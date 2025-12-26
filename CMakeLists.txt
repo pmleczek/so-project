@@ -8,6 +8,8 @@ project(so_project
 SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(so_project src/main.cpp)
+file(GLOB SRC_FILES src/*.cpp)
+add_executable(so_project ${SRC_FILES})
+target_include_directories(so_project PRIVATE include)
 
 target_compile_features(so_project PRIVATE cxx_std_17)
