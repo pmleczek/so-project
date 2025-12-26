@@ -45,9 +45,3 @@ double Config::randomDouble(double min, double max) {
   std::uniform_real_distribution<> dis(min, max);
   return dis(gen);
 }
-
-void Config::registerProcess(pid_t pid, ProcessType type) {
-  Logger::shared().log("Registering process: " + std::to_string(pid) +
-                       " as type: " + processTypeNames[type]);
-  processTypes[pid] = type;
-}
