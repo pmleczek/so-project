@@ -3,12 +3,22 @@
 #include <sys/shm.h>
 #include <unistd.h>
 
+enum CandidateStatus {
+  PENDING = 0,
+  ELIGIBLE = 1,
+  INELIGIBLE = 2,
+  PENDING_COMMISSION_A = 3,
+  FAILED_COMMISSION_A = 4,
+  PENDING_COMMISSION_B = 5,
+  COMPLETED = 6,
+};
+
 struct SharedCandidateState {
-  int id;
   pid_t pid;
   double scoreA;
   double scoreB;
   double finalScore;
+  CandidateStatus status;
   bool passedExam;
   bool reattempt;
 };

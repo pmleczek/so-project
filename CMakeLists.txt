@@ -12,11 +12,12 @@ set(COMMON_SOURCES
     src/config.cpp
     src/output/Logger.cpp
     src/output/ResultsWriter.cpp
+    src/ipc/MessageQueueManager.cpp
     src/ipc/SharedMemoryManager.cpp
-    src/processinfo.cpp
+    src/ipc/SemaphoreManager.cpp
     src/utils/random.cpp
     src/utils/constants.cpp
-    src/validators.cpp
+    src/utils/validation.cpp
 )
 
 add_executable(so_project_main 

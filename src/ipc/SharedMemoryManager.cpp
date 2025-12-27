@@ -57,12 +57,19 @@ bool SharedMemoryManager::initialize(int candidateCount) {
   key_t shmKey = getShmKey();
   size_t shmSize = getShmSize(candidateCount);
 
+  // TODO: Clean it up
+  int tempShmId = shmget(shmKey, 1, 0600);
+  if (tempShmId != -1) {
+    shmctl(tempShmId, IPC_RMID, nullptr);
+  }
+
   Logger::shared().log("Creating shared memory segment with key " +
                        std::to_string(shmKey) + " and size " +
                        std::to_string(shmSize));
 
   shmId = shmget(shmKey, shmSize, IPC_CREAT | IPC_EXCL | 0600);
   if (shmId == -1) {
+    // TODO: Redundant?
     if (errno == EEXIST) {
       Logger::shared().log("Shared memory already exists");
       int oldShmId = shmget(shmKey, 0, 0600);

@@ -25,14 +25,14 @@ void ResultsWriter::writeResults() {
   }
 
   resultsFile << "Id Kandydata, Wynik (część A), Wynik (część B), Wynik "
-                 "(końcowy), Zdał egzamin, Ponowne podejście, Matura"
+                 "(końcowy), Ponowne podejście, Matura"
               << std::endl;
 
   for (int i = 0; i < data->candidateCount; i++) {
     SharedCandidateState &candidate = data->candidates[i];
-    resultsFile << candidate.id << "," << candidate.scoreA << ","
-                << candidate.scoreB << "," << candidate.finalScore << ","
-                << "TBD" << "," << (candidate.reattempt ? "Tak" : "Nie") << ","
+    resultsFile << i << "," << candidate.scoreA << "," << candidate.scoreB
+                << "," << candidate.finalScore << ","
+                << (candidate.reattempt ? "Tak" : "Nie") << ","
                 << (candidate.passedExam ? "Tak" : "Nie") << std::endl;
   }
 

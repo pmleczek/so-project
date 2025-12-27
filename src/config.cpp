@@ -26,7 +26,7 @@ void Config::initializeFromArgs(int count, int time) {
   Logger::shared().log("- Exam failure rate: " + std::to_string(failureRate));
   examFailureRate = failureRate;
   double reattemptMultiplier = Random::randomDouble(1.5, 2.5) / 100;
-  Logger::shared().log("- Reattempt rate: " + std::to_string(reattemptRate));
+  Logger::shared().log("- Reattempt rate: " + std::to_string(reattemptMultiplier));
   reattemptRate = reattemptMultiplier;
 
   Logger::shared().log("Argument-based configuration:");

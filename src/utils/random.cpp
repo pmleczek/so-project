@@ -1,6 +1,5 @@
 #include "utils/random.h"
 #include <random>
-#include <iostream>
 
 double Random::randomDouble(double min, double max) {
   std::random_device rd;
@@ -18,9 +17,6 @@ int Random::randomInt(int min, int max) {
 
 std::unordered_set<int> Random::randomValues(int count, int min, int max,
                                              std::unordered_set<int> exclude) {
-  std::cout << "Generating " << count << " random values between " << min
-            << " and " << max << " excluding " << exclude.size() << " values"
-            << std::endl;
   std::unordered_set<int> values;
   while (values.size() < count) {
     int value = randomInt(min, max);
