@@ -7,6 +7,9 @@ public:
 private:
   static void initialize(int argc, char *argv[]);
   static void setupConfig(int argc, char *argv[]);
+  static void spawnCandidateProcesses();
+  static void validateEligibility();
   static void waitForExamStart();
+  static void publishResults();
   static void cleanup();
 };

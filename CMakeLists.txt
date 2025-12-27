@@ -25,3 +25,11 @@ add_executable(so_project_main
 )
 target_include_directories(so_project_main PRIVATE include)
 target_compile_features(so_project_main PRIVATE cxx_std_17)
+
+add_executable(so_project_candidate
+    src/candidate/main.cpp
+    src/candidate/CandidateProcess.cpp
+    ${COMMON_SOURCES}
+)
+target_include_directories(so_project_candidate PRIVATE include)
+target_compile_features(so_project_candidate PRIVATE cxx_std_17)

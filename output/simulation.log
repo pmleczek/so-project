@@ -1,8 +1,866 @@
-[2025-12-27 12:37:33.241] [26777] Initializing main process...
-[2025-12-27 12:37:33.241] [26777] Setting up configuration for main process...
-[2025-12-27 12:37:33.241] [26777] SharedMemoryManager::initialize()
-[2025-12-27 12:37:33.241] [26777] Waiting 0 seconds for exam start...
-[2025-12-27 12:37:33.241] [26777] Cleaning up main process...
-[2025-12-27 12:37:33.241] [26777] SharedMemoryManager::destroy()
-[2025-12-27 12:37:33.242] [26777] SharedMemoryManager::detach()
-[2025-12-27 12:37:33.242] [26777] SharedMemoryManager::detach()
+[2025-12-27 13:04:32.975] [66126] Initializing main process...
+[2025-12-27 13:04:32.975] [66126] Setting up configuration for main process...
+[2025-12-27 13:04:32.975] [66126] Validating arguments
+[2025-12-27 13:04:32.975] [66126] Validating passed argument count: 3
+[2025-12-27 13:04:32.975] [66126] Validating passed candidate count: 120
+[2025-12-27 13:04:32.975] [66126] Validating passed start time: 2
+[2025-12-27 13:04:32.975] [66126] All passed arguments validated successfully
+[2025-12-27 13:04:32.975] [66126] Generating simulation configuration
+[2025-12-27 13:04:32.975] [66126] Initializing simulation configuration
+[2025-12-27 13:04:32.975] [66126] Argument-based configuration:
+[2025-12-27 13:04:32.975] [66126] - Candidate count: 120
+[2025-12-27 13:04:32.975] [66126] - Start time: 2
+[2025-12-27 13:04:32.975] [66126] Randomized configuration:
+[2025-12-27 13:04:32.976] [66126] - Candidate ratio (people per place): 10.215832
+[2025-12-27 13:04:32.976] [66126] - Exam failure rate (%): 2.075467
+[2025-12-27 13:04:32.976] [66126] - Reattempt rate (%): 1.989095
+[2025-12-27 13:04:32.976] [66126] Simulation configuration initialized
+[2025-12-27 13:04:32.976] [66126] SharedMemoryManager::initialize()
+[2025-12-27 13:04:32.976] [66126] Spawning 120 candidate processes...
+[2025-12-27 13:04:32.976] [66126] Candidate process with PID 66127 spawned successfully
+[2025-12-27 13:04:32.976] [66127] Spawning candidate process with PID 66127
+[2025-12-27 13:04:32.976] [66126] Candidate process with PID 66128 spawned successfully
+[2025-12-27 13:04:32.977] [66126] Candidate process with PID 66129 spawned successfully
+[2025-12-27 13:04:32.977] [66128] Spawning candidate process with PID 66128
+[2025-12-27 13:04:32.977] [66129] Spawning candidate process with PID 66129
+[2025-12-27 13:04:32.977] [66126] Candidate process with PID 66130 spawned successfully
+[2025-12-27 13:04:32.977] [66126] Candidate process with PID 66131 spawned successfully
+[2025-12-27 13:04:32.977] [66130] Spawning candidate process with PID 66130
+[2025-12-27 13:04:32.978] [66126] Candidate process with PID 66132 spawned successfully
+[2025-12-27 13:04:32.977] [66131] Spawning candidate process with PID 66131
+[2025-12-27 13:04:32.978] [66132] Spawning candidate process with PID 66132
+[2025-12-27 13:04:32.978] [66126] Candidate process with PID 66133 spawned successfully
+[2025-12-27 13:04:32.978] [66126] Candidate process with PID 66134 spawned successfully
+[2025-12-27 13:04:32.978] [66133] Spawning candidate process with PID 66133
+[2025-12-27 13:04:32.978] [66126] Candidate process with PID 66135 spawned successfully
+[2025-12-27 13:04:32.978] [66134] Spawning candidate process with PID 66134
+[2025-12-27 13:04:32.978] [66135] Spawning candidate process with PID 66135
+[2025-12-27 13:04:32.979] [66126] Candidate process with PID 66136 spawned successfully
+[2025-12-27 13:04:32.979] [66126] Candidate process with PID 66137 spawned successfully
+[2025-12-27 13:04:32.979] [66136] Spawning candidate process with PID 66136
+[2025-12-27 13:04:32.979] [66126] Candidate process with PID 66138 spawned successfully
+[2025-12-27 13:04:32.979] [66137] Spawning candidate process with PID 66137
+[2025-12-27 13:04:32.979] [66138] Spawning candidate process with PID 66138
+[2025-12-27 13:04:32.980] [66126] Candidate process with PID 66139 spawned successfully
+[2025-12-27 13:04:32.980] [66139] Spawning candidate process with PID 66139
+[2025-12-27 13:04:32.981] [66126] Candidate process with PID 66140 spawned successfully
+[2025-12-27 13:04:32.981] [66140] Spawning candidate process with PID 66140
+[2025-12-27 13:04:32.981] [66126] Candidate process with PID 66141 spawned successfully
+[2025-12-27 13:04:32.982] [66141] Spawning candidate process with PID 66141
+[2025-12-27 13:04:32.982] [66126] Candidate process with PID 66142 spawned successfully
+[2025-12-27 13:04:32.982] [66142] Spawning candidate process with PID 66142
+[2025-12-27 13:04:32.982] [66126] Candidate process with PID 66143 spawned successfully
+[2025-12-27 13:04:32.982] [66143] Spawning candidate process with PID 66143
+[2025-12-27 13:04:32.983] [66126] Candidate process with PID 66144 spawned successfully
+[2025-12-27 13:04:32.983] [66144] Spawning candidate process with PID 66144
+[2025-12-27 13:04:32.983] [66126] Candidate process with PID 66145 spawned successfully
+[2025-12-27 13:04:32.983] [66145] Spawning candidate process with PID 66145
+[2025-12-27 13:04:32.984] [66126] Candidate process with PID 66146 spawned successfully
+[2025-12-27 13:04:32.984] [66146] Spawning candidate process with PID 66146
+[2025-12-27 13:04:32.984] [66126] Candidate process with PID 66147 spawned successfully
+[2025-12-27 13:04:32.984] [66147] Spawning candidate process with PID 66147
+[2025-12-27 13:04:32.985] [66126] Candidate process with PID 66148 spawned successfully
+[2025-12-27 13:04:32.985] [66148] Spawning candidate process with PID 66148
+[2025-12-27 13:04:32.985] [66126] Candidate process with PID 66149 spawned successfully
+[2025-12-27 13:04:32.985] [66126] Candidate process with PID 66150 spawned successfully
+[2025-12-27 13:04:32.985] [66149] Spawning candidate process with PID 66149
+[2025-12-27 13:04:32.985] [66150] Spawning candidate process with PID 66150
+[2025-12-27 13:04:32.986] [66126] Candidate process with PID 66151 spawned successfully
+[2025-12-27 13:04:32.986] [66151] Spawning candidate process with PID 66151
+[2025-12-27 13:04:32.986] [66126] Candidate process with PID 66152 spawned successfully
+[2025-12-27 13:04:32.986] [66152] Spawning candidate process with PID 66152
+[2025-12-27 13:04:32.987] [66126] Candidate process with PID 66153 spawned successfully
+[2025-12-27 13:04:32.987] [66153] Spawning candidate process with PID 66153
+[2025-12-27 13:04:32.987] [66126] Candidate process with PID 66154 spawned successfully
+[2025-12-27 13:04:32.987] [66154] Spawning candidate process with PID 66154
+[2025-12-27 13:04:32.988] [66126] Candidate process with PID 66155 spawned successfully
+[2025-12-27 13:04:32.988] [66155] Spawning candidate process with PID 66155
+[2025-12-27 13:04:32.988] [66126] Candidate process with PID 66156 spawned successfully
+[2025-12-27 13:04:32.988] [66156] Spawning candidate process with PID 66156
+[2025-12-27 13:04:32.988] [66126] Candidate process with PID 66157 spawned successfully
+[2025-12-27 13:04:32.988] [66157] Spawning candidate process with PID 66157
+[2025-12-27 13:04:32.989] [66126] Candidate process with PID 66158 spawned successfully
+[2025-12-27 13:04:32.989] [66158] Spawning candidate process with PID 66158
+[2025-12-27 13:04:32.989] [66126] Candidate process with PID 66159 spawned successfully
+[2025-12-27 13:04:32.989] [66159] Spawning candidate process with PID 66159
+[2025-12-27 13:04:32.990] [66126] Candidate process with PID 66160 spawned successfully
+[2025-12-27 13:04:32.990] [66160] Spawning candidate process with PID 66160
+[2025-12-27 13:04:32.990] [66126] Candidate process with PID 66161 spawned successfully
+[2025-12-27 13:04:32.990] [66161] Spawning candidate process with PID 66161
+[2025-12-27 13:04:32.990] [66126] Candidate process with PID 66162 spawned successfully
+[2025-12-27 13:04:32.990] [66162] Spawning candidate process with PID 66162
+[2025-12-27 13:04:32.991] [66126] Candidate process with PID 66163 spawned successfully
+[2025-12-27 13:04:32.991] [66163] Spawning candidate process with PID 66163
+[2025-12-27 13:04:32.991] [66126] Candidate process with PID 66164 spawned successfully
+[2025-12-27 13:04:32.991] [66164] Spawning candidate process with PID 66164
+[2025-12-27 13:04:32.991] [66126] Candidate process with PID 66165 spawned successfully
+[2025-12-27 13:04:32.991] [66165] Spawning candidate process with PID 66165
+[2025-12-27 13:04:32.992] [66126] Candidate process with PID 66166 spawned successfully
+[2025-12-27 13:04:32.992] [66166] Spawning candidate process with PID 66166
+[2025-12-27 13:04:32.992] [66126] Candidate process with PID 66167 spawned successfully
+[2025-12-27 13:04:32.992] [66167] Spawning candidate process with PID 66167
+[2025-12-27 13:04:32.993] [66126] Candidate process with PID 66168 spawned successfully
+[2025-12-27 13:04:32.993] [66168] Spawning candidate process with PID 66168
+[2025-12-27 13:04:32.993] [66126] Candidate process with PID 66169 spawned successfully
+[2025-12-27 13:04:32.993] [66169] Spawning candidate process with PID 66169
+[2025-12-27 13:04:32.994] [66126] Candidate process with PID 66170 spawned successfully
+[2025-12-27 13:04:32.994] [66170] Spawning candidate process with PID 66170
+[2025-12-27 13:04:32.994] [66126] Candidate process with PID 66171 spawned successfully
+[2025-12-27 13:04:32.994] [66171] Spawning candidate process with PID 66171
+[2025-12-27 13:04:32.994] [66126] Candidate process with PID 66172 spawned successfully
+[2025-12-27 13:04:32.994] [66172] Spawning candidate process with PID 66172
+[2025-12-27 13:04:32.995] [66126] Candidate process with PID 66173 spawned successfully
+[2025-12-27 13:04:32.995] [66126] Candidate process with PID 66174 spawned successfully
+[2025-12-27 13:04:32.995] [66173] Spawning candidate process with PID 66173
+[2025-12-27 13:04:32.995] [66174] Spawning candidate process with PID 66174
+[2025-12-27 13:04:32.995] [66126] Candidate process with PID 66175 spawned successfully
+[2025-12-27 13:04:32.995] [66175] Spawning candidate process with PID 66175
+[2025-12-27 13:04:32.995] [66126] Candidate process with PID 66176 spawned successfully
+[2025-12-27 13:04:32.995] [66176] Spawning candidate process with PID 66176
+[2025-12-27 13:04:32.996] [66126] Candidate process with PID 66177 spawned successfully
+[2025-12-27 13:04:32.996] [66177] Spawning candidate process with PID 66177
+[2025-12-27 13:04:32.996] [66126] Candidate process with PID 66178 spawned successfully
+[2025-12-27 13:04:32.996] [66178] Spawning candidate process with PID 66178
+[2025-12-27 13:04:32.997] [66126] Candidate process with PID 66179 spawned successfully
+[2025-12-27 13:04:32.997] [66126] Candidate process with PID 66180 spawned successfully
+[2025-12-27 13:04:32.997] [66179] Spawning candidate process with PID 66179
+[2025-12-27 13:04:32.997] [66126] Candidate process with PID 66181 spawned successfully
+[2025-12-27 13:04:32.997] [66180] Spawning candidate process with PID 66180
+[2025-12-27 13:04:32.997] [66126] Candidate process with PID 66182 spawned successfully
+[2025-12-27 13:04:32.997] [66181] Spawning candidate process with PID 66181
+[2025-12-27 13:04:32.997] [66182] Spawning candidate process with PID 66182
+[2025-12-27 13:04:32.998] [66126] Candidate process with PID 66183 spawned successfully
+[2025-12-27 13:04:32.998] [66183] Spawning candidate process with PID 66183
+[2025-12-27 13:04:32.998] [66126] Candidate process with PID 66184 spawned successfully
+[2025-12-27 13:04:32.998] [66184] Spawning candidate process with PID 66184
+[2025-12-27 13:04:32.998] [66126] Candidate process with PID 66185 spawned successfully
+[2025-12-27 13:04:32.998] [66185] Spawning candidate process with PID 66185
+[2025-12-27 13:04:32.999] [66126] Candidate process with PID 66186 spawned successfully
+[2025-12-27 13:04:32.999] [66186] Spawning candidate process with PID 66186
+[2025-12-27 13:04:32.999] [66126] Candidate process with PID 66187 spawned successfully
+[2025-12-27 13:04:32.999] [66187] Spawning candidate process with PID 66187
+[2025-12-27 13:04:32.999] [66126] Candidate process with PID 66188 spawned successfully
+[2025-12-27 13:04:32.999] [66126] Candidate process with PID 66189 spawned successfully
+[2025-12-27 13:04:32.999] [66188] Spawning candidate process with PID 66188
+[2025-12-27 13:04:32.999] [66189] Spawning candidate process with PID 66189
+[2025-12-27 13:04:33.0] [66126] Candidate process with PID 66190 spawned successfully
+[2025-12-27 13:04:33.0] [66190] Spawning candidate process with PID 66190
+[2025-12-27 13:04:33.0] [66126] Candidate process with PID 66191 spawned successfully
+[2025-12-27 13:04:33.0] [66126] Candidate process with PID 66192 spawned successfully
+[2025-12-27 13:04:33.0] [66191] Spawning candidate process with PID 66191
+[2025-12-27 13:04:33.0] [66126] Candidate process with PID 66193 spawned successfully
+[2025-12-27 13:04:33.0] [66192] Spawning candidate process with PID 66192
+[2025-12-27 13:04:33.0] [66193] Spawning candidate process with PID 66193
+[2025-12-27 13:04:33.1] [66126] Candidate process with PID 66194 spawned successfully
+[2025-12-27 13:04:33.1] [66126] Candidate process with PID 66195 spawned successfully
+[2025-12-27 13:04:33.1] [66194] Spawning candidate process with PID 66194
+[2025-12-27 13:04:33.1] [66195] Spawning candidate process with PID 66195
+[2025-12-27 13:04:33.1] [66126] Candidate process with PID 66196 spawned successfully
+[2025-12-27 13:04:33.1] [66196] Spawning candidate process with PID 66196
+[2025-12-27 13:04:33.1] [66126] Candidate process with PID 66197 spawned successfully
+[2025-12-27 13:04:33.2] [66197] Spawning candidate process with PID 66197
+[2025-12-27 13:04:33.2] [66126] Candidate process with PID 66198 spawned successfully
+[2025-12-27 13:04:33.2] [66198] Spawning candidate process with PID 66198
+[2025-12-27 13:04:33.2] [66126] Candidate process with PID 66199 spawned successfully
+[2025-12-27 13:04:33.2] [66199] Spawning candidate process with PID 66199
+[2025-12-27 13:04:33.2] [66126] Candidate process with PID 66200 spawned successfully
+[2025-12-27 13:04:33.3] [66126] Candidate process with PID 66201 spawned successfully
+[2025-12-27 13:04:33.2] [66200] Spawning candidate process with PID 66200
+[2025-12-27 13:04:33.3] [66201] Spawning candidate process with PID 66201
+[2025-12-27 13:04:33.3] [66126] Candidate process with PID 66202 spawned successfully
+[2025-12-27 13:04:33.3] [66202] Spawning candidate process with PID 66202
+[2025-12-27 13:04:33.3] [66126] Candidate process with PID 66203 spawned successfully
+[2025-12-27 13:04:33.3] [66203] Spawning candidate process with PID 66203
+[2025-12-27 13:04:33.4] [66126] Candidate process with PID 66204 spawned successfully
+[2025-12-27 13:04:33.4] [66204] Spawning candidate process with PID 66204
+[2025-12-27 13:04:33.4] [66126] Candidate process with PID 66205 spawned successfully
+[2025-12-27 13:04:33.4] [66126] Candidate process with PID 66206 spawned successfully
+[2025-12-27 13:04:33.4] [66205] Spawning candidate process with PID 66205
+[2025-12-27 13:04:33.4] [66206] Spawning candidate process with PID 66206
+[2025-12-27 13:04:33.4] [66126] Candidate process with PID 66207 spawned successfully
+[2025-12-27 13:04:33.5] [66126] Candidate process with PID 66208 spawned successfully
+[2025-12-27 13:04:33.4] [66207] Spawning candidate process with PID 66207
+[2025-12-27 13:04:33.5] [66126] Candidate process with PID 66209 spawned successfully
+[2025-12-27 13:04:33.5] [66209] Spawning candidate process with PID 66209
+[2025-12-27 13:04:33.5] [66126] Candidate process with PID 66210 spawned successfully
+[2025-12-27 13:04:33.5] [66208] Spawning candidate process with PID 66208
+[2025-12-27 13:04:33.5] [66210] Spawning candidate process with PID 66210
+[2025-12-27 13:04:33.5] [66126] Candidate process with PID 66211 spawned successfully
+[2025-12-27 13:04:33.6] [66211] Spawning candidate process with PID 66211
+[2025-12-27 13:04:33.6] [66126] Candidate process with PID 66212 spawned successfully
+[2025-12-27 13:04:33.6] [66212] Spawning candidate process with PID 66212
+[2025-12-27 13:04:33.6] [66126] Candidate process with PID 66213 spawned successfully
+[2025-12-27 13:04:33.6] [66213] Spawning candidate process with PID 66213
+[2025-12-27 13:04:33.6] [66126] Candidate process with PID 66214 spawned successfully
+[2025-12-27 13:04:33.7] [66126] Candidate process with PID 66215 spawned successfully
+[2025-12-27 13:04:33.6] [66214] Spawning candidate process with PID 66214
+[2025-12-27 13:04:33.7] [66215] Spawning candidate process with PID 66215
+[2025-12-27 13:04:33.7] [66126] Candidate process with PID 66216 spawned successfully
+[2025-12-27 13:04:33.7] [66216] Spawning candidate process with PID 66216
+[2025-12-27 13:04:33.7] [66126] Candidate process with PID 66217 spawned successfully
+[2025-12-27 13:04:33.7] [66126] Candidate process with PID 66218 spawned successfully
+[2025-12-27 13:04:33.7] [66217] Spawning candidate process with PID 66217
+[2025-12-27 13:04:33.7] [66218] Spawning candidate process with PID 66218
+[2025-12-27 13:04:33.8] [66126] Candidate process with PID 66219 spawned successfully
+[2025-12-27 13:04:33.8] [66219] Spawning candidate process with PID 66219
+[2025-12-27 13:04:33.8] [66126] Candidate process with PID 66220 spawned successfully
+[2025-12-27 13:04:33.8] [66220] Spawning candidate process with PID 66220
+[2025-12-27 13:04:33.8] [66126] Candidate process with PID 66221 spawned successfully
+[2025-12-27 13:04:33.8] [66221] Spawning candidate process with PID 66221
+[2025-12-27 13:04:33.9] [66126] Candidate process with PID 66222 spawned successfully
+[2025-12-27 13:04:33.9] [66222] Spawning candidate process with PID 66222
+[2025-12-27 13:04:33.9] [66126] Candidate process with PID 66223 spawned successfully
+[2025-12-27 13:04:33.9] [66223] Spawning candidate process with PID 66223
+[2025-12-27 13:04:33.9] [66126] Candidate process with PID 66224 spawned successfully
+[2025-12-27 13:04:33.9] [66224] Spawning candidate process with PID 66224
+[2025-12-27 13:04:33.10] [66126] Candidate process with PID 66225 spawned successfully
+[2025-12-27 13:04:33.10] [66225] Spawning candidate process with PID 66225
+[2025-12-27 13:04:33.10] [66126] Candidate process with PID 66226 spawned successfully
+[2025-12-27 13:04:33.10] [66226] Spawning candidate process with PID 66226
+[2025-12-27 13:04:33.11] [66126] Candidate process with PID 66227 spawned successfully
+[2025-12-27 13:04:33.11] [66227] Spawning candidate process with PID 66227
+[2025-12-27 13:04:33.11] [66126] Candidate process with PID 66228 spawned successfully
+[2025-12-27 13:04:33.11] [66228] Spawning candidate process with PID 66228
+[2025-12-27 13:04:33.11] [66126] Candidate process with PID 66229 spawned successfully
+[2025-12-27 13:04:33.11] [66229] Spawning candidate process with PID 66229
+[2025-12-27 13:04:33.11] [66126] Candidate process with PID 66230 spawned successfully
+[2025-12-27 13:04:33.12] [66230] Spawning candidate process with PID 66230
+[2025-12-27 13:04:33.12] [66126] Candidate process with PID 66231 spawned successfully
+[2025-12-27 13:04:33.12] [66126] Candidate process with PID 66232 spawned successfully
+[2025-12-27 13:04:33.12] [66231] Spawning candidate process with PID 66231
+[2025-12-27 13:04:33.12] [66232] Spawning candidate process with PID 66232
+[2025-12-27 13:04:33.12] [66126] Candidate process with PID 66233 spawned successfully
+[2025-12-27 13:04:33.12] [66233] Spawning candidate process with PID 66233
+[2025-12-27 13:04:33.13] [66126] Candidate process with PID 66234 spawned successfully
+[2025-12-27 13:04:33.13] [66234] Spawning candidate process with PID 66234
+[2025-12-27 13:04:33.13] [66126] Candidate process with PID 66235 spawned successfully
+[2025-12-27 13:04:33.13] [66235] Spawning candidate process with PID 66235
+[2025-12-27 13:04:33.13] [66126] Candidate process with PID 66236 spawned successfully
+[2025-12-27 13:04:33.14] [66236] Spawning candidate process with PID 66236
+[2025-12-27 13:04:33.14] [66126] Candidate process with PID 66237 spawned successfully
+[2025-12-27 13:04:33.14] [66237] Spawning candidate process with PID 66237
+[2025-12-27 13:04:33.14] [66126] Candidate process with PID 66238 spawned successfully
+[2025-12-27 13:04:33.15] [66126] Candidate process with PID 66239 spawned successfully
+[2025-12-27 13:04:33.14] [66238] Spawning candidate process with PID 66238
+[2025-12-27 13:04:33.15] [66126] Candidate process with PID 66240 spawned successfully
+[2025-12-27 13:04:33.15] [66239] Spawning candidate process with PID 66239
+[2025-12-27 13:04:33.15] [66240] Spawning candidate process with PID 66240
+[2025-12-27 13:04:33.15] [66126] Candidate process with PID 66241 spawned successfully
+[2025-12-27 13:04:33.15] [66241] Spawning candidate process with PID 66241
+[2025-12-27 13:04:33.16] [66126] Candidate process with PID 66242 spawned successfully
+[2025-12-27 13:04:33.16] [66126] Candidate process with PID 66243 spawned successfully
+[2025-12-27 13:04:33.16] [66242] Spawning candidate process with PID 66242
+[2025-12-27 13:04:33.16] [66243] Spawning candidate process with PID 66243
+[2025-12-27 13:04:33.16] [66126] Candidate process with PID 66244 spawned successfully
+[2025-12-27 13:04:33.16] [66244] Spawning candidate process with PID 66244
+[2025-12-27 13:04:33.16] [66126] Candidate process with PID 66250 spawned successfully
+[2025-12-27 13:04:33.16] [66250] Spawning candidate process with PID 66250
+[2025-12-27 13:04:33.17] [66126] Candidate process with PID 66262 spawned successfully
+[2025-12-27 13:04:33.17] [66126] Validating eligibility of candidates...
+[2025-12-27 13:04:33.17] [66126] Waiting 2 seconds for exam start...
+[2025-12-27 13:04:33.17] [66262] Spawning candidate process with PID 66262
+[2025-12-27 13:04:33.320] [66135] Initializing candidate process...
+[2025-12-27 13:04:33.324] [66135] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.324] [66135] Cleaning up candidate process...
+[2025-12-27 13:04:33.324] [66135] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.324] [66135] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.325] [66151] Initializing candidate process...
+[2025-12-27 13:04:33.327] [66151] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.327] [66151] Cleaning up candidate process...
+[2025-12-27 13:04:33.327] [66151] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.327] [66127] Initializing candidate process...
+[2025-12-27 13:04:33.338] [66127] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.339] [66127] Cleaning up candidate process...
+[2025-12-27 13:04:33.339] [66127] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.342] [66127] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.344] [66220] Initializing candidate process...
+[2025-12-27 13:04:33.345] [66220] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.345] [66229] Initializing candidate process...
+[2025-12-27 13:04:33.345] [66181] Initializing candidate process...
+[2025-12-27 13:04:33.346] [66181] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.346] [66231] Initializing candidate process...
+[2025-12-27 13:04:33.346] [66231] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.346] [66231] Cleaning up candidate process...
+[2025-12-27 13:04:33.346] [66231] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.346] [66211] Initializing candidate process...
+[2025-12-27 13:04:33.346] [66211] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.346] [66238] Initializing candidate process...
+[2025-12-27 13:04:33.347] [66238] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.347] [66238] Cleaning up candidate process...
+[2025-12-27 13:04:33.347] [66139] Initializing candidate process...
+[2025-12-27 13:04:33.347] [66139] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.347] [66139] Cleaning up candidate process...
+[2025-12-27 13:04:33.347] [66139] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.347] [66185] Initializing candidate process...
+[2025-12-27 13:04:33.347] [66185] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.347] [66230] Initializing candidate process...
+[2025-12-27 13:04:33.348] [66230] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.348] [66234] Initializing candidate process...
+[2025-12-27 13:04:33.348] [66234] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.348] [66234] Cleaning up candidate process...
+[2025-12-27 13:04:33.348] [66234] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.348] [66234] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.348] [66216] Initializing candidate process...
+[2025-12-27 13:04:33.348] [66216] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.349] [66182] Initializing candidate process...
+[2025-12-27 13:04:33.349] [66182] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.349] [66182] Cleaning up candidate process...
+[2025-12-27 13:04:33.349] [66182] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.349] [66182] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.349] [66154] Initializing candidate process...
+[2025-12-27 13:04:33.349] [66154] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.349] [66133] Initializing candidate process...
+[2025-12-27 13:04:33.350] [66133] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.350] [66151] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.350] [66140] Initializing candidate process...
+[2025-12-27 13:04:33.350] [66140] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.350] [66140] Cleaning up candidate process...
+[2025-12-27 13:04:33.350] [66140] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.350] [66140] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.350] [66186] Initializing candidate process...
+[2025-12-27 13:04:33.350] [66186] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.350] [66186] Cleaning up candidate process...
+[2025-12-27 13:04:33.350] [66186] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.350] [66186] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.351] [66163] Initializing candidate process...
+[2025-12-27 13:04:33.351] [66163] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.351] [66167] Initializing candidate process...
+[2025-12-27 13:04:33.351] [66167] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.351] [66146] Initializing candidate process...
+[2025-12-27 13:04:33.351] [66146] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.351] [66157] Initializing candidate process...
+[2025-12-27 13:04:33.352] [66157] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.352] [66157] Cleaning up candidate process...
+[2025-12-27 13:04:33.352] [66157] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.352] [66157] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.352] [66131] Initializing candidate process...
+[2025-12-27 13:04:33.352] [66131] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.352] [66198] Initializing candidate process...
+[2025-12-27 13:04:33.352] [66198] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.352] [66198] Cleaning up candidate process...
+[2025-12-27 13:04:33.352] [66198] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.352] [66198] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.352] [66168] Initializing candidate process...
+[2025-12-27 13:04:33.353] [66168] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.353] [66168] Cleaning up candidate process...
+[2025-12-27 13:04:33.353] [66168] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66168] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66173] Initializing candidate process...
+[2025-12-27 13:04:33.353] [66173] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.353] [66173] Cleaning up candidate process...
+[2025-12-27 13:04:33.353] [66173] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66173] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66219] Initializing candidate process...
+[2025-12-27 13:04:33.353] [66219] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.353] [66219] Cleaning up candidate process...
+[2025-12-27 13:04:33.353] [66219] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66219] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.353] [66161] Initializing candidate process...
+[2025-12-27 13:04:33.354] [66161] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.354] [66177] Initializing candidate process...
+[2025-12-27 13:04:33.354] [66177] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.354] [66177] Cleaning up candidate process...
+[2025-12-27 13:04:33.354] [66177] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.354] [66177] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.354] [66142] Initializing candidate process...
+[2025-12-27 13:04:33.354] [66142] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.354] [66142] Cleaning up candidate process...
+[2025-12-27 13:04:33.354] [66142] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.354] [66142] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.354] [66242] Initializing candidate process...
+[2025-12-27 13:04:33.354] [66242] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.354] [66242] Cleaning up candidate process...
+[2025-12-27 13:04:33.354] [66242] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.355] [66242] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.355] [66153] Initializing candidate process...
+[2025-12-27 13:04:33.355] [66153] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.355] [66153] Cleaning up candidate process...
+[2025-12-27 13:04:33.355] [66153] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.355] [66153] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.355] [66240] Initializing candidate process...
+[2025-12-27 13:04:33.355] [66240] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.355] [66262] Initializing candidate process...
+[2025-12-27 13:04:33.355] [66262] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.355] [66262] Cleaning up candidate process...
+[2025-12-27 13:04:33.355] [66262] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.355] [66132] Initializing candidate process...
+[2025-12-27 13:04:33.356] [66132] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.356] [66132] Cleaning up candidate process...
+[2025-12-27 13:04:33.356] [66132] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66132] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66228] Initializing candidate process...
+[2025-12-27 13:04:33.356] [66228] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.356] [66228] Cleaning up candidate process...
+[2025-12-27 13:04:33.356] [66228] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66228] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66190] Initializing candidate process...
+[2025-12-27 13:04:33.356] [66190] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.356] [66190] Cleaning up candidate process...
+[2025-12-27 13:04:33.356] [66190] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66190] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.356] [66184] Initializing candidate process...
+[2025-12-27 13:04:33.357] [66184] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.357] [66184] Cleaning up candidate process...
+[2025-12-27 13:04:33.357] [66184] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66184] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66179] Initializing candidate process...
+[2025-12-27 13:04:33.357] [66179] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.357] [66179] Cleaning up candidate process...
+[2025-12-27 13:04:33.357] [66179] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66179] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66139] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66217] Initializing candidate process...
+[2025-12-27 13:04:33.357] [66217] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.357] [66217] Cleaning up candidate process...
+[2025-12-27 13:04:33.357] [66217] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.357] [66193] Initializing candidate process...
+[2025-12-27 13:04:33.358] [66193] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.358] [66193] Cleaning up candidate process...
+[2025-12-27 13:04:33.358] [66193] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.358] [66193] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.358] [66216] Cleaning up candidate process...
+[2025-12-27 13:04:33.358] [66216] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.358] [66143] Initializing candidate process...
+[2025-12-27 13:04:33.358] [66143] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.358] [66143] Cleaning up candidate process...
+[2025-12-27 13:04:33.358] [66143] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.358] [66143] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.358] [66195] Initializing candidate process...
+[2025-12-27 13:04:33.358] [66195] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.359] [66195] Cleaning up candidate process...
+[2025-12-27 13:04:33.359] [66195] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66195] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66201] Initializing candidate process...
+[2025-12-27 13:04:33.359] [66201] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.359] [66201] Cleaning up candidate process...
+[2025-12-27 13:04:33.359] [66201] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66201] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66202] Initializing candidate process...
+[2025-12-27 13:04:33.359] [66202] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.359] [66202] Cleaning up candidate process...
+[2025-12-27 13:04:33.359] [66202] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66202] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66146] Cleaning up candidate process...
+[2025-12-27 13:04:33.359] [66146] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.359] [66241] Initializing candidate process...
+[2025-12-27 13:04:33.360] [66241] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.360] [66171] Initializing candidate process...
+[2025-12-27 13:04:33.360] [66171] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.360] [66131] Cleaning up candidate process...
+[2025-12-27 13:04:33.360] [66131] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.360] [66214] Initializing candidate process...
+[2025-12-27 13:04:33.360] [66214] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.360] [66214] Cleaning up candidate process...
+[2025-12-27 13:04:33.360] [66214] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.360] [66214] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.360] [66205] Initializing candidate process...
+[2025-12-27 13:04:33.361] [66205] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.361] [66205] Cleaning up candidate process...
+[2025-12-27 13:04:33.361] [66205] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66205] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66137] Initializing candidate process...
+[2025-12-27 13:04:33.361] [66137] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.361] [66137] Cleaning up candidate process...
+[2025-12-27 13:04:33.361] [66137] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66137] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66162] Initializing candidate process...
+[2025-12-27 13:04:33.361] [66162] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.361] [66162] Cleaning up candidate process...
+[2025-12-27 13:04:33.361] [66162] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66162] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.361] [66141] Initializing candidate process...
+[2025-12-27 13:04:33.361] [66141] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.362] [66141] Cleaning up candidate process...
+[2025-12-27 13:04:33.362] [66141] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66203] Initializing candidate process...
+[2025-12-27 13:04:33.362] [66203] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.362] [66203] Cleaning up candidate process...
+[2025-12-27 13:04:33.362] [66203] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66203] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66197] Initializing candidate process...
+[2025-12-27 13:04:33.362] [66197] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.362] [66197] Cleaning up candidate process...
+[2025-12-27 13:04:33.362] [66197] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66197] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66240] Cleaning up candidate process...
+[2025-12-27 13:04:33.362] [66240] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.362] [66165] Initializing candidate process...
+[2025-12-27 13:04:33.363] [66165] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.363] [66165] Cleaning up candidate process...
+[2025-12-27 13:04:33.363] [66165] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.363] [66165] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.363] [66208] Initializing candidate process...
+[2025-12-27 13:04:33.363] [66208] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.363] [66208] Cleaning up candidate process...
+[2025-12-27 13:04:33.363] [66208] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.363] [66208] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.363] [66229] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.363] [66172] Initializing candidate process...
+[2025-12-27 13:04:33.363] [66172] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.363] [66212] Initializing candidate process...
+[2025-12-27 13:04:33.364] [66212] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.364] [66231] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.364] [66148] Initializing candidate process...
+[2025-12-27 13:04:33.364] [66148] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.364] [66148] Cleaning up candidate process...
+[2025-12-27 13:04:33.364] [66148] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.364] [66218] Initializing candidate process...
+[2025-12-27 13:04:33.364] [66218] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.364] [66218] Cleaning up candidate process...
+[2025-12-27 13:04:33.364] [66218] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.364] [66218] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.364] [66230] Cleaning up candidate process...
+[2025-12-27 13:04:33.364] [66230] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.364] [66215] Initializing candidate process...
+[2025-12-27 13:04:33.365] [66215] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.365] [66215] Cleaning up candidate process...
+[2025-12-27 13:04:33.365] [66215] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.365] [66215] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.365] [66216] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.365] [66244] Initializing candidate process...
+[2025-12-27 13:04:33.365] [66244] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.365] [66152] Initializing candidate process...
+[2025-12-27 13:04:33.365] [66152] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.365] [66133] Cleaning up candidate process...
+[2025-12-27 13:04:33.365] [66133] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.365] [66200] Initializing candidate process...
+[2025-12-27 13:04:33.366] [66200] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.366] [66200] Cleaning up candidate process...
+[2025-12-27 13:04:33.366] [66200] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.366] [66200] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.366] [66192] Initializing candidate process...
+[2025-12-27 13:04:33.366] [66192] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.366] [66187] Initializing candidate process...
+[2025-12-27 13:04:33.366] [66187] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.366] [66187] Cleaning up candidate process...
+[2025-12-27 13:04:33.366] [66187] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.366] [66146] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.366] [66224] Initializing candidate process...
+[2025-12-27 13:04:33.367] [66224] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.367] [66224] Cleaning up candidate process...
+[2025-12-27 13:04:33.367] [66224] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66224] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66131] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66235] Initializing candidate process...
+[2025-12-27 13:04:33.367] [66235] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.367] [66235] Cleaning up candidate process...
+[2025-12-27 13:04:33.367] [66235] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66235] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66156] Initializing candidate process...
+[2025-12-27 13:04:33.367] [66156] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.367] [66156] Cleaning up candidate process...
+[2025-12-27 13:04:33.367] [66156] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66156] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.367] [66213] Initializing candidate process...
+[2025-12-27 13:04:33.368] [66213] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.368] [66213] Cleaning up candidate process...
+[2025-12-27 13:04:33.368] [66213] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66213] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66227] Initializing candidate process...
+[2025-12-27 13:04:33.368] [66227] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.368] [66227] Cleaning up candidate process...
+[2025-12-27 13:04:33.368] [66227] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66141] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66226] Initializing candidate process...
+[2025-12-27 13:04:33.368] [66226] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.368] [66226] Cleaning up candidate process...
+[2025-12-27 13:04:33.368] [66226] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66226] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.368] [66138] Initializing candidate process...
+[2025-12-27 13:04:33.369] [66138] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.369] [66138] Cleaning up candidate process...
+[2025-12-27 13:04:33.369] [66138] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.369] [66138] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.369] [66250] Initializing candidate process...
+[2025-12-27 13:04:33.369] [66250] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.369] [66225] Initializing candidate process...
+[2025-12-27 13:04:33.369] [66220] Cleaning up candidate process...
+[2025-12-27 13:04:33.369] [66220] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.369] [66237] Initializing candidate process...
+[2025-12-27 13:04:33.370] [66237] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.370] [66128] Initializing candidate process...
+[2025-12-27 13:04:33.370] [66128] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.370] [66128] Cleaning up candidate process...
+[2025-12-27 13:04:33.370] [66128] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66128] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66212] Cleaning up candidate process...
+[2025-12-27 13:04:33.370] [66212] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66221] Initializing candidate process...
+[2025-12-27 13:04:33.370] [66221] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.370] [66221] Cleaning up candidate process...
+[2025-12-27 13:04:33.370] [66221] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66221] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66185] Cleaning up candidate process...
+[2025-12-27 13:04:33.370] [66185] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66217] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66230] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.370] [66130] Initializing candidate process...
+[2025-12-27 13:04:33.371] [66130] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.371] [66130] Cleaning up candidate process...
+[2025-12-27 13:04:33.371] [66130] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66130] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66244] Cleaning up candidate process...
+[2025-12-27 13:04:33.371] [66244] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66152] Cleaning up candidate process...
+[2025-12-27 13:04:33.371] [66152] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66133] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66136] Initializing candidate process...
+[2025-12-27 13:04:33.371] [66136] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.371] [66232] Initializing candidate process...
+[2025-12-27 13:04:33.371] [66232] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.371] [66163] Cleaning up candidate process...
+[2025-12-27 13:04:33.371] [66163] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.371] [66167] Cleaning up candidate process...
+[2025-12-27 13:04:33.372] [66167] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.372] [66169] Initializing candidate process...
+[2025-12-27 13:04:33.372] [66169] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.372] [66169] Cleaning up candidate process...
+[2025-12-27 13:04:33.372] [66169] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.372] [66169] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.372] [66233] Initializing candidate process...
+[2025-12-27 13:04:33.372] [66233] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.372] [66188] Initializing candidate process...
+[2025-12-27 13:04:33.372] [66188] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.372] [66188] Cleaning up candidate process...
+[2025-12-27 13:04:33.372] [66188] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.372] [66188] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.372] [66166] Initializing candidate process...
+[2025-12-27 13:04:33.373] [66166] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.373] [66209] Initializing candidate process...
+[2025-12-27 13:04:33.373] [66209] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.373] [66210] Initializing candidate process...
+[2025-12-27 13:04:33.373] [66210] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.373] [66210] Cleaning up candidate process...
+[2025-12-27 13:04:33.373] [66210] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.373] [66210] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.373] [66227] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.373] [66183] Initializing candidate process...
+[2025-12-27 13:04:33.374] [66183] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.374] [66164] Initializing candidate process...
+[2025-12-27 13:04:33.374] [66164] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.374] [66236] Initializing candidate process...
+[2025-12-27 13:04:33.374] [66236] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.374] [66236] Cleaning up candidate process...
+[2025-12-27 13:04:33.374] [66236] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.374] [66236] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.374] [66250] Cleaning up candidate process...
+[2025-12-27 13:04:33.374] [66250] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.374] [66159] Initializing candidate process...
+[2025-12-27 13:04:33.374] [66159] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.375] [66180] Initializing candidate process...
+[2025-12-27 13:04:33.375] [66180] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.375] [66180] Cleaning up candidate process...
+[2025-12-27 13:04:33.375] [66180] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.375] [66180] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.375] [66206] Initializing candidate process...
+[2025-12-27 13:04:33.375] [66206] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.375] [66206] Cleaning up candidate process...
+[2025-12-27 13:04:33.375] [66206] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.375] [66148] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.375] [66134] Initializing candidate process...
+[2025-12-27 13:04:33.375] [66134] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.375] [66134] Cleaning up candidate process...
+[2025-12-27 13:04:33.375] [66134] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.375] [66134] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66129] Initializing candidate process...
+[2025-12-27 13:04:33.376] [66129] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.376] [66178] Initializing candidate process...
+[2025-12-27 13:04:33.376] [66178] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.376] [66178] Cleaning up candidate process...
+[2025-12-27 13:04:33.376] [66178] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66178] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66158] Initializing candidate process...
+[2025-12-27 13:04:33.376] [66158] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.376] [66158] Cleaning up candidate process...
+[2025-12-27 13:04:33.376] [66158] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66158] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66163] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.376] [66155] Initializing candidate process...
+[2025-12-27 13:04:33.377] [66155] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.377] [66155] Cleaning up candidate process...
+[2025-12-27 13:04:33.377] [66155] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.377] [66155] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.377] [66171] Cleaning up candidate process...
+[2025-12-27 13:04:33.377] [66171] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.377] [66233] Cleaning up candidate process...
+[2025-12-27 13:04:33.377] [66233] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.377] [66150] Initializing candidate process...
+[2025-12-27 13:04:33.377] [66150] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.377] [66223] Initializing candidate process...
+[2025-12-27 13:04:33.377] [66223] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.377] [66166] Cleaning up candidate process...
+[2025-12-27 13:04:33.377] [66166] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66209] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66209] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66209] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66191] Initializing candidate process...
+[2025-12-27 13:04:33.378] [66191] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.378] [66191] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66191] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66191] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66164] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66164] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66207] Initializing candidate process...
+[2025-12-27 13:04:33.378] [66207] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.378] [66207] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66207] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66250] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66220] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66159] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66159] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66229] Cleaning up candidate process...
+[2025-12-27 13:04:33.378] [66229] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.378] [66229] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66211] Cleaning up candidate process...
+[2025-12-27 13:04:33.379] [66211] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66211] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66206] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66176] Initializing candidate process...
+[2025-12-27 13:04:33.379] [66176] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.379] [66185] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66170] Initializing candidate process...
+[2025-12-27 13:04:33.379] [66170] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.379] [66129] Cleaning up candidate process...
+[2025-12-27 13:04:33.379] [66129] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66244] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.379] [66174] Initializing candidate process...
+[2025-12-27 13:04:33.380] [66174] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.380] [66136] Cleaning up candidate process...
+[2025-12-27 13:04:33.380] [66136] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66232] Cleaning up candidate process...
+[2025-12-27 13:04:33.380] [66232] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66167] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66187] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66241] Cleaning up candidate process...
+[2025-12-27 13:04:33.380] [66241] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66144] Initializing candidate process...
+[2025-12-27 13:04:33.380] [66144] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.380] [66239] Initializing candidate process...
+[2025-12-27 13:04:33.380] [66239] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.380] [66239] Cleaning up candidate process...
+[2025-12-27 13:04:33.380] [66239] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.380] [66239] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66223] Cleaning up candidate process...
+[2025-12-27 13:04:33.381] [66223] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66166] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66145] Initializing candidate process...
+[2025-12-27 13:04:33.381] [66145] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.381] [66222] Initializing candidate process...
+[2025-12-27 13:04:33.381] [66222] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.381] [66183] Cleaning up candidate process...
+[2025-12-27 13:04:33.381] [66183] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66194] Initializing candidate process...
+[2025-12-27 13:04:33.381] [66194] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.381] [66240] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66262] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.381] [66225] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.382] [66207] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66237] Cleaning up candidate process...
+[2025-12-27 13:04:33.382] [66237] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66237] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66172] Cleaning up candidate process...
+[2025-12-27 13:04:33.382] [66172] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66238] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66243] Initializing candidate process...
+[2025-12-27 13:04:33.382] [66243] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.382] [66147] Initializing candidate process...
+[2025-12-27 13:04:33.382] [66147] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.382] [66147] Cleaning up candidate process...
+[2025-12-27 13:04:33.382] [66129] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66152] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66174] Cleaning up candidate process...
+[2025-12-27 13:04:33.382] [66174] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66136] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66192] Cleaning up candidate process...
+[2025-12-27 13:04:33.382] [66192] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.382] [66189] Initializing candidate process...
+[2025-12-27 13:04:33.383] [66189] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.383] [66189] Cleaning up candidate process...
+[2025-12-27 13:04:33.383] [66189] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.383] [66189] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.383] [66149] Initializing candidate process...
+[2025-12-27 13:04:33.383] [66149] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.383] [66196] Initializing candidate process...
+[2025-12-27 13:04:33.383] [66196] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.383] [66223] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.383] [66199] Initializing candidate process...
+[2025-12-27 13:04:33.384] [66199] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.384] [66199] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66199] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66199] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66183] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66164] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66194] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66194] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66194] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66181] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66181] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66172] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66238] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66176] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66176] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66170] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66170] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66147] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66147] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66174] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66232] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66192] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66241] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66171] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66144] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66144] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66150] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66150] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.384] [66161] Cleaning up candidate process...
+[2025-12-27 13:04:33.384] [66161] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66145] Cleaning up candidate process...
+[2025-12-27 13:04:33.385] [66145] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66222] Cleaning up candidate process...
+[2025-12-27 13:04:33.385] [66222] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66222] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66159] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66212] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66181] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66243] Cleaning up candidate process...
+[2025-12-27 13:04:33.385] [66243] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66243] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66170] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66204] Initializing candidate process...
+[2025-12-27 13:04:33.385] [66204] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.385] [66144] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66149] Cleaning up candidate process...
+[2025-12-27 13:04:33.385] [66149] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66196] Cleaning up candidate process...
+[2025-12-27 13:04:33.385] [66196] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.385] [66160] Initializing candidate process...
+[2025-12-27 13:04:33.386] [66160] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.386] [66160] Cleaning up candidate process...
+[2025-12-27 13:04:33.386] [66160] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66160] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66154] Cleaning up candidate process...
+[2025-12-27 13:04:33.386] [66154] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66204] Cleaning up candidate process...
+[2025-12-27 13:04:33.386] [66204] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66204] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66161] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66196] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66145] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66175] Initializing candidate process...
+[2025-12-27 13:04:33.386] [66175] SharedMemoryManager::attach()
+[2025-12-27 13:04:33.386] [66176] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66233] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66154] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66150] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66149] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.386] [66225] Cleaning up candidate process...
+[2025-12-27 13:04:33.386] [66225] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.387] [66225] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.387] [66175] Cleaning up candidate process...
+[2025-12-27 13:04:33.387] [66175] SharedMemoryManager::detach()
+[2025-12-27 13:04:33.387] [66175] SharedMemoryManager::detach()
+[2025-12-27 13:04:35.22] [66126] Publishing exam results...
+[2025-12-27 13:04:35.23] [66126] Cleaning up main process...
+[2025-12-27 13:04:35.23] [66126] SharedMemoryManager::destroy()
+[2025-12-27 13:04:35.23] [66126] SharedMemoryManager::detach()
+[2025-12-27 13:04:35.23] [66126] SharedMemoryManager::detach()

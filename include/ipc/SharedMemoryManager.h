@@ -7,6 +7,7 @@ struct SharedCandidateState {
   pid_t pid;
   double scoreA;
   double scoreB;
+  double finalScore;
   bool passedExam;
   bool reattempt;
 };
