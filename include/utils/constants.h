@@ -2,8 +2,9 @@
 
 #include <string>
 
-struct Constants {
-  static constexpr const char *LOG_FILE = "simulation.log";
+struct GeneralConstants {
+  static constexpr const char *LOG_FILENAME = "simulation.log";
+  static constexpr const char *OUTPUT_DIRECTORY = "output";
 };
 
 // Constants for argument validation
@@ -14,4 +15,10 @@ struct ArgConstants {
   static const int CANDIDATE_COUNT_MIN = 1;
   // Time constraints
   static const int TIME_MIN = 0;
+};
+
+class Constants {
+public:
+  static std::string logFilePath();
+  static std::string outputDirectory();
 };

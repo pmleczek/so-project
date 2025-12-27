@@ -1,5 +1,5 @@
 #include "processinfo.h"
-#include "logger.h"
+#include "output/Logger.h"
 
 std::unordered_map<pid_t, ProcessType> ProcessInfo::processTypes;
 

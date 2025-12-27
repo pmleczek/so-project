@@ -1,6 +1,6 @@
 #include "lifecycle.h"
 #include "config.h"
-#include "logger.h"
+#include "output/Logger.h"
 #include "processinfo.h"
 #include "utils/random.h"
 #include "validators.h"

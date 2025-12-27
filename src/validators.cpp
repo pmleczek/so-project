@@ -1,7 +1,7 @@
 #include "validators.h"
 
-#include "constants.h"
-#include "logger.h"
+#include "output/Logger.h"
+#include "utils/constants.h"
 #include <iostream>
 
 void ArgValidator::validateArgs(int argc, char *argv[]) {

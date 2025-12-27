@@ -1,6 +1,6 @@
 #include "ipc/SharedMemoryManager.h"
 
-#include "logger.h"
+#include "output/Logger.h"
 #include <cerrno>
 #include <cstring>
 
