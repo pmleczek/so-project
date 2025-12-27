@@ -4,6 +4,7 @@
 #include <unistd.h>
 
 struct SharedCandidateState {
+  int id;
   pid_t pid;
   double scoreA;
   double scoreB;
@@ -30,10 +31,11 @@ private:
   SharedMemoryManager() = default;
   ~SharedMemoryManager();
 
+  key_t getShmKey();
   size_t getShmSize(int candidateCount);
 
   int shmId = -1;
   SharedMemoryData *data_ = nullptr;
   // TODO: Consider using some constant that makes sense as a project identifier
-  static const int PROJECT_IDENTIFIER = 0x155288;
+  static const int PROJECT_IDENTIFIER = 155;
 };

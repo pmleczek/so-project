@@ -11,6 +11,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(COMMON_SOURCES
     src/config.cpp
     src/output/Logger.cpp
+    src/output/ResultsWriter.cpp
     src/ipc/SharedMemoryManager.cpp
     src/processinfo.cpp
     src/utils/random.cpp
@@ -21,6 +22,7 @@ set(COMMON_SOURCES
 add_executable(so_project_main 
     src/main/main.cpp
     src/main/MainProcess.cpp
+    src/candidate/CandidateFactory.cpp
     ${COMMON_SOURCES}
 )
 target_include_directories(so_project_main PRIVATE include)

@@ -4,6 +4,7 @@
 
 struct GeneralConstants {
   static constexpr const char *LOG_FILENAME = "simulation.log";
+  static constexpr const char *RESULTS_FILENAME = "results.csv";
   static constexpr const char *OUTPUT_DIRECTORY = "output";
 };
 
@@ -20,5 +21,6 @@ struct ArgConstants {
 class Constants {
 public:
   static std::string logFilePath();
+  static std::string resultsFilePath();
   static std::string outputDirectory();
 };

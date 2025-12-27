@@ -5,6 +5,11 @@ std::string Constants::logFilePath() {
          GeneralConstants::LOG_FILENAME;
 }
 
+std::string Constants::resultsFilePath() {
+  return std::string("../") + GeneralConstants::OUTPUT_DIRECTORY + "/" +
+         GeneralConstants::RESULTS_FILENAME;
+}
+
 std::string Constants::outputDirectory() {
   return std::string("../") + GeneralConstants::OUTPUT_DIRECTORY;
 }
