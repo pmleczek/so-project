@@ -2,6 +2,7 @@
 #include "config.h"
 #include "logger.h"
 #include "processinfo.h"
+#include "utils/random.h"
 #include "validators.h"
 #include <unistd.h>
 
@@ -10,9 +11,11 @@ void initializeMainProcess(int argc, char *argv[]) {
   Logger::shared().log("Simulation started");
   registerMainProcess();
   configureMainProcess(argc, argv);
-  // TODO: Spawn candidate and examiner processes
+  SharedMemoryManager::shared().initialize(Config::shared().candidateCount);
+  // TODO: Spawn examiner processes
   spawnCandidateProcesses();
   waitForExamStart();
+  SharedMemoryManager::shared().destroy();
 }
 
 void registerMainProcess() {
@@ -34,15 +37,18 @@ void configureMainProcess(int argc, char *argv[]) {
 }
 
 void spawnCandidateProcesses() {
-  int count = static_cast<int>(std::floor(
-      Config::shared().candidateCount * Config::shared().candidateRatio));
-  Logger::shared().log("Spawning " + std::to_string(count) + " candidate processes");
+  int count = static_cast<int>(std::floor(Config::shared().candidateCount *
+                                          Config::shared().candidateRatio));
+  Logger::shared().log("Spawning " + std::to_string(count) +
+                       " candidate processes");
   for (int i = 0; i < count; i++) {
-    pid_t candidatePID = fork();
-    if (candidatePID == 0) {
-      exit(0);
+    SharedCandidateState candidateState = initializeCandidate();
+    SharedMemoryManager &shm = SharedMemoryManager::shared();
+    SharedMemoryData *data = shm.data();
+    if (data) {
+      data->candidates[i] = candidateState;
     } else {
-      ProcessInfo::registerProcess(candidatePID, ProcessType::CANDIDATE);
+      // TODO: Handle error
     }
   }
 }
@@ -54,3 +60,27 @@ void waitForExamStart() {
   sleep(startTime);
 }
 // END SECTION: Main Process
+
+// SECTION: Candidate Process
+SharedCandidateState initializeCandidate() {
+  pid_t candidatePID = fork();
+  if (candidatePID == 0) {
+    runCandidateProcess();
+  } else {
+    ProcessInfo::registerProcess(candidatePID, ProcessType::CANDIDATE);
+    bool passedExam =
+        Random::randomDouble(0, 100) > Config::shared().examFailureRate;
+    bool reattempt =
+        Random::randomDouble(0, 100) > Config::shared().reattemptRate;
+    return SharedCandidateState{candidatePID, 0, 0, passedExam, reattempt};
+  }
+}
+
+void runCandidateProcess() {
+  Logger::shared().log("Hello I'm candidate with PID: " +
+                       std::to_string(getpid()));
+  SharedMemoryManager &shm = SharedMemoryManager::shared();
+  shm.attach();
+  exit(0);
+}
+// END SECTION: Candidate Process

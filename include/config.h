@@ -15,7 +15,4 @@ public:
   double candidateRatio;
   double examFailureRate;
   double reattemptRate;
-
-private:
-  double randomDouble(double min, double max);
 };

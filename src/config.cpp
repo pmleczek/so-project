@@ -1,6 +1,6 @@
 #include "config.h"
 #include "logger.h"
-#include <random>
+#include "utils/random.h"
 
 Config &Config::shared() {
   static Config instance;
@@ -23,25 +23,18 @@ void Config::initializeFromArgs(int count, int time) {
   startTime = time;
 
   Logger::shared().log("Randomized configuration:");
-  double ratio = randomDouble(9.0, 11.0);
+  double ratio = Random::randomDouble(9.0, 11.0);
   Logger::shared().log("- Candidate ratio (people per place): " +
                        std::to_string(ratio));
   candidateRatio = ratio;
-  double failureRate = randomDouble(1.5, 2.5);
+  double failureRate = Random::randomDouble(1.5, 2.5);
   Logger::shared().log("- Exam failure rate (%): " +
                        std::to_string(failureRate));
   examFailureRate = failureRate;
-  double reattemptRate = randomDouble(1.5, 2.5);
+  double reattemptRate = Random::randomDouble(1.5, 2.5);
   Logger::shared().log("- Reattempt rate (%): " +
                        std::to_string(reattemptRate));
   reattemptRate = reattemptRate;
 
   Logger::shared().log("Simulation configuration initialized");
-}
-
-double Config::randomDouble(double min, double max) {
-  std::random_device rd;
-  std::mt19937 gen(rd());
-  std::uniform_real_distribution<> dis(min, max);
-  return dis(gen);
 }
