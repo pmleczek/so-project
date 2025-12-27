@@ -8,8 +8,20 @@ project(so_project
 SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-file(GLOB_RECURSE SRC_FILES src/*.cpp)
-add_executable(so_project ${SRC_FILES})
-target_include_directories(so_project PRIVATE include)
+set(COMMON_SOURCES
+    src/config.cpp
+    src/output/Logger.cpp
+    src/ipc/SharedMemoryManager.cpp
+    src/processinfo.cpp
+    src/utils/random.cpp
+    src/utils/constants.cpp
+    src/validators.cpp
+)
 
-target_compile_features(so_project PRIVATE cxx_std_17)
+add_executable(so_project_main 
+    src/main/main.cpp
+    src/main/MainProcess.cpp
+    ${COMMON_SOURCES}
+)
+target_include_directories(so_project_main PRIVATE include)
+target_compile_features(so_project_main PRIVATE cxx_std_17)
