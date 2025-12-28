@@ -3,7 +3,6 @@
 #include "common/output/Logger.h"
 
 int main(int argc, char *argv[]) {
-  Logger::setupLogFile();
-  Logger::info("Dean process started");
+  Logger::info("Commission process started");
   return 0;
 }
