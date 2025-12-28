@@ -14,4 +14,4 @@ cmake ..
 
 cmake --build .
 
-./so_project_main "$@"
+./dean "$@"
