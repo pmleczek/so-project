@@ -9,6 +9,7 @@ SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(COMMON_SOURCES
+    src/common/ipc/SharedMemoryManager.cpp
     src/common/output/Logger.cpp
 )
 

@@ -1,211 +1,218 @@
-[INFO] [2025-12-28 14:16:44.195] Dean process started (pid=70019)
-[INFO] [2025-12-28 14:16:44.198] Candidate process started (pid=70054)
-[INFO] [2025-12-28 14:16:44.198] Candidate process started (pid=70055)
-[INFO] [2025-12-28 14:16:44.199] Candidate process started (pid=70056)
-[INFO] [2025-12-28 14:16:44.199] Candidate process started (pid=70062)
-[INFO] [2025-12-28 14:16:44.200] Candidate process started (pid=70060)
-[INFO] [2025-12-28 14:16:44.200] Candidate process started (pid=70058)
-[INFO] [2025-12-28 14:16:44.200] Candidate process started (pid=70059)
-[INFO] [2025-12-28 14:16:44.201] Candidate process started (pid=70057)
-[INFO] [2025-12-28 14:16:44.201] Candidate process started (pid=70068)
-[INFO] [2025-12-28 14:16:44.201] Candidate process started (pid=70061)
-[INFO] [2025-12-28 14:16:44.202] Candidate process started (pid=70064)
-[INFO] [2025-12-28 14:16:44.202] Candidate process started (pid=70065)
-[INFO] [2025-12-28 14:16:44.202] Candidate process started (pid=70066)
-[INFO] [2025-12-28 14:16:44.203] Candidate process started (pid=70067)
-[INFO] [2025-12-28 14:16:44.203] Candidate process started (pid=70063)
-[INFO] [2025-12-28 14:16:44.204] Candidate process started (pid=70069)
-[INFO] [2025-12-28 14:16:44.204] Candidate process started (pid=70070)
-[INFO] [2025-12-28 14:16:44.204] Candidate process started (pid=70071)
-[INFO] [2025-12-28 14:16:44.205] Candidate process started (pid=70077)
-[INFO] [2025-12-28 14:16:44.205] Candidate process started (pid=70073)
-[INFO] [2025-12-28 14:16:44.205] Candidate process started (pid=70074)
-[INFO] [2025-12-28 14:16:44.206] Candidate process started (pid=70075)
-[INFO] [2025-12-28 14:16:44.206] Candidate process started (pid=70076)
-[INFO] [2025-12-28 14:16:44.206] Candidate process started (pid=70072)
-[INFO] [2025-12-28 14:16:44.207] Candidate process started (pid=70078)
-[INFO] [2025-12-28 14:16:44.207] Candidate process started (pid=70079)
-[INFO] [2025-12-28 14:16:44.207] Candidate process started (pid=70080)
-[INFO] [2025-12-28 14:16:44.208] Candidate process started (pid=70081)
-[INFO] [2025-12-28 14:16:44.208] Candidate process started (pid=70082)
-[INFO] [2025-12-28 14:16:44.208] Candidate process started (pid=70083)
-[INFO] [2025-12-28 14:16:44.209] Candidate process started (pid=70084)
-[INFO] [2025-12-28 14:16:44.210] Candidate process started (pid=70085)
-[INFO] [2025-12-28 14:16:44.211] Candidate process started (pid=70086)
-[INFO] [2025-12-28 14:16:44.212] Candidate process started (pid=70090)
-[INFO] [2025-12-28 14:16:44.212] Candidate process started (pid=70087)
-[INFO] [2025-12-28 14:16:44.212] Candidate process started (pid=70089)
-[INFO] [2025-12-28 14:16:44.213] Candidate process started (pid=70088)
-[INFO] [2025-12-28 14:16:44.213] Candidate process started (pid=70094)
-[INFO] [2025-12-28 14:16:44.213] Candidate process started (pid=70092)
-[INFO] [2025-12-28 14:16:44.215] Candidate process started (pid=70093)
-[INFO] [2025-12-28 14:16:44.217] Candidate process started (pid=70091)
-[INFO] [2025-12-28 14:16:44.218] Candidate process started (pid=70096)
-[INFO] [2025-12-28 14:16:44.218] Candidate process started (pid=70095)
-[INFO] [2025-12-28 14:16:44.219] Candidate process started (pid=70097)
-[INFO] [2025-12-28 14:16:44.219] Candidate process started (pid=70098)
-[INFO] [2025-12-28 14:16:44.219] Candidate process started (pid=70099)
-[INFO] [2025-12-28 14:16:44.220] Candidate process started (pid=70100)
-[INFO] [2025-12-28 14:16:44.220] Candidate process started (pid=70115)
-[INFO] [2025-12-28 14:16:44.221] Candidate process started (pid=70103)
-[INFO] [2025-12-28 14:16:44.221] Candidate process started (pid=70104)
-[INFO] [2025-12-28 14:16:44.222] Candidate process started (pid=70106)
-[INFO] [2025-12-28 14:16:44.222] Candidate process started (pid=70108)
-[INFO] [2025-12-28 14:16:44.222] Candidate process started (pid=70110)
-[INFO] [2025-12-28 14:16:44.223] Candidate process started (pid=70111)
-[INFO] [2025-12-28 14:16:44.223] Candidate process started (pid=70112)
-[INFO] [2025-12-28 14:16:44.223] Candidate process started (pid=70113)
-[INFO] [2025-12-28 14:16:44.224] Candidate process started (pid=70114)
-[INFO] [2025-12-28 14:16:44.224] Candidate process started (pid=70101)
-[INFO] [2025-12-28 14:16:44.224] Candidate process started (pid=70116)
-[INFO] [2025-12-28 14:16:44.225] Candidate process started (pid=70117)
-[INFO] [2025-12-28 14:16:44.225] Candidate process started (pid=70127)
-[INFO] [2025-12-28 14:16:44.225] Candidate process started (pid=70119)
-[INFO] [2025-12-28 14:16:44.226] Candidate process started (pid=70120)
-[INFO] [2025-12-28 14:16:44.227] Candidate process started (pid=70121)
-[INFO] [2025-12-28 14:16:44.227] Candidate process started (pid=70122)
-[INFO] [2025-12-28 14:16:44.228] Candidate process started (pid=70123)
-[INFO] [2025-12-28 14:16:44.228] Candidate process started (pid=70124)
-[INFO] [2025-12-28 14:16:44.229] Candidate process started (pid=70125)
-[INFO] [2025-12-28 14:16:44.229] Candidate process started (pid=70126)
-[INFO] [2025-12-28 14:16:44.229] Candidate process started (pid=70118)
-[INFO] [2025-12-28 14:16:44.229] Candidate process started (pid=70128)
-[INFO] [2025-12-28 14:16:44.230] Candidate process started (pid=70129)
-[INFO] [2025-12-28 14:16:44.230] Candidate process started (pid=70130)
-[INFO] [2025-12-28 14:16:44.230] Candidate process started (pid=70132)
-[INFO] [2025-12-28 14:16:44.230] Candidate process started (pid=70131)
-[INFO] [2025-12-28 14:16:44.231] Candidate process started (pid=70133)
-[INFO] [2025-12-28 14:16:44.231] Candidate process started (pid=70134)
-[INFO] [2025-12-28 14:16:44.231] Candidate process started (pid=70135)
-[INFO] [2025-12-28 14:16:44.231] Candidate process started (pid=70136)
-[INFO] [2025-12-28 14:16:44.232] Candidate process started (pid=70137)
-[INFO] [2025-12-28 14:16:44.232] Candidate process started (pid=70138)
-[INFO] [2025-12-28 14:16:44.232] Candidate process started (pid=70139)
-[INFO] [2025-12-28 14:16:44.234] Candidate process started (pid=70140)
-[INFO] [2025-12-28 14:16:44.234] Candidate process started (pid=70141)
-[INFO] [2025-12-28 14:16:44.234] Candidate process started (pid=70142)
-[INFO] [2025-12-28 14:16:44.235] Candidate process started (pid=70150)
-[INFO] [2025-12-28 14:16:44.235] Candidate process started (pid=70144)
-[INFO] [2025-12-28 14:16:44.235] Candidate process started (pid=70145)
-[INFO] [2025-12-28 14:16:44.236] Candidate process started (pid=70146)
-[INFO] [2025-12-28 14:16:44.236] Candidate process started (pid=70147)
-[INFO] [2025-12-28 14:16:44.236] Candidate process started (pid=70148)
-[INFO] [2025-12-28 14:16:44.236] Candidate process started (pid=70149)
-[INFO] [2025-12-28 14:16:44.237] Candidate process started (pid=70143)
-[INFO] [2025-12-28 14:16:44.237] Candidate process started (pid=70151)
-[INFO] [2025-12-28 14:16:44.237] Waiting for start time: 14:06
-[INFO] [2025-12-28 14:16:44.237] Candidate process started (pid=70152)
-[INFO] [2025-12-28 14:16:44.237] Candidate process started (pid=70153)
-[INFO] [2025-12-28 14:16:44.238] Candidate process started (pid=70154)
-[INFO] [2025-12-28 14:16:44.238] Candidate process started (pid=70155)
-[INFO] [2025-12-28 14:16:44.238] Candidate process started (pid=70156)
-[INFO] [2025-12-28 14:16:44.238] Candidate process started (pid=70157)
-[INFO] [2025-12-28 14:16:44.238] Sleeping for 15 seconds
-[INFO] [2025-12-28 14:16:59.243] Rejecting candidate 0 (pid=70054) due to exam failure
-[INFO] [2025-12-28 14:16:59.245] Rejecting candidate 15 (pid=70069) due to exam failure
-[INFO] [2025-12-28 14:16:59.245] Candidate process with pid 70054 exiting with status 0
-[INFO] [2025-12-28 14:16:59.245] Rejecting candidate 30 (pid=70084) due to exam failure
-[INFO] [2025-12-28 14:16:59.245] Candidate process with pid 70069 exiting with status 0
-[INFO] [2025-12-28 14:16:59.245] Rejecting candidate 45 (pid=70099) due to exam failure
-[INFO] [2025-12-28 14:16:59.245] Candidate process with pid 70084 exiting with status 0
-[INFO] [2025-12-28 14:16:59.245] Candidate process with pid 70099 exiting with status 0
-[INFO] [2025-12-28 14:16:59.245] Rejecting candidate 60 (pid=70118) due to exam failure
-[INFO] [2025-12-28 14:16:59.246] Rejecting candidate 75 (pid=70133) due to exam failure
-[INFO] [2025-12-28 14:16:59.246] Rejecting candidate 90 (pid=70148) due to exam failure
-[INFO] [2025-12-28 14:16:59.246] Candidate process with pid 70133 exiting with status 0
-[INFO] [2025-12-28 14:16:59.246] Candidate process with pid 70118 exiting with status 0
-[INFO] [2025-12-28 14:16:59.246] Making queue for commission A
-[INFO] [2025-12-28 14:16:59.246] Candidate process with pid 70148 exiting with status 0
-[INFO] [2025-12-28 14:17:04.207] Candidate process with pid 70062 exiting with status 0
-[INFO] [2025-12-28 14:17:04.207] Candidate process with pid 70055 exiting with status 0
-[INFO] [2025-12-28 14:17:04.208] Candidate process with pid 70056 exiting with status 0
-[INFO] [2025-12-28 14:17:04.208] Candidate process with pid 70060 exiting with status 0
-[INFO] [2025-12-28 14:17:04.209] Candidate process with pid 70063 exiting with status 0
-[INFO] [2025-12-28 14:17:04.209] Candidate process with pid 70059 exiting with status 0
-[INFO] [2025-12-28 14:17:04.210] Candidate process with pid 70064 exiting with status 0
-[INFO] [2025-12-28 14:17:04.210] Candidate process with pid 70057 exiting with status 0
-[INFO] [2025-12-28 14:17:04.211] Candidate process with pid 70065 exiting with status 0
-[INFO] [2025-12-28 14:17:04.211] Candidate process with pid 70058 exiting with status 0
-[INFO] [2025-12-28 14:17:04.211] Candidate process with pid 70068 exiting with status 0
-[INFO] [2025-12-28 14:17:04.211] Candidate process with pid 70067 exiting with status 0
-[INFO] [2025-12-28 14:17:04.211] Candidate process with pid 70061 exiting with status 0
-[INFO] [2025-12-28 14:17:04.212] Candidate process with pid 70066 exiting with status 0
-[INFO] [2025-12-28 14:17:04.213] Candidate process with pid 70070 exiting with status 0
-[INFO] [2025-12-28 14:17:04.213] Candidate process with pid 70071 exiting with status 0
-[INFO] [2025-12-28 14:17:04.214] Candidate process with pid 70076 exiting with status 0
-[INFO] [2025-12-28 14:17:04.214] Candidate process with pid 70077 exiting with status 0
-[INFO] [2025-12-28 14:17:04.214] Candidate process with pid 70078 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70072 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70082 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70080 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70075 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70074 exiting with status 0
-[INFO] [2025-12-28 14:17:04.215] Candidate process with pid 70073 exiting with status 0
-[INFO] [2025-12-28 14:17:04.216] Candidate process with pid 70081 exiting with status 0
-[INFO] [2025-12-28 14:17:04.216] Candidate process with pid 70083 exiting with status 0
-[INFO] [2025-12-28 14:17:04.216] Candidate process with pid 70079 exiting with status 0
-[INFO] [2025-12-28 14:17:04.216] Candidate process with pid 70085 exiting with status 0
-[INFO] [2025-12-28 14:17:04.220] Candidate process with pid 70086 exiting with status 0
-[INFO] [2025-12-28 14:17:04.220] Candidate process with pid 70090 exiting with status 0
-[INFO] [2025-12-28 14:17:04.220] Candidate process with pid 70087 exiting with status 0
-[INFO] [2025-12-28 14:17:04.221] Candidate process with pid 70088 exiting with status 0
-[INFO] [2025-12-28 14:17:04.221] Candidate process with pid 70094 exiting with status 0
-[INFO] [2025-12-28 14:17:04.222] Candidate process with pid 70092 exiting with status 0
-[INFO] [2025-12-28 14:17:04.222] Candidate process with pid 70095 exiting with status 0
-[INFO] [2025-12-28 14:17:04.222] Candidate process with pid 70103 exiting with status 0
-[INFO] [2025-12-28 14:17:04.223] Candidate process with pid 70089 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70091 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70096 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70098 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70115 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70093 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70097 exiting with status 0
-[INFO] [2025-12-28 14:17:04.226] Candidate process with pid 70100 exiting with status 0
-[INFO] [2025-12-28 14:17:04.228] Candidate process with pid 70111 exiting with status 0
-[INFO] [2025-12-28 14:17:04.228] Candidate process with pid 70113 exiting with status 0
-[INFO] [2025-12-28 14:17:04.228] Candidate process with pid 70127 exiting with status 0
-[INFO] [2025-12-28 14:17:04.228] Candidate process with pid 70110 exiting with status 0
-[INFO] [2025-12-28 14:17:04.229] Candidate process with pid 70106 exiting with status 0
-[INFO] [2025-12-28 14:17:04.229] Candidate process with pid 70112 exiting with status 0
-[INFO] [2025-12-28 14:17:04.229] Candidate process with pid 70101 exiting with status 0
-[INFO] [2025-12-28 14:17:04.229] Candidate process with pid 70116 exiting with status 0
-[INFO] [2025-12-28 14:17:04.230] Candidate process with pid 70108 exiting with status 0
-[INFO] [2025-12-28 14:17:04.230] Candidate process with pid 70114 exiting with status 0
-[INFO] [2025-12-28 14:17:04.230] Candidate process with pid 70117 exiting with status 0
-[INFO] [2025-12-28 14:17:04.230] Candidate process with pid 70119 exiting with status 0
-[INFO] [2025-12-28 14:17:04.231] Candidate process with pid 70104 exiting with status 0
-[INFO] [2025-12-28 14:17:04.232] Candidate process with pid 70120 exiting with status 0
-[INFO] [2025-12-28 14:17:04.236] Candidate process with pid 70122 exiting with status 0
-[INFO] [2025-12-28 14:17:04.236] Candidate process with pid 70125 exiting with status 0
-[INFO] [2025-12-28 14:17:04.236] Candidate process with pid 70123 exiting with status 0
-[INFO] [2025-12-28 14:17:04.236] Candidate process with pid 70126 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70132 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70129 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70136 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70134 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70121 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70130 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70128 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70137 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70139 exiting with status 0
-[INFO] [2025-12-28 14:17:04.237] Candidate process with pid 70142 exiting with status 0
-[INFO] [2025-12-28 14:17:04.238] Candidate process with pid 70135 exiting with status 0
-[INFO] [2025-12-28 14:17:04.238] Candidate process with pid 70140 exiting with status 0
-[INFO] [2025-12-28 14:17:04.238] Candidate process with pid 70124 exiting with status 0
-[INFO] [2025-12-28 14:17:04.238] Candidate process with pid 70141 exiting with status 0
-[INFO] [2025-12-28 14:17:04.238] Candidate process with pid 70131 exiting with status 0
-[INFO] [2025-12-28 14:17:04.240] Candidate process with pid 70138 exiting with status 0
-[INFO] [2025-12-28 14:17:04.243] Candidate process with pid 70147 exiting with status 0
-[INFO] [2025-12-28 14:17:04.243] Candidate process with pid 70156 exiting with status 0
-[INFO] [2025-12-28 14:17:04.244] Candidate process with pid 70143 exiting with status 0
-[INFO] [2025-12-28 14:17:04.244] Candidate process with pid 70153 exiting with status 0
-[INFO] [2025-12-28 14:17:04.245] Candidate process with pid 70145 exiting with status 0
-[INFO] [2025-12-28 14:17:04.245] Candidate process with pid 70149 exiting with status 0
-[INFO] [2025-12-28 14:17:04.245] Candidate process with pid 70150 exiting with status 0
-[INFO] [2025-12-28 14:17:04.245] Candidate process with pid 70152 exiting with status 0
-[INFO] [2025-12-28 14:17:04.245] Candidate process with pid 70144 exiting with status 0
-[INFO] [2025-12-28 14:17:04.246] Candidate process with pid 70154 exiting with status 0
-[INFO] [2025-12-28 14:17:04.246] Candidate process with pid 70151 exiting with status 0
-[INFO] [2025-12-28 14:17:04.246] Candidate process with pid 70155 exiting with status 0
-[INFO] [2025-12-28 14:17:04.246] Candidate process with pid 70146 exiting with status 0
-[INFO] [2025-12-28 14:17:04.246] Candidate process with pid 70157 exiting with status 0
+[INFO] [2025-12-28 16:05:49.906] Dean process started (pid=4811)
+[INFO] [2025-12-28 16:05:49.906] SharedMemoryManager::initialize(100)
+[INFO] [2025-12-28 16:05:49.906] Initializing shared memory for key: -1693527766
+[INFO] [2025-12-28 16:05:49.906] Creating new shared memory with size: 4008 bytes
+[INFO] [2025-12-28 16:05:49.938] Waiting for start time: 14:06
+[INFO] [2025-12-28 16:05:49.938] Sleeping for 15 seconds
+[INFO] [2025-12-28 16:05:50.274] Candidate process started (pid=4965)
+[INFO] [2025-12-28 16:05:50.282] Candidate process started (pid=5030)
+[INFO] [2025-12-28 16:05:50.288] Candidate process started (pid=5043)
+[INFO] [2025-12-28 16:05:50.289] Candidate process started (pid=4977)
+[INFO] [2025-12-28 16:05:50.290] Candidate process started (pid=5051)
+[INFO] [2025-12-28 16:05:50.292] Candidate process started (pid=4987)
+[INFO] [2025-12-28 16:05:50.292] Candidate process started (pid=5014)
+[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4978)
+[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=5042)
+[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4967)
+[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4953)
+[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=5004)
+[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=4980)
+[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=4973)
+[INFO] [2025-12-28 16:05:50.295] Candidate process started (pid=4999)
+[INFO] [2025-12-28 16:05:50.295] Candidate process started (pid=4997)
+[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=5008)
+[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=4968)
+[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=5005)
+[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=5010)
+[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=5019)
+[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=4969)
+[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5020)
+[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=4964)
+[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5026)
+[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5022)
+[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5018)
+[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=4954)
+[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5029)
+[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5023)
+[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=5031)
+[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=4966)
+[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=5032)
+[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=4974)
+[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=4976)
+[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5025)
+[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5033)
+[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5035)
+[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=4990)
+[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=4958)
+[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=5044)
+[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=5011)
+[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4983)
+[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=5001)
+[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4957)
+[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=5000)
+[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4991)
+[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4970)
+[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=5016)
+[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4952)
+[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4959)
+[INFO] [2025-12-28 16:05:50.305] Candidate process started (pid=5013)
+[INFO] [2025-12-28 16:05:50.305] Candidate process started (pid=5039)
+[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5006)
+[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5038)
+[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5037)
+[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5036)
+[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=4963)
+[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5034)
+[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5041)
+[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5040)
+[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=5021)
+[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4975)
+[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4979)
+[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4955)
+[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4994)
+[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4982)
+[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=5052)
+[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4998)
+[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=5007)
+[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=4986)
+[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=5017)
+[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=4962)
+[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5045)
+[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5047)
+[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5015)
+[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=5003)
+[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=4993)
+[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=5028)
+[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=4985)
+[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=4988)
+[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=4960)
+[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=5049)
+[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=5046)
+[INFO] [2025-12-28 16:05:50.314] Candidate process started (pid=5050)
+[INFO] [2025-12-28 16:05:50.314] Candidate process started (pid=4972)
+[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=5012)
+[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=5024)
+[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=4992)
+[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=4995)
+[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4981)
+[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4961)
+[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4996)
+[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4984)
+[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4971)
+[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=5002)
+[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=5048)
+[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4989)
+[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4956)
+[INFO] [2025-12-28 16:05:50.318] Candidate process started (pid=5009)
+[INFO] [2025-12-28 16:06:04.937] Rejecting candidate 0 (pid=4952) due to exam failure
+[INFO] [2025-12-28 16:06:04.937] Rejecting candidate 15 (pid=4967) due to exam failure
+[INFO] [2025-12-28 16:06:04.937] Candidate process with pid 4952 exiting with status 0
+[INFO] [2025-12-28 16:06:04.938] Rejecting candidate 30 (pid=4982) due to exam failure
+[INFO] [2025-12-28 16:06:04.938] Candidate process with pid 4967 exiting with status 0
+[INFO] [2025-12-28 16:06:04.938] Rejecting candidate 45 (pid=4997) due to exam failure
+[INFO] [2025-12-28 16:06:04.938] Candidate process with pid 4982 exiting with status 0
+[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 60 (pid=5012) due to exam failure
+[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 4997 exiting with status 0
+[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 75 (pid=5028) due to exam failure
+[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 5012 exiting with status 0
+[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 90 (pid=5043) due to exam failure
+[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 5028 exiting with status 0
+[INFO] [2025-12-28 16:06:04.940] Making queue for commission A
+[INFO] [2025-12-28 16:06:04.940] Candidate process with pid 5043 exiting with status 0
+[INFO] [2025-12-28 16:06:10.284] Candidate process with pid 4965 exiting with status 0
+[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 4987 exiting with status 0
+[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 5051 exiting with status 0
+[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 4977 exiting with status 0
+[INFO] [2025-12-28 16:06:10.293] Candidate process with pid 5030 exiting with status 0
+[INFO] [2025-12-28 16:06:10.295] Candidate process with pid 5005 exiting with status 0
+[INFO] [2025-12-28 16:06:10.296] Candidate process with pid 4969 exiting with status 0
+[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 4978 exiting with status 0
+[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 5014 exiting with status 0
+[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 5020 exiting with status 0
+[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 5019 exiting with status 0
+[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 5004 exiting with status 0
+[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 4980 exiting with status 0
+[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 4999 exiting with status 0
+[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 4973 exiting with status 0
+[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 5042 exiting with status 0
+[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 4964 exiting with status 0
+[INFO] [2025-12-28 16:06:10.300] Candidate process with pid 4968 exiting with status 0
+[INFO] [2025-12-28 16:06:10.300] Candidate process with pid 4953 exiting with status 0
+[INFO] [2025-12-28 16:06:10.301] Candidate process with pid 5008 exiting with status 0
+[INFO] [2025-12-28 16:06:10.301] Candidate process with pid 5010 exiting with status 0
+[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 5026 exiting with status 0
+[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 4991 exiting with status 0
+[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 5035 exiting with status 0
+[INFO] [2025-12-28 16:06:10.303] Candidate process with pid 4958 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5022 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5018 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5031 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5029 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5032 exiting with status 0
+[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 4970 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5044 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5025 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4966 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4954 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4974 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5023 exiting with status 0
+[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5033 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4990 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5011 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4983 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5000 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5001 exiting with status 0
+[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4976 exiting with status 0
+[INFO] [2025-12-28 16:06:10.307] Candidate process with pid 4957 exiting with status 0
+[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5040 exiting with status 0
+[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5016 exiting with status 0
+[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5007 exiting with status 0
+[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5021 exiting with status 0
+[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5045 exiting with status 0
+[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 4994 exiting with status 0
+[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 5038 exiting with status 0
+[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 5036 exiting with status 0
+[INFO] [2025-12-28 16:06:10.311] Candidate process with pid 5041 exiting with status 0
+[INFO] [2025-12-28 16:06:10.311] Candidate process with pid 5039 exiting with status 0
+[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 5037 exiting with status 0
+[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 5013 exiting with status 0
+[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 4963 exiting with status 0
+[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 4986 exiting with status 0
+[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 5006 exiting with status 0
+[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 4959 exiting with status 0
+[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 4995 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4975 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4993 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4955 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 5052 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 5015 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4962 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4998 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4972 exiting with status 0
+[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4979 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5047 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5017 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5003 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5024 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5050 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4961 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4992 exiting with status 0
+[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4984 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5034 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4981 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4971 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4960 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4988 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4985 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5049 exiting with status 0
+[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5046 exiting with status 0
+[INFO] [2025-12-28 16:06:10.318] Candidate process with pid 5002 exiting with status 0
+[INFO] [2025-12-28 16:06:10.318] Candidate process with pid 4996 exiting with status 0
+[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 4989 exiting with status 0
+[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 5048 exiting with status 0
+[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 4956 exiting with status 0
+[INFO] [2025-12-28 16:06:10.320] Candidate process with pid 5009 exiting with status 0
+[INFO] [2025-12-28 16:06:10.320] SharedMemoryManager::destroy()
+[INFO] [2025-12-28 16:06:10.320] Destroying shared memory with id: 7208961
+[INFO] [2025-12-28 16:06:10.320] SharedMemoryManager::detach()
+[INFO] [2025-12-28 16:06:10.320] Detaching from shared memory

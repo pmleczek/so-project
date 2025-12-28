@@ -1,8 +1,10 @@
+#include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include <ctime>
 #include <iostream>
 #include <signal.h>
 #include <sstream>
+#include <sys/wait.h>
 #include <unistd.h>
 #include <vector>
 
@@ -12,8 +14,11 @@ std::vector<int> spawnCandidates(int count) {
   for (int i = 0; i < count; i++) {
     int pid = fork();
     if (pid == 0) {
-      execlp("./candidate", "./candidate", NULL);
+      execlp("./candidate", "./candidate", std::to_string(i).c_str(), NULL);
     } else {
+      SharedMemoryManager::data()->candidates[i] = {
+          .pid = pid,
+      };
       pids.push_back(pid);
     }
   }
@@ -56,8 +61,25 @@ void rejectCandidates(const std::vector<int> &candidatePids) {
     if (i % 15 == 0) {
       Logger::info("Rejecting candidate " + std::to_string(i) + " (pid=" +
                    std::to_string(candidatePids[i]) + ") due to exam failure");
+      SharedMemoryManager::data()->candidates[i].status = NotEligible;
       kill(candidatePids[i], SIGUSR2);
+    } else {
+      SharedMemoryManager::data()->candidates[i].status = PendingCommissionA;
     }
+  }
+}
+
+void spawnComissions() {
+  // Comission A
+  pid_t pidA = fork();
+  if (pid == 0) {
+    execlp("./commission", "./commission", "A", NULL);
+  }
+
+  // Comission B
+  pid_t pidB = fork();
+  if (pidB == 0) {
+    execlp("./commission", "./commission", "B", NULL);
   }
 }
 
@@ -69,15 +91,24 @@ int main(int argc, char *argv[]) {
   Logger::setupLogFile();
   Logger::info("Dean process started (pid=" + std::to_string(getpid()) + ")");
 
+  SharedMemoryManager::initialize(100);
+
   int candidateCount = 100;
   std::string startTime = "14:06";
 
   std::vector<int> candidatePids = spawnCandidates(candidateCount);
+  
   waitForStart(startTime);
   // TODO: Or wait some time for processes to start
   rejectCandidates(candidatePids);
 
   makeQueueForCommissionA();
+
+  while (wait(NULL) > 0) { /* no-op */
+    ;
+  }
+
+  SharedMemoryManager::destroy();
 
   return 0;
 }
