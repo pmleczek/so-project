@@ -49,6 +49,7 @@ int findCommissionASeat() {
 }
 
 int main(int argc, char *argv[]) {
+  Logger::info("Candidate process started (pid=" + std::to_string(getpid()) + ")");
   SharedMemoryManager::attach();
   // signal(SIGUSR1, evacuationHandler);
   signal(SIGUSR2, rejectionHandler);
@@ -90,8 +91,6 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
-  // Komisja A ma 5 członków, więc potrzebujemy (1 << 5) - 1 = 31 (binarnie
-  // 11111)
   while (SharedMemoryManager::data()->commissionA.seats[seat].questionsCount !=
          (1 << 5) - 1) {
     Logger::info("Candidate process with pid " + std::to_string(getpid()) +
@@ -106,7 +105,6 @@ int main(int argc, char *argv[]) {
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " answered questions");
 
-  // Znajdź swój indeks w tablicy kandydatów
   int candidateIndex = -1;
   int myPid = getpid();
   for (int i = 0; i < SharedMemoryManager::data()->candidateCount; i++) {
@@ -123,7 +121,6 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  // Czekaj na ocenę
   while (
       SharedMemoryManager::data()->candidates[candidateIndex].theoreticalScore <
       0) {
@@ -135,6 +132,12 @@ int main(int argc, char *argv[]) {
                std::to_string(SharedMemoryManager::data()
                                   ->candidates[candidateIndex]
                                   .theoreticalScore));
+
+  if (SharedMemoryManager::data()->candidates[candidateIndex].theoreticalScore < 30) {
+    Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+                 " failed to pass the exam");
+    exit(0);
+  }
 
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " exiting with status 0");

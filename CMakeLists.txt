@@ -13,10 +13,13 @@ set(COMMON_SOURCES
     src/common/ipc/SharedMemoryManager.cpp
     src/common/output/Logger.cpp
     src/common/utils/Random.cpp
+    src/common/utils/Time.cpp
 )
 
 add_executable(dean 
     src/dean/main.cpp
+    src/dean/DeanProcess.cpp
+    src/dean/DeanConfig.cpp
     ${COMMON_SOURCES}
 )
 target_include_directories(dean PRIVATE include)
