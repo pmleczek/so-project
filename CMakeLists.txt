@@ -31,6 +31,7 @@ target_compile_features(candidate PRIVATE cxx_std_17)
 
 add_executable(commission
     src/commission/main.cpp
+    src/commission/CommissionProcess.cpp
     ${COMMON_SOURCES}
 )
 target_include_directories(commission PRIVATE include)
