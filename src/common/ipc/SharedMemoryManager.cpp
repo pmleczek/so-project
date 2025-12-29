@@ -99,5 +99,5 @@ SharedState *SharedMemoryManager::data() { return shared().data_; }
 key_t SharedMemoryManager::getKey() { return ftok("/tmp", 155); }
 
 size_t SharedMemoryManager::getSize(int count) {
-  return sizeof(SharedState) + sizeof(CandidateInfo) * count + sizeof(ComissionQueue) * 2;
+  return sizeof(SharedState) + sizeof(CandidateInfo) * count;
 }

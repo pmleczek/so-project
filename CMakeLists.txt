@@ -9,8 +9,10 @@ SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(COMMON_SOURCES
+    src/common/ipc/SemaphoreManager.cpp
     src/common/ipc/SharedMemoryManager.cpp
     src/common/output/Logger.cpp
+    src/common/utils/Random.cpp
 )
 
 add_executable(dean 
@@ -26,3 +28,10 @@ add_executable(candidate
 )
 target_include_directories(candidate PRIVATE include)
 target_compile_features(candidate PRIVATE cxx_std_17)
+
+add_executable(commission
+    src/commission/main.cpp
+    ${COMMON_SOURCES}
+)
+target_include_directories(commission PRIVATE include)
+target_compile_features(commission PRIVATE cxx_std_17)

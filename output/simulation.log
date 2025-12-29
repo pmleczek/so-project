@@ -1,218 +1,668 @@
-[INFO] [2025-12-28 16:05:49.906] Dean process started (pid=4811)
-[INFO] [2025-12-28 16:05:49.906] SharedMemoryManager::initialize(100)
-[INFO] [2025-12-28 16:05:49.906] Initializing shared memory for key: -1693527766
-[INFO] [2025-12-28 16:05:49.906] Creating new shared memory with size: 4008 bytes
-[INFO] [2025-12-28 16:05:49.938] Waiting for start time: 14:06
-[INFO] [2025-12-28 16:05:49.938] Sleeping for 15 seconds
-[INFO] [2025-12-28 16:05:50.274] Candidate process started (pid=4965)
-[INFO] [2025-12-28 16:05:50.282] Candidate process started (pid=5030)
-[INFO] [2025-12-28 16:05:50.288] Candidate process started (pid=5043)
-[INFO] [2025-12-28 16:05:50.289] Candidate process started (pid=4977)
-[INFO] [2025-12-28 16:05:50.290] Candidate process started (pid=5051)
-[INFO] [2025-12-28 16:05:50.292] Candidate process started (pid=4987)
-[INFO] [2025-12-28 16:05:50.292] Candidate process started (pid=5014)
-[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4978)
-[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=5042)
-[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4967)
-[INFO] [2025-12-28 16:05:50.293] Candidate process started (pid=4953)
-[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=5004)
-[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=4980)
-[INFO] [2025-12-28 16:05:50.294] Candidate process started (pid=4973)
-[INFO] [2025-12-28 16:05:50.295] Candidate process started (pid=4999)
-[INFO] [2025-12-28 16:05:50.295] Candidate process started (pid=4997)
-[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=5008)
-[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=4968)
-[INFO] [2025-12-28 16:05:50.296] Candidate process started (pid=5005)
-[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=5010)
-[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=5019)
-[INFO] [2025-12-28 16:05:50.297] Candidate process started (pid=4969)
-[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5020)
-[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=4964)
-[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5026)
-[INFO] [2025-12-28 16:05:50.298] Candidate process started (pid=5022)
-[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5018)
-[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=4954)
-[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5029)
-[INFO] [2025-12-28 16:05:50.299] Candidate process started (pid=5023)
-[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=5031)
-[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=4966)
-[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=5032)
-[INFO] [2025-12-28 16:05:50.300] Candidate process started (pid=4974)
-[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=4976)
-[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5025)
-[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5033)
-[INFO] [2025-12-28 16:05:50.301] Candidate process started (pid=5035)
-[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=4990)
-[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=4958)
-[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=5044)
-[INFO] [2025-12-28 16:05:50.302] Candidate process started (pid=5011)
-[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4983)
-[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=5001)
-[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4957)
-[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=5000)
-[INFO] [2025-12-28 16:05:50.303] Candidate process started (pid=4991)
-[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4970)
-[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=5016)
-[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4952)
-[INFO] [2025-12-28 16:05:50.304] Candidate process started (pid=4959)
-[INFO] [2025-12-28 16:05:50.305] Candidate process started (pid=5013)
-[INFO] [2025-12-28 16:05:50.305] Candidate process started (pid=5039)
-[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5006)
-[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5038)
-[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5037)
-[INFO] [2025-12-28 16:05:50.306] Candidate process started (pid=5036)
-[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=4963)
-[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5034)
-[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5041)
-[INFO] [2025-12-28 16:05:50.307] Candidate process started (pid=5040)
-[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=5021)
-[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4975)
-[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4979)
-[INFO] [2025-12-28 16:05:50.308] Candidate process started (pid=4955)
-[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4994)
-[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4982)
-[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=5052)
-[INFO] [2025-12-28 16:05:50.309] Candidate process started (pid=4998)
-[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=5007)
-[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=4986)
-[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=5017)
-[INFO] [2025-12-28 16:05:50.310] Candidate process started (pid=4962)
-[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5045)
-[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5047)
-[INFO] [2025-12-28 16:05:50.311] Candidate process started (pid=5015)
-[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=5003)
-[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=4993)
-[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=5028)
-[INFO] [2025-12-28 16:05:50.312] Candidate process started (pid=4985)
-[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=4988)
-[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=4960)
-[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=5049)
-[INFO] [2025-12-28 16:05:50.313] Candidate process started (pid=5046)
-[INFO] [2025-12-28 16:05:50.314] Candidate process started (pid=5050)
-[INFO] [2025-12-28 16:05:50.314] Candidate process started (pid=4972)
-[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=5012)
-[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=5024)
-[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=4992)
-[INFO] [2025-12-28 16:05:50.315] Candidate process started (pid=4995)
-[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4981)
-[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4961)
-[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4996)
-[INFO] [2025-12-28 16:05:50.316] Candidate process started (pid=4984)
-[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4971)
-[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=5002)
-[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=5048)
-[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4989)
-[INFO] [2025-12-28 16:05:50.317] Candidate process started (pid=4956)
-[INFO] [2025-12-28 16:05:50.318] Candidate process started (pid=5009)
-[INFO] [2025-12-28 16:06:04.937] Rejecting candidate 0 (pid=4952) due to exam failure
-[INFO] [2025-12-28 16:06:04.937] Rejecting candidate 15 (pid=4967) due to exam failure
-[INFO] [2025-12-28 16:06:04.937] Candidate process with pid 4952 exiting with status 0
-[INFO] [2025-12-28 16:06:04.938] Rejecting candidate 30 (pid=4982) due to exam failure
-[INFO] [2025-12-28 16:06:04.938] Candidate process with pid 4967 exiting with status 0
-[INFO] [2025-12-28 16:06:04.938] Rejecting candidate 45 (pid=4997) due to exam failure
-[INFO] [2025-12-28 16:06:04.938] Candidate process with pid 4982 exiting with status 0
-[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 60 (pid=5012) due to exam failure
-[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 4997 exiting with status 0
-[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 75 (pid=5028) due to exam failure
-[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 5012 exiting with status 0
-[INFO] [2025-12-28 16:06:04.939] Rejecting candidate 90 (pid=5043) due to exam failure
-[INFO] [2025-12-28 16:06:04.939] Candidate process with pid 5028 exiting with status 0
-[INFO] [2025-12-28 16:06:04.940] Making queue for commission A
-[INFO] [2025-12-28 16:06:04.940] Candidate process with pid 5043 exiting with status 0
-[INFO] [2025-12-28 16:06:10.284] Candidate process with pid 4965 exiting with status 0
-[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 4987 exiting with status 0
-[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 5051 exiting with status 0
-[INFO] [2025-12-28 16:06:10.289] Candidate process with pid 4977 exiting with status 0
-[INFO] [2025-12-28 16:06:10.293] Candidate process with pid 5030 exiting with status 0
-[INFO] [2025-12-28 16:06:10.295] Candidate process with pid 5005 exiting with status 0
-[INFO] [2025-12-28 16:06:10.296] Candidate process with pid 4969 exiting with status 0
-[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 4978 exiting with status 0
-[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 5014 exiting with status 0
-[INFO] [2025-12-28 16:06:10.297] Candidate process with pid 5020 exiting with status 0
-[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 5019 exiting with status 0
-[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 5004 exiting with status 0
-[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 4980 exiting with status 0
-[INFO] [2025-12-28 16:06:10.298] Candidate process with pid 4999 exiting with status 0
-[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 4973 exiting with status 0
-[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 5042 exiting with status 0
-[INFO] [2025-12-28 16:06:10.299] Candidate process with pid 4964 exiting with status 0
-[INFO] [2025-12-28 16:06:10.300] Candidate process with pid 4968 exiting with status 0
-[INFO] [2025-12-28 16:06:10.300] Candidate process with pid 4953 exiting with status 0
-[INFO] [2025-12-28 16:06:10.301] Candidate process with pid 5008 exiting with status 0
-[INFO] [2025-12-28 16:06:10.301] Candidate process with pid 5010 exiting with status 0
-[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 5026 exiting with status 0
-[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 4991 exiting with status 0
-[INFO] [2025-12-28 16:06:10.302] Candidate process with pid 5035 exiting with status 0
-[INFO] [2025-12-28 16:06:10.303] Candidate process with pid 4958 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5022 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5018 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5031 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5029 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 5032 exiting with status 0
-[INFO] [2025-12-28 16:06:10.304] Candidate process with pid 4970 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5044 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5025 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4966 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4954 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 4974 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5023 exiting with status 0
-[INFO] [2025-12-28 16:06:10.305] Candidate process with pid 5033 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4990 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5011 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4983 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5000 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 5001 exiting with status 0
-[INFO] [2025-12-28 16:06:10.306] Candidate process with pid 4976 exiting with status 0
-[INFO] [2025-12-28 16:06:10.307] Candidate process with pid 4957 exiting with status 0
-[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5040 exiting with status 0
-[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5016 exiting with status 0
-[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5007 exiting with status 0
-[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5021 exiting with status 0
-[INFO] [2025-12-28 16:06:10.309] Candidate process with pid 5045 exiting with status 0
-[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 4994 exiting with status 0
-[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 5038 exiting with status 0
-[INFO] [2025-12-28 16:06:10.310] Candidate process with pid 5036 exiting with status 0
-[INFO] [2025-12-28 16:06:10.311] Candidate process with pid 5041 exiting with status 0
-[INFO] [2025-12-28 16:06:10.311] Candidate process with pid 5039 exiting with status 0
-[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 5037 exiting with status 0
-[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 5013 exiting with status 0
-[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 4963 exiting with status 0
-[INFO] [2025-12-28 16:06:10.313] Candidate process with pid 4986 exiting with status 0
-[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 5006 exiting with status 0
-[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 4959 exiting with status 0
-[INFO] [2025-12-28 16:06:10.314] Candidate process with pid 4995 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4975 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4993 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4955 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 5052 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 5015 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4962 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4998 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4972 exiting with status 0
-[INFO] [2025-12-28 16:06:10.315] Candidate process with pid 4979 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5047 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5017 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5003 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5024 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 5050 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4961 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4992 exiting with status 0
-[INFO] [2025-12-28 16:06:10.316] Candidate process with pid 4984 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5034 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4981 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4971 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4960 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4988 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 4985 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5049 exiting with status 0
-[INFO] [2025-12-28 16:06:10.317] Candidate process with pid 5046 exiting with status 0
-[INFO] [2025-12-28 16:06:10.318] Candidate process with pid 5002 exiting with status 0
-[INFO] [2025-12-28 16:06:10.318] Candidate process with pid 4996 exiting with status 0
-[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 4989 exiting with status 0
-[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 5048 exiting with status 0
-[INFO] [2025-12-28 16:06:10.319] Candidate process with pid 4956 exiting with status 0
-[INFO] [2025-12-28 16:06:10.320] Candidate process with pid 5009 exiting with status 0
-[INFO] [2025-12-28 16:06:10.320] SharedMemoryManager::destroy()
-[INFO] [2025-12-28 16:06:10.320] Destroying shared memory with id: 7208961
-[INFO] [2025-12-28 16:06:10.320] SharedMemoryManager::detach()
-[INFO] [2025-12-28 16:06:10.320] Detaching from shared memory
+[INFO] [2025-12-29 11:49:57.384] Dean process started (pid=26485)
+[INFO] [2025-12-29 11:49:57.384] SharedMemoryManager::initialize(100)
+[INFO] [2025-12-29 11:49:57.384] Initializing shared memory for key: -1693527766
+[WARN] [2025-12-29 11:49:57.384] Shared memory already exists. Cleaning up...
+[INFO] [2025-12-29 11:49:57.385] Creating new shared memory with size: 4152 bytes
+[INFO] [2025-12-29 11:49:57.388] Commission process started
+[INFO] [2025-12-29 11:49:57.388] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.388] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.413] Waiting for start time: 00:02
+[INFO] [2025-12-29 11:49:57.413] Sleeping for 15 seconds
+[INFO] [2025-12-29 11:49:57.904] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.912] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.917] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.919] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.919] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.923] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.923] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.923] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.923] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.925] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.926] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.926] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.926] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.926] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.926] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.927] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.928] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.929] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.930] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.931] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.932] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.933] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.934] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.935] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.936] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.937] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.938] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.939] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.940] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.941] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.942] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.943] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.944] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.945] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.946] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.947] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.948] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:49:57.949] Attaching to shared memory with key: -1693527766
+[INFO] [2025-12-29 11:49:57.950] Getting shared memory for key: -1693527766
+[INFO] [2025-12-29 11:50:12.416] Rejecting candidate 0 (pid=26487) due to exam failure
+[INFO] [2025-12-29 11:50:12.417] Rejecting candidate 15 (pid=26502) due to exam failure
+[INFO] [2025-12-29 11:50:12.417] Candidate process with pid 26487 exiting with status 0
+[INFO] [2025-12-29 11:50:12.417] Rejecting candidate 30 (pid=26517) due to exam failure
+[INFO] [2025-12-29 11:50:12.417] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.417] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.417] Candidate process with pid 26502 exiting with status 0
+[INFO] [2025-12-29 11:50:12.417] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.418] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.418] Rejecting candidate 45 (pid=26532) due to exam failure
+[INFO] [2025-12-29 11:50:12.418] Candidate process with pid 26517 exiting with status 0
+[INFO] [2025-12-29 11:50:12.418] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.418] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.418] Rejecting candidate 60 (pid=26547) due to exam failure
+[INFO] [2025-12-29 11:50:12.418] Candidate process with pid 26532 exiting with status 0
+[INFO] [2025-12-29 11:50:12.419] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.420] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.420] Candidate process with pid 26547 exiting with status 0
+[INFO] [2025-12-29 11:50:12.421] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.421] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.421] Rejecting candidate 75 (pid=26562) due to exam failure
+[INFO] [2025-12-29 11:50:12.422] Rejecting candidate 90 (pid=26577) due to exam failure
+[INFO] [2025-12-29 11:50:12.422] Candidate process with pid 26562 exiting with status 0
+[INFO] [2025-12-29 11:50:12.422] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.422] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.422] Candidate process with pid 26577 exiting with status 0
+[INFO] [2025-12-29 11:50:12.422] SharedMemoryManager::detach()
+[INFO] [2025-12-29 11:50:12.422] Detaching from shared memory
+[INFO] [2025-12-29 11:50:12.455] Commission A member 0 started
+[INFO] [2025-12-29 11:50:12.455] Commission A member 1 started
+[INFO] [2025-12-29 11:50:12.455] Commission A member 2 started
+[INFO] [2025-12-29 11:50:12.455] Commission A state:
+[INFO] [2025-12-29 11:50:12.455] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:12.455] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:12.455] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:50:12.972] Candidate process with pid 26573 exam started
+[INFO] [2025-12-29 11:50:12.972] Candidate process started (pid=26573)
+[INFO] [2025-12-29 11:50:12.972] Candidate process with pid 26573 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.976] Candidate process with pid 26579 exam started
+[INFO] [2025-12-29 11:50:12.976] Candidate process started (pid=26579)
+[INFO] [2025-12-29 11:50:12.976] Candidate process with pid 26579 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.977] Candidate process with pid 26567 exam started
+[INFO] [2025-12-29 11:50:12.977] Candidate process started (pid=26567)
+[INFO] [2025-12-29 11:50:12.977] Candidate process with pid 26584 exam started
+[INFO] [2025-12-29 11:50:12.978] Candidate process started (pid=26584)
+[INFO] [2025-12-29 11:50:12.978] Candidate process with pid 26567 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.978] Candidate process with pid 26584 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.978] Candidate process with pid 26566 exam started
+[INFO] [2025-12-29 11:50:12.978] Candidate process started (pid=26566)
+[INFO] [2025-12-29 11:50:12.978] Candidate process with pid 26566 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.980] Candidate process with pid 26509 exam started
+[INFO] [2025-12-29 11:50:12.981] Candidate process started (pid=26509)
+[INFO] [2025-12-29 11:50:12.981] Candidate process with pid 26500 exam started
+[INFO] [2025-12-29 11:50:12.981] Candidate process started (pid=26500)
+[INFO] [2025-12-29 11:50:12.981] Candidate process with pid 26509 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.981] Candidate process with pid 26500 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.981] Candidate process with pid 26500 got commission A seat 0
+[INFO] [2025-12-29 11:50:12.981] Candidate process with pid 26500 waiting for commission A seat 0 to be asked
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26525 exam started
+[INFO] [2025-12-29 11:50:12.982] Candidate process started (pid=26525)
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26581 exam started
+[INFO] [2025-12-29 11:50:12.982] Candidate process started (pid=26581)
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26525 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26581 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26525 got commission A seat 1
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26525 waiting for commission A seat 1 to be asked
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26581 got commission A seat 2
+[INFO] [2025-12-29 11:50:12.982] Candidate process with pid 26581 waiting for commission A seat 2 to be asked
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26582 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26582)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26493 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26493)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26488 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26488)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26561 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26561)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26578 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26578)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26563 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26563)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26565 exam started
+[INFO] [2025-12-29 11:50:12.983] Candidate process started (pid=26565)
+[INFO] [2025-12-29 11:50:12.983] Candidate process with pid 26534 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26534)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26501 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26501)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26507 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26507)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26572 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26572)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26513 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26513)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26557 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26557)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26540 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26540)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26574 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26574)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26528 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process started (pid=26528)
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26542 exam started
+[INFO] [2025-12-29 11:50:12.984] Candidate process with pid 26543 exam started
+[INFO] [2025-12-29 11:50:12.985] Candidate process started (pid=26543)
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26585 exam started
+[INFO] [2025-12-29 11:50:12.985] Candidate process started (pid=26585)
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26493 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26507 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26488 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26572 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26561 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26513 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26578 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26557 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26563 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26540 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26565 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26574 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.985] Candidate process with pid 26534 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26554 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26554)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26570 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26570)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26582 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26528 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26492 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26492)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26535 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26535)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26537 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26537)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26546 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26546)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26559 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26559)
+[INFO] [2025-12-29 11:50:12.986] Candidate process with pid 26568 exam started
+[INFO] [2025-12-29 11:50:12.986] Candidate process started (pid=26568)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26496 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26496)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26496 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26516 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26516)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26545 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26545)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26571 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26571)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26555 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26555)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26510 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26510)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26521 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26521)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26526 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26526)
+[INFO] [2025-12-29 11:50:12.987] Candidate process with pid 26544 exam started
+[INFO] [2025-12-29 11:50:12.987] Candidate process started (pid=26544)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26492 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26586 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26586)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26548 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26548)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26489 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26489)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26501 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26559 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26553 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26553)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26583 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26583)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26511 exam started
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26511)
+[INFO] [2025-12-29 11:50:12.988] Candidate process started (pid=26542)
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26542 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26543 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26571 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26585 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.988] Candidate process with pid 26555 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26554 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26510 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26570 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26521 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26503 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26503)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26503 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26505 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26505)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26556 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26556)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26533 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26533)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26508 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26508)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26508 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26564 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26564)
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26564 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.989] Candidate process with pid 26499 exam started
+[INFO] [2025-12-29 11:50:12.989] Candidate process started (pid=26499)
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26506 exam started
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26544 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26535 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26586 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26537 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26548 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26546 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26489 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26568 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26553 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26491 exam started
+[INFO] [2025-12-29 11:50:12.990] Candidate process started (pid=26491)
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26516 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26511 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26545 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26526 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26531 exam started
+[INFO] [2025-12-29 11:50:12.990] Candidate process started (pid=26531)
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26505 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.990] Candidate process with pid 26541 exam started
+[INFO] [2025-12-29 11:50:12.990] Candidate process started (pid=26541)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26541 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26533 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26520 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26520)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26530 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26530)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26538 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26538)
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26506)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26583 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26491 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26569 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26569)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26556 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26536 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26536)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26520 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26495 exam started
+[INFO] [2025-12-29 11:50:12.991] Candidate process started (pid=26495)
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26499 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26538 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26506 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.991] Candidate process with pid 26531 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26569 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26558 exam started
+[INFO] [2025-12-29 11:50:12.992] Candidate process started (pid=26558)
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26530 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26495 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26536 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.992] Candidate process with pid 26558 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.994] Candidate process with pid 26550 exam started
+[INFO] [2025-12-29 11:50:12.994] Candidate process with pid 26498 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26518 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26518)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26552 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26552)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26522 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26522)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26549 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26549)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26519 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26519)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26490 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26490)
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26550)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26550 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26576 exam started
+[INFO] [2025-12-29 11:50:12.995] Candidate process started (pid=26576)
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26549 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26518 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26519 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26552 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26490 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.995] Candidate process with pid 26522 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.996] Candidate process started (pid=26498)
+[INFO] [2025-12-29 11:50:12.996] Candidate process with pid 26576 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.996] Candidate process with pid 26498 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26560 exam started
+[INFO] [2025-12-29 11:50:12.997] Candidate process started (pid=26560)
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26514 exam started
+[INFO] [2025-12-29 11:50:12.997] Candidate process started (pid=26514)
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26560 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26514 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26524 exam started
+[INFO] [2025-12-29 11:50:12.997] Candidate process started (pid=26524)
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26575 exam started
+[INFO] [2025-12-29 11:50:12.997] Candidate process started (pid=26575)
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26575 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26580 exam started
+[INFO] [2025-12-29 11:50:12.997] Candidate process started (pid=26580)
+[INFO] [2025-12-29 11:50:12.997] Candidate process with pid 26524 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.998] Candidate process with pid 26580 waiting for commission A seat
+[INFO] [2025-12-29 11:50:12.999] Candidate process with pid 26504 exam started
+[INFO] [2025-12-29 11:50:12.999] Candidate process started (pid=26504)
+[INFO] [2025-12-29 11:50:12.999] Candidate process with pid 26504 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.1] Candidate process with pid 26551 exam started
+[INFO] [2025-12-29 11:50:13.1] Candidate process started (pid=26551)
+[INFO] [2025-12-29 11:50:13.1] Candidate process with pid 26551 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.2] Candidate process with pid 26529 exam started
+[INFO] [2025-12-29 11:50:13.2] Candidate process started (pid=26529)
+[INFO] [2025-12-29 11:50:13.2] Candidate process with pid 26494 exam started
+[INFO] [2025-12-29 11:50:13.2] Candidate process started (pid=26494)
+[INFO] [2025-12-29 11:50:13.2] Candidate process with pid 26529 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.2] Candidate process with pid 26523 exam started
+[INFO] [2025-12-29 11:50:13.3] Candidate process started (pid=26523)
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26494 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26523 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26512 exam started
+[INFO] [2025-12-29 11:50:13.3] Candidate process started (pid=26512)
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26512 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26539 exam started
+[INFO] [2025-12-29 11:50:13.3] Candidate process started (pid=26539)
+[INFO] [2025-12-29 11:50:13.3] Candidate process with pid 26539 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.4] Candidate process with pid 26515 exam started
+[INFO] [2025-12-29 11:50:13.4] Candidate process started (pid=26515)
+[INFO] [2025-12-29 11:50:13.4] Candidate process with pid 26515 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.4] Candidate process with pid 26497 exam started
+[INFO] [2025-12-29 11:50:13.4] Candidate process started (pid=26497)
+[INFO] [2025-12-29 11:50:13.4] Candidate process with pid 26497 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.5] Candidate process with pid 26527 exam started
+[INFO] [2025-12-29 11:50:13.5] Candidate process started (pid=26527)
+[INFO] [2025-12-29 11:50:13.5] Candidate process with pid 26527 waiting for commission A seat
+[INFO] [2025-12-29 11:50:13.984] Candidate process with pid 26500 waiting for commission A seat 0 to be asked
+[INFO] [2025-12-29 11:50:13.985] Candidate process with pid 26581 waiting for commission A seat 2 to be asked
+[INFO] [2025-12-29 11:50:13.985] Candidate process with pid 26525 waiting for commission A seat 1 to be asked
+[INFO] [2025-12-29 11:50:14.460] Member 2 generated question for seat 0 taken by pid 26500
+[INFO] [2025-12-29 11:50:14.460] Member 2 generated question for seat 1 taken by pid 26525
+[INFO] [2025-12-29 11:50:14.460] Member 2 generated question for seat 2 taken by pid 26581
+[INFO] [2025-12-29 11:50:14.989] Candidate process with pid 26500 waiting for commission A seat 0 to be asked
+[INFO] [2025-12-29 11:50:14.990] Candidate process with pid 26581 waiting for commission A seat 2 to be asked
+[INFO] [2025-12-29 11:50:14.990] Candidate process with pid 26525 waiting for commission A seat 1 to be asked
+[INFO] [2025-12-29 11:50:15.994] Candidate process with pid 26500 waiting for commission A seat 0 to be asked
+[INFO] [2025-12-29 11:50:15.994] Candidate process with pid 26581 waiting for commission A seat 2 to be asked
+[INFO] [2025-12-29 11:50:15.994] Candidate process with pid 26525 waiting for commission A seat 1 to be asked
+[INFO] [2025-12-29 11:50:16.460] Member 0 generated question for seat 0 taken by pid 26500
+[INFO] [2025-12-29 11:50:16.461] Member 0 generated question for seat 1 taken by pid 26525
+[INFO] [2025-12-29 11:50:16.461] Member 0 generated question for seat 2 taken by pid 26581
+[INFO] [2025-12-29 11:50:16.996] Candidate process with pid 26525 waiting for commission A seat 1 to be asked
+[INFO] [2025-12-29 11:50:16.997] Candidate process with pid 26500 waiting for commission A seat 0 to be asked
+[INFO] [2025-12-29 11:50:16.998] Candidate process with pid 26581 waiting for commission A seat 2 to be asked
+[INFO] [2025-12-29 11:50:17.459] Commission A state:
+[INFO] [2025-12-29 11:50:17.460] Seat 0: 26500 5 0
+[INFO] [2025-12-29 11:50:17.460] Member 1 generated question for seat 0 taken by pid 26500
+[INFO] [2025-12-29 11:50:17.460] Seat 1: 26525 5 0
+[INFO] [2025-12-29 11:50:17.460] Member 1 generated question for seat 1 taken by pid 26525
+[INFO] [2025-12-29 11:50:17.460] Seat 2: 26581 5 0
+[INFO] [2025-12-29 11:50:17.461] Member 1 generated question for seat 2 taken by pid 26581
+[INFO] [2025-12-29 11:50:22.461] Commission A state:
+[INFO] [2025-12-29 11:50:22.462] Seat 0: 26500 7 0
+[INFO] [2025-12-29 11:50:22.462] Seat 1: 26525 7 0
+[INFO] [2025-12-29 11:50:22.462] Seat 2: 26581 7 0
+[INFO] [2025-12-29 11:50:23.3] Candidate process with pid 26500 answered questions
+[INFO] [2025-12-29 11:50:23.4] Candidate process with pid 26500 exiting with status 0
+[INFO] [2025-12-29 11:50:23.4] Candidate process with pid 26525 answered questions
+[INFO] [2025-12-29 11:50:23.5] Candidate process with pid 26525 exiting with status 0
+[INFO] [2025-12-29 11:50:23.6] Candidate process with pid 26581 answered questions
+[INFO] [2025-12-29 11:50:23.6] Candidate process with pid 26581 exiting with status 0
+[INFO] [2025-12-29 11:50:27.465] Commission A state:
+[INFO] [2025-12-29 11:50:27.466] Seat 0: 26500 7 1
+[INFO] [2025-12-29 11:50:27.466] Seat 1: 26525 7 1
+[INFO] [2025-12-29 11:50:27.466] Seat 2: 26581 7 1
+[INFO] [2025-12-29 11:50:27.466] [Commission A] % of candidates graded: 1.075269%
+[INFO] [2025-12-29 11:50:32.472] Commission A state:
+[INFO] [2025-12-29 11:50:32.473] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:32.473] Seat 1: 26525 7 1
+[INFO] [2025-12-29 11:50:32.473] Seat 2: 26581 7 1
+[INFO] [2025-12-29 11:50:32.473] [Commission A] % of candidates graded: 2.150538%
+[INFO] [2025-12-29 11:50:37.478] Commission A state:
+[INFO] [2025-12-29 11:50:37.479] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:37.479] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:37.479] Seat 2: 26581 7 1
+[INFO] [2025-12-29 11:50:37.479] [Commission A] % of candidates graded: 3.225806%
+[INFO] [2025-12-29 11:50:42.480] Commission A state:
+[INFO] [2025-12-29 11:50:42.481] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:42.481] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:42.482] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:50:47.486] Commission A state:
+[INFO] [2025-12-29 11:50:47.486] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:47.486] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:47.486] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:50:52.490] Commission A state:
+[INFO] [2025-12-29 11:50:52.491] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:52.491] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:52.492] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:50:57.496] Commission A state:
+[INFO] [2025-12-29 11:50:57.496] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:50:57.496] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:50:57.496] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:02.500] Commission A state:
+[INFO] [2025-12-29 11:51:02.501] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:02.501] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:02.501] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:07.506] Commission A state:
+[INFO] [2025-12-29 11:51:07.506] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:07.507] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:07.507] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:12.510] Commission A state:
+[INFO] [2025-12-29 11:51:12.511] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:12.511] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:12.511] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:17.515] Commission A state:
+[INFO] [2025-12-29 11:51:17.515] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:17.515] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:17.516] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:22.517] Commission A state:
+[INFO] [2025-12-29 11:51:22.517] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:22.517] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:22.517] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:27.520] Commission A state:
+[INFO] [2025-12-29 11:51:27.520] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:27.520] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:27.520] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:32.524] Commission A state:
+[INFO] [2025-12-29 11:51:32.524] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:32.525] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:32.525] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:37.525] Commission A state:
+[INFO] [2025-12-29 11:51:37.525] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:37.525] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:37.525] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:42.531] Commission A state:
+[INFO] [2025-12-29 11:51:42.531] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:42.532] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:42.532] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:47.535] Commission A state:
+[INFO] [2025-12-29 11:51:47.535] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:47.535] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:47.535] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:52.539] Commission A state:
+[INFO] [2025-12-29 11:51:52.540] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:52.540] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:52.540] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:51:57.545] Commission A state:
+[INFO] [2025-12-29 11:51:57.545] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:51:57.546] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:51:57.546] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:02.550] Commission A state:
+[INFO] [2025-12-29 11:52:02.551] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:02.551] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:02.551] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:07.555] Commission A state:
+[INFO] [2025-12-29 11:52:07.556] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:07.556] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:07.556] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:12.561] Commission A state:
+[INFO] [2025-12-29 11:52:12.562] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:12.562] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:12.562] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:17.565] Commission A state:
+[INFO] [2025-12-29 11:52:17.565] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:17.565] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:17.565] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:22.565] Commission A state:
+[INFO] [2025-12-29 11:52:22.566] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:22.566] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:22.566] Seat 2: -1 0 0
+[INFO] [2025-12-29 11:52:27.567] Commission A state:
+[INFO] [2025-12-29 11:52:27.568] Seat 0: -1 0 0
+[INFO] [2025-12-29 11:52:27.568] Seat 1: -1 0 0
+[INFO] [2025-12-29 11:52:27.568] Seat 2: -1 0 0

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <pthread.h>
+
 enum CandidateStatus {
   Pending = 0,
   NotEligible = 1,
@@ -11,24 +13,28 @@ enum CandidateStatus {
 
 struct CandidateInfo {
   int pid;
-  double theoreticalScore = 0.0;
-  double practicalScore = 0.0;
-  double finalScore = 0.0;
+  double theoreticalScore = -1.0;
+  double practicalScore = -1.0;
+  double finalScore = -1.0;
   CandidateStatus status = Pending;
 };
 
-// struct CommissionSeat {
-//   int pid = -1;
+struct CommissionSeat {
+  int pid = -1;
+  int questionsCount = 0;
+  bool answered = false;
+};
 
-// }
-
-// struct CommissionInfo {
-
-// }
+struct CommissionInfo {
+  CommissionSeat seats[3];
+};
 
 struct SharedState {
+  bool examStarted = false;
   int candidateCount;
-  // CommissionInfo commissionA;
-  // CommissionInfo commissionB;
+  int commissionACandidateCount;
+  CommissionInfo commissionA;
+  CommissionInfo commissionB;
+  pthread_mutex_t seatsMutex;
   CandidateInfo candidates[];
 };

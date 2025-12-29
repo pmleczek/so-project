@@ -1,3 +1,4 @@
+#include "common/ipc/SemaphoreManager.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include <ctime>
@@ -57,58 +58,92 @@ void waitForStart(const std::string &startTime) {
 
 void rejectCandidates(const std::vector<int> &candidatePids) {
   // TODO: Read from shared memory
+  int rejected = 0;
   for (int i = 0; i < candidatePids.size(); i++) {
     if (i % 15 == 0) {
       Logger::info("Rejecting candidate " + std::to_string(i) + " (pid=" +
                    std::to_string(candidatePids[i]) + ") due to exam failure");
       SharedMemoryManager::data()->candidates[i].status = NotEligible;
       kill(candidatePids[i], SIGUSR2);
+      rejected++;
     } else {
       SharedMemoryManager::data()->candidates[i].status = PendingCommissionA;
     }
   }
+
+  SharedMemoryManager::data()->commissionACandidateCount =
+      candidatePids.size() - rejected;
 }
 
 void spawnComissions() {
   // Comission A
   pid_t pidA = fork();
-  if (pid == 0) {
+  if (pidA == 0) {
     execlp("./commission", "./commission", "A", NULL);
   }
 
   // Comission B
-  pid_t pidB = fork();
-  if (pidB == 0) {
-    execlp("./commission", "./commission", "B", NULL);
-  }
+  // TODO: Uncomment when commission division is implemented
+  // pid_t pidB = fork();
+  // if (pidB == 0) {
+  //   execlp("./commission", "./commission", "B", NULL);
+  // }
 }
 
-void makeQueueForCommissionA() {
-  Logger::info("Making queue for commission A");
-}
-
-int main(int argc, char *argv[]) {
+void initialize() {
   Logger::setupLogFile();
   Logger::info("Dean process started (pid=" + std::to_string(getpid()) + ")");
 
   SharedMemoryManager::initialize(100);
+  SemaphoreManager::create("commissionA", 3);
+  SemaphoreManager::create("commissionB", 3);
+
+  pthread_mutexattr_t attr;
+  pthread_mutexattr_init(&attr);
+  pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
+  pthread_mutex_init(&SharedMemoryManager::data()->seatsMutex, &attr);
+  pthread_mutexattr_destroy(&attr);
+
+  for (int i = 0; i < 3; i++) {
+    SharedMemoryManager::data()->commissionA.seats[i].pid = -1;
+    SharedMemoryManager::data()->commissionA.seats[i].questionsCount = 0;
+    SharedMemoryManager::data()->commissionA.seats[i].answered = false;
+
+    // TODO: Uncomment when commission division is implemented
+    // SharedMemoryManager::data()->commissionB.seats[i].pid = -1;
+    // SharedMemoryManager::data()->commissionB.seats[i].questionsCount = 0;
+    // SharedMemoryManager::data()->commissionB.seats[i].answered = false;
+  }
+}
+
+void cleanup() {
+  SharedMemoryManager::destroy();
+  SemaphoreManager::unlink("/commissionA");
+  SemaphoreManager::unlink("/commissionB");
+
+  Logger::info("Dean process finished");
+}
+
+int main(int argc, char *argv[]) {
+  initialize();
 
   int candidateCount = 100;
-  std::string startTime = "14:06";
+  std::string startTime = "00:02";
 
+  spawnComissions();
   std::vector<int> candidatePids = spawnCandidates(candidateCount);
-  
+
   waitForStart(startTime);
   // TODO: Or wait some time for processes to start
   rejectCandidates(candidatePids);
 
-  makeQueueForCommissionA();
+  SharedMemoryManager::data()->examStarted = true;
 
   while (wait(NULL) > 0) { /* no-op */
     ;
   }
 
-  SharedMemoryManager::destroy();
+  cleanup();
 
   return 0;
 }
