@@ -54,6 +54,13 @@ void CommissionProcess::waitForExamStart() {
 void CommissionProcess::start() {
   Logger::info("CommissionProcess::start()");
   spawnThreads();
+
+  Logger::info("Commission " + std::string(1, commissionType_) +
+               " releasing 3 seats after exam start");
+  for (int i = 0; i < 3; i++) {
+    SemaphoreManager::post(semaphore);
+  }
+
   mainLoop();
 }
 
@@ -61,52 +68,68 @@ void CommissionProcess::mainLoop() {
   Logger::info("CommissionProcess::mainLoop() START");
 
   while (running) {
+    SharedState *state = SharedMemoryManager::data();
 
-    if (candidatesProcessed >= SharedMemoryManager::data()->candidateCount) {
-      running = false;
-      break;
+    if (candidatesProcessed >= state->commissionACandidateCount) {
+      bool allSeatsEmpty = true;
+      for (int i = 0; i < 3; i++) {
+        if (state->commissionA.seats[i].pid != -1) {
+          allSeatsEmpty = false;
+          break;
+        }
+      }
+
+      if (allSeatsEmpty) {
+        Logger::info("All candidates processed (" +
+                     std::to_string(candidatesProcessed) + "/" +
+                     std::to_string(state->commissionACandidateCount) +
+                     "), finishing...");
+        running = false;
+        break;
+      }
     }
 
-    pthread_mutex_lock(SharedMemoryManager::data()->mutex);
+    pthread_mutex_lock(&state->seatsMutex);
 
     for (int i = 0; i < 3; i++) {
       // TODO: Extract to function
-      if (SharedMemoryManager::data()->commissionA.seats[i].answered &&
-          SharedMemoryManager::data()->commissionA.seats[i].pid != -1) {
-        CandidateInfo &candidate = findCandidate(i);
-        if (candidate.theoreticalScore != -1) {
-          continue;
-        }
+      if (state->commissionA.seats[i].answered &&
+          state->commissionA.seats[i].pid != -1) {
+        CandidateInfo *candidate = findCandidate(i);
 
-        candidate.theoreticalScore = getNRandomScore(3);
-        candidatesProcessed++;
-
-        SharedMemoryManager::data()->commissionA.seats[i].answered = false;
-        SharedMemoryManager::data()->commissionA.seats[i].questionsCount = 0;
-        SharedMemoryManager::data()->commissionA.seats[i].pid = -1;
-        // SemaphoreManager::post(semaphore);
-
-        Logger::info(
-            "[Commission A] % of candidates graded: " +
-            std::to_string(
-                candidatesProcessed /
-                (double)SharedMemoryManager::data()->commissionACandidateCount *
-                100.0) +
-            "%");
-      }
-    }
-
-    if (candidatesProcessed <
-        SharedMemoryManager::data()->commissionACandidateCount) {
-      int freeSeats = 0;
-      for (int i = 0; i < 3; i++) {
-        if (SharedMemoryManager::data()->commissionA.seats[i].pid == -1) {
+        if (candidate == nullptr) {
+          Logger::warn(
+              "Seat " + std::to_string(i) +
+              " has answered flag but candidate not found, freeing seat");
+          state->commissionA.seats[i].answered = false;
+          state->commissionA.seats[i].questionsCount = 0;
+          state->commissionA.seats[i].pid = -1;
           SemaphoreManager::post(semaphore);
+          break;
         }
+
+        if (candidate->theoreticalScore < 0) {
+          candidate->theoreticalScore = getNRandomScore(3);
+          candidatesProcessed++;
+
+          Logger::info("[Commission A] % of candidates graded: " +
+                       std::to_string(candidatesProcessed /
+                                      (double)state->commissionACandidateCount *
+                                      100.0) +
+                       "%");
+        }
+
+        state->commissionA.seats[i].answered = false;
+        state->commissionA.seats[i].questionsCount = 0;
+        state->commissionA.seats[i].pid = -1;
+
+        SemaphoreManager::post(semaphore);
+
+        break;
       }
     }
 
-    pthread_mutex_unlock(SharedMemoryManager::data()->mutex);
+    pthread_mutex_unlock(&state->seatsMutex);
 
     usleep(1000000);
   }
@@ -114,25 +137,30 @@ void CommissionProcess::mainLoop() {
   Logger::info("CommissionProcess::mainLoop() END");
 }
 
-CandidateInfo &CommissionProcess::findCandidate(int seat) {
-  for (int i = 0; i < SharedMemoryManager::data()->candidateCount; i++) {
-    if (SharedMemoryManager::data()->candidates[i].pid ==
-        SharedMemoryManager::data()->commissionA.seats[seat].pid) {
-      return SharedMemoryManager::data()->candidates[i];
+CandidateInfo *CommissionProcess::findCandidate(int seat) {
+  SharedState *state = SharedMemoryManager::data();
+  int pid = state->commissionA.seats[seat].pid;
+
+  for (int i = 0; i < state->candidateCount; i++) {
+    if (state->candidates[i].pid == pid) {
+      return &state->candidates[i];
     }
   }
 
-  Logger::error("Candidate not found for seat " + std::to_string(seat));
-  exit(1);
+  Logger::warn("Candidate not found for seat " + std::to_string(seat) +
+               " with pid " + std::to_string(pid) +
+               " - candidate may have already exited");
+  return nullptr;
 }
 
 void CommissionProcess::spawnThreads() {
   Logger::info("CommissionProcess::spawnThreads()");
+  SharedState *state = SharedMemoryManager::data();
   for (int i = 0; i < memberCount_; i++) {
-    threadData[i] = {.memberId = i,
-                     .commissionId = commissionType_,
-                     .running = &running,
-                     .mutex = &mutex};
+    threadData[i].memberId = i;
+    threadData[i].commissionId = commissionType_;
+    threadData[i].running = &running;
+    threadData[i].mutex = &state->seatsMutex;
     int result =
         pthread_create(&threadIds[i], nullptr, threadFunction, &threadData[i]);
     if (result != 0) {

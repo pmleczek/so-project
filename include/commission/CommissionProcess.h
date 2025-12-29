@@ -2,11 +2,12 @@
 
 #include "common/ipc/SemaphoreManager.h"
 #include "common/ipc/SharedState.h"
+#include <atomic>
 
 struct ThreadData {
   int memberId;
   char commissionId;
-  bool *running;
+  std::atomic<bool> *running;
   pthread_mutex_t *mutex;
 };
 
@@ -22,15 +23,14 @@ private:
   void mainLoop();
   void spawnThreads();
   void waitThreads();
-  CandidateInfo &findCandidate(int seat);
+  CandidateInfo *findCandidate(int seat);
   static void *threadFunction(void *arg);
 
   int memberCount_;
   char commissionType_;
   std::atomic<bool> running = true;
   sem_t *semaphore;
-  pthread_t threadIds[3];
-  ThreadData threadData[3];
-  pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+  pthread_t threadIds[5];
+  ThreadData threadData[5];
   std::atomic<int> candidatesProcessed = 0;
 };

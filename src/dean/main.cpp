@@ -17,9 +17,13 @@ std::vector<int> spawnCandidates(int count) {
     if (pid == 0) {
       execlp("./candidate", "./candidate", std::to_string(i).c_str(), NULL);
     } else {
-      SharedMemoryManager::data()->candidates[i] = {
-          .pid = pid,
-      };
+      // Inicjalizuj kandydata - wszystkie pola mają wartości domyślne z
+      // struktury
+      SharedMemoryManager::data()->candidates[i].pid = pid;
+      SharedMemoryManager::data()->candidates[i].theoreticalScore = -1.0;
+      SharedMemoryManager::data()->candidates[i].practicalScore = -1.0;
+      SharedMemoryManager::data()->candidates[i].finalScore = -1.0;
+      SharedMemoryManager::data()->candidates[i].status = Pending;
       pids.push_back(pid);
     }
   }
@@ -95,8 +99,9 @@ void initialize() {
   Logger::info("Dean process started (pid=" + std::to_string(getpid()) + ")");
 
   SharedMemoryManager::initialize(100);
-  SemaphoreManager::create("commissionA", 3);
-  SemaphoreManager::create("commissionB", 3);
+  // Semafor startuje z 0 - komisja zwolni 3 miejsca po rozpoczęciu egzaminu
+  SemaphoreManager::create("commissionA", 0);
+  SemaphoreManager::create("commissionB", 0);
 
   pthread_mutexattr_t attr;
   pthread_mutexattr_init(&attr);
@@ -132,6 +137,9 @@ int main(int argc, char *argv[]) {
 
   spawnComissions();
   std::vector<int> candidatePids = spawnCandidates(candidateCount);
+
+  // Ustaw liczbę kandydatów w shared memory
+  SharedMemoryManager::data()->candidateCount = candidateCount;
 
   waitForStart(startTime);
   // TODO: Or wait some time for processes to start

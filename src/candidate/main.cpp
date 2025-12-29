@@ -90,8 +90,10 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
+  // Komisja A ma 5 członków, więc potrzebujemy (1 << 5) - 1 = 31 (binarnie
+  // 11111)
   while (SharedMemoryManager::data()->commissionA.seats[seat].questionsCount !=
-         (1 << 3) - 1) {
+         (1 << 5) - 1) {
     Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                  " waiting for commission A seat " + std::to_string(seat) +
                  " to be asked");
@@ -104,18 +106,38 @@ int main(int argc, char *argv[]) {
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " answered questions");
 
-  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
-               " exiting with status 0");
+  // Znajdź swój indeks w tablicy kandydatów
+  int candidateIndex = -1;
+  int myPid = getpid();
+  for (int i = 0; i < SharedMemoryManager::data()->candidateCount; i++) {
+    if (SharedMemoryManager::data()->candidates[i].pid == myPid) {
+      candidateIndex = i;
+      break;
+    }
+  }
 
-  while (SharedMemoryManager::data()->candidates[0].theoreticalScore == -1) {
+  if (candidateIndex == -1) {
+    Logger::error("Candidate process with pid " + std::to_string(myPid) +
+                  " not found in candidates array");
+    SharedMemoryManager::detach();
+    return 1;
+  }
+
+  // Czekaj na ocenę
+  while (
+      SharedMemoryManager::data()->candidates[candidateIndex].theoreticalScore <
+      0) {
     sleep(1);
   }
 
-  Logger::info(
-      "Candidate process with pid " + std::to_string(getpid()) +
-      " got theoretical score: " +
-      std::to_string(
-          SharedMemoryManager::data()->candidates[0].theoreticalScore));
+  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+               " got theoretical score: " +
+               std::to_string(SharedMemoryManager::data()
+                                  ->candidates[candidateIndex]
+                                  .theoreticalScore));
+
+  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+               " exiting with status 0");
 
   SharedMemoryManager::detach();
 
