@@ -145,11 +145,14 @@ void DeanProcess::spawnCandidates() {
         double theoreticalScore = Random::randomDouble(30.0, 100.0);
         SharedMemoryManager::data()->candidates[i].theoreticalScore =
             theoreticalScore;
+        retaking++;
       } else {
         SharedMemoryManager::data()->candidates[i].theoreticalScore = -1.0;
       }
     }
 
+    // TODO: Investigate
+    // For stability reasons
     usleep(10000);
   }
 }
@@ -166,7 +169,7 @@ void DeanProcess::verifyCandidates() {
   }
 
   SharedMemoryManager::data()->commissionACandidateCount =
-      config.candidateCount - rejected;
+      config.candidateCount - rejected - retaking;
 }
 
 void DeanProcess::cleanup() {

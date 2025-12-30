@@ -223,4 +223,5 @@ void CommissionProcess::cleanup() {
   Logger::info("CommissionProcess::cleanup()");
   waitThreads();
   SharedMemoryManager::detach();
+  Logger::info("CommissionProcess exiting with status 0");
 }

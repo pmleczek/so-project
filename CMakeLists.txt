@@ -27,6 +27,7 @@ target_compile_features(dean PRIVATE cxx_std_17)
 
 add_executable(candidate
     src/candidate/main.cpp
+    src/candidate/CandidateProcess.cpp
     ${COMMON_SOURCES}
 )
 target_include_directories(candidate PRIVATE include)

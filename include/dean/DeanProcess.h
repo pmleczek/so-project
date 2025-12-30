@@ -18,5 +18,6 @@ private:
   int assertStartTime(int argc, char *argv[]);
 
   int candidateCount;
+  int retaking = 0;
   DeanConfig config;
 };

@@ -80,7 +80,8 @@ Główny proces symulacji - jeden na całą symulację. Uruchamiany jako pierws
 - Destrukcję mechanizmów IPC
 - Weryfikację mozliwosci przystąpienia do egzaminu przez kandydatów
 - Rozpoczyna egzamin o określonej godzinie
-- Obsługę sygnału ewakuacji
+- Obsługę sygnału ewakuacji i przekazywanie sygnału do kandydatów oraz komisji
+- Publikację wyników (listy rankingowej) po zakończeniu/przerwaniu egzaminu
 
 <a name="#cand-type"></a>
 ### Kandydat (`candidate`)
@@ -90,4 +91,4 @@ Reprezentuje pojedynczego kandydata
 <a name="#comm-type"></a>
 ### Komisja (`commission`)
 
-Reprezentuje pojedynczą komisję (`A` lub `B`) - dwa procesy na całą symulacje. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Komisja składa się odpowiednio z 3 lub 5 wątków w zależności od typu (`A` lub `B`) odpowiedzialnych za tworzenie pytań dla kandydatów.
+Reprezentuje pojedynczą komisję (`A` lub `B`) - dwa procesy na całą symulacje. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Komisja składa się odpowiednio z 3 lub 5 wątków w zależności od typu (`A` lub `B`) odpowiedzialnych za tworzenie pytań dla kandydatów w ciągu kilku sekund (losowa liczba czasu z zakresu `2` do `5` sekund). Komisja odpowiada również za ocenianie odpowiedzi kandydatów, oceny przekazywane są do dziekana przez przewodniczącego komisji.
