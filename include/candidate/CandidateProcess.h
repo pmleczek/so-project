@@ -12,13 +12,16 @@ public:
   void waitForGrading(char commission);
   void maybeExitExam();
   void getCommissionASeat();
+  void getCommissionBSeat();
   void cleanup();
 
 private:
   static void rejectionHandler(int signal);
   int findCommissionASeat();
+  int findCommissionBSeat();
 
   int index;
   int seat = -1;
   sem_t *semaphoreA;
+  sem_t *semaphoreB;
 };

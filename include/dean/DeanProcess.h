@@ -1,6 +1,7 @@
 #pragma once
 
 #include "dean/DeanConfig.h"
+#include <unordered_set>
 
 class DeanProcess {
 public:
@@ -16,6 +17,9 @@ public:
 private:
   int assertPlaceCount(int argc, char *argv[]);
   int assertStartTime(int argc, char *argv[]);
+  std::unordered_set<int> getFailedExamIndices();
+  std::unordered_set<int>
+  getRetakeExamIndices(std::unordered_set<int> excludedIndices);
 
   int candidateCount;
   int retaking = 0;

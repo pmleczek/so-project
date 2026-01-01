@@ -17,7 +17,10 @@ int main(int argc, char *argv[]) {
 
   candidateProcess.maybeExitExam();
 
-  // TODO: Implement commission B
+  candidateProcess.getCommissionBSeat();
+  candidateProcess.waitForQuestions('B');
+  candidateProcess.prepareAnswers('B');
+  candidateProcess.waitForGrading('B');
 
   candidateProcess.cleanup();
 

@@ -80,15 +80,45 @@ int CandidateProcess::findCommissionASeat() {
   return -1;
 }
 
+int CandidateProcess::findCommissionBSeat() {
+  // TODO: Use mutex in other places?
+  pthread_mutex_t *seatsMutex = &SharedMemoryManager::data()->seatsMutex;
+  pthread_mutex_lock(seatsMutex);
+
+  CommissionSeat *seats = SharedMemoryManager::data()->commissionB.seats;
+  for (int i = 0; i < 3; i++) {
+    if (seats[i].pid == -1) {
+      SharedMemoryManager::data()->commissionB.seats[i] = {
+          .pid = getpid(),
+          .questionsCount = 0,
+          .answered = false,
+      };
+      pthread_mutex_unlock(seatsMutex);
+      return i;
+    }
+  }
+
+  pthread_mutex_unlock(seatsMutex);
+  return -1;
+}
+
 void CandidateProcess::waitForQuestions(char commission) {
   Logger::info("CandidateProcess::waitForQuestions()");
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " waiting for questions from commission " + commission);
 
-  int questionNumber = commission == 'A' ? 5 : 3;
-  while (SharedMemoryManager::data()->commissionA.seats[seat].questionsCount !=
-         (1 << questionNumber) - 1) {
-    sleep(1);
+  if (commission == 'A') {
+    while (
+        SharedMemoryManager::data()->commissionA.seats[seat].questionsCount !=
+        (1 << 5) - 1) {
+      sleep(1);
+    }
+  } else {
+    while (
+        SharedMemoryManager::data()->commissionB.seats[seat].questionsCount !=
+        (1 << 3) - 1) {
+      sleep(1);
+    }
   }
 }
 
@@ -96,7 +126,13 @@ void CandidateProcess::prepareAnswers(char commission) {
   // TODO: Proper implementation
   // TODO: Sleep T_A_i seconds
   sleep(5);
-  SharedMemoryManager::data()->commissionA.seats[seat].answered = true;
+
+  if (commission == 'A') {
+    SharedMemoryManager::data()->commissionA.seats[seat].answered = true;
+  } else {
+    SharedMemoryManager::data()->commissionB.seats[seat].answered = true;
+  }
+
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " answered questions");
 }
@@ -111,6 +147,29 @@ void CandidateProcess::waitForGrading(char commission) {
   } else {
     while (SharedMemoryManager::data()->candidates[index].practicalScore < 0) {
       sleep(1);
+    }
+  }
+}
+
+void CandidateProcess::getCommissionBSeat() {
+  Logger::info("CandidateProcess::getCommissionBSeat()");
+
+  seat = -1;
+  semaphoreB = SemaphoreManager::open("commissionB");
+
+  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+               " waiting for commission B seat");
+  SemaphoreManager::wait(semaphoreB);
+
+  while (seat == -1) {
+    if (SemaphoreManager::trywait(semaphoreB) == 0) {
+      seat = findCommissionBSeat();
+      if (seat == -1) {
+        SemaphoreManager::post(semaphoreB);
+        usleep(10000);
+      }
+    } else {
+      usleep(10000);
     }
   }
 }

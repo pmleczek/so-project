@@ -33,6 +33,7 @@ struct SharedState {
   bool examStarted = false;
   int candidateCount;
   int commissionACandidateCount;
+  int commissionBCandidateCount;
   CommissionInfo commissionA;
   CommissionInfo commissionB;
   pthread_mutex_t seatsMutex;

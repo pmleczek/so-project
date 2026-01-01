@@ -54,10 +54,9 @@ void DeanProcess::initialize(int argc, char *argv[]) {
     SharedMemoryManager::data()->commissionA.seats[i].questionsCount = 0;
     SharedMemoryManager::data()->commissionA.seats[i].answered = false;
 
-    // TODO: Uncomment when commission B is added
-    // SharedMemoryManager::data()->commissionB.seats[i].pid = -1;
-    // SharedMemoryManager::data()->commissionB.seats[i].questionsCount = 0;
-    // SharedMemoryManager::data()->commissionB.seats[i].answered = false;
+    SharedMemoryManager::data()->commissionB.seats[i].pid = -1;
+    SharedMemoryManager::data()->commissionB.seats[i].questionsCount = 0;
+    SharedMemoryManager::data()->commissionB.seats[i].answered = false;
   }
 
   SharedMemoryManager::data()->candidateCount = config.candidateCount;
@@ -81,9 +80,12 @@ void DeanProcess::waitForExamStart() {
 void DeanProcess::start() {
   Logger::info("DeanProcess::start()");
   SharedMemoryManager::data()->examStarted = true;
-  while (wait(NULL) > 0) {
-    ;
+
+  while (SharedMemoryManager::data()->examStarted) {
+    usleep(1000000);
   }
+
+  Logger::info("Exam ended");
 }
 
 void DeanProcess::spawnComissions() {
@@ -96,11 +98,37 @@ void DeanProcess::spawnComissions() {
   }
 
   // Comission B
-  // TODO: Uncomment when commission division is implemented
-  // pid_t pidB = fork();
-  // if (pidB == 0) {
-  //   execlp("./commission", "./commission", "B", NULL);
-  // }
+  pid_t pidB = fork();
+  if (pidB == 0) {
+    execlp("./commission", "./commission", "B", NULL);
+  }
+}
+
+std::unordered_set<int> DeanProcess::getFailedExamIndices() {
+  auto indices =
+      Random::randomInts(config.failedExamCount, 0, config.candidateCount - 1);
+
+  Logger::info("Failed exam indices (" + std::to_string(indices.size()) +
+               "): ");
+  for (int index : indices) {
+    Logger::info("- " + std::to_string(index));
+  }
+
+  return indices;
+}
+
+std::unordered_set<int>
+DeanProcess::getRetakeExamIndices(std::unordered_set<int> excludedIndices) {
+  auto indices = Random::randomInts(config.retakeExamCount, 0,
+                                    config.candidateCount - 1, excludedIndices);
+
+  Logger::info("Retake exam indices (" + std::to_string(indices.size()) +
+               "): ");
+  for (int index : indices) {
+    Logger::info("- " + std::to_string(index));
+  }
+
+  return indices;
 }
 
 void DeanProcess::spawnCandidates() {
@@ -108,11 +136,10 @@ void DeanProcess::spawnCandidates() {
 
   Logger::info("Spawning " + std::to_string(config.candidateCount) +
                " candidates");
-  // TODO: Separate function?
-  std::unordered_set<int> failedExamIndices =
-      Random::randomInts(config.failedExamCount, 0, config.candidateCount - 1);
-  std::unordered_set<int> retakeExamIndices = Random::randomInts(
-      config.retakeExamCount, 0, config.candidateCount - 1, failedExamIndices);
+
+  std::unordered_set<int> failedExamIndices = getFailedExamIndices();
+  std::unordered_set<int> retakeExamIndices =
+      getRetakeExamIndices(failedExamIndices);
 
   pid_t candidatePid;
   bool failed, retake;
@@ -168,8 +195,9 @@ void DeanProcess::verifyCandidates() {
     }
   }
 
-  SharedMemoryManager::data()->commissionACandidateCount =
-      config.candidateCount - rejected - retaking;
+  int commissonACount  = config.candidateCount - rejected - retaking;
+  SharedMemoryManager::data()->commissionACandidateCount = commissonACount;
+  SharedMemoryManager::data()->commissionBCandidateCount = commissonACount;
 }
 
 void DeanProcess::cleanup() {

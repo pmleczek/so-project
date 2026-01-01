@@ -70,10 +70,16 @@ void CommissionProcess::mainLoop() {
   while (running) {
     SharedState *state = SharedMemoryManager::data();
 
-    if (candidatesProcessed >= state->commissionACandidateCount) {
+    int totalCandidates = commissionType_ == 'A'
+                              ? state->commissionACandidateCount
+                              : state->commissionBCandidateCount;
+    CommissionInfo *commission =
+        commissionType_ == 'A' ? &state->commissionA : &state->commissionB;
+
+    if (candidatesProcessed >= totalCandidates) {
       bool allSeatsEmpty = true;
       for (int i = 0; i < 3; i++) {
-        if (state->commissionA.seats[i].pid != -1) {
+        if (commission->seats[i].pid != -1) {
           allSeatsEmpty = false;
           break;
         }
@@ -82,9 +88,14 @@ void CommissionProcess::mainLoop() {
       if (allSeatsEmpty) {
         Logger::info("All candidates processed (" +
                      std::to_string(candidatesProcessed) + "/" +
-                     std::to_string(state->commissionACandidateCount) +
-                     "), finishing...");
+                     std::to_string(totalCandidates) + "), finishing...");
         running = false;
+
+        if (commissionType_ == 'B') {
+          Logger::info("Commission B finished, ending exam");
+          SharedMemoryManager::data()->examStarted = false;
+        }
+
         break;
       }
     }
@@ -93,35 +104,44 @@ void CommissionProcess::mainLoop() {
 
     for (int i = 0; i < 3; i++) {
       // TODO: Extract to function
-      if (state->commissionA.seats[i].answered &&
-          state->commissionA.seats[i].pid != -1) {
+      if (commission->seats[i].answered && commission->seats[i].pid != -1) {
         CandidateInfo *candidate = findCandidate(i);
 
         if (candidate == nullptr) {
           Logger::warn(
               "Seat " + std::to_string(i) +
               " has answered flag but candidate not found, freeing seat");
-          state->commissionA.seats[i].answered = false;
-          state->commissionA.seats[i].questionsCount = 0;
-          state->commissionA.seats[i].pid = -1;
+          commission->seats[i].answered = false;
+          commission->seats[i].questionsCount = 0;
+          commission->seats[i].pid = -1;
           SemaphoreManager::post(semaphore);
           break;
         }
 
-        if (candidate->theoreticalScore < 0) {
-          candidate->theoreticalScore = getNRandomScore(3);
+        double score = commissionType_ == 'A' ? candidate->theoreticalScore
+                                              : candidate->practicalScore;
+        if (score < 0) {
+          if (commissionType_ == 'A') {
+            candidate->theoreticalScore = getNRandomScore(5);
+          } else {
+            candidate->practicalScore = getNRandomScore(3);
+          }
           candidatesProcessed++;
 
-          Logger::info("[Commission A] % of candidates graded: " +
+          if (commissionType_ == 'A' && candidate->theoreticalScore < 30) {
+            SharedMemoryManager::data()->commissionBCandidateCount -= 1;
+          }
+
+          Logger::info("[Commission " + std::string(1, commissionType_) +
+                       "] % of candidates graded: " +
                        std::to_string(candidatesProcessed /
-                                      (double)state->commissionACandidateCount *
-                                      100.0) +
+                                      (double)totalCandidates * 100.0) +
                        "%");
         }
 
-        state->commissionA.seats[i].answered = false;
-        state->commissionA.seats[i].questionsCount = 0;
-        state->commissionA.seats[i].pid = -1;
+        commission->seats[i].answered = false;
+        commission->seats[i].questionsCount = 0;
+        commission->seats[i].pid = -1;
 
         SemaphoreManager::post(semaphore);
 
@@ -139,7 +159,9 @@ void CommissionProcess::mainLoop() {
 
 CandidateInfo *CommissionProcess::findCandidate(int seat) {
   SharedState *state = SharedMemoryManager::data();
-  int pid = state->commissionA.seats[seat].pid;
+  CommissionInfo *commission =
+      commissionType_ == 'A' ? &state->commissionA : &state->commissionB;
+  int pid = commission->seats[seat].pid;
 
   for (int i = 0; i < state->candidateCount; i++) {
     if (state->candidates[i].pid == pid) {
@@ -223,5 +245,5 @@ void CommissionProcess::cleanup() {
   Logger::info("CommissionProcess::cleanup()");
   waitThreads();
   SharedMemoryManager::detach();
-  Logger::info("CommissionProcess exiting with status 0");
+  Logger::info("CommissionProcess exiting");
 }

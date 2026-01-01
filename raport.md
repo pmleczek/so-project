@@ -13,6 +13,7 @@
     - [Dziekan](#dean-type)
     - [Kandydat](#cand-type)
     - [Komisja](#comm-type)
+- [Testy](#tests)
 
 <a name="#basic-info"></a>
 ## Podstawowe informacje
@@ -92,3 +93,20 @@ Reprezentuje pojedynczego kandydata
 ### Komisja (`commission`)
 
 Reprezentuje pojedynczą komisję (`A` lub `B`) - dwa procesy na całą symulacje. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Komisja składa się odpowiednio z 3 lub 5 wątków w zależności od typu (`A` lub `B`) odpowiedzialnych za tworzenie pytań dla kandydatów w ciągu kilku sekund (losowa liczba czasu z zakresu `2` do `5` sekund). Komisja odpowiada również za ocenianie odpowiedzi kandydatów, oceny przekazywane są do dziekana przez przewodniczącego komisji.
+
+<a name="#tests"></a>
+## Testy
+
+### 1. Weryfikacja dopuszczenia do egzaminu
+
+**Oczekiwane zachowanie**: Dziekan powinien poprawnie weryfikować możliwość podejścia do egzaminu przez kandydatów, tj. powinien sprawdzać czy każdy z kandydatów posiada zdaną maturę.
+
+****
+
+### 2. Dopuszczenie do części praktycznej
+
+### 3. Pominięcie części teoretycznej
+
+### 4. Ocena odpowiedzi przez komisję
+
+### 5. Ewakuacja budynku
