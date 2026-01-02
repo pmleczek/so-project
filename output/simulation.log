@@ -1,1138 +1,831 @@
-[INFO] [2026-01-02 13:33:02.720] Dean process started (pid=71009)
-[INFO] [2026-01-02 13:33:02.721] DeanProcess::initialize()
-[INFO] [2026-01-02 13:33:02.721] DeanConfig initialized with 10 places
-[INFO] [2026-01-02 13:33:02.721] DeanConfig - place count: 10 places
-[INFO] [2026-01-02 13:33:02.721] DeanConfig - start time: 00:40
-[INFO] [2026-01-02 13:33:02.721] DeanConfig - candidate count: 98 candidates
-[INFO] [2026-01-02 13:33:02.721] DeanConfig - failed exam count: 1 failed exams
-[INFO] [2026-01-02 13:33:02.721] DeanConfig - retake exam count: 1 retake exams
-[INFO] [2026-01-02 13:33:02.721] SharedMemoryManager::initialize(98)
-[INFO] [2026-01-02 13:33:02.721] Initializing shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.721] Creating new shared memory with size: 4080 bytes
-[INFO] [2026-01-02 13:33:02.721] DeanProcess::spawnComissions()
-[INFO] [2026-01-02 13:33:02.722] DeanProcess::spawnCandidates()
-[INFO] [2026-01-02 13:33:02.722] Spawning 98 candidates
-[INFO] [2026-01-02 13:33:02.722] Failed exam indices (1): 
-[INFO] [2026-01-02 13:33:02.722] - 38
-[INFO] [2026-01-02 13:33:02.722] Retake exam indices (1): 
-[INFO] [2026-01-02 13:33:02.722] - 56
-[INFO] [2026-01-02 13:33:02.727] Candidate process started (pid=71012)
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::CommissionProcess()
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::initialize()
-[INFO] [2026-01-02 13:33:02.728] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::CommissionProcess()
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::initialize()
-[INFO] [2026-01-02 13:33:02.728] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.728] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.728] Initializing comission: B with 3 members
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.728] Initializing comission: A with 5 members
-[INFO] [2026-01-02 13:33:02.728] CommissionProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.736] Candidate process started (pid=71013)
-[INFO] [2026-01-02 13:33:02.736] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.736] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.736] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.736] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.748] Candidate process started (pid=71014)
-[INFO] [2026-01-02 13:33:02.749] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.749] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.749] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.749] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.761] Candidate process started (pid=71015)
-[INFO] [2026-01-02 13:33:02.762] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.762] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.762] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.762] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.773] Candidate process started (pid=71016)
-[INFO] [2026-01-02 13:33:02.773] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.773] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.773] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.773] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.786] Candidate process started (pid=71017)
-[INFO] [2026-01-02 13:33:02.786] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.786] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.786] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.786] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.800] Candidate process started (pid=71018)
-[INFO] [2026-01-02 13:33:02.800] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.800] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.800] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.800] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.812] Candidate process started (pid=71019)
-[INFO] [2026-01-02 13:33:02.812] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.812] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.812] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.812] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.824] Candidate process started (pid=71020)
-[INFO] [2026-01-02 13:33:02.824] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.824] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.824] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.824] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.837] Candidate process started (pid=71021)
-[INFO] [2026-01-02 13:33:02.837] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.837] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.837] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.837] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.850] Candidate process started (pid=71022)
-[INFO] [2026-01-02 13:33:02.851] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.851] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.851] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.851] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.864] Candidate process started (pid=71023)
-[INFO] [2026-01-02 13:33:02.864] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.864] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.864] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.864] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.875] Candidate process started (pid=71024)
-[INFO] [2026-01-02 13:33:02.876] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.876] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.876] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.876] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.887] Candidate process started (pid=71025)
-[INFO] [2026-01-02 13:33:02.888] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.888] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.888] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.888] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.900] Candidate process started (pid=71026)
-[INFO] [2026-01-02 13:33:02.900] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.900] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.900] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.900] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.911] Candidate process started (pid=71027)
-[INFO] [2026-01-02 13:33:02.911] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.911] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.911] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.911] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.924] Candidate process started (pid=71028)
-[INFO] [2026-01-02 13:33:02.924] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.924] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.924] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.924] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.936] Candidate process started (pid=71029)
-[INFO] [2026-01-02 13:33:02.936] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.936] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.937] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.937] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.949] Candidate process started (pid=71030)
-[INFO] [2026-01-02 13:33:02.949] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.949] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.950] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.950] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.960] Candidate process started (pid=71031)
-[INFO] [2026-01-02 13:33:02.960] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.960] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.960] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.960] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.972] Candidate process started (pid=71032)
-[INFO] [2026-01-02 13:33:02.972] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.972] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.972] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.972] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.982] Candidate process started (pid=71033)
-[INFO] [2026-01-02 13:33:02.983] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.983] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.983] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.983] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:02.993] Candidate process started (pid=71034)
-[INFO] [2026-01-02 13:33:02.993] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:02.993] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:02.993] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:02.993] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.5] Candidate process started (pid=71035)
-[INFO] [2026-01-02 13:33:03.6] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.6] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.6] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.6] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.18] Candidate process started (pid=71036)
-[INFO] [2026-01-02 13:33:03.18] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.18] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.18] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.18] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.29] Candidate process started (pid=71037)
-[INFO] [2026-01-02 13:33:03.29] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.29] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.29] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.29] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.41] Candidate process started (pid=71038)
-[INFO] [2026-01-02 13:33:03.41] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.41] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.41] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.41] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.56] Candidate process started (pid=71039)
-[INFO] [2026-01-02 13:33:03.57] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.57] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.57] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.57] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.69] Candidate process started (pid=71042)
-[INFO] [2026-01-02 13:33:03.70] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.70] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.70] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.70] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.79] Candidate process started (pid=71043)
-[INFO] [2026-01-02 13:33:03.80] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.80] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.80] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.80] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.91] Candidate process started (pid=71046)
-[INFO] [2026-01-02 13:33:03.92] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.92] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.92] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.92] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.104] Candidate process started (pid=71048)
-[INFO] [2026-01-02 13:33:03.104] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.104] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.104] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.104] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.117] Candidate process started (pid=71052)
-[INFO] [2026-01-02 13:33:03.117] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.117] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.117] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.117] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.129] Candidate process started (pid=71057)
-[INFO] [2026-01-02 13:33:03.130] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.130] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.130] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.130] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.141] Candidate process started (pid=71061)
-[INFO] [2026-01-02 13:33:03.141] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.141] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.141] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.141] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.154] Candidate process started (pid=71064)
-[INFO] [2026-01-02 13:33:03.154] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.154] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.154] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.154] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.164] Candidate process started (pid=71067)
-[INFO] [2026-01-02 13:33:03.164] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.164] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.164] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.164] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.177] Candidate process started (pid=71070)
-[INFO] [2026-01-02 13:33:03.177] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.177] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.177] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.177] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.190] Candidate process started (pid=71087)
-[INFO] [2026-01-02 13:33:03.190] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.190] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.190] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.190] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.202] Candidate process started (pid=71088)
-[INFO] [2026-01-02 13:33:03.202] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.202] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.202] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.202] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.214] Candidate process started (pid=71089)
-[INFO] [2026-01-02 13:33:03.214] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.214] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.214] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.214] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.226] Candidate process started (pid=71090)
-[INFO] [2026-01-02 13:33:03.227] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.227] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.227] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.227] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.239] Candidate process started (pid=71091)
-[INFO] [2026-01-02 13:33:03.240] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.240] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.240] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.240] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.252] Candidate process started (pid=71092)
-[INFO] [2026-01-02 13:33:03.252] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.252] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.252] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.252] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.265] Candidate process started (pid=71093)
-[INFO] [2026-01-02 13:33:03.265] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.265] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.265] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.265] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.277] Candidate process started (pid=71094)
-[INFO] [2026-01-02 13:33:03.278] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.278] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.278] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.278] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.289] Candidate process started (pid=71095)
-[INFO] [2026-01-02 13:33:03.289] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.289] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.289] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.289] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.299] Candidate process started (pid=71096)
-[INFO] [2026-01-02 13:33:03.300] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.300] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.300] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.300] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.312] Candidate process started (pid=71097)
-[INFO] [2026-01-02 13:33:03.312] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.312] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.312] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.312] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.322] Candidate process started (pid=71098)
-[INFO] [2026-01-02 13:33:03.323] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.323] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.323] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.323] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.333] Candidate process started (pid=71099)
-[INFO] [2026-01-02 13:33:03.333] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.333] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.333] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.333] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.344] Candidate process started (pid=71100)
-[INFO] [2026-01-02 13:33:03.344] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.344] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.344] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.344] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.354] Candidate process started (pid=71101)
-[INFO] [2026-01-02 13:33:03.354] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.355] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.355] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.355] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.366] Candidate process started (pid=71102)
-[INFO] [2026-01-02 13:33:03.366] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.366] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.367] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.367] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.377] Candidate process started (pid=71103)
-[INFO] [2026-01-02 13:33:03.377] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.377] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.377] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.377] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.387] Candidate process started (pid=71104)
-[INFO] [2026-01-02 13:33:03.388] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.388] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.388] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.388] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.398] Candidate process started (pid=71105)
-[INFO] [2026-01-02 13:33:03.398] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.398] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.398] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.398] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.410] Candidate process started (pid=71106)
-[INFO] [2026-01-02 13:33:03.410] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.410] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.410] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.410] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.420] Candidate process started (pid=71107)
-[INFO] [2026-01-02 13:33:03.421] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.421] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.421] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.421] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.431] Candidate process started (pid=71108)
-[INFO] [2026-01-02 13:33:03.431] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.431] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.431] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.431] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.444] Candidate process started (pid=71109)
-[INFO] [2026-01-02 13:33:03.445] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.445] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.445] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.445] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.457] Candidate process started (pid=71110)
-[INFO] [2026-01-02 13:33:03.457] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.457] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.457] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.458] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.470] Candidate process started (pid=71113)
-[INFO] [2026-01-02 13:33:03.470] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.470] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.470] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.470] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.482] Candidate process started (pid=71114)
-[INFO] [2026-01-02 13:33:03.482] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.482] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.482] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.482] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.493] Candidate process started (pid=71115)
-[INFO] [2026-01-02 13:33:03.494] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.494] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.494] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.494] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.504] Candidate process started (pid=71116)
-[INFO] [2026-01-02 13:33:03.504] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.504] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.505] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.505] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.516] Candidate process started (pid=71117)
-[INFO] [2026-01-02 13:33:03.516] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.516] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.516] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.516] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.529] Candidate process started (pid=71118)
-[INFO] [2026-01-02 13:33:03.529] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.529] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.529] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.529] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.542] Candidate process started (pid=71119)
-[INFO] [2026-01-02 13:33:03.542] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.542] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.542] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.542] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.552] Candidate process started (pid=71120)
-[INFO] [2026-01-02 13:33:03.553] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.553] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.553] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.553] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.564] Candidate process started (pid=71121)
-[INFO] [2026-01-02 13:33:03.565] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.566] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.566] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.566] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.577] Candidate process started (pid=71122)
-[INFO] [2026-01-02 13:33:03.577] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.577] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.578] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.578] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.590] Candidate process started (pid=71123)
-[INFO] [2026-01-02 13:33:03.591] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.591] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.591] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.591] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.602] Candidate process started (pid=71124)
-[INFO] [2026-01-02 13:33:03.603] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.603] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.603] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.603] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.612] Candidate process started (pid=71125)
-[INFO] [2026-01-02 13:33:03.613] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.613] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.613] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.613] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.624] Candidate process started (pid=71126)
-[INFO] [2026-01-02 13:33:03.625] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.625] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.625] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.625] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.636] Candidate process started (pid=71127)
-[INFO] [2026-01-02 13:33:03.636] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.636] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.636] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.636] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.646] Candidate process started (pid=71128)
-[INFO] [2026-01-02 13:33:03.646] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.646] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.646] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.646] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.658] Candidate process started (pid=71129)
-[INFO] [2026-01-02 13:33:03.658] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.658] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.658] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.658] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.668] Candidate process started (pid=71130)
-[INFO] [2026-01-02 13:33:03.668] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.668] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.668] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.668] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.679] Candidate process started (pid=71131)
-[INFO] [2026-01-02 13:33:03.680] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.680] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.680] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.680] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.692] Candidate process started (pid=71132)
-[INFO] [2026-01-02 13:33:03.692] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.692] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.692] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.693] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.705] Candidate process started (pid=71133)
-[INFO] [2026-01-02 13:33:03.705] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.705] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.705] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.705] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.724] Candidate process started (pid=71134)
-[INFO] [2026-01-02 13:33:03.725] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.725] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.725] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.725] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.737] Candidate process started (pid=71135)
-[INFO] [2026-01-02 13:33:03.737] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.737] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.737] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.737] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.748] Candidate process started (pid=71136)
-[INFO] [2026-01-02 13:33:03.748] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.749] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.749] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.749] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.761] Candidate process started (pid=71137)
-[INFO] [2026-01-02 13:33:03.762] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.762] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.762] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.762] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.772] Candidate process started (pid=71138)
-[INFO] [2026-01-02 13:33:03.773] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.773] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.773] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.773] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.785] Candidate process started (pid=71139)
-[INFO] [2026-01-02 13:33:03.785] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.785] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.785] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.785] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.798] Candidate process started (pid=71140)
-[INFO] [2026-01-02 13:33:03.799] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.799] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.799] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.799] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.811] Candidate process started (pid=71141)
-[INFO] [2026-01-02 13:33:03.811] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.811] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.811] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.811] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.823] Candidate process started (pid=71142)
-[INFO] [2026-01-02 13:33:03.824] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.824] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.824] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.824] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.834] Candidate process started (pid=71143)
-[INFO] [2026-01-02 13:33:03.835] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.835] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.835] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.835] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.847] Candidate process started (pid=71144)
-[INFO] [2026-01-02 13:33:03.848] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.848] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.848] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.848] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.858] Candidate process started (pid=71145)
-[INFO] [2026-01-02 13:33:03.858] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.858] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.858] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.858] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.871] Candidate process started (pid=71148)
-[INFO] [2026-01-02 13:33:03.871] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.871] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.871] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.871] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.882] Candidate process started (pid=71151)
-[INFO] [2026-01-02 13:33:03.882] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.882] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.882] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.883] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.895] Candidate process started (pid=71152)
-[INFO] [2026-01-02 13:33:03.895] CandidateProcess::initialize()
-[INFO] [2026-01-02 13:33:03.895] Attaching to shared memory with key: -1693527766
-[INFO] [2026-01-02 13:33:03.895] Getting shared memory for key: -1693527766
-[INFO] [2026-01-02 13:33:03.895] CandidateProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.904] DeanProcess::waitForExamStart()
-[INFO] [2026-01-02 13:33:03.904] Sleeping for 15 seconds
-[INFO] [2026-01-02 13:33:16.182] DeanProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.182] Termination signal: SIG 2 received
-[INFO] [2026-01-02 13:33:16.183] CommissionProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.183] Termination signal: SIG 15 received
-[INFO] [2026-01-02 13:33:16.183] CommissionProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.183] CommissionProcess::waitThreads()
-[INFO] [2026-01-02 13:33:16.183] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.183] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.183] Candidate process with pid 71016 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.183] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.183] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.183] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.184] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.184] Candidate process with pid 71021 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.184] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.184] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.184] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.184] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.184] Candidate process with pid 71017 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.184] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.185] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.185] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.185] Candidate process with pid 71028 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.185] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.185] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.185] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.185] Candidate process with pid 71030 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.186] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.186] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.186] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.186] Candidate process with pid 71030 exiting with status 0
-[INFO] [2026-01-02 13:33:16.186] Candidate process with pid 71016 exiting with status 0
-[INFO] [2026-01-02 13:33:16.186] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.186] Candidate process with pid 71015 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.186] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.186] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.186] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.186] Candidate process with pid 71015 exiting with status 0
-[INFO] [2026-01-02 13:33:16.187] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.187] Candidate process with pid 71057 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.187] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.187] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.187] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.187] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.187] Candidate process with pid 71026 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.187] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.187] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.187] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.187] Candidate process with pid 71026 exiting with status 0
-[INFO] [2026-01-02 13:33:16.187] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.187] Candidate process with pid 71020 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.188] Candidate process with pid 71088 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.188] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.188] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.188] Candidate process with pid 71014 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.188] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.188] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.188] Candidate process with pid 71022 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.188] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.189] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.189] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.189] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.189] Candidate process with pid 71099 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.189] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.189] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.189] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.189] Candidate process with pid 71099 exiting with status 0
-[INFO] [2026-01-02 13:33:16.189] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.189] Candidate process with pid 71052 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.189] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.189] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.190] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.190] Candidate process with pid 71052 exiting with status 0
-[INFO] [2026-01-02 13:33:16.190] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.190] Candidate process with pid 71064 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.190] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.190] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.190] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.190] Candidate process with pid 71064 exiting with status 0
-[INFO] [2026-01-02 13:33:16.190] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.190] Candidate process with pid 71019 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.190] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.190] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.190] Candidate process with pid 71117 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.191] Candidate process with pid 71121 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.191] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.191] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.191] Candidate process with pid 71089 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.191] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.191] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.191] Candidate process with pid 71033 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.191] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.191] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.191] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.192] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.192] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.192] Candidate process with pid 71145 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.192] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.192] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.192] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.192] Candidate process with pid 71145 exiting with status 0
-[INFO] [2026-01-02 13:33:16.192] Candidate process with pid 71014 exiting with status 0
-[INFO] [2026-01-02 13:33:16.192] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.192] Candidate process with pid 71096 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.192] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.192] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.192] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.192] CommissionProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.192] Termination signal: SIG 15 received
-[INFO] [2026-01-02 13:33:16.193] CommissionProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.193] CommissionProcess::waitThreads()
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.193] Candidate process with pid 71046 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.193] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.193] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.193] Candidate process with pid 71023 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.193] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.193] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.193] Candidate process with pid 71107 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.193] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.193] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.193] Candidate process with pid 71021 exiting with status 0
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.193] Candidate process with pid 71110 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.193] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.193] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.194] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.194] Candidate process with pid 71067 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.194] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.194] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.194] Candidate process with pid 71115 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.194] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.194] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.194] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.194] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.194] Candidate process with pid 71120 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.194] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.194] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.194] Candidate process with pid 71120 exiting with status 0
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.194] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71125 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.195] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.195] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71128 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.195] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.195] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71131 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.195] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.195] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71091 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.195] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.195] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71137 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.195] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.195] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.195] Candidate process with pid 71088 exiting with status 0
-[INFO] [2026-01-02 13:33:16.195] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71141 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.196] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.196] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71144 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.196] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.196] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71151 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.196] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.196] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71097 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.196] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.196] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71022 exiting with status 0
-[INFO] [2026-01-02 13:33:16.196] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.196] Candidate process with pid 71100 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.197] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.197] Candidate process with pid 71104 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.197] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.197] Candidate process with pid 71012 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.197] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.197] Candidate process with pid 71025 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.197] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.197] Candidate process with pid 71027 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.197] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.197] Candidate process with pid 71114 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.197] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.197] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.198] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71070 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.198] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.198] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71122 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.198] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.198] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71031 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.198] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.198] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71121 exiting with status 0
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71129 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.198] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.198] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.198] Candidate process with pid 71132 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.198] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.198] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.199] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.199] Candidate process with pid 71135 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.199] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.199] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.199] Candidate process with pid 71138 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.199] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.199] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.199] Candidate process with pid 71142 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.199] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.199] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.199] Candidate process with pid 71093 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.199] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.199] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.199] DeanProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.199] SharedMemoryManager::destroy()
-[INFO] [2026-01-02 13:33:16.199] Destroying shared memory with id: 131085
-[INFO] [2026-01-02 13:33:16.199] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.200] Candidate process with pid 71094 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.200] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.200] Candidate process with pid 71098 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.200] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.200] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.200] Candidate process with pid 71101 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.200] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.200] Candidate process with pid 71048 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.200] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.200] Candidate process with pid 71108 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.200] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.200] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.201] Candidate process with pid 71113 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.201] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.201] Candidate process with pid 71013 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.201] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] Candidate process with pid 71115 exiting with status 0
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.201] Candidate process with pid 71118 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.201] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.201] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.201] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.201] Candidate process with pid 71123 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.202] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.202] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.202] Candidate process with pid 71127 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.202] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.202] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.202] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.202] Candidate process with pid 71128 exiting with status 0
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.202] Candidate process with pid 71090 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.202] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.202] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.202] Candidate process with pid 71134 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.202] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.202] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.202] Candidate process with pid 71034 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.202] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.203] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.203] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71140 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71033 exiting with status 0
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71143 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.203] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.203] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71036 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.203] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.203] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.203] Dean process exiting with status 0
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71151 exiting with status 0
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71038 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.203] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.203] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.203] Candidate process with pid 71042 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.203] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.204] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.204] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71102 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.204] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.204] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71105 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.204] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.204] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71024 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.204] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.204] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71061 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.204] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.204] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.204] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71057 exiting with status 0
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71113 exiting with status 0
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71017 exiting with status 0
-[INFO] [2026-01-02 13:33:16.204] Candidate process with pid 71027 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71067 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71029 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.205] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.205] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71019 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71119 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.205] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.205] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71087 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.205] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.205] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.205] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.205] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71020 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71127 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71028 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71129 exiting with status 0
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.205] Candidate process with pid 71032 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.205] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.205] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.205] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71136 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.206] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.206] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71139 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.206] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.206] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.206] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.206] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71140 exiting with status 0
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71143 exiting with status 0
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71144 exiting with status 0
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71093 exiting with status 0
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.206] Candidate process with pid 71152 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.206] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.206] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.206] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71039 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71043 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71103 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71106 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71012 exiting with status 0
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71109 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71018 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.207] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.207] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.207] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.207] Candidate process with pid 71013 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71114 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] CommissionProcess exiting
-[INFO] [2026-01-02 13:33:16.208] CommissionProcess exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.208] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.208] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71118 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71124 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.208] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.208] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.208] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71087 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71125 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71031 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71130 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.208] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.208] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.208] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71032 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71089 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71091 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71134 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71135 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] Candidate process with pid 71136 exiting with status 0
-[INFO] [2026-01-02 13:33:16.208] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71092 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.209] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.209] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.209] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71141 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71035 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.209] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.209] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.209] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.209] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.209] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71152 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71094 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71038 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71096 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71097 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71039 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71098 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71042 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] CommissionProcess exiting
-[INFO] [2026-01-02 13:33:16.209] CommissionProcess exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.209] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.209] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71102 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71101 exiting with status 0
-[INFO] [2026-01-02 13:33:16.209] Candidate process with pid 71103 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71104 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71023 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71105 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71048 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71106 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71107 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71024 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71108 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71025 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71109 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71110 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71061 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71116 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.210] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.210] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.210] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71119 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71122 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71126 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.210] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.210] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.210] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71090 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71132 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71130 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71137 exiting with status 0
-[INFO] [2026-01-02 13:33:16.210] Candidate process with pid 71034 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71138 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71139 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71092 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71142 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71148 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.211] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.211] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.211] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71148 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71043 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71100 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71046 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71018 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71029 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71070 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.211] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71123 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71124 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71133 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.211] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.211] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.211] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71035 exiting with status 0
-[INFO] [2026-01-02 13:33:16.211] Candidate process with pid 71095 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.211] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.211] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.212] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71126 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] CandidateProcess::terminationHandler()
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71037 exiting with status 0 (terminated)
-[INFO] [2026-01-02 13:33:16.212] CandidateProcess::cleanup()
-[INFO] [2026-01-02 13:33:16.212] SharedMemoryManager::detach()
-[INFO] [2026-01-02 13:33:16.212] Detaching from shared memory
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71131 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71095 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71036 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71133 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71116 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71117 exiting with status 0
-[INFO] [2026-01-02 13:33:16.212] Candidate process with pid 71037 exiting with status 0
+[INFO] [2026-01-02 20:30:21.273] Process: dean started (pid=53339)
+[INFO] [2026-01-02 20:30:21.274] DeanConfig initialized with 10 places
+[INFO] [2026-01-02 20:30:21.274] DeanConfig - place count: 10 places
+[INFO] [2026-01-02 20:30:21.274] DeanConfig - start time: 00:40
+[INFO] [2026-01-02 20:30:21.275] DeanConfig - candidate count: 97 candidates
+[INFO] [2026-01-02 20:30:21.275] DeanConfig - failed exam count: 1 failed exams
+[INFO] [2026-01-02 20:30:21.275] DeanConfig - retake exam count: 1 retake exams
+[INFO] [2026-01-02 20:30:21.275] SharedMemoryManager::initialize(97)
+[INFO] [2026-01-02 20:30:21.275] Initializing shared memory for key: -1693527766
+[WARN] [2026-01-02 20:30:21.275] Shared memory already exists. Cleaning up...
+[INFO] [2026-01-02 20:30:21.275] Creating new shared memory with size: 4040 bytes
+[INFO] [2026-01-02 20:30:21.276] Spawning 97 candidates
+[INFO] [2026-01-02 20:30:21.276] Failed exam indices (1): 
+[INFO] [2026-01-02 20:30:21.276] - 95
+[INFO] [2026-01-02 20:30:21.276] Retake exam indices (1): 
+[INFO] [2026-01-02 20:30:21.276] - 57
+[INFO] [2026-01-02 20:30:21.757] CommissionProcess::CommissionProcess()
+[INFO] [2026-01-02 20:30:21.757] CommissionProcess::initialize()
+[INFO] [2026-01-02 20:30:21.757] CommissionProcess::CommissionProcess()
+[INFO] [2026-01-02 20:30:21.758] CommissionProcess::initialize()
+[INFO] [2026-01-02 20:30:21.758] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:21.758] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:21.758] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:21.758] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:21.758] Initializing comission: B with 3 members
+[INFO] [2026-01-02 20:30:21.758] CommissionProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:21.758] Initializing comission: A with 5 members
+[INFO] [2026-01-02 20:30:21.758] CommissionProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.199] Candidate process started (pid=53390)
+[INFO] [2026-01-02 20:30:22.207] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.207] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.207] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.207] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.207] Candidate process started (pid=53349)
+[INFO] [2026-01-02 20:30:22.209] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.209] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.210] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.210] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.210] Candidate process started (pid=53434)
+[INFO] [2026-01-02 20:30:22.211] Candidate process started (pid=53436)
+[INFO] [2026-01-02 20:30:22.211] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.212] Candidate process started (pid=53412)
+[INFO] [2026-01-02 20:30:22.212] Candidate process started (pid=53404)
+[INFO] [2026-01-02 20:30:22.213] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.213] Candidate process started (pid=53356)
+[INFO] [2026-01-02 20:30:22.213] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.213] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.213] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.213] Candidate process started (pid=53439)
+[INFO] [2026-01-02 20:30:22.213] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.213] Candidate process started (pid=53418)
+[INFO] [2026-01-02 20:30:22.214] Candidate process started (pid=53409)
+[INFO] [2026-01-02 20:30:22.214] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.214] Candidate process started (pid=53394)
+[INFO] [2026-01-02 20:30:22.215] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.215] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.215] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.215] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.215] Candidate process started (pid=53348)
+[INFO] [2026-01-02 20:30:22.216] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.216] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.216] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.216] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.216] Candidate process started (pid=53419)
+[INFO] [2026-01-02 20:30:22.216] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.216] Candidate process started (pid=53391)
+[INFO] [2026-01-02 20:30:22.216] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.216] Candidate process started (pid=53367)
+[INFO] [2026-01-02 20:30:22.217] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.217] Candidate process started (pid=53388)
+[INFO] [2026-01-02 20:30:22.217] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.217] Candidate process started (pid=53347)
+[INFO] [2026-01-02 20:30:22.217] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.217] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.217] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.217] Candidate process started (pid=53430)
+[INFO] [2026-01-02 20:30:22.217] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.217] Candidate process started (pid=53414)
+[INFO] [2026-01-02 20:30:22.218] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.218] Candidate process started (pid=53398)
+[INFO] [2026-01-02 20:30:22.218] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.218] Candidate process started (pid=53350)
+[INFO] [2026-01-02 20:30:22.218] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.218] Candidate process started (pid=53427)
+[INFO] [2026-01-02 20:30:22.218] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.218] Candidate process started (pid=53405)
+[INFO] [2026-01-02 20:30:22.219] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.219] Candidate process started (pid=53393)
+[INFO] [2026-01-02 20:30:22.219] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.219] Candidate process started (pid=53389)
+[INFO] [2026-01-02 20:30:22.219] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.219] Candidate process started (pid=53424)
+[INFO] [2026-01-02 20:30:22.220] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.220] Candidate process started (pid=53437)
+[INFO] [2026-01-02 20:30:22.220] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.220] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.220] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.220] Candidate process started (pid=53420)
+[INFO] [2026-01-02 20:30:22.220] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.220] Candidate process started (pid=53426)
+[INFO] [2026-01-02 20:30:22.220] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.220] Candidate process started (pid=53366)
+[INFO] [2026-01-02 20:30:22.221] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.221] Candidate process started (pid=53357)
+[INFO] [2026-01-02 20:30:22.221] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.221] Candidate process started (pid=53407)
+[INFO] [2026-01-02 20:30:22.221] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.221] Candidate process started (pid=53440)
+[INFO] [2026-01-02 20:30:22.221] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.221] Candidate process started (pid=53411)
+[INFO] [2026-01-02 20:30:22.221] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.221] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.222] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.222] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.222] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.222] Candidate process started (pid=53428)
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.222] Candidate process started (pid=53421)
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.222] Candidate process started (pid=53433)
+[INFO] [2026-01-02 20:30:22.222] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.223] Candidate process started (pid=53417)
+[INFO] [2026-01-02 20:30:22.223] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.223] Candidate process started (pid=53360)
+[INFO] [2026-01-02 20:30:22.223] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.223] Candidate process started (pid=53416)
+[INFO] [2026-01-02 20:30:22.223] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.223] Candidate process started (pid=53403)
+[INFO] [2026-01-02 20:30:22.223] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.223] Candidate process started (pid=53358)
+[INFO] [2026-01-02 20:30:22.224] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.224] Candidate process started (pid=53399)
+[INFO] [2026-01-02 20:30:22.224] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.224] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.224] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.224] Candidate process started (pid=53345)
+[INFO] [2026-01-02 20:30:22.224] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.224] Candidate process started (pid=53387)
+[INFO] [2026-01-02 20:30:22.225] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.225] Candidate process started (pid=53406)
+[INFO] [2026-01-02 20:30:22.225] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.225] Candidate process started (pid=53361)
+[INFO] [2026-01-02 20:30:22.225] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.225] Candidate process started (pid=53413)
+[INFO] [2026-01-02 20:30:22.225] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.225] Candidate process started (pid=53386)
+[INFO] [2026-01-02 20:30:22.226] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.226] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.226] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.226] Candidate process started (pid=53422)
+[INFO] [2026-01-02 20:30:22.226] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.226] Candidate process started (pid=53359)
+[INFO] [2026-01-02 20:30:22.226] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.226] Candidate process started (pid=53397)
+[INFO] [2026-01-02 20:30:22.226] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.226] Candidate process started (pid=53400)
+[INFO] [2026-01-02 20:30:22.227] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.227] Candidate process started (pid=53425)
+[INFO] [2026-01-02 20:30:22.227] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.227] Candidate process started (pid=53431)
+[INFO] [2026-01-02 20:30:22.227] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.227] Candidate process started (pid=53408)
+[INFO] [2026-01-02 20:30:22.227] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.227] Candidate process started (pid=53354)
+[INFO] [2026-01-02 20:30:22.228] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Candidate process started (pid=53435)
+[INFO] [2026-01-02 20:30:22.228] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.228] Candidate process started (pid=53429)
+[INFO] [2026-01-02 20:30:22.228] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.228] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.228] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.228] Candidate process started (pid=53401)
+[INFO] [2026-01-02 20:30:22.229] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.229] Candidate process started (pid=53392)
+[INFO] [2026-01-02 20:30:22.229] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.229] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.229] Candidate process started (pid=53432)
+[INFO] [2026-01-02 20:30:22.229] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.229] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.229] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.229] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.229] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.230] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.230] Candidate process started (pid=53346)
+[INFO] [2026-01-02 20:30:22.230] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.230] Candidate process started (pid=53423)
+[INFO] [2026-01-02 20:30:22.230] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.230] Candidate process started (pid=53402)
+[INFO] [2026-01-02 20:30:22.230] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.230] Candidate process started (pid=53396)
+[INFO] [2026-01-02 20:30:22.231] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.231] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.231] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.231] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Candidate process started (pid=53351)
+[INFO] [2026-01-02 20:30:22.231] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.231] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.231] Candidate process started (pid=53442)
+[INFO] [2026-01-02 20:30:22.232] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.232] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Candidate process started (pid=53385)
+[INFO] [2026-01-02 20:30:22.232] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.232] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.232] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.232] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.232] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.233] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.233] Candidate process started (pid=53438)
+[INFO] [2026-01-02 20:30:22.233] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.233] Candidate process started (pid=53395)
+[INFO] [2026-01-02 20:30:22.233] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.233] Candidate process started (pid=53441)
+[INFO] [2026-01-02 20:30:22.233] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.234] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.234] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.234] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.234] Candidate process started (pid=53363)
+[INFO] [2026-01-02 20:30:22.235] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.235] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.235] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.235] Candidate process started (pid=53410)
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.236] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.237] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] Candidate process started (pid=53415)
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.238] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.238] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.238] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.238] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.238] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.239] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.239] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.244] Candidate process started (pid=53443)
+[INFO] [2026-01-02 20:30:22.245] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.245] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.245] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.245] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.257] Candidate process started (pid=53444)
+[INFO] [2026-01-02 20:30:22.257] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.257] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.257] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.257] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.270] Candidate process started (pid=53445)
+[INFO] [2026-01-02 20:30:22.270] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.270] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.270] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.270] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.280] Candidate process started (pid=53446)
+[INFO] [2026-01-02 20:30:22.280] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.280] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.280] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.280] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.293] Candidate process started (pid=53447)
+[INFO] [2026-01-02 20:30:22.294] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.294] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.294] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.294] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.304] Candidate process started (pid=53448)
+[INFO] [2026-01-02 20:30:22.304] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.304] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.305] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.305] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.317] Candidate process started (pid=53449)
+[INFO] [2026-01-02 20:30:22.318] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.318] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.318] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.318] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.330] Candidate process started (pid=53466)
+[INFO] [2026-01-02 20:30:22.331] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.331] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.331] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.331] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.343] Candidate process started (pid=53467)
+[INFO] [2026-01-02 20:30:22.343] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.343] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.343] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.343] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.355] Candidate process started (pid=53468)
+[INFO] [2026-01-02 20:30:22.356] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.356] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.356] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.356] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.368] Candidate process started (pid=53469)
+[INFO] [2026-01-02 20:30:22.369] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.369] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.369] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.369] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.383] Candidate process started (pid=53470)
+[INFO] [2026-01-02 20:30:22.383] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.383] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.383] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.383] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.391] Candidate process started (pid=53471)
+[INFO] [2026-01-02 20:30:22.391] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.392] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.392] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.392] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.404] Candidate process started (pid=53472)
+[INFO] [2026-01-02 20:30:22.404] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.404] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.404] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.404] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.417] Candidate process started (pid=53473)
+[INFO] [2026-01-02 20:30:22.417] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.417] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.417] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.418] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.430] Candidate process started (pid=53476)
+[INFO] [2026-01-02 20:30:22.430] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.430] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.430] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.430] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.443] Candidate process started (pid=53479)
+[INFO] [2026-01-02 20:30:22.443] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.443] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.443] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.443] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.456] Candidate process started (pid=53480)
+[INFO] [2026-01-02 20:30:22.457] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.457] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.457] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.457] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.469] Candidate process started (pid=53481)
+[INFO] [2026-01-02 20:30:22.469] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.469] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.469] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.469] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.481] Candidate process started (pid=53482)
+[INFO] [2026-01-02 20:30:22.481] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.482] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.482] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.482] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.495] Candidate process started (pid=53483)
+[INFO] [2026-01-02 20:30:22.495] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.495] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.495] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.495] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.507] Candidate process started (pid=53484)
+[INFO] [2026-01-02 20:30:22.508] CandidateProcess::initialize()
+[INFO] [2026-01-02 20:30:22.508] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-02 20:30:22.508] Getting shared memory for key: -1693527766
+[INFO] [2026-01-02 20:30:22.508] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.518] DeanProcess::waitForExamStart()
+[INFO] [2026-01-02 20:30:22.518] Sleeping for 15 seconds
+[INFO] [2026-01-02 20:30:37.521] DeanProcess::verifyCandidates()
+[INFO] [2026-01-02 20:30:37.522] DeanProcess::start()
+[INFO] [2026-01-02 20:30:37.522] CandidateProcess::rejectionHandler()
+[INFO] [2026-01-02 20:30:37.522] Candidate process with pid 53483 exiting with status 0
+[INFO] [2026-01-02 20:30:37.522] CandidateProcess::cleanup()
+[INFO] [2026-01-02 20:30:37.522] SharedMemoryManager::detach()
+[INFO] [2026-01-02 20:30:37.522] Detaching from shared memory
+[INFO] [2026-01-02 20:30:37.522] Candidate process with pid 53483 exiting with status 0
+[INFO] [2026-01-02 20:30:37.523] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:37.523] Candidate process with pid 53482 waiting for commission A seat
+[INFO] [2026-01-02 20:30:37.566] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:37.566] Candidate process with pid 53484 waiting for commission A seat
+[INFO] [2026-01-02 20:30:37.856] CommissionProcess::start()
+[INFO] [2026-01-02 20:30:37.856] CommissionProcess::spawnThreads()
+[INFO] [2026-01-02 20:30:37.856] Commission A member 0 started
+[INFO] [2026-01-02 20:30:37.856] Commission A releasing 3 seats after exam start
+[INFO] [2026-01-02 20:30:37.856] Commission A member 1 started
+[INFO] [2026-01-02 20:30:37.856] Commission A member 3 started
+[INFO] [2026-01-02 20:30:37.856] Commission A member 4 started
+[INFO] [2026-01-02 20:30:37.857] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:37.856] CommissionProcess::mainLoop() START
+[INFO] [2026-01-02 20:30:37.856] Commission A member 2 started
+[INFO] [2026-01-02 20:30:37.857] Candidate process with pid 53484 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:37.869] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:37.869] Candidate process with pid 53482 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:37.869] CommissionProcess::start()
+[INFO] [2026-01-02 20:30:37.869] CommissionProcess::spawnThreads()
+[INFO] [2026-01-02 20:30:37.869] Commission B releasing 3 seats after exam start
+[INFO] [2026-01-02 20:30:37.869] Commission B member 0 started
+[INFO] [2026-01-02 20:30:37.869] CommissionProcess::mainLoop() START
+[INFO] [2026-01-02 20:30:37.869] Commission B member 1 started
+[INFO] [2026-01-02 20:30:37.869] Commission B member 2 started
+[INFO] [2026-01-02 20:30:38.264] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.264] Candidate process with pid 53349 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.264] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.264] Candidate process with pid 53390 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.269] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.269] Candidate process with pid 53394 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.274] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.274] Candidate process with pid 53348 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.274] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.275] Candidate process with pid 53411 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.278] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.278] Candidate process with pid 53416 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.281] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.281] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.281] Candidate process with pid 53432 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.281] Candidate process with pid 53404 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.282] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.282] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.282] Candidate process with pid 53356 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.282] Candidate process with pid 53361 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.284] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.284] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.284] Candidate process with pid 53419 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.284] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.285] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.285] Candidate process with pid 53420 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.285] Candidate process with pid 53396 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.285] Candidate process with pid 53401 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.285] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.285] Candidate process with pid 53418 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.285] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.285] Candidate process with pid 53393 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.286] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.286] Candidate process with pid 53431 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] Candidate process with pid 53403 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.288] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53392 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53360 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53405 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53440 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53402 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53428 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53359 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53409 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53436 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53424 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53413 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53363 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53388 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53385 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53407 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53427 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53442 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53366 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] Candidate process with pid 53398 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.289] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53439 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53433 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53423 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53437 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53395 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53357 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53400 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53391 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] Candidate process with pid 53441 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.290] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53415 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53408 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53345 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53386 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53435 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53417 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53358 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53399 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53429 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.291] Candidate process with pid 53434 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53438 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53387 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53389 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53367 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53412 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53347 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53351 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.292] Candidate process with pid 53426 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.293] Candidate process with pid 53425 doesn't have to take commission A exam
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:38.293] Candidate process with pid 53425 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.293] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.293] Candidate process with pid 53410 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.293] Candidate process with pid 53397 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.293] Candidate process with pid 53443 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.294] Candidate process with pid 53406 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.294] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.294] Candidate process with pid 53421 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.294] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.294] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.294] Candidate process with pid 53422 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.294] Candidate process with pid 53414 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.294] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.294] Candidate process with pid 53354 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.298] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.298] Candidate process with pid 53346 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.298] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.298] Candidate process with pid 53350 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.303] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.303] Candidate process with pid 53430 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.314] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.314] Candidate process with pid 53444 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.333] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.333] Candidate process with pid 53445 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.338] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.338] Candidate process with pid 53446 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.348] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.348] Candidate process with pid 53447 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.361] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.361] Candidate process with pid 53448 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.373] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.373] Candidate process with pid 53449 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.398] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.399] Candidate process with pid 53466 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.406] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.406] Candidate process with pid 53467 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.412] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.412] Candidate process with pid 53468 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.424] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.424] Candidate process with pid 53469 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.438] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.438] Candidate process with pid 53470 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.445] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.445] Candidate process with pid 53471 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.461] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.462] Candidate process with pid 53472 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.464] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.464] Candidate process with pid 53473 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.498] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.498] Candidate process with pid 53476 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.499] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.499] Candidate process with pid 53479 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.514] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.514] Candidate process with pid 53480 waiting for commission A seat
+[INFO] [2026-01-02 20:30:38.524] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-02 20:30:38.524] Candidate process with pid 53481 waiting for commission A seat
+[INFO] [2026-01-02 20:30:39.862] Member 0 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:39.862] Member 0 generated question for seat 1 taken by pid 53482
+[INFO] [2026-01-02 20:30:41.862] Member 3 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:41.862] Member 3 generated question for seat 1 taken by pid 53482
+[INFO] [2026-01-02 20:30:42.857] Member 1 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:42.857] Member 1 generated question for seat 1 taken by pid 53482
+[INFO] [2026-01-02 20:30:42.857] Member 4 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:42.857] Member 4 generated question for seat 1 taken by pid 53482
+[INFO] [2026-01-02 20:30:42.860] Member 2 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:42.860] Member 2 generated question for seat 1 taken by pid 53482
+[INFO] [2026-01-02 20:30:47.881] Candidate process with pid 53484 answered questions
+[INFO] [2026-01-02 20:30:47.882] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:30:47.893] Candidate process with pid 53482 answered questions
+[INFO] [2026-01-02 20:30:47.894] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:30:47.897] [Commission A] % of candidates graded: 1.052632%
+[INFO] [2026-01-02 20:30:47.897] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:47.897] Candidate process with pid 53349 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:48.863] Member 1 generated question for seat 0 taken by pid 53349
+[INFO] [2026-01-02 20:30:48.874] Member 0 generated question for seat 0 taken by pid 53349
+[INFO] [2026-01-02 20:30:48.883] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-02 20:30:48.884] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-02 20:30:48.884] Candidate process with pid 53484 waiting for commission B seat
+[INFO] [2026-01-02 20:30:48.902] [Commission A] % of candidates graded: 2.105263%
+[INFO] [2026-01-02 20:30:48.902] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:48.902] Candidate process with pid 53390 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:48.907] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:48.907] Candidate process with pid 53484 waiting for questions from commission B
+[INFO] [2026-01-02 20:30:49.861] Member 4 generated question for seat 0 taken by pid 53349
+[INFO] [2026-01-02 20:30:49.861] Member 4 generated question for seat 1 taken by pid 53390
+[INFO] [2026-01-02 20:30:49.864] Member 3 generated question for seat 0 taken by pid 53349
+[INFO] [2026-01-02 20:30:49.864] Member 3 generated question for seat 1 taken by pid 53390
+[INFO] [2026-01-02 20:30:49.884] Member 1 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:49.885] Member 0 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:49.897] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-02 20:30:49.898] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-02 20:30:49.898] Candidate process with pid 53482 waiting for commission B seat
+[INFO] [2026-01-02 20:30:50.866] Member 2 generated question for seat 0 taken by pid 53349
+[INFO] [2026-01-02 20:30:50.867] Member 2 generated question for seat 1 taken by pid 53390
+[INFO] [2026-01-02 20:30:51.865] Member 1 generated question for seat 1 taken by pid 53390
+[INFO] [2026-01-02 20:30:51.880] Member 0 generated question for seat 1 taken by pid 53390
+[INFO] [2026-01-02 20:30:53.886] Member 2 generated question for seat 0 taken by pid 53484
+[INFO] [2026-01-02 20:30:55.916] Candidate process with pid 53349 answered questions
+[INFO] [2026-01-02 20:30:55.916] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:30:55.929] [Commission A] % of candidates graded: 3.157895%
+[INFO] [2026-01-02 20:30:55.929] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:55.929] Candidate process with pid 53394 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:56.889] Member 0 generated question for seat 0 taken by pid 53394
+[INFO] [2026-01-02 20:30:56.912] Candidate process with pid 53390 answered questions
+[INFO] [2026-01-02 20:30:56.912] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:30:56.919] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-02 20:30:56.919] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-02 20:30:56.919] Candidate process with pid 53349 waiting for commission B seat
+[INFO] [2026-01-02 20:30:56.934] [Commission A] % of candidates graded: 4.210526%
+[INFO] [2026-01-02 20:30:56.934] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:56.934] Candidate process with pid 53348 waiting for questions from commission A
+[INFO] [2026-01-02 20:30:57.913] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-02 20:30:57.914] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-02 20:30:57.914] Candidate process with pid 53390 waiting for commission B seat
+[INFO] [2026-01-02 20:30:58.871] Member 4 generated question for seat 0 taken by pid 53394
+[INFO] [2026-01-02 20:30:58.871] Member 4 generated question for seat 1 taken by pid 53348
+[INFO] [2026-01-02 20:30:58.872] Member 1 generated question for seat 0 taken by pid 53394
+[INFO] [2026-01-02 20:30:58.872] Member 1 generated question for seat 1 taken by pid 53348
+[INFO] [2026-01-02 20:30:58.930] Candidate process with pid 53484 answered questions
+[INFO] [2026-01-02 20:30:58.930] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:30:58.943] [Commission B] % of candidates graded: 1.052632%
+[INFO] [2026-01-02 20:30:58.944] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:30:58.944] Candidate process with pid 53482 waiting for questions from commission B
+[INFO] [2026-01-02 20:30:59.872] Member 2 generated question for seat 0 taken by pid 53394
+[INFO] [2026-01-02 20:30:59.873] Member 2 generated question for seat 1 taken by pid 53348
+[INFO] [2026-01-02 20:30:59.891] Member 0 generated question for seat 1 taken by pid 53348
+[INFO] [2026-01-02 20:30:59.900] Member 0 generated question for seat 0 taken by pid 53482
+[INFO] [2026-01-02 20:30:59.931] CandidateProcess::cleanup()
+[INFO] [2026-01-02 20:30:59.931] SharedMemoryManager::detach()
+[INFO] [2026-01-02 20:30:59.931] Detaching from shared memory
+[INFO] [2026-01-02 20:30:59.931] Candidate process with pid 53484 exiting with status 0
+[INFO] [2026-01-02 20:31:00.878] Member 3 generated question for seat 0 taken by pid 53394
+[INFO] [2026-01-02 20:31:00.878] Member 3 generated question for seat 1 taken by pid 53348
+[INFO] [2026-01-02 20:31:00.894] Member 2 generated question for seat 0 taken by pid 53482
+[INFO] [2026-01-02 20:31:02.898] Member 1 generated question for seat 0 taken by pid 53482
+[INFO] [2026-01-02 20:31:05.952] Candidate process with pid 53394 answered questions
+[INFO] [2026-01-02 20:31:05.953] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:31:05.953] Candidate process with pid 53348 answered questions
+[INFO] [2026-01-02 20:31:05.953] CandidateProcess::waitForGrading()
+[INFO] [2026-01-02 20:31:05.972] [Commission A] % of candidates graded: 5.263158%
+[INFO] [2026-01-02 20:31:05.973] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:31:05.973] Candidate process with pid 53411 waiting for questions from commission A
+[INFO] [2026-01-02 20:31:06.883] Member 1 generated question for seat 0 taken by pid 53411
+[INFO] [2026-01-02 20:31:06.900] Member 0 generated question for seat 0 taken by pid 53411
+[INFO] [2026-01-02 20:31:06.958] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-02 20:31:06.958] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-02 20:31:06.959] Candidate process with pid 53394 waiting for commission B seat
+[INFO] [2026-01-02 20:31:06.978] [Commission A] % of candidates graded: 6.315789%
+[INFO] [2026-01-02 20:31:06.978] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-02 20:31:06.978] Candidate process with pid 53416 waiting for questions from commission A

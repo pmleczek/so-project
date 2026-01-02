@@ -12,7 +12,9 @@ set(COMMON_SOURCES
     src/common/ipc/SemaphoreManager.cpp
     src/common/ipc/SharedMemoryManager.cpp
     src/common/output/Logger.cpp
+    src/common/process/BaseProcess.cpp
     src/common/process/ProcessRegistry.cpp
+    src/common/utils/Memory.cpp
     src/common/utils/Random.cpp
     src/common/utils/Time.cpp
 )

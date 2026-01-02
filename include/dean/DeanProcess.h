@@ -1,18 +1,24 @@
 #pragma once
 
+#include "common/process/BaseProcess.h"
 #include "dean/DeanConfig.h"
 #include <unordered_set>
 
-class DeanProcess {
+class DeanProcess : public BaseProcess {
 public:
   DeanProcess(int argc, char *argv[]);
-  void initialize(int argc, char *argv[]);
+
+  std::vector<int> validateArguments(int argc, char *argv[]) override;
+  void initialize(int argc, char *argv[]) override;
+  void cleanup() override;
+  void setupSignalHandlers() override;
+  void handleError(const char *message) override;
+  
   void spawnComissions();
   void spawnCandidates();
   void verifyCandidates();
   void waitForExamStart();
   void start();
-  void cleanup();
 
 private:
   int assertPlaceCount(int argc, char *argv[]);
@@ -26,5 +32,4 @@ private:
   int candidateCount;
   int retaking = 0;
   DeanConfig config;
-  static DeanProcess *instance_;
 };
