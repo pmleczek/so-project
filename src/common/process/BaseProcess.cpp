@@ -7,6 +7,7 @@ BaseProcess *BaseProcess::instance_ = nullptr;
 BaseProcess::BaseProcess(int argc, char *argv[], bool setupLogger) {
   processName_ = getProcessName(argc, argv);
   pid_ = getpid();
+  instance_ = this;
 
   if (setupLogger) {
     Logger::setupLogFile();

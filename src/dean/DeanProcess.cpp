@@ -3,6 +3,7 @@
 #include "common/ipc/SemaphoreManager.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
+#include "common/output/ResultsWriter.h"
 #include "common/process/ProcessRegistry.h"
 #include "common/utils/Memory.h"
 #include "common/utils/Random.h"
@@ -122,11 +123,6 @@ void DeanProcess::setupSignalHandlers() {
   if (result == SIG_ERR) {
     handleError("Failed to set up SIGQUIT handler");
   }
-
-  result = signal(SIGQUIT, DeanProcess::terminationHandler);
-  if (result == SIG_ERR) {
-    handleError("Failed to set up SIGQUIT handler");
-  }
   /* END SECTION: Termination signals */
 
   /* SECTION: Evacuation signal */
@@ -143,8 +139,18 @@ void DeanProcess::setupSignalHandlers() {
  * @param message The error message.
  */
 void DeanProcess::handleError(const char *message) {
-  perror(message);
+  /* Include both: the passed message and the errno message */
+  if (message != nullptr) {
+    perror(message);
+    perror(nullptr);
+  } else {
+    perror(message);
+  }
+
+  /* Propagate the termination signal to all child processes and cleanup */
   ProcessRegistry::propagateSignal(SIGTERM);
+  cleanup();
+
   exit(1);
 }
 
@@ -179,6 +185,7 @@ void DeanProcess::start() {
   }
 
   Logger::info("Exam ended");
+  ResultsWriter::publishResults(false);
 }
 
 /**
@@ -350,10 +357,14 @@ void DeanProcess::evacuationHandler(int signal) {
   Logger::info("Evacuation signal received");
 
   ProcessRegistry::propagateSignal(signal);
+  ResultsWriter::publishResults(true);
 
   if (instance_) {
     instance_->cleanup();
     instance_ = nullptr;
+  } else {
+    Logger::error("No instance found for evacuation handler");
+    exit(1);
   }
 
   exit(0);

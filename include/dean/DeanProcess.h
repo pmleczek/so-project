@@ -13,7 +13,7 @@ public:
   void cleanup() override;
   void setupSignalHandlers() override;
   void handleError(const char *message) override;
-  
+
   void spawnComissions();
   void spawnCandidates();
   void verifyCandidates();

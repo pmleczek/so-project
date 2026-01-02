@@ -14,6 +14,7 @@ enum CandidateStatus {
 };
 
 struct CandidateInfo {
+  int index = -1;
   int pid;
   double theoreticalScore = -1.0;
   double practicalScore = -1.0;
