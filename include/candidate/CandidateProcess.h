@@ -17,6 +17,7 @@ public:
 
 private:
   static void rejectionHandler(int signal);
+  static void terminationHandler(int signal);
   int findCommissionASeat();
   int findCommissionBSeat();
 
@@ -24,4 +25,5 @@ private:
   int seat = -1;
   sem_t *semaphoreA;
   sem_t *semaphoreB;
+  static CandidateProcess *instance_;
 };

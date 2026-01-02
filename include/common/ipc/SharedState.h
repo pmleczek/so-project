@@ -1,6 +1,7 @@
 #pragma once
 
 #include <pthread.h>
+#include <unistd.h>
 
 enum CandidateStatus {
   Pending = 0,
@@ -9,6 +10,7 @@ enum CandidateStatus {
   Failed = 3,
   PendingCommissionB = 4,
   Passed = 5,
+  Terminated = 6,
 };
 
 struct CandidateInfo {
@@ -37,5 +39,7 @@ struct SharedState {
   CommissionInfo commissionA;
   CommissionInfo commissionB;
   pthread_mutex_t seatsMutex;
+  pid_t commissionAPID = -1;
+  pid_t commissionBID = -1;
   CandidateInfo candidates[];
 };

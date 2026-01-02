@@ -3,14 +3,17 @@
 #include "common/ipc/SemaphoreManager.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
+#include "common/process/ProcessRegistry.h"
 #include "common/utils/Random.h"
 #include "common/utils/Time.h"
 #include <signal.h>
 #include <unistd.h>
 
+DeanProcess *DeanProcess::instance_ = nullptr;
+
 DeanProcess::DeanProcess(int argc, char *argv[]) : config() {
   Logger::setupLogFile();
-
+  instance_ = this;
   Logger::info("Dean process started (pid=" + std::to_string(getpid()) + ")");
   initialize(argc, argv);
 }
@@ -33,6 +36,11 @@ int DeanProcess::assertPlaceCount(int argc, char *argv[]) {
 
 void DeanProcess::initialize(int argc, char *argv[]) {
   Logger::info("DeanProcess::initialize()");
+
+  signal(SIGINT, DeanProcess::terminationHandler);
+  signal(SIGTERM, DeanProcess::terminationHandler);
+  signal(SIGQUIT, DeanProcess::terminationHandler);
+  signal(SIGUSR1, DeanProcess::evacuationHandler);
 
   int placeCount = assertPlaceCount(argc, argv);
   std::string startTime = argv[2];
@@ -96,12 +104,14 @@ void DeanProcess::spawnComissions() {
   if (pidA == 0) {
     execlp("./commission", "./commission", "A", NULL);
   }
+  ProcessRegistry::registerCommission(pidA, 'A');
 
   // Comission B
   pid_t pidB = fork();
   if (pidB == 0) {
     execlp("./commission", "./commission", "B", NULL);
   }
+  ProcessRegistry::registerCommission(pidB, 'B');
 }
 
 std::unordered_set<int> DeanProcess::getFailedExamIndices() {
@@ -195,7 +205,7 @@ void DeanProcess::verifyCandidates() {
     }
   }
 
-  int commissonACount  = config.candidateCount - rejected - retaking;
+  int commissonACount = config.candidateCount - rejected - retaking;
   SharedMemoryManager::data()->commissionACandidateCount = commissonACount;
   SharedMemoryManager::data()->commissionBCandidateCount = commissonACount;
 }
@@ -208,4 +218,33 @@ void DeanProcess::cleanup() {
   SemaphoreManager::unlink("/commissionB");
 
   Logger::info("Dean process exiting with status 0");
+}
+
+void DeanProcess::evacuationHandler(int signal) {
+  Logger::info("DeanProcess::evacuationHandler()");
+  Logger::info("Evacuation signal received");
+
+  ProcessRegistry::propagateSignal(signal);
+
+  if (instance_) {
+    instance_->cleanup();
+    instance_ = nullptr;
+  }
+
+  exit(0);
+}
+
+void DeanProcess::terminationHandler(int signal) {
+  Logger::info("DeanProcess::terminationHandler()");
+  Logger::info("Termination signal: SIG " + std::to_string(signal) +
+               " received");
+
+  ProcessRegistry::propagateSignal(SIGTERM);
+
+  if (instance_) {
+    instance_->cleanup();
+    instance_ = nullptr;
+  }
+
+  exit(0);
 }

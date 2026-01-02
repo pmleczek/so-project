@@ -17,6 +17,7 @@ public:
   void waitForExamStart();
   void start();
   void cleanup();
+  static void terminationHandler(int signal);
 
 private:
   void initialize(int argc, char *argv[]);
@@ -33,4 +34,5 @@ private:
   pthread_t threadIds[5];
   ThreadData threadData[5];
   std::atomic<int> candidatesProcessed = 0;
+  static CommissionProcess *instance_;
 };

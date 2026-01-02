@@ -20,8 +20,11 @@ private:
   std::unordered_set<int> getFailedExamIndices();
   std::unordered_set<int>
   getRetakeExamIndices(std::unordered_set<int> excludedIndices);
+  static void evacuationHandler(int signal);
+  static void terminationHandler(int signal);
 
   int candidateCount;
   int retaking = 0;
   DeanConfig config;
+  static DeanProcess *instance_;
 };

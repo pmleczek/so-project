@@ -5,6 +5,8 @@
 #include "common/utils/Random.h"
 #include <unistd.h>
 
+CommissionProcess *CommissionProcess::instance_ = nullptr;
+
 // TODO: Extract
 double getNRandomScore(int n) {
   double score = 0.0;
@@ -17,6 +19,7 @@ double getNRandomScore(int n) {
 CommissionProcess::CommissionProcess(int argc, char *argv[])
     : memberCount_(argc) {
   Logger::info("CommissionProcess::CommissionProcess()");
+  instance_ = this;
   initialize(argc, argv);
 }
 
@@ -246,4 +249,17 @@ void CommissionProcess::cleanup() {
   waitThreads();
   SharedMemoryManager::detach();
   Logger::info("CommissionProcess exiting");
+}
+
+void CommissionProcess::terminationHandler(int signal) {
+  Logger::info("CommissionProcess::terminationHandler()");
+  Logger::info("Termination signal: SIG " + std::to_string(signal) + " received");
+
+  if (instance_) {
+    instance_->cleanup();
+    instance_ = nullptr;
+  }
+
+  Logger::info("CommissionProcess exiting with status 0 (terminated)");
+  exit(0);
 }

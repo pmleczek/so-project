@@ -1,16 +1,20 @@
 #include "candidate/CandidateProcess.h"
+
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
-
+#include "common/process/ProcessRegistry.h"
 #include <unistd.h>
+
+CandidateProcess *CandidateProcess::instance_ = nullptr;
 
 CandidateProcess::CandidateProcess(int argc, char *argv[]) {
   Logger::info("Candidate process started (pid=" + std::to_string(getpid()) +
                ")");
 
-  // TODO: Implement
-  // signal(SIGUSR1, evacuationHandler);
+  instance_ = this;
+
   signal(SIGUSR2, rejectionHandler);
+  signal(SIGTERM, terminationHandler);
 
   initialize(argc, argv);
 }
@@ -188,11 +192,32 @@ void CandidateProcess::cleanup() {
   SharedMemoryManager::detach();
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " exiting with status 0");
+  ProcessRegistry::unregister(getpid());
 }
 
 void CandidateProcess::rejectionHandler(int signal) {
   Logger::info("CandidateProcess::rejectionHandler()");
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " exiting with status 0");
+
+  if (instance_) {
+    instance_->cleanup();
+    instance_ = nullptr;
+  }
+
+  exit(0);
+}
+
+void CandidateProcess::terminationHandler(int signal) {
+  Logger::info("CandidateProcess::terminationHandler()");
+  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+               " exiting with status 0 (terminated)");
+  ProcessRegistry::unregister(getpid());
+
+  if (instance_) {
+    instance_->cleanup();
+    instance_ = nullptr;
+  }
+
   exit(0);
 }
