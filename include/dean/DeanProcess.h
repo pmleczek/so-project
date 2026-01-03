@@ -8,8 +8,8 @@ class DeanProcess : public BaseProcess {
 public:
   DeanProcess(int argc, char *argv[]);
 
-  std::vector<int> validateArguments(int argc, char *argv[]) override;
-  void initialize(int argc, char *argv[]) override;
+  void validateArguments(int argc, char *argv[]) override;
+  void initialize() override;
   void cleanup() override;
   void setupSignalHandlers() override;
   void handleError(const char *message) override;
@@ -21,8 +21,6 @@ public:
   void start();
 
 private:
-  int assertPlaceCount(int argc, char *argv[]);
-  int assertStartTime(int argc, char *argv[]);
   std::unordered_set<int> getFailedExamIndices();
   std::unordered_set<int>
   getRetakeExamIndices(std::unordered_set<int> excludedIndices);

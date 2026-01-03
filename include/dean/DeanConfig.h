@@ -5,10 +5,10 @@
 class DeanConfig {
 public:
   DeanConfig();
-  DeanConfig(int places, const std::string &startTime);
+  DeanConfig(int places, int startTime);
 
   int placeCount;
-  std::string startTime;
+  int startTime;
   int candidateCount;
   int failedExamCount;
   int retakeExamCount;

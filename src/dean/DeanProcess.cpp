@@ -8,7 +8,9 @@
 #include "common/utils/Memory.h"
 #include "common/utils/Random.h"
 #include "common/utils/Time.h"
+#include <regex>
 #include <signal.h>
+#include <sys/resource.h>
 #include <unistd.h>
 
 /**
@@ -23,64 +25,88 @@ DeanProcess::DeanProcess(int argc, char *argv[])
     validateArguments(argc, argv);
   } catch (const std::exception &e) {
     std::string errorMessage =
-        "Failed to validate arguments: " + std::string(e.what());
+        "Failed to validate arguments: \n\t" + std::string(e.what());
     perror(errorMessage.c_str());
+    exit(1);
   }
 
   setupSignalHandlers();
 
   try {
-    initialize(argc, argv);
+    initialize();
   } catch (const std::exception &e) {
     std::string errorMessage = "Failed to initialize process " + processName_ +
-                               ": " + std::string(e.what());
+                               "\n: " + std::string(e.what());
     perror(errorMessage.c_str());
+    exit(1);
   }
 }
 
 /**
- * Validates the arguments passed to the program.
+ * Validates the arguments passed to the program and initializes the
+ * configuration.
  *
  * @param argc The number of arguments passed to the program.
  * @param argv The arguments passed to the program.
  * @throws std::invalid_argument If the arguments are invalid.
  */
-std::vector<int> DeanProcess::validateArguments(int argc, char *argv[]) {
+void DeanProcess::validateArguments(int argc, char *argv[]) {
   /* Validate argument count */
   if (argc != 3) {
     throw std::invalid_argument("Invalid number of arguments. Usage: ./dean "
                                 "<place count> <start time>");
   }
 
+  /* Get maximum possible process count */
+  int MAX_CANDIDATE_COUNT = -1;
+  struct rlimit rl;
+  if (getrlimit(RLIMIT_NOFILE, &rl) == 0) {
+    MAX_CANDIDATE_COUNT = rl.rlim_cur;
+  } else {
+    MAX_CANDIDATE_COUNT = sysconf(_SC_CHILD_MAX);
+    if (MAX_CANDIDATE_COUNT == -1) {
+      handleError("Failed to infer MAX_CANDIDATE_COUNT");
+    }
+  }
+
+  /* Limit possible process count to 90% of available processes */
+  MAX_CANDIDATE_COUNT = MAX_CANDIDATE_COUNT * 0.9;
+  /* Assume maximum candidate to place ratio (random value between 9.5 and 10.5)
+   */
+  MAX_CANDIDATE_COUNT = MAX_CANDIDATE_COUNT / 10.5;
+
   /* Validate place count */
   /* Expected format: integer */
   /* Expected value: 0 < n <= MAX_CANDIDATE_COUNT */
-  // TODO: Implement
-  // TODO: Implement MAX_CANDIDATE_COUNT
   int placeCount = std::stoi(argv[1]);
-  if (placeCount <= 0 /* || placeCount > MAX_CANDIDATE_COUNT*/) {
+  if (placeCount <= 0 || placeCount > MAX_CANDIDATE_COUNT) {
+    throw std::invalid_argument("Invalid place count. Expected: 0 < n <= " +
+                                std::to_string(MAX_CANDIDATE_COUNT));
   }
 
   /* Validate start time */
   /* Expected format: HH:MM (24 hrs) */
   /* Expected value: correct time, >= current time */
-  std::string timeString = argv[2];
-  // TODO: Validate time
+  std::regex timeRegex("^([01][0-9]|2[0-3]):[0-5][0-9]$");
+  if (!std::regex_match(argv[2], timeRegex)) {
+    throw std::invalid_argument("Start time is invalid or has an invalid "
+                                "format. Expected format: HH:MM (24 hrs)");
+  }
 
-  return {};
+  /* Add 59 seconds to make the start time as late as possible */
+  int seconds = Time::seconds(argv[2]) + 59;
+  if (seconds < Time::now()) {
+    throw std::invalid_argument("Start time is in the past");
+  }
+
+  /* Initialize the dean proces configuration */
+  config = DeanConfig(placeCount, seconds);
 }
 
 /**
  * Initializes the dean process and IPC mechanisms.
- *
- * @param argc The number of arguments passed to the program.
- * @param argv The arguments passed to the program.
  */
-void DeanProcess::initialize(int argc, char *argv[]) {
-  int placeCount = std::stoi(argv[1]);
-  std::string startTime = argv[2];
-  config = DeanConfig(placeCount, startTime);
-
+void DeanProcess::initialize() {
   /* Create shared memory and initialize its state */
   SharedMemoryManager::initialize(config.candidateCount);
   SharedMemoryManager::data()->candidateCount = config.candidateCount;
@@ -158,19 +184,17 @@ void DeanProcess::handleError(const char *message) {
  * Waits for the exam to start.
  */
 void DeanProcess::waitForExamStart() {
-  // TODO: Refactor
-  Logger::info("DeanProcess::waitForExamStart()");
-  int start = Time::seconds(config.startTime);
-  int current = Time::now();
-  int sleepTime = start - current;
+  int sleepTime = config.startTime - Time::now();
 
-  if (sleepTime < 0) {
-    // TODO: Add better sleep logic or handle invalid start time
-    sleepTime = 15;
+  /* Sleep for at least 15 seconds to avoid race conditions */
+  sleepTime = std::max(sleepTime, 15);
+
+  Logger::info("Waiting for exam start for " + std::to_string(sleepTime) +
+               " seconds");
+  int result = sleep(sleepTime);
+  if (result < 0) {
+    handleError("Failed in sleep() call to wait for exam start");
   }
-
-  Logger::info("Sleeping for " + std::to_string(sleepTime) + " seconds");
-  sleep(sleepTime);
 }
 
 /**
@@ -268,7 +292,6 @@ void DeanProcess::spawnCandidates() {
 
   for (int i = 0; i < config.candidateCount; i++) {
     candidatePid = fork();
-    // TODO: Handle fork error
     if (candidatePid < 0) {
       std::string errorMessage =
           "Failed in fork() call for candidate " + std::to_string(i);
@@ -306,7 +329,12 @@ void DeanProcess::spawnCandidates() {
 
     // TODO: Investigate
     // For stability reasons
-    usleep(10000);
+    // int result = usleep(10000);
+    // if (result < 0) {
+    //   std::string errorMessage = "Failed in usleep() call for candidate " +
+    //                              std::to_string(i);
+    //   handleError(errorMessage.c_str());
+    // }
   }
 }
 
@@ -356,7 +384,7 @@ void DeanProcess::evacuationHandler(int signal) {
   Logger::info("DeanProcess::evacuationHandler()");
   Logger::info("Evacuation signal received");
 
-  ProcessRegistry::propagateSignal(signal);
+  ProcessRegistry::propagateSignal(SIGTERM);
   ResultsWriter::publishResults(true);
 
   if (instance_) {
@@ -383,6 +411,9 @@ void DeanProcess::terminationHandler(int signal) {
   if (instance_) {
     instance_->cleanup();
     instance_ = nullptr;
+  } else {
+    Logger::error("No instance found for evacuation handler");
+    exit(1);
   }
 
   exit(0);

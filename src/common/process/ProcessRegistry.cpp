@@ -31,6 +31,8 @@ void ProcessRegistry::unregister(pid_t pid) {
 }
 
 void ProcessRegistry::propagateSignal(int signal) {
+  Logger::info("Propagating signal: " + std::to_string(signal) + " to all processes");
+
   if (SharedMemoryManager::data()->commissionAPID != -1) {
     kill(SharedMemoryManager::data()->commissionAPID, signal);
   }

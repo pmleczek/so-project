@@ -2,15 +2,14 @@
 
 #include <string>
 #include <unistd.h>
-#include <vector>
 
 class BaseProcess {
 public:
   BaseProcess(int argc, char *argv[], bool setupLogger = false);
   virtual ~BaseProcess() = default;
 
-  virtual std::vector<int> validateArguments(int argc, char *argv[]) = 0;
-  virtual void initialize(int argc, char *argv[]) = 0;
+  virtual void validateArguments(int argc, char *argv[]) = 0;
+  virtual void initialize() = 0;
   virtual void cleanup() = 0;
   virtual void handleError(const char *message) = 0;
   virtual void setupSignalHandlers() = 0;
