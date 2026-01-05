@@ -2,58 +2,133 @@
 
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
+#include "common/utils/Memory.h"
 #include "common/utils/Random.h"
+#include <signal.h>
 #include <unistd.h>
 
-CommissionProcess *CommissionProcess::instance_ = nullptr;
-
-// TODO: Extract
-double getNRandomScore(int n) {
-  double score = 0.0;
-  for (int i = 0; i < n; i++) {
-    score += Random::randomDouble(0.0, 100.0);
-  }
-  return score / n;
-}
-
+/**
+ * Constructor for the commission process.
+ *
+ * @param argc The number of arguments passed to the program.
+ * @param argv The arguments passed to the program.
+ */
 CommissionProcess::CommissionProcess(int argc, char *argv[])
-    : memberCount_(argc) {
-  Logger::info("CommissionProcess::CommissionProcess()");
-  instance_ = this;
-  initialize(argc, argv);
-}
-
-void CommissionProcess::initialize(int argc, char *argv[]) {
-  Logger::info("CommissionProcess::initialize()");
-  SharedMemoryManager::attach();
-
-  // TODO: Validate args
-  if (argc != 2) {
-    Logger::error("Invalid number of arguments: " + std::to_string(argc));
+    : BaseProcess(argc, argv, false), memberCount_(argc) {
+  try {
+    validateArguments(argc, argv);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to validate arguments: \n\t" + std::string(e.what());
+    handleError(errorMessage.c_str());
     exit(1);
   }
 
+  setupSignalHandlers();
+
+  try {
+    initialize();
+  } catch (const std::exception &e) {
+    std::string errorMessage = "Failed to initialize process " + processName_ +
+                               "\n: " + std::string(e.what());
+    handleError(errorMessage.c_str());
+    exit(1);
+  }
+}
+
+/**
+ * Validates the arguments passed to the program.
+ *
+ * @param argc The number of arguments passed to the program.
+ * @param argv The arguments passed to the program.
+ * @throws std::invalid_argument If the arguments are invalid.
+ */
+void CommissionProcess::validateArguments(int argc, char *argv[]) {
+  if (argc != 2) {
+    throw std::invalid_argument("Invalid number of arguments. Usage: "
+                                "./commission <type>");
+  }
+
   commissionType_ = argv[1][0];
-  semaphore =
-      SemaphoreManager::open(std::string("commission") + commissionType_);
+  if (commissionType_ != 'A' && commissionType_ != 'B') {
+    throw std::invalid_argument(
+        "Invalid commission type. Usage: ./commission <type: A or B>");
+  }
 
   if (commissionType_ == 'A') {
     memberCount_ = 5;
   } else if (commissionType_ == 'B') {
     memberCount_ = 3;
   }
+}
+
+/**
+ * Initializes the commission process.
+ */
+void CommissionProcess::initialize() {
+  SharedMemoryManager::attach();
+
+  semaphore =
+      SemaphoreManager::open(std::string("commission") + commissionType_);
 
   Logger::info(std::string("Initializing comission: ") + commissionType_ +
                " with " + std::to_string(memberCount_) + " members");
 }
 
-void CommissionProcess::waitForExamStart() {
-  Logger::info("CommissionProcess::waitForExamStart()");
-  while (!SharedMemoryManager::data()->examStarted) {
-    usleep(500000);
+/**
+ * Sets up the signal handlers for the commission process.
+ */
+void CommissionProcess::setupSignalHandlers() {
+  auto result = signal(SIGTERM, terminationHandler);
+  if (result == SIG_ERR) {
+    handleError("Failed to set up signal handler for SIGTERM");
+    exit(1);
   }
 }
 
+/**
+ * Handles an error by sending a SIGTERM to the dean process and exiting the
+ * process with status 1.
+ *
+ * @param message The message to display.
+ */
+void CommissionProcess::handleError(const char *message) {
+  /* Include both: the passed message and the errno message */
+  if (message != nullptr) {
+    perror(message);
+    perror(nullptr);
+  } else {
+    perror(message);
+  }
+
+  int result = kill(getppid(), SIGTERM);
+  if (result < 0) {
+    perror("kill() failed to send SIGTERM to dean process");
+  }
+
+  cleanup();
+
+  exit(1);
+}
+
+/**
+ * Waits for the exam to start by checking the examStarted flag in the shared
+ * memory.
+ */
+void CommissionProcess::waitForExamStart() {
+  Logger::info("Commission " + std::string(1, commissionType_) +
+               " waiting for exam start");
+  while (!SharedMemoryManager::data()->examStarted) {
+    int result = usleep(500000);
+    if (result < 0) {
+      handleError("Failed to sleep in waitForExamStart()");
+    }
+  }
+}
+
+/**
+ * Starts the commission process.
+ */
 void CommissionProcess::start() {
   Logger::info("CommissionProcess::start()");
   spawnThreads();
@@ -67,12 +142,16 @@ void CommissionProcess::start() {
   mainLoop();
 }
 
+/**
+ * Main loop for the commission process.
+ */
 void CommissionProcess::mainLoop() {
   Logger::info("CommissionProcess::mainLoop() START");
 
   while (running) {
-    SharedState *state = SharedMemoryManager::data();
+    pthread_mutex_lock(&SharedMemoryManager::data()->seatsMutex);
 
+    SharedState *state = SharedMemoryManager::data();
     int totalCandidates = commissionType_ == 'A'
                               ? state->commissionACandidateCount
                               : state->commissionBCandidateCount;
@@ -96,19 +175,17 @@ void CommissionProcess::mainLoop() {
 
         if (commissionType_ == 'B') {
           Logger::info("Commission B finished, ending exam");
-          SharedMemoryManager::data()->examStarted = false;
+          state->examStarted = false;
         }
 
+        pthread_mutex_unlock(&SharedMemoryManager::data()->seatsMutex);
         break;
       }
     }
 
-    pthread_mutex_lock(&state->seatsMutex);
-
     for (int i = 0; i < 3; i++) {
-      // TODO: Extract to function
       if (commission->seats[i].answered && commission->seats[i].pid != -1) {
-        CandidateInfo *candidate = findCandidate(i);
+        CandidateInfo *candidate = Memory::findCandidate(commissionType_, i);
 
         if (candidate == nullptr) {
           Logger::warn(
@@ -125,14 +202,14 @@ void CommissionProcess::mainLoop() {
                                               : candidate->practicalScore;
         if (score < 0) {
           if (commissionType_ == 'A') {
-            candidate->theoreticalScore = getNRandomScore(5);
+            candidate->theoreticalScore = Random::sampleMean(5, 0.0, 100.0);
           } else {
-            candidate->practicalScore = getNRandomScore(3);
+            candidate->practicalScore = Random::sampleMean(3, 0.0, 100.0);
           }
           candidatesProcessed++;
 
           if (commissionType_ == 'A' && candidate->theoreticalScore < 30) {
-            SharedMemoryManager::data()->commissionBCandidateCount -= 1;
+            state->commissionBCandidateCount -= 1;
           }
 
           Logger::info("[Commission " + std::string(1, commissionType_) +
@@ -152,32 +229,20 @@ void CommissionProcess::mainLoop() {
       }
     }
 
-    pthread_mutex_unlock(&state->seatsMutex);
+    pthread_mutex_unlock(&SharedMemoryManager::data()->seatsMutex);
 
-    usleep(1000000);
+    int result = usleep(1000000);
+    if (result < 0) {
+      handleError("Failed to sleep in mainLoop()");
+    }
   }
 
   Logger::info("CommissionProcess::mainLoop() END");
 }
 
-CandidateInfo *CommissionProcess::findCandidate(int seat) {
-  SharedState *state = SharedMemoryManager::data();
-  CommissionInfo *commission =
-      commissionType_ == 'A' ? &state->commissionA : &state->commissionB;
-  int pid = commission->seats[seat].pid;
-
-  for (int i = 0; i < state->candidateCount; i++) {
-    if (state->candidates[i].pid == pid) {
-      return &state->candidates[i];
-    }
-  }
-
-  Logger::warn("Candidate not found for seat " + std::to_string(seat) +
-               " with pid " + std::to_string(pid) +
-               " - candidate may have already exited");
-  return nullptr;
-}
-
+/**
+ * Spawns the threads for the commission members.
+ */
 void CommissionProcess::spawnThreads() {
   Logger::info("CommissionProcess::spawnThreads()");
   SharedState *state = SharedMemoryManager::data();
@@ -195,6 +260,9 @@ void CommissionProcess::spawnThreads() {
   }
 }
 
+/**
+ * Waits for the threads to finish execution.
+ */
 void CommissionProcess::waitThreads() {
   Logger::info("CommissionProcess::waitThreads()");
   for (int i = 0; i < memberCount_; i++) {
@@ -202,6 +270,9 @@ void CommissionProcess::waitThreads() {
   }
 }
 
+/**
+ * Thread function for the commission members.
+ */
 void *CommissionProcess::threadFunction(void *arg) {
   ThreadData *data = static_cast<ThreadData *>(arg);
 
@@ -244,6 +315,9 @@ void *CommissionProcess::threadFunction(void *arg) {
   return nullptr;
 }
 
+/**
+ * Cleans up the commission process.
+ */
 void CommissionProcess::cleanup() {
   Logger::info("CommissionProcess::cleanup()");
   waitThreads();
@@ -251,12 +325,16 @@ void CommissionProcess::cleanup() {
   Logger::info("CommissionProcess exiting");
 }
 
+/**
+ * Handles the termination signal for the commission process.
+ */
 void CommissionProcess::terminationHandler(int signal) {
   Logger::info("CommissionProcess::terminationHandler()");
-  Logger::info("Termination signal: SIG " + std::to_string(signal) + " received");
+  Logger::info("Termination signal: SIG " + std::to_string(signal) +
+               " received");
 
   if (instance_) {
-    instance_->cleanup();
+    static_cast<CommissionProcess *>(instance_)->cleanup();
     instance_ = nullptr;
   }
 

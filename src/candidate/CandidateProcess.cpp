@@ -46,9 +46,9 @@ void CandidateProcess::validateArguments(int argc, char *argv[]) {
   /* Candidate index */
   /* + 5 times for commission A */
   /* + 3 times for commission B */
-  if (argc != 11) {
-    throw std::invalid_argument(
-        "Invalid number of arguments. Usage: ./candidate <index>");
+  if (argc != 10) {
+    throw std::invalid_argument("Invalid number of arguments. Usage: "
+                                "./candidate <index> <timesA> <timesB>");
   }
 
   /* Validate candidate index */
@@ -64,7 +64,7 @@ void CandidateProcess::validateArguments(int argc, char *argv[]) {
   /* Expected format: double[] */
   /* Expected value: t[i] > 0.0 */
   for (int i = 0; i < 5; i++) {
-    timesA[i] = std::stod(argv[3 + i]);
+    timesA[i] = std::stod(argv[2 + i]);
     if (timesA[i] <= 0.0) {
       throw std::invalid_argument("Times A must be positive");
     }
@@ -74,7 +74,7 @@ void CandidateProcess::validateArguments(int argc, char *argv[]) {
   /* Expected format: double[] */
   /* Expected value: t[i] > 0.0 */
   for (int i = 0; i < 3; i++) {
-    timesB[i] = std::stod(argv[8 + i]);
+    timesB[i] = std::stod(argv[7 + i]);
     if (timesB[i] <= 0.0) {
       throw std::invalid_argument("Times B must be positive");
     }
@@ -145,7 +145,10 @@ void CandidateProcess::handleError(const char *message) {
 void CandidateProcess::waitForExamStart() {
   Logger::info("CandidateProcess::waitForExamStart()");
   while (!SharedMemoryManager::data()->examStarted) {
-    sleep(1);
+    int result = sleep(1);
+    if (result < 0) {
+      handleError("Failed to sleep in waitForExamStart()");
+    }
   }
 }
 
@@ -165,19 +168,12 @@ void CandidateProcess::getCommissionASeat() {
 
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " waiting for commission A seat");
-  SemaphoreManager::wait(semaphoreA);
 
   while (seat == -1) {
-    if (SemaphoreManager::trywait(semaphoreA) == 0) {
-      seat = findCommissionASeat();
-      if (seat == -1) {
-        SemaphoreManager::post(semaphoreA);
-        int result = usleep(10000);
-        if (result < 0) {
-          handleError("Failed to sleep in getCommissionASeat()");
-        }
-      }
-    } else {
+    SemaphoreManager::wait(semaphoreA);
+    seat = findCommissionASeat();
+    if (seat == -1) {
+      SemaphoreManager::post(semaphoreA);
       int result = usleep(10000);
       if (result < 0) {
         handleError("Failed to sleep in getCommissionASeat()");
@@ -305,11 +301,17 @@ void CandidateProcess::waitForGrading(char commission) {
   if (commission == 'A') {
     while (SharedMemoryManager::data()->candidates[index].theoreticalScore <
            0) {
-      sleep(1);
+      int result = sleep(1);
+      if (result < 0) {
+        handleError("Failed to sleep in waitForGrading()");
+      }
     }
   } else {
     while (SharedMemoryManager::data()->candidates[index].practicalScore < 0) {
-      sleep(1);
+      int result = sleep(1);
+      if (result < 0) {
+        handleError("Failed to sleep in waitForGrading()");
+      }
     }
   }
 }
@@ -325,17 +327,16 @@ void CandidateProcess::getCommissionBSeat() {
 
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " waiting for commission B seat");
-  SemaphoreManager::wait(semaphoreB);
 
   while (seat == -1) {
-    if (SemaphoreManager::trywait(semaphoreB) == 0) {
-      seat = findCommissionBSeat();
-      if (seat == -1) {
-        SemaphoreManager::post(semaphoreB);
-        usleep(10000);
+    SemaphoreManager::wait(semaphoreB);
+    seat = findCommissionBSeat();
+    if (seat == -1) {
+      SemaphoreManager::post(semaphoreB);
+      int result = usleep(10000);
+      if (result < 0) {
+        handleError("Failed to sleep in getCommissionBSeat()");
       }
-    } else {
-      usleep(10000);
     }
   }
 }
@@ -374,7 +375,7 @@ void CandidateProcess::rejectionHandler(int signal) {
                " exiting with status 0");
 
   if (instance_) {
-    instance_->cleanup();
+    static_cast<CandidateProcess *>(instance_)->cleanup();
     instance_ = nullptr;
   }
 
@@ -392,7 +393,7 @@ void CandidateProcess::terminationHandler(int signal) {
                " exiting with status 0 (terminated)");
 
   if (instance_) {
-    instance_->cleanup();
+    static_cast<CandidateProcess *>(instance_)->cleanup();
     instance_ = nullptr;
   }
 

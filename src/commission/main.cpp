@@ -9,7 +9,6 @@
 #include <unistd.h>
 
 int main(int argc, char *argv[]) {
-  signal(SIGTERM, CommissionProcess::terminationHandler);
   CommissionProcess commissionProcess(argc, argv);
 
   commissionProcess.waitForExamStart();

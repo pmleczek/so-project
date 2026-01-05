@@ -12,6 +12,8 @@ public:
   int candidateCount;
   int failedExamCount;
   int retakeExamCount;
+  double timesA[5];
+  double timesB[3];
 
 private:
   void printConfig();

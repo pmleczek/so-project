@@ -60,3 +60,21 @@ void Memory::initializeMutex() {
     Logger::warn(errorMessage);
   }
 }
+
+CandidateInfo *Memory::findCandidate(char commissionType, int seat) {
+  SharedState *state = SharedMemoryManager::data();
+  CommissionInfo *commission =
+      commissionType == 'A' ? &state->commissionA : &state->commissionB;
+  int pid = commission->seats[seat].pid;
+
+  for (int i = 0; i < state->candidateCount; i++) {
+    if (state->candidates[i].pid == pid) {
+      return &state->candidates[i];
+    }
+  }
+
+  Logger::warn("Candidate not found for seat " + std::to_string(seat) +
+               " with pid " + std::to_string(pid) +
+               " - candidate may have already exited");
+  return nullptr;
+}

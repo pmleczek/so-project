@@ -31,8 +31,8 @@ private:
   int index;
   int seat = -1;
 
-  sem_t *semaphoreA;
-  sem_t *semaphoreB;
+  sem_t *semaphoreA = nullptr;
+  sem_t *semaphoreB = nullptr;
 
   double timesA[5];
   double timesB[3];

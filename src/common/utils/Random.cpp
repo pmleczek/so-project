@@ -16,8 +16,17 @@ int Random::randomInt(int min, int max) {
   return dist(gen);
 }
 
+double Random::sampleMean(int samples, double min, double max) {
+  double sum = 0.0;
+  for (int i = 0; i < samples; i++) {
+    sum += randomDouble(min, max);
+  }
+
+  return sum / samples;
+}
+
 std::unordered_set<int> Random::randomInts(int count, int min, int max,
-                                      std::unordered_set<int> exclude) {
+                                           std::unordered_set<int> exclude) {
   std::unordered_set<int> result;
   while (result.size() < count) {
     int num = randomInt(min, max);

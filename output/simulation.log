@@ -1,1 +1,987 @@
-[INFO] [2026-01-03 16:59:04.458] Process: dean started (pid=45738)
+[INFO] [2026-01-05 15:06:48.106] Process: dean started (pid=15877)
+[INFO] [2026-01-05 15:06:48.107] DeanConfig initialized with: 3 places and start time of: 54419
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - place count: 3 places
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - start time: 54419
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - candidate count: 30 candidates
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - failed exam count: 0 failed exams
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - retake exam count: 0 retake exams
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - times for answers in commission A: 0.606189, 0.450251, 0.503645, 0.397029, 0.481523
+[INFO] [2026-01-05 15:06:48.107] DeanConfig - times for answers in commission B: 0.431029, 0.713661, 0.610173
+[INFO] [2026-01-05 15:06:48.107] SharedMemoryManager::initialize(30)
+[INFO] [2026-01-05 15:06:48.107] Initializing shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:48.107] Creating new shared memory with size: 1360 bytes
+[INFO] [2026-01-05 15:06:48.108] Spawning 30 candidates
+[INFO] [2026-01-05 15:06:48.108] Failed exam indices (0): 
+[INFO] [2026-01-05 15:06:48.108] Retake exam indices (0): 
+[INFO] [2026-01-05 15:06:48.117] Waiting for exam start for 15 seconds
+[INFO] [2026-01-05 15:06:48.599] Process: commission started (pid=15878)
+[INFO] [2026-01-05 15:06:48.601] Process: commission started (pid=15879)
+[INFO] [2026-01-05 15:06:48.601] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:48.601] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:48.601] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:48.601] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:48.601] Initializing comission: B with 3 members
+[INFO] [2026-01-05 15:06:48.601] Commission B waiting for exam start
+[INFO] [2026-01-05 15:06:48.601] Initializing comission: A with 5 members
+[INFO] [2026-01-05 15:06:48.601] Commission A waiting for exam start
+[INFO] [2026-01-05 15:06:49.37] Process: candidate started (pid=15890)
+[INFO] [2026-01-05 15:06:49.38] Process: candidate started (pid=15886)
+[INFO] [2026-01-05 15:06:49.41] Process: candidate started (pid=15880)
+[INFO] [2026-01-05 15:06:49.44] Process: candidate started (pid=15883)
+[INFO] [2026-01-05 15:06:49.45] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.45] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.45] Process: candidate started (pid=15884)
+[INFO] [2026-01-05 15:06:49.45] Process: candidate started (pid=15902)
+[INFO] [2026-01-05 15:06:49.45] Process: candidate started (pid=15899)
+[INFO] [2026-01-05 15:06:49.46] Process: candidate started (pid=15905)
+[INFO] [2026-01-05 15:06:49.46] Process: candidate started (pid=15901)
+[INFO] [2026-01-05 15:06:49.46] Process: candidate started (pid=15897)
+[INFO] [2026-01-05 15:06:49.46] Process: candidate started (pid=15896)
+[INFO] [2026-01-05 15:06:49.46] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.46] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.46] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.46] Process: candidate started (pid=15888)
+[INFO] [2026-01-05 15:06:49.47] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.47] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.47] Process: candidate started (pid=15904)
+[INFO] [2026-01-05 15:06:49.47] Process: candidate started (pid=15881)
+[INFO] [2026-01-05 15:06:49.47] Process: candidate started (pid=15882)
+[INFO] [2026-01-05 15:06:49.47] Process: candidate started (pid=15889)
+[INFO] [2026-01-05 15:06:49.48] Process: candidate started (pid=15885)
+[INFO] [2026-01-05 15:06:49.48] Process: candidate started (pid=15893)
+[INFO] [2026-01-05 15:06:49.48] Process: candidate started (pid=15894)
+[INFO] [2026-01-05 15:06:49.48] Process: candidate started (pid=15906)
+[INFO] [2026-01-05 15:06:49.48] Process: candidate started (pid=15907)
+[INFO] [2026-01-05 15:06:49.49] Process: candidate started (pid=15909)
+[INFO] [2026-01-05 15:06:49.49] Process: candidate started (pid=15895)
+[INFO] [2026-01-05 15:06:49.49] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.49] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.49] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.49] Process: candidate started (pid=15900)
+[INFO] [2026-01-05 15:06:49.49] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.49] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.49] Process: candidate started (pid=15903)
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Process: candidate started (pid=15887)
+[INFO] [2026-01-05 15:06:49.50] Process: candidate started (pid=15908)
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.50] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.50] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Process: candidate started (pid=15892)
+[INFO] [2026-01-05 15:06:49.51] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.51] Process: candidate started (pid=15891)
+[INFO] [2026-01-05 15:06:49.51] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.51] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.52] Process: candidate started (pid=15898)
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.53] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.53] Attaching to shared memory with key: -1693527766
+[INFO] [2026-01-05 15:06:49.53] Getting shared memory for key: -1693527766
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:06:49.53] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-05 15:07:03.122] Exam has started
+[INFO] [2026-01-05 15:07:03.122] DeanProcess::verifyCandidates()
+[INFO] [2026-01-05 15:07:03.123] DeanProcess::start()
+[INFO] [2026-01-05 15:07:03.206] CommissionProcess::start()
+[INFO] [2026-01-05 15:07:03.207] CommissionProcess::spawnThreads()
+[INFO] [2026-01-05 15:07:03.207] Commission B member 0 started
+[INFO] [2026-01-05 15:07:03.207] Commission B member 1 started
+[INFO] [2026-01-05 15:07:03.207] Commission B member 2 started
+[INFO] [2026-01-05 15:07:03.207] Commission B releasing 3 seats after exam start
+[INFO] [2026-01-05 15:07:03.207] CommissionProcess::mainLoop() START
+[INFO] [2026-01-05 15:07:03.209] CommissionProcess::start()
+[INFO] [2026-01-05 15:07:03.209] CommissionProcess::spawnThreads()
+[INFO] [2026-01-05 15:07:03.209] Commission A member 0 started
+[INFO] [2026-01-05 15:07:03.209] Commission A member 2 started
+[INFO] [2026-01-05 15:07:03.209] Commission A member 3 started
+[INFO] [2026-01-05 15:07:03.209] Commission A member 1 started
+[INFO] [2026-01-05 15:07:03.209] Commission A releasing 3 seats after exam start
+[INFO] [2026-01-05 15:07:03.209] Commission A member 4 started
+[INFO] [2026-01-05 15:07:03.209] CommissionProcess::mainLoop() START
+[INFO] [2026-01-05 15:07:04.94] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.94] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.94] Candidate process with pid 15909 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.94] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:04.94] Candidate process with pid 15909 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:04.95] Candidate process with pid 15901 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.95] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:04.95] Candidate process with pid 15901 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:04.97] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.97] Candidate process with pid 15893 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.97] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:04.97] Candidate process with pid 15893 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15896 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15894 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15880 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15907 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15881 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] Candidate process with pid 15889 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.98] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.99] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15888 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.99] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15891 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15906 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15890 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15887 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15900 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.99] Candidate process with pid 15886 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.100] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.100] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.100] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.100] Candidate process with pid 15902 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.100] Candidate process with pid 15883 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.100] Candidate process with pid 15899 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.103] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.103] Candidate process with pid 15905 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.103] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.104] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.104] Candidate process with pid 15904 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.104] Candidate process with pid 15884 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.106] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.106] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.106] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.106] Candidate process with pid 15898 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.106] Candidate process with pid 15908 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.106] Candidate process with pid 15895 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.108] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.108] Candidate process with pid 15897 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.109] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.109] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.109] Candidate process with pid 15892 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.109] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.109] Candidate process with pid 15885 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.109] Candidate process with pid 15903 waiting for commission A seat
+[INFO] [2026-01-05 15:07:04.113] CandidateProcess::getCommissionASeat()
+[INFO] [2026-01-05 15:07:04.114] Candidate process with pid 15882 waiting for commission A seat
+[INFO] [2026-01-05 15:07:06.210] Member 3 generated question for seat 0 taken by pid 15909
+[INFO] [2026-01-05 15:07:06.211] Member 3 generated question for seat 1 taken by pid 15901
+[INFO] [2026-01-05 15:07:06.211] Member 3 generated question for seat 2 taken by pid 15893
+[INFO] [2026-01-05 15:07:06.211] Member 0 generated question for seat 0 taken by pid 15909
+[INFO] [2026-01-05 15:07:06.212] Member 0 generated question for seat 1 taken by pid 15901
+[INFO] [2026-01-05 15:07:06.212] Member 0 generated question for seat 2 taken by pid 15893
+[INFO] [2026-01-05 15:07:07.214] Member 1 generated question for seat 0 taken by pid 15909
+[INFO] [2026-01-05 15:07:07.215] Member 1 generated question for seat 1 taken by pid 15901
+[INFO] [2026-01-05 15:07:07.216] Member 1 generated question for seat 2 taken by pid 15893
+[INFO] [2026-01-05 15:07:07.216] Member 4 generated question for seat 0 taken by pid 15909
+[INFO] [2026-01-05 15:07:07.216] Member 4 generated question for seat 1 taken by pid 15901
+[INFO] [2026-01-05 15:07:07.216] Member 4 generated question for seat 2 taken by pid 15893
+[INFO] [2026-01-05 15:07:08.212] Member 2 generated question for seat 0 taken by pid 15909
+[INFO] [2026-01-05 15:07:08.213] Member 2 generated question for seat 1 taken by pid 15901
+[INFO] [2026-01-05 15:07:08.213] Member 2 generated question for seat 2 taken by pid 15893
+[INFO] [2026-01-05 15:07:11.556] Candidate process with pid 15893 answered questions
+[INFO] [2026-01-05 15:07:11.557] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:11.558] Candidate process with pid 15901 answered questions
+[INFO] [2026-01-05 15:07:11.558] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:11.558] Candidate process with pid 15909 answered questions
+[INFO] [2026-01-05 15:07:11.558] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:12.239] [Commission A] % of candidates graded: 3.333333%
+[INFO] [2026-01-05 15:07:12.239] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:12.240] Candidate process with pid 15896 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:12.563] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:12.563] Candidate process with pid 15909 failed to pass the exam
+[INFO] [2026-01-05 15:07:12.563] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:12.563] Detaching from shared memory
+[INFO] [2026-01-05 15:07:13.240] [Commission A] % of candidates graded: 6.666667%
+[INFO] [2026-01-05 15:07:13.241] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:13.241] Candidate process with pid 15894 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:13.568] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:13.569] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:13.569] Candidate process with pid 15901 waiting for commission B seat
+[INFO] [2026-01-05 15:07:13.570] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:13.570] Candidate process with pid 15901 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:14.220] Member 2 generated question for seat 0 taken by pid 15896
+[INFO] [2026-01-05 15:07:14.221] Member 2 generated question for seat 1 taken by pid 15894
+[INFO] [2026-01-05 15:07:14.225] Member 1 generated question for seat 0 taken by pid 15896
+[INFO] [2026-01-05 15:07:14.226] Member 1 generated question for seat 1 taken by pid 15894
+[INFO] [2026-01-05 15:07:14.245] [Commission A] % of candidates graded: 10.000000%
+[INFO] [2026-01-05 15:07:14.245] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:14.245] Candidate process with pid 15880 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:14.570] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:14.571] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:14.571] Candidate process with pid 15893 waiting for commission B seat
+[INFO] [2026-01-05 15:07:14.571] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:14.571] Candidate process with pid 15893 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:15.220] Member 0 generated question for seat 0 taken by pid 15901
+[INFO] [2026-01-05 15:07:15.220] Member 0 generated question for seat 1 taken by pid 15893
+[INFO] [2026-01-05 15:07:15.221] Member 4 generated question for seat 0 taken by pid 15896
+[INFO] [2026-01-05 15:07:15.221] Member 4 generated question for seat 1 taken by pid 15894
+[INFO] [2026-01-05 15:07:15.221] Member 4 generated question for seat 2 taken by pid 15880
+[INFO] [2026-01-05 15:07:15.222] Member 0 generated question for seat 0 taken by pid 15896
+[INFO] [2026-01-05 15:07:15.222] Member 0 generated question for seat 1 taken by pid 15894
+[INFO] [2026-01-05 15:07:15.222] Member 0 generated question for seat 2 taken by pid 15880
+[INFO] [2026-01-05 15:07:15.223] Member 1 generated question for seat 0 taken by pid 15901
+[INFO] [2026-01-05 15:07:15.223] Member 1 generated question for seat 1 taken by pid 15893
+[INFO] [2026-01-05 15:07:15.224] Member 3 generated question for seat 0 taken by pid 15896
+[INFO] [2026-01-05 15:07:15.224] Member 3 generated question for seat 1 taken by pid 15894
+[INFO] [2026-01-05 15:07:15.224] Member 3 generated question for seat 2 taken by pid 15880
+[INFO] [2026-01-05 15:07:16.226] Member 2 generated question for seat 0 taken by pid 15901
+[INFO] [2026-01-05 15:07:16.227] Member 2 generated question for seat 1 taken by pid 15893
+[INFO] [2026-01-05 15:07:16.230] Member 1 generated question for seat 2 taken by pid 15880
+[INFO] [2026-01-05 15:07:17.225] Member 2 generated question for seat 2 taken by pid 15880
+[INFO] [2026-01-05 15:07:17.686] Candidate process with pid 15896 answered questions
+[INFO] [2026-01-05 15:07:17.687] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:17.690] Candidate process with pid 15894 answered questions
+[INFO] [2026-01-05 15:07:17.690] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:18.254] [Commission A] % of candidates graded: 13.333333%
+[INFO] [2026-01-05 15:07:18.255] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:18.255] Candidate process with pid 15907 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:18.341] Candidate process with pid 15893 answered questions
+[INFO] [2026-01-05 15:07:18.341] Candidate process with pid 15901 answered questions
+[INFO] [2026-01-05 15:07:18.341] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:18.341] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:18.692] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:18.693] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:18.693] Candidate process with pid 15896 waiting for commission B seat
+[INFO] [2026-01-05 15:07:18.693] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:18.694] Candidate process with pid 15896 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:19.224] Member 3 generated question for seat 0 taken by pid 15907
+[INFO] [2026-01-05 15:07:19.225] Member 1 generated question for seat 2 taken by pid 15896
+[INFO] [2026-01-05 15:07:19.232] Member 2 generated question for seat 2 taken by pid 15896
+[INFO] [2026-01-05 15:07:19.260] [Commission A] % of candidates graded: 16.666667%
+[INFO] [2026-01-05 15:07:19.260] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:19.260] Candidate process with pid 15881 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:19.268] [Commission B] % of candidates graded: 3.448276%
+[INFO] [2026-01-05 15:07:19.344] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:19.344] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:19.344] Detaching from shared memory
+[INFO] [2026-01-05 15:07:19.344] Candidate process with pid 15901 exiting with status 0
+[INFO] [2026-01-05 15:07:19.696] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:19.696] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:19.696] Candidate process with pid 15894 waiting for commission B seat
+[INFO] [2026-01-05 15:07:19.696] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:19.696] Candidate process with pid 15894 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:19.702] Candidate process with pid 15880 answered questions
+[INFO] [2026-01-05 15:07:19.702] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:20.226] Member 0 generated question for seat 0 taken by pid 15894
+[INFO] [2026-01-05 15:07:20.226] Member 0 generated question for seat 2 taken by pid 15896
+[INFO] [2026-01-05 15:07:20.265] [Commission A] % of candidates graded: 20.000000%
+[INFO] [2026-01-05 15:07:20.265] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:20.265] Candidate process with pid 15889 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:20.273] [Commission B] % of candidates graded: 6.896552%
+[INFO] [2026-01-05 15:07:20.349] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:20.349] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:20.350] Detaching from shared memory
+[INFO] [2026-01-05 15:07:20.350] Candidate process with pid 15893 exiting with status 0
+[INFO] [2026-01-05 15:07:20.706] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:20.707] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:20.708] Candidate process with pid 15880 waiting for commission B seat
+[INFO] [2026-01-05 15:07:20.708] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:20.708] Candidate process with pid 15880 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:21.231] Member 4 generated question for seat 0 taken by pid 15907
+[INFO] [2026-01-05 15:07:21.233] Member 4 generated question for seat 1 taken by pid 15881
+[INFO] [2026-01-05 15:07:21.233] Member 4 generated question for seat 2 taken by pid 15889
+[INFO] [2026-01-05 15:07:22.225] Member 3 generated question for seat 1 taken by pid 15881
+[INFO] [2026-01-05 15:07:22.226] Member 3 generated question for seat 2 taken by pid 15889
+[INFO] [2026-01-05 15:07:22.231] Member 2 generated question for seat 0 taken by pid 15907
+[INFO] [2026-01-05 15:07:22.232] Member 2 generated question for seat 1 taken by pid 15881
+[INFO] [2026-01-05 15:07:22.232] Member 2 generated question for seat 2 taken by pid 15889
+[INFO] [2026-01-05 15:07:22.232] Member 0 generated question for seat 0 taken by pid 15907
+[INFO] [2026-01-05 15:07:22.232] Member 0 generated question for seat 1 taken by pid 15881
+[INFO] [2026-01-05 15:07:22.232] Member 0 generated question for seat 2 taken by pid 15889
+[INFO] [2026-01-05 15:07:22.240] Member 1 generated question for seat 0 taken by pid 15907
+[INFO] [2026-01-05 15:07:22.240] Member 1 generated question for seat 1 taken by pid 15881
+[INFO] [2026-01-05 15:07:22.240] Member 1 generated question for seat 2 taken by pid 15889
+[INFO] [2026-01-05 15:07:22.457] Candidate process with pid 15896 answered questions
+[INFO] [2026-01-05 15:07:22.458] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:23.230] Member 0 generated question for seat 1 taken by pid 15880
+[INFO] [2026-01-05 15:07:23.284] [Commission B] % of candidates graded: 10.344828%
+[INFO] [2026-01-05 15:07:23.462] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:23.464] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:23.464] Detaching from shared memory
+[INFO] [2026-01-05 15:07:23.464] Candidate process with pid 15896 exiting with status 0
+[INFO] [2026-01-05 15:07:24.230] Member 1 generated question for seat 0 taken by pid 15894
+[INFO] [2026-01-05 15:07:24.231] Member 1 generated question for seat 1 taken by pid 15880
+[INFO] [2026-01-05 15:07:24.234] Member 2 generated question for seat 0 taken by pid 15894
+[INFO] [2026-01-05 15:07:24.235] Member 2 generated question for seat 1 taken by pid 15880
+[INFO] [2026-01-05 15:07:24.703] Candidate process with pid 15907 answered questions
+[INFO] [2026-01-05 15:07:24.703] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:24.709] Candidate process with pid 15881 answered questions
+[INFO] [2026-01-05 15:07:24.709] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:24.710] Candidate process with pid 15889 answered questions
+[INFO] [2026-01-05 15:07:24.710] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:25.284] [Commission A] % of candidates graded: 23.333333%
+[INFO] [2026-01-05 15:07:25.284] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:25.285] Candidate process with pid 15888 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:25.708] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:25.708] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:25.709] Candidate process with pid 15907 waiting for commission B seat
+[INFO] [2026-01-05 15:07:25.709] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:25.709] Candidate process with pid 15907 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:26.231] Member 3 generated question for seat 0 taken by pid 15888
+[INFO] [2026-01-05 15:07:26.233] Member 1 generated question for seat 2 taken by pid 15907
+[INFO] [2026-01-05 15:07:26.236] Member 0 generated question for seat 0 taken by pid 15888
+[INFO] [2026-01-05 15:07:26.286] [Commission A] % of candidates graded: 26.666667%
+[INFO] [2026-01-05 15:07:26.286] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:26.286] Candidate process with pid 15891 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:26.466] Candidate process with pid 15894 answered questions
+[INFO] [2026-01-05 15:07:26.466] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:26.479] Candidate process with pid 15880 answered questions
+[INFO] [2026-01-05 15:07:26.479] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:26.717] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:26.717] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:26.718] Candidate process with pid 15881 waiting for commission B seat
+[INFO] [2026-01-05 15:07:27.240] Member 2 generated question for seat 2 taken by pid 15907
+[INFO] [2026-01-05 15:07:27.240] Member 4 generated question for seat 0 taken by pid 15888
+[INFO] [2026-01-05 15:07:27.241] Member 4 generated question for seat 1 taken by pid 15891
+[INFO] [2026-01-05 15:07:27.244] Member 1 generated question for seat 0 taken by pid 15888
+[INFO] [2026-01-05 15:07:27.244] Member 1 generated question for seat 1 taken by pid 15891
+[INFO] [2026-01-05 15:07:27.290] [Commission A] % of candidates graded: 30.000000%
+[INFO] [2026-01-05 15:07:27.290] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:27.290] Candidate process with pid 15906 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:27.303] [Commission B] % of candidates graded: 13.793103%
+[INFO] [2026-01-05 15:07:27.303] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:27.303] Candidate process with pid 15881 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:27.467] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:27.467] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:27.467] Detaching from shared memory
+[INFO] [2026-01-05 15:07:27.467] Candidate process with pid 15894 exiting with status 0
+[INFO] [2026-01-05 15:07:27.723] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:27.723] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:27.723] Candidate process with pid 15889 waiting for commission B seat
+[INFO] [2026-01-05 15:07:28.236] Member 0 generated question for seat 0 taken by pid 15881
+[INFO] [2026-01-05 15:07:28.236] Member 0 generated question for seat 2 taken by pid 15907
+[INFO] [2026-01-05 15:07:28.307] [Commission B] % of candidates graded: 17.241379%
+[INFO] [2026-01-05 15:07:28.307] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:28.307] Candidate process with pid 15889 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:28.489] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:28.489] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:28.489] Detaching from shared memory
+[INFO] [2026-01-05 15:07:28.489] Candidate process with pid 15880 exiting with status 0
+[INFO] [2026-01-05 15:07:29.234] Member 3 generated question for seat 1 taken by pid 15891
+[INFO] [2026-01-05 15:07:29.234] Member 3 generated question for seat 2 taken by pid 15906
+[INFO] [2026-01-05 15:07:29.235] Member 2 generated question for seat 0 taken by pid 15888
+[INFO] [2026-01-05 15:07:29.235] Member 2 generated question for seat 1 taken by pid 15891
+[INFO] [2026-01-05 15:07:29.235] Member 2 generated question for seat 2 taken by pid 15906
+[INFO] [2026-01-05 15:07:29.237] Member 0 generated question for seat 1 taken by pid 15891
+[INFO] [2026-01-05 15:07:29.238] Member 0 generated question for seat 2 taken by pid 15906
+[INFO] [2026-01-05 15:07:29.246] Member 4 generated question for seat 2 taken by pid 15906
+[INFO] [2026-01-05 15:07:30.239] Member 1 generated question for seat 0 taken by pid 15881
+[INFO] [2026-01-05 15:07:30.240] Member 1 generated question for seat 1 taken by pid 15889
+[INFO] [2026-01-05 15:07:30.475] Candidate process with pid 15907 answered questions
+[INFO] [2026-01-05 15:07:30.476] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:31.241] Member 0 generated question for seat 1 taken by pid 15889
+[INFO] [2026-01-05 15:07:31.245] Member 2 generated question for seat 0 taken by pid 15881
+[INFO] [2026-01-05 15:07:31.246] Member 2 generated question for seat 1 taken by pid 15889
+[INFO] [2026-01-05 15:07:31.249] Member 1 generated question for seat 2 taken by pid 15906
+[INFO] [2026-01-05 15:07:31.315] [Commission B] % of candidates graded: 20.689655%
+[INFO] [2026-01-05 15:07:31.482] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:31.482] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:31.483] Detaching from shared memory
+[INFO] [2026-01-05 15:07:31.483] Candidate process with pid 15907 exiting with status 0
+[INFO] [2026-01-05 15:07:31.736] Candidate process with pid 15888 answered questions
+[INFO] [2026-01-05 15:07:31.737] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:31.742] Candidate process with pid 15891 answered questions
+[INFO] [2026-01-05 15:07:31.743] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:32.314] [Commission A] % of candidates graded: 33.333333%
+[INFO] [2026-01-05 15:07:32.315] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:32.315] Candidate process with pid 15890 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:32.741] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:32.742] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:32.742] Candidate process with pid 15888 waiting for commission B seat
+[INFO] [2026-01-05 15:07:32.742] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:32.742] Candidate process with pid 15888 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:33.74] Candidate process with pid 15889 answered questions
+[INFO] [2026-01-05 15:07:33.74] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:33.77] Candidate process with pid 15881 answered questions
+[INFO] [2026-01-05 15:07:33.77] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:33.246] Member 0 generated question for seat 2 taken by pid 15888
+[INFO] [2026-01-05 15:07:33.319] [Commission A] % of candidates graded: 36.666667%
+[INFO] [2026-01-05 15:07:33.320] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:33.320] Candidate process with pid 15887 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:33.321] [Commission B] % of candidates graded: 24.137931%
+[INFO] [2026-01-05 15:07:33.748] Candidate process with pid 15906 answered questions
+[INFO] [2026-01-05 15:07:33.749] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:33.751] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:33.752] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:33.752] Candidate process with pid 15891 waiting for commission B seat
+[INFO] [2026-01-05 15:07:33.752] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:33.752] Candidate process with pid 15891 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:34.82] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:34.83] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:34.83] Detaching from shared memory
+[INFO] [2026-01-05 15:07:34.83] Candidate process with pid 15881 exiting with status 0
+[INFO] [2026-01-05 15:07:34.245] Member 1 generated question for seat 0 taken by pid 15891
+[INFO] [2026-01-05 15:07:34.245] Member 1 generated question for seat 2 taken by pid 15888
+[INFO] [2026-01-05 15:07:34.247] Member 0 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:34.247] Member 0 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:34.248] Member 4 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:34.248] Member 4 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:34.252] Member 1 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:34.253] Member 1 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:34.325] [Commission A] % of candidates graded: 40.000000%
+[INFO] [2026-01-05 15:07:34.326] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:34.326] [Commission B] % of candidates graded: 27.586207%
+[INFO] [2026-01-05 15:07:34.326] Candidate process with pid 15900 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:34.753] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:34.754] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:34.754] Candidate process with pid 15906 waiting for commission B seat
+[INFO] [2026-01-05 15:07:34.755] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:34.755] Candidate process with pid 15906 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:35.80] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:35.80] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:35.80] Detaching from shared memory
+[INFO] [2026-01-05 15:07:35.80] Candidate process with pid 15889 exiting with status 0
+[INFO] [2026-01-05 15:07:35.240] Member 3 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:35.241] Member 3 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:35.241] Member 3 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:35.248] Member 0 generated question for seat 0 taken by pid 15891
+[INFO] [2026-01-05 15:07:35.248] Member 0 generated question for seat 1 taken by pid 15906
+[INFO] [2026-01-05 15:07:35.250] Member 2 generated question for seat 0 taken by pid 15891
+[INFO] [2026-01-05 15:07:35.250] Member 2 generated question for seat 1 taken by pid 15906
+[INFO] [2026-01-05 15:07:35.250] Member 2 generated question for seat 2 taken by pid 15888
+[INFO] [2026-01-05 15:07:36.253] Member 4 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:37.244] Member 2 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:37.244] Member 2 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:37.245] Member 2 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:37.256] Member 1 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:37.511] Candidate process with pid 15888 answered questions
+[INFO] [2026-01-05 15:07:37.512] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:37.515] Candidate process with pid 15891 answered questions
+[INFO] [2026-01-05 15:07:37.515] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:38.247] Member 1 generated question for seat 1 taken by pid 15906
+[INFO] [2026-01-05 15:07:38.248] Member 0 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:38.334] [Commission B] % of candidates graded: 31.034483%
+[INFO] [2026-01-05 15:07:38.519] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:38.519] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:38.520] Detaching from shared memory
+[INFO] [2026-01-05 15:07:38.520] Candidate process with pid 15891 exiting with status 0
+[INFO] [2026-01-05 15:07:39.340] [Commission B] % of candidates graded: 34.482759%
+[INFO] [2026-01-05 15:07:39.520] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:39.520] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:39.520] Detaching from shared memory
+[INFO] [2026-01-05 15:07:39.520] Candidate process with pid 15888 exiting with status 0
+[INFO] [2026-01-05 15:07:39.774] Candidate process with pid 15887 answered questions
+[INFO] [2026-01-05 15:07:39.774] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:39.776] Candidate process with pid 15890 answered questions
+[INFO] [2026-01-05 15:07:39.777] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:40.345] [Commission A] % of candidates graded: 43.333333%
+[INFO] [2026-01-05 15:07:40.346] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:40.346] Candidate process with pid 15886 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:40.531] Candidate process with pid 15906 answered questions
+[INFO] [2026-01-05 15:07:40.531] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:40.777] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:40.777] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:40.777] Candidate process with pid 15890 waiting for commission B seat
+[INFO] [2026-01-05 15:07:40.777] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:40.777] Candidate process with pid 15890 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:40.786] Candidate process with pid 15900 answered questions
+[INFO] [2026-01-05 15:07:40.786] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:41.249] Member 2 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:41.252] Member 0 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:41.254] Member 2 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:41.257] Member 0 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:41.262] Member 4 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:41.343] [Commission B] % of candidates graded: 37.931034%
+[INFO] [2026-01-05 15:07:41.347] [Commission A] % of candidates graded: 46.666667%
+[INFO] [2026-01-05 15:07:41.347] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:41.348] Candidate process with pid 15902 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:41.537] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:41.538] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:41.538] Detaching from shared memory
+[INFO] [2026-01-05 15:07:41.538] Candidate process with pid 15906 exiting with status 0
+[INFO] [2026-01-05 15:07:41.782] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:41.783] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:41.783] Candidate process with pid 15887 waiting for commission B seat
+[INFO] [2026-01-05 15:07:41.783] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:41.783] Candidate process with pid 15887 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:42.352] [Commission A] % of candidates graded: 50.000000%
+[INFO] [2026-01-05 15:07:42.352] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:42.352] Candidate process with pid 15883 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:42.794] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:42.795] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:42.795] Candidate process with pid 15900 waiting for commission B seat
+[INFO] [2026-01-05 15:07:42.796] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:42.796] Candidate process with pid 15900 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:43.248] Member 3 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:43.249] Member 3 generated question for seat 1 taken by pid 15902
+[INFO] [2026-01-05 15:07:43.249] Member 3 generated question for seat 2 taken by pid 15883
+[INFO] [2026-01-05 15:07:43.253] Member 1 generated question for seat 0 taken by pid 15890
+[INFO] [2026-01-05 15:07:43.253] Member 1 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:43.253] Member 1 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:43.254] Member 2 generated question for seat 1 taken by pid 15902
+[INFO] [2026-01-05 15:07:43.254] Member 2 generated question for seat 2 taken by pid 15883
+[INFO] [2026-01-05 15:07:44.253] Member 0 generated question for seat 1 taken by pid 15902
+[INFO] [2026-01-05 15:07:44.253] Member 0 generated question for seat 2 taken by pid 15883
+[INFO] [2026-01-05 15:07:44.262] Member 0 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:44.262] Member 0 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:44.264] Member 1 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:44.265] Member 1 generated question for seat 1 taken by pid 15902
+[INFO] [2026-01-05 15:07:44.265] Member 1 generated question for seat 2 taken by pid 15883
+[INFO] [2026-01-05 15:07:44.265] Member 4 generated question for seat 1 taken by pid 15902
+[INFO] [2026-01-05 15:07:44.265] Member 4 generated question for seat 2 taken by pid 15883
+[INFO] [2026-01-05 15:07:45.542] Candidate process with pid 15890 answered questions
+[INFO] [2026-01-05 15:07:45.543] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:46.258] Member 2 generated question for seat 1 taken by pid 15887
+[INFO] [2026-01-05 15:07:46.259] Member 2 generated question for seat 2 taken by pid 15900
+[INFO] [2026-01-05 15:07:46.364] [Commission B] % of candidates graded: 41.379310%
+[INFO] [2026-01-05 15:07:46.547] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:46.547] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:46.548] Detaching from shared memory
+[INFO] [2026-01-05 15:07:46.548] Candidate process with pid 15890 exiting with status 0
+[INFO] [2026-01-05 15:07:46.801] Candidate process with pid 15886 answered questions
+[INFO] [2026-01-05 15:07:46.802] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:46.803] Candidate process with pid 15902 answered questions
+[INFO] [2026-01-05 15:07:46.803] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:46.806] Candidate process with pid 15883 answered questions
+[INFO] [2026-01-05 15:07:46.806] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:47.373] [Commission A] % of candidates graded: 53.333333%
+[INFO] [2026-01-05 15:07:47.374] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:47.374] Candidate process with pid 15899 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:47.806] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:47.807] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:47.807] Candidate process with pid 15886 waiting for commission B seat
+[INFO] [2026-01-05 15:07:47.807] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:47.807] Candidate process with pid 15886 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:48.379] [Commission A] % of candidates graded: 56.666667%
+[INFO] [2026-01-05 15:07:48.379] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:48.379] Candidate process with pid 15905 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:48.561] Candidate process with pid 15887 answered questions
+[INFO] [2026-01-05 15:07:48.562] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:48.571] Candidate process with pid 15900 answered questions
+[INFO] [2026-01-05 15:07:48.571] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:48.813] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:48.814] Candidate process with pid 15902 failed to pass the exam
+[INFO] [2026-01-05 15:07:48.814] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:48.814] Detaching from shared memory
+[INFO] [2026-01-05 15:07:49.263] Member 3 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:49.263] Member 3 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:49.373] [Commission B] % of candidates graded: 46.428571%
+[INFO] [2026-01-05 15:07:49.384] [Commission A] % of candidates graded: 60.000000%
+[INFO] [2026-01-05 15:07:49.385] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:49.385] Candidate process with pid 15904 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:49.564] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:49.565] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:49.565] Detaching from shared memory
+[INFO] [2026-01-05 15:07:49.566] Candidate process with pid 15887 exiting with status 0
+[INFO] [2026-01-05 15:07:49.818] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:49.818] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:49.819] Candidate process with pid 15883 waiting for commission B seat
+[INFO] [2026-01-05 15:07:49.819] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:49.819] Candidate process with pid 15883 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:50.275] Member 4 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:50.276] Member 4 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:50.276] Member 4 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:50.377] [Commission B] % of candidates graded: 50.000000%
+[INFO] [2026-01-05 15:07:50.581] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:50.581] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:50.582] Detaching from shared memory
+[INFO] [2026-01-05 15:07:50.582] Candidate process with pid 15900 exiting with status 0
+[INFO] [2026-01-05 15:07:51.261] Member 0 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:51.262] Member 0 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:51.262] Member 0 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:51.262] Member 1 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:51.263] Member 1 generated question for seat 1 taken by pid 15883
+[INFO] [2026-01-05 15:07:51.264] Member 2 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:51.264] Member 2 generated question for seat 1 taken by pid 15883
+[INFO] [2026-01-05 15:07:51.266] Member 0 generated question for seat 0 taken by pid 15886
+[INFO] [2026-01-05 15:07:51.266] Member 0 generated question for seat 1 taken by pid 15883
+[INFO] [2026-01-05 15:07:52.258] Member 2 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:52.259] Member 2 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:52.259] Member 2 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:52.273] Member 1 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:52.273] Member 1 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:52.273] Member 1 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:53.268] Member 3 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:53.580] Candidate process with pid 15883 answered questions
+[INFO] [2026-01-05 15:07:53.581] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:53.582] Candidate process with pid 15886 answered questions
+[INFO] [2026-01-05 15:07:53.582] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:54.389] [Commission B] % of candidates graded: 53.571429%
+[INFO] [2026-01-05 15:07:54.586] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:54.587] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:54.587] Detaching from shared memory
+[INFO] [2026-01-05 15:07:54.587] Candidate process with pid 15886 exiting with status 0
+[INFO] [2026-01-05 15:07:54.836] Candidate process with pid 15899 answered questions
+[INFO] [2026-01-05 15:07:54.836] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:54.837] Candidate process with pid 15905 answered questions
+[INFO] [2026-01-05 15:07:54.837] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:55.395] [Commission B] % of candidates graded: 57.142857%
+[INFO] [2026-01-05 15:07:55.404] [Commission A] % of candidates graded: 63.333333%
+[INFO] [2026-01-05 15:07:55.404] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:55.404] Candidate process with pid 15884 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:55.590] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:07:55.590] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:07:55.590] Detaching from shared memory
+[INFO] [2026-01-05 15:07:55.590] Candidate process with pid 15883 exiting with status 0
+[INFO] [2026-01-05 15:07:55.838] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:55.838] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:55.839] Candidate process with pid 15899 waiting for commission B seat
+[INFO] [2026-01-05 15:07:55.839] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:55.839] Candidate process with pid 15899 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:55.839] Candidate process with pid 15904 answered questions
+[INFO] [2026-01-05 15:07:55.839] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:07:56.267] Member 1 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:56.268] Member 0 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:07:56.277] Member 1 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:07:56.405] [Commission A] % of candidates graded: 66.666667%
+[INFO] [2026-01-05 15:07:56.405] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:56.406] Candidate process with pid 15898 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:56.844] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:56.844] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:56.845] Candidate process with pid 15905 waiting for commission B seat
+[INFO] [2026-01-05 15:07:56.845] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:56.845] Candidate process with pid 15905 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:57.266] Member 2 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:07:57.267] Member 2 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:07:57.279] Member 3 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:07:57.279] Member 3 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:07:57.281] Member 4 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:07:57.282] Member 4 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:07:57.410] [Commission A] % of candidates graded: 70.000000%
+[INFO] [2026-01-05 15:07:57.411] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:57.411] Candidate process with pid 15908 waiting for questions from commission A
+[INFO] [2026-01-05 15:07:57.848] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:07:57.850] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:07:57.850] Candidate process with pid 15904 waiting for commission B seat
+[INFO] [2026-01-05 15:07:57.850] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:07:57.850] Candidate process with pid 15904 waiting for questions from commission B
+[INFO] [2026-01-05 15:07:58.272] Member 0 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:58.273] Member 0 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:58.273] Member 0 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:58.273] Member 1 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:58.273] Member 1 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:59.269] Member 2 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:07:59.270] Member 2 generated question for seat 0 taken by pid 15899
+[INFO] [2026-01-05 15:07:59.270] Member 2 generated question for seat 1 taken by pid 15905
+[INFO] [2026-01-05 15:07:59.270] Member 2 generated question for seat 2 taken by pid 15904
+[INFO] [2026-01-05 15:07:59.280] Member 1 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:07:59.280] Member 1 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:07:59.854] Candidate process with pid 15884 answered questions
+[INFO] [2026-01-05 15:07:59.854] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:00.287] Member 4 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:00.423] [Commission A] % of candidates graded: 73.333333%
+[INFO] [2026-01-05 15:08:00.423] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:00.424] Candidate process with pid 15895 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:00.857] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:00.858] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:00.858] Candidate process with pid 15884 waiting for commission B seat
+[INFO] [2026-01-05 15:08:01.273] Member 0 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:01.273] Member 0 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:08:01.273] Member 0 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:01.274] Member 2 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:01.284] Member 3 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:01.284] Member 3 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:01.286] Member 1 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:01.615] Candidate process with pid 15905 answered questions
+[INFO] [2026-01-05 15:08:01.616] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:01.617] Candidate process with pid 15904 answered questions
+[INFO] [2026-01-05 15:08:01.617] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:01.617] Candidate process with pid 15899 answered questions
+[INFO] [2026-01-05 15:08:01.617] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:02.424] [Commission B] % of candidates graded: 60.714286%
+[INFO] [2026-01-05 15:08:02.424] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:02.425] Candidate process with pid 15884 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:02.622] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:02.624] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:02.624] Detaching from shared memory
+[INFO] [2026-01-05 15:08:02.624] Candidate process with pid 15899 exiting with status 0
+[INFO] [2026-01-05 15:08:03.289] Member 4 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:03.425] [Commission B] % of candidates graded: 64.285714%
+[INFO] [2026-01-05 15:08:03.626] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:03.627] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:03.627] Detaching from shared memory
+[INFO] [2026-01-05 15:08:03.628] Candidate process with pid 15905 exiting with status 0
+[INFO] [2026-01-05 15:08:03.868] Candidate process with pid 15908 answered questions
+[INFO] [2026-01-05 15:08:03.869] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:03.872] Candidate process with pid 15898 answered questions
+[INFO] [2026-01-05 15:08:03.872] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:04.426] [Commission B] % of candidates graded: 67.857143%
+[INFO] [2026-01-05 15:08:04.439] [Commission A] % of candidates graded: 76.666667%
+[INFO] [2026-01-05 15:08:04.439] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:04.440] Candidate process with pid 15897 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:04.625] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:04.626] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:04.627] Detaching from shared memory
+[INFO] [2026-01-05 15:08:04.627] Candidate process with pid 15904 exiting with status 0
+[INFO] [2026-01-05 15:08:04.877] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:04.878] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:04.878] Candidate process with pid 15898 waiting for commission B seat
+[INFO] [2026-01-05 15:08:04.878] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:04.878] Candidate process with pid 15898 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:05.279] Member 0 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:05.279] Member 2 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:05.280] Member 2 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:08:05.280] Member 2 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:08:05.280] Member 0 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:08:05.280] Member 0 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:08:05.443] [Commission A] % of candidates graded: 80.000000%
+[INFO] [2026-01-05 15:08:05.444] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:05.445] Candidate process with pid 15892 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:05.874] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:05.875] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:05.875] Candidate process with pid 15908 waiting for commission B seat
+[INFO] [2026-01-05 15:08:05.875] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:05.875] Candidate process with pid 15908 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:05.877] Candidate process with pid 15895 answered questions
+[INFO] [2026-01-05 15:08:05.878] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:06.284] Member 3 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:06.285] Member 3 generated question for seat 2 taken by pid 15892
+[INFO] [2026-01-05 15:08:06.295] Member 4 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:06.295] Member 4 generated question for seat 2 taken by pid 15892
+[INFO] [2026-01-05 15:08:06.447] [Commission A] % of candidates graded: 83.333333%
+[INFO] [2026-01-05 15:08:06.448] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:06.448] Candidate process with pid 15885 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:06.881] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:06.882] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:06.882] Candidate process with pid 15895 waiting for commission B seat
+[INFO] [2026-01-05 15:08:07.285] Member 1 generated question for seat 0 taken by pid 15884
+[INFO] [2026-01-05 15:08:07.285] Member 1 generated question for seat 1 taken by pid 15898
+[INFO] [2026-01-05 15:08:07.285] Member 1 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:08.281] Member 2 generated question for seat 0 taken by pid 15885
+[INFO] [2026-01-05 15:08:08.282] Member 2 generated question for seat 2 taken by pid 15892
+[INFO] [2026-01-05 15:08:08.285] Member 0 generated question for seat 0 taken by pid 15885
+[INFO] [2026-01-05 15:08:08.285] Member 0 generated question for seat 2 taken by pid 15892
+[INFO] [2026-01-05 15:08:08.296] Member 1 generated question for seat 0 taken by pid 15885
+[INFO] [2026-01-05 15:08:08.296] Member 1 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:08.296] Member 1 generated question for seat 2 taken by pid 15892
+[INFO] [2026-01-05 15:08:09.198] Candidate process with pid 15884 answered questions
+[INFO] [2026-01-05 15:08:09.198] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:09.448] [Commission B] % of candidates graded: 71.428571%
+[INFO] [2026-01-05 15:08:09.449] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:09.449] Candidate process with pid 15895 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:09.646] Candidate process with pid 15898 answered questions
+[INFO] [2026-01-05 15:08:09.646] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:10.203] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:10.203] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:10.203] Detaching from shared memory
+[INFO] [2026-01-05 15:08:10.203] Candidate process with pid 15884 exiting with status 0
+[INFO] [2026-01-05 15:08:10.284] Member 0 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:10.285] Member 0 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:10.285] Member 2 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:10.285] Member 2 generated question for seat 2 taken by pid 15908
+[INFO] [2026-01-05 15:08:10.287] Member 3 generated question for seat 0 taken by pid 15885
+[INFO] [2026-01-05 15:08:10.449] [Commission B] % of candidates graded: 75.000000%
+[INFO] [2026-01-05 15:08:10.651] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:10.651] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:10.651] Detaching from shared memory
+[INFO] [2026-01-05 15:08:10.652] Candidate process with pid 15898 exiting with status 0
+[INFO] [2026-01-05 15:08:10.890] Candidate process with pid 15897 answered questions
+[INFO] [2026-01-05 15:08:10.890] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:10.895] Candidate process with pid 15892 answered questions
+[INFO] [2026-01-05 15:08:10.895] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:11.289] Member 1 generated question for seat 0 taken by pid 15895
+[INFO] [2026-01-05 15:08:11.301] Member 4 generated question for seat 0 taken by pid 15885
+[INFO] [2026-01-05 15:08:11.462] [Commission A] % of candidates graded: 86.666667%
+[INFO] [2026-01-05 15:08:11.462] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:11.463] Candidate process with pid 15903 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:11.892] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:11.893] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:11.893] Candidate process with pid 15897 waiting for commission B seat
+[INFO] [2026-01-05 15:08:11.893] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:11.893] Candidate process with pid 15897 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:12.283] Member 2 generated question for seat 1 taken by pid 15903
+[INFO] [2026-01-05 15:08:12.465] [Commission A] % of candidates graded: 90.000000%
+[INFO] [2026-01-05 15:08:12.466] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:12.466] Candidate process with pid 15882 waiting for questions from commission A
+[INFO] [2026-01-05 15:08:12.655] Candidate process with pid 15908 answered questions
+[INFO] [2026-01-05 15:08:12.655] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:12.903] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:12.903] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:12.903] Candidate process with pid 15892 waiting for commission B seat
+[INFO] [2026-01-05 15:08:13.212] Candidate process with pid 15895 answered questions
+[INFO] [2026-01-05 15:08:13.212] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:13.290] Member 0 generated question for seat 1 taken by pid 15903
+[INFO] [2026-01-05 15:08:13.290] Member 0 generated question for seat 2 taken by pid 15882
+[INFO] [2026-01-05 15:08:13.290] Member 3 generated question for seat 1 taken by pid 15903
+[INFO] [2026-01-05 15:08:13.290] Member 3 generated question for seat 2 taken by pid 15882
+[INFO] [2026-01-05 15:08:13.301] Member 1 generated question for seat 1 taken by pid 15903
+[INFO] [2026-01-05 15:08:13.301] Member 1 generated question for seat 2 taken by pid 15882
+[INFO] [2026-01-05 15:08:13.306] Member 4 generated question for seat 1 taken by pid 15903
+[INFO] [2026-01-05 15:08:13.306] Member 4 generated question for seat 2 taken by pid 15882
+[INFO] [2026-01-05 15:08:13.458] [Commission B] % of candidates graded: 78.571429%
+[INFO] [2026-01-05 15:08:13.458] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:13.458] Candidate process with pid 15892 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:13.906] Candidate process with pid 15885 answered questions
+[INFO] [2026-01-05 15:08:13.906] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:14.214] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:14.214] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:14.214] Detaching from shared memory
+[INFO] [2026-01-05 15:08:14.214] Candidate process with pid 15895 exiting with status 0
+[INFO] [2026-01-05 15:08:14.290] Member 2 generated question for seat 0 taken by pid 15892
+[INFO] [2026-01-05 15:08:14.290] Member 2 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:14.290] Member 0 generated question for seat 0 taken by pid 15892
+[INFO] [2026-01-05 15:08:14.290] Member 0 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:14.459] [Commission B] % of candidates graded: 82.142857%
+[INFO] [2026-01-05 15:08:14.467] [Commission A] % of candidates graded: 93.333333%
+[INFO] [2026-01-05 15:08:14.661] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:14.662] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:14.662] Detaching from shared memory
+[INFO] [2026-01-05 15:08:14.662] Candidate process with pid 15908 exiting with status 0
+[INFO] [2026-01-05 15:08:14.908] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:14.908] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:14.908] Candidate process with pid 15885 waiting for commission B seat
+[INFO] [2026-01-05 15:08:14.908] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:14.908] Candidate process with pid 15885 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:15.294] Member 1 generated question for seat 0 taken by pid 15892
+[INFO] [2026-01-05 15:08:15.294] Member 1 generated question for seat 1 taken by pid 15897
+[INFO] [2026-01-05 15:08:15.294] Member 1 generated question for seat 2 taken by pid 15885
+[INFO] [2026-01-05 15:08:15.906] Candidate process with pid 15903 answered questions
+[INFO] [2026-01-05 15:08:15.906] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:16.288] Member 2 generated question for seat 2 taken by pid 15882
+[INFO] [2026-01-05 15:08:16.293] Member 2 generated question for seat 2 taken by pid 15885
+[INFO] [2026-01-05 15:08:16.477] [Commission A] % of candidates graded: 96.666667%
+[INFO] [2026-01-05 15:08:16.909] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:16.909] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:16.909] Candidate process with pid 15903 waiting for commission B seat
+[INFO] [2026-01-05 15:08:17.219] Candidate process with pid 15892 answered questions
+[INFO] [2026-01-05 15:08:17.220] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:17.471] [Commission B] % of candidates graded: 85.714286%
+[INFO] [2026-01-05 15:08:17.471] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:17.471] Candidate process with pid 15903 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:17.666] Candidate process with pid 15897 answered questions
+[INFO] [2026-01-05 15:08:17.666] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:18.221] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:18.221] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:18.221] Detaching from shared memory
+[INFO] [2026-01-05 15:08:18.221] Candidate process with pid 15892 exiting with status 0
+[INFO] [2026-01-05 15:08:18.298] Member 2 generated question for seat 0 taken by pid 15903
+[INFO] [2026-01-05 15:08:18.476] [Commission B] % of candidates graded: 89.285714%
+[INFO] [2026-01-05 15:08:18.669] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:18.669] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:18.669] Detaching from shared memory
+[INFO] [2026-01-05 15:08:18.669] Candidate process with pid 15897 exiting with status 0
+[INFO] [2026-01-05 15:08:18.917] Candidate process with pid 15882 answered questions
+[INFO] [2026-01-05 15:08:18.918] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:19.293] Member 0 generated question for seat 0 taken by pid 15903
+[INFO] [2026-01-05 15:08:19.293] Member 0 generated question for seat 2 taken by pid 15885
+[INFO] [2026-01-05 15:08:19.299] Member 1 generated question for seat 0 taken by pid 15903
+[INFO] [2026-01-05 15:08:19.488] [Commission A] % of candidates graded: 100.000000%
+[INFO] [2026-01-05 15:08:19.923] CandidateProcess::maybeExitExam()
+[INFO] [2026-01-05 15:08:19.923] CandidateProcess::getCommissionBSeat()
+[INFO] [2026-01-05 15:08:19.923] Candidate process with pid 15882 waiting for commission B seat
+[INFO] [2026-01-05 15:08:19.923] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-05 15:08:19.923] Candidate process with pid 15882 waiting for questions from commission B
+[INFO] [2026-01-05 15:08:20.494] All candidates processed (30/30), finishing...
+[INFO] [2026-01-05 15:08:20.494] CommissionProcess::mainLoop() END
+[INFO] [2026-01-05 15:08:20.494] CommissionProcess::cleanup()
+[INFO] [2026-01-05 15:08:20.494] CommissionProcess::waitThreads()
+[INFO] [2026-01-05 15:08:21.238] Candidate process with pid 15903 answered questions
+[INFO] [2026-01-05 15:08:21.238] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:21.291] Member 2 finished work
+[INFO] [2026-01-05 15:08:21.303] Member 1 generated question for seat 1 taken by pid 15882
+[INFO] [2026-01-05 15:08:21.311] Member 4 finished work
+[INFO] [2026-01-05 15:08:21.492] [Commission B] % of candidates graded: 92.857143%
+[INFO] [2026-01-05 15:08:21.682] Candidate process with pid 15885 answered questions
+[INFO] [2026-01-05 15:08:21.682] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:22.244] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:22.246] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:22.246] Detaching from shared memory
+[INFO] [2026-01-05 15:08:22.246] Candidate process with pid 15903 exiting with status 0
+[INFO] [2026-01-05 15:08:22.295] Member 0 generated question for seat 1 taken by pid 15882
+[INFO] [2026-01-05 15:08:22.298] Member 3 finished work
+[INFO] [2026-01-05 15:08:22.301] Member 2 generated question for seat 1 taken by pid 15882
+[INFO] [2026-01-05 15:08:22.308] Member 1 finished work
+[INFO] [2026-01-05 15:08:22.492] [Commission B] % of candidates graded: 96.428571%
+[INFO] [2026-01-05 15:08:22.687] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:22.687] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:22.687] Detaching from shared memory
+[INFO] [2026-01-05 15:08:22.687] Candidate process with pid 15885 exiting with status 0
+[INFO] [2026-01-05 15:08:23.299] Member 0 finished work
+[INFO] [2026-01-05 15:08:23.300] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:23.300] Detaching from shared memory
+[INFO] [2026-01-05 15:08:23.300] CommissionProcess exiting
+[INFO] [2026-01-05 15:08:23.300] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:23.300] Detaching from shared memory
+[INFO] [2026-01-05 15:08:24.695] Candidate process with pid 15882 answered questions
+[INFO] [2026-01-05 15:08:24.696] CandidateProcess::waitForGrading()
+[INFO] [2026-01-05 15:08:25.506] [Commission B] % of candidates graded: 100.000000%
+[INFO] [2026-01-05 15:08:25.698] CandidateProcess::cleanup()
+[INFO] [2026-01-05 15:08:25.699] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:25.699] Detaching from shared memory
+[INFO] [2026-01-05 15:08:25.699] Candidate process with pid 15882 exiting with status 0
+[INFO] [2026-01-05 15:08:26.508] All candidates processed (28/28), finishing...
+[INFO] [2026-01-05 15:08:26.508] Commission B finished, ending exam
+[INFO] [2026-01-05 15:08:26.508] CommissionProcess::mainLoop() END
+[INFO] [2026-01-05 15:08:26.508] CommissionProcess::cleanup()
+[INFO] [2026-01-05 15:08:26.508] CommissionProcess::waitThreads()
+[INFO] [2026-01-05 15:08:27.308] Member 2 finished work
+[INFO] [2026-01-05 15:08:27.421] Exam ended
+[INFO] [2026-01-05 15:08:27.423] DeanProcess::cleanup()
+[INFO] [2026-01-05 15:08:27.423] SharedMemoryManager::destroy()
+[INFO] [2026-01-05 15:08:27.423] Destroying shared memory with id: 917520
+[INFO] [2026-01-05 15:08:27.423] Dean process exiting with status 0
+[INFO] [2026-01-05 15:08:27.423] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:27.423] Detaching from shared memory
+[INFO] [2026-01-05 15:08:28.310] Member 1 finished work
+[INFO] [2026-01-05 15:08:31.301] Member 0 finished work
+[INFO] [2026-01-05 15:08:31.302] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:31.302] Detaching from shared memory
+[INFO] [2026-01-05 15:08:31.302] CommissionProcess exiting
+[INFO] [2026-01-05 15:08:31.302] SharedMemoryManager::detach()
+[INFO] [2026-01-05 15:08:31.302] Detaching from shared memory

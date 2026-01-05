@@ -195,6 +195,8 @@ void DeanProcess::waitForExamStart() {
   if (result < 0) {
     handleError("Failed in sleep() call to wait for exam start");
   }
+
+  Logger::info("Exam has started");
 }
 
 /**
@@ -299,7 +301,15 @@ void DeanProcess::spawnCandidates() {
     }
 
     if (candidatePid == 0) {
-      execlp("./candidate", "./candidate", std::to_string(i).c_str(), NULL);
+      execlp("./candidate", "./candidate", std::to_string(i).c_str(),
+             std::to_string(config.timesA[0]).c_str(),
+             std::to_string(config.timesA[1]).c_str(),
+             std::to_string(config.timesA[2]).c_str(),
+             std::to_string(config.timesA[3]).c_str(),
+             std::to_string(config.timesA[4]).c_str(),
+             std::to_string(config.timesB[0]).c_str(),
+             std::to_string(config.timesB[1]).c_str(),
+             std::to_string(config.timesB[2]).c_str(), NULL);
       std::string errorMessage =
           "Failed in execlp() call for candidate " + std::to_string(i);
       handleError(errorMessage.c_str());
@@ -388,7 +398,7 @@ void DeanProcess::evacuationHandler(int signal) {
   ResultsWriter::publishResults(true);
 
   if (instance_) {
-    instance_->cleanup();
+    static_cast<DeanProcess *>(instance_)->cleanup();
     instance_ = nullptr;
   } else {
     Logger::error("No instance found for evacuation handler");
@@ -409,7 +419,7 @@ void DeanProcess::terminationHandler(int signal) {
   ProcessRegistry::propagateSignal(SIGTERM);
 
   if (instance_) {
-    instance_->cleanup();
+    static_cast<DeanProcess *>(instance_)->cleanup();
     instance_ = nullptr;
   } else {
     Logger::error("No instance found for evacuation handler");
