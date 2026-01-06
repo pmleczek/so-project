@@ -27,37 +27,37 @@ void Memory::initializeMutex() {
   pthread_mutexattr_t attr;
   int result = pthread_mutexattr_init(&attr);
   if (result != 0) {
-    std::string errorMessage =
-        std::string(
-            "Failed to initialize mutex attributes for shared memory: ") +
-        std::strerror(result);
-    throw std::runtime_error(errorMessage);
+    throw std::runtime_error("Failed to initialize mutex attributes: " +
+                             std::string(std::strerror(result)));
   }
 
   result = pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED);
   if (result != 0) {
-    std::string errorMessage =
-        std::string("Failed to set process shared attribute for mutex ") +
-        "attributes for shared memory: " + std::strerror(result);
-
-    throw std::runtime_error(errorMessage);
-  }
-
-  result = pthread_mutex_init(&SharedMemoryManager::data()->seatsMutex, &attr);
-  if (result != 0) {
-    std::string errorMessage =
-        std::string("Failed to initialize mutex for shared memory: ") +
-        std::strerror(result);
     pthread_mutexattr_destroy(&attr);
-    throw std::runtime_error(errorMessage);
+    throw std::runtime_error("Failed to set process shared attribute: " +
+                             std::string(std::strerror(result)));
   }
+
+  SharedState *state = SharedMemoryManager::data();
+
+  auto initMutex = [&](pthread_mutex_t *mutex, const char *name) {
+    result = pthread_mutex_init(mutex, &attr);
+    if (result != 0) {
+      pthread_mutexattr_destroy(&attr);
+      throw std::runtime_error(std::string("Failed to initialize ") + name +
+                               " mutex: " + std::strerror(result));
+    }
+  };
+
+  initMutex(&state->candidateMutex, "candidate");
+  initMutex(&state->commissionAMutex, "commissionA");
+  initMutex(&state->commissionBMutex, "commissionB");
+  initMutex(&state->examStateMutex, "examState");
 
   result = pthread_mutexattr_destroy(&attr);
   if (result != 0) {
-    std::string errorMessage =
-        std::string("Failed to destroy mutex attributes for shared memory: ") +
-        std::strerror(result);
-    Logger::warn(errorMessage);
+    Logger::warn("Failed to destroy mutex attributes: " +
+                 std::string(std::strerror(result)));
   }
 }
 

@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
   CandidateProcess candidateProcess(argc, argv);
 
   candidateProcess.waitForExamStart();
-  candidateProcess.getCommissionASeat();
+  candidateProcess.getCommissionSeat('A');
 
   candidateProcess.waitForQuestions('A');
   candidateProcess.prepareAnswers('A');
@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 
   candidateProcess.maybeExitExam();
 
-  candidateProcess.getCommissionBSeat();
+  candidateProcess.getCommissionSeat('B');
   candidateProcess.waitForQuestions('B');
   candidateProcess.prepareAnswers('B');
   candidateProcess.waitForGrading('B');

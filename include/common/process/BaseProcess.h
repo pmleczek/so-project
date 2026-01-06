@@ -20,8 +20,9 @@ public:
   std::string processName_;
 
 protected:
+  static void terminationHandler(int signal);
+  void registerSignal(int sig, void (*handler)(int));
+
   static BaseProcess *instance_;
   pid_t pid_;
-
-  static void terminationHandler(int signal);
 };

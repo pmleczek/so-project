@@ -35,6 +35,21 @@ void BaseProcess::terminationHandler(int signal) {
   }
 }
 
+void BaseProcess::registerSignal(int sig, void (*handler)(int)) {
+  auto result = signal(sig, handler);
+  if (result == SIG_ERR) {
+    std::string errorMessage =
+        std::string("Failed to register signal: SIG ") + std::to_string(sig);
+
+    if (!processName_.empty() && processName_ != "dean") {
+      handleError(errorMessage.c_str());
+    } else {
+      perror(errorMessage.c_str());
+      exit(1);
+    }
+  }
+}
+
 std::string BaseProcess::getProcessName(int argc, char *argv[]) {
   if (argc < 1) {
     Logger::warn("Cannot infer process name from arguments");

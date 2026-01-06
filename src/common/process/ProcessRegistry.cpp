@@ -1,5 +1,6 @@
 #include "common/process/ProcessRegistry.h"
 
+#include "common/ipc/MutexWrapper.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include <signal.h>
@@ -18,11 +19,25 @@ void ProcessRegistry::unregister(pid_t pid) {
   } else if (pid == SharedMemoryManager::data()->commissionBID) {
     SharedMemoryManager::data()->commissionBID = -1;
   } else {
-    for (int i = 0; i < SharedMemoryManager::data()->candidateCount; i++) {
-      if (SharedMemoryManager::data()->candidates[i].pid == pid) {
-        SharedMemoryManager::data()->candidates[i].status = Terminated;
-        return;
+    try {
+      pthread_mutex_t *candidatesMutex =
+          &SharedMemoryManager::data()->candidateMutex;
+      MutexWrapper::lock(candidatesMutex);
+
+      for (int i = 0; i < SharedMemoryManager::data()->candidateCount; i++) {
+        if (SharedMemoryManager::data()->candidates[i].pid == pid) {
+          SharedMemoryManager::data()->candidates[i].status = Terminated;
+          MutexWrapper::unlock(candidatesMutex);
+          return;
+        }
       }
+      
+      MutexWrapper::unlock(candidatesMutex);
+    } catch (const std::exception &e) {
+      std::string errorMessage = "Failed to unregister process " +
+                                 std::to_string(pid) + ": " +
+                                 std::string(e.what());
+      perror(errorMessage.c_str());
     }
 
     Logger::error("Candidate process with PID:" + std::to_string(pid) +
@@ -31,7 +46,8 @@ void ProcessRegistry::unregister(pid_t pid) {
 }
 
 void ProcessRegistry::propagateSignal(int signal) {
-  Logger::info("Propagating signal: " + std::to_string(signal) + " to all processes");
+  Logger::info("Propagating signal: " + std::to_string(signal) +
+               " to all processes");
 
   if (SharedMemoryManager::data()->commissionAPID != -1) {
     kill(SharedMemoryManager::data()->commissionAPID, signal);

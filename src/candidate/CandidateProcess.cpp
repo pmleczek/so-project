@@ -1,8 +1,10 @@
 #include "candidate/CandidateProcess.h"
 
+#include "common/ipc/MutexWrapper.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include "common/process/ProcessRegistry.h"
+#include "common/utils/Misc.h"
 #include <signal.h>
 
 /**
@@ -59,6 +61,7 @@ void CandidateProcess::validateArguments(int argc, char *argv[]) {
     throw std::invalid_argument("Candidate index must be non-negative");
   }
   index = candidateIndex;
+  Logger::setProcessPrefix("Candidate (id=" + std::to_string(index) + ")");
 
   /* Validate times for commission A */
   /* Expected format: double[] */
@@ -90,27 +93,8 @@ void CandidateProcess::initialize() { SharedMemoryManager::attach(); }
  * Sets up the signal handlers for the candidate process.
  */
 void CandidateProcess::setupSignalHandlers() {
-  auto result = signal(SIGUSR2, rejectionHandler);
-  if (result == SIG_ERR) {
-    perror("signal() failed to register SIGUSR2 handler");
-    ProcessRegistry::unregister(getpid());
-    int result = kill(getppid(), SIGTERM);
-    if (result < 0) {
-      perror("kill() failed to send SIGTERM to dean process");
-    }
-    exit(1);
-  }
-
-  result = signal(SIGTERM, terminationHandler);
-  if (result == SIG_ERR) {
-    perror("signal() failed to register SIGTERM handler");
-    ProcessRegistry::unregister(getpid());
-    int result = kill(getppid(), SIGTERM);
-    if (result < 0) {
-      perror("kill() failed to send SIGTERM to dean process");
-    }
-    exit(1);
-  }
+  registerSignal(SIGUSR2, rejectionHandler);
+  registerSignal(SIGTERM, terminationHandler);
 }
 
 /**
@@ -143,122 +127,136 @@ void CandidateProcess::handleError(const char *message) {
  * memory.
  */
 void CandidateProcess::waitForExamStart() {
-  Logger::info("CandidateProcess::waitForExamStart()");
-  while (!SharedMemoryManager::data()->examStarted) {
-    int result = sleep(1);
-    if (result < 0) {
-      handleError("Failed to sleep in waitForExamStart()");
+  try {
+    Logger::info("CandidateProcess::waitForExamStart()");
+    pthread_mutex_t *examStateMutex =
+        &SharedMemoryManager::data()->examStateMutex;
+
+    while (true) {
+      MutexWrapper::lock(examStateMutex);
+      if (SharedMemoryManager::data()->examStarted) {
+        MutexWrapper::unlock(examStateMutex);
+        break;
+      }
+      MutexWrapper::unlock(examStateMutex);
+
+      Misc::safeSleep(1);
     }
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to wait for exam start: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 }
 
 /**
- * Gets a commission A seat by checking the semaphore and the shared memory.
+ * Gets a seat for the given commission.
+ *
+ * @param commission The commission to get a seat for.
  */
-void CandidateProcess::getCommissionASeat() {
-  Logger::info("CandidateProcess::getCommissionASeat()");
-
-  if (SharedMemoryManager::data()->candidates[index].theoreticalScore >= 30.0) {
-    Logger::info("Candidate process with pid " + std::to_string(getpid()) +
-                 " doesn't have to take commission A exam");
-    return;
+void CandidateProcess::getCommissionSeat(char commission) {
+  /* Reset seat for commission B */
+  if (commission == 'B') {
+    seat = -1;
   }
 
-  semaphoreA = SemaphoreManager::open("commissionA");
+  try {
+    sem_t *semaphore = SemaphoreManager::open(
+        (commission == 'A') ? "commissionA" : "commissionB");
 
-  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
-               " waiting for commission A seat");
+    while (seat == -1) {
+      SemaphoreManager::wait(semaphore);
+      seat = findCommissionSeat(commission);
 
-  while (seat == -1) {
-    SemaphoreManager::wait(semaphoreA);
-    seat = findCommissionASeat();
-    if (seat == -1) {
-      SemaphoreManager::post(semaphoreA);
-      int result = usleep(10000);
-      if (result < 0) {
-        handleError("Failed to sleep in getCommissionASeat()");
+      if (seat == -1) {
+        SemaphoreManager::post(semaphore);
+        Misc::safeUSleep(10000);
       }
     }
+
+    SemaphoreManager::close(semaphore);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to get commission seat: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 }
 
 /**
- * Finds a commission A seat by checking the shared memory.
+ * Finds a seat for the given commission.
+ *
+ * @param commission The commission to find a seat for.
+ * @return The seat number, or -1 if no seat is found.
  */
-int CandidateProcess::findCommissionASeat() {
-  // TODO: Use mutex in other places?
-  pthread_mutex_t *seatsMutex = &SharedMemoryManager::data()->seatsMutex;
-  pthread_mutex_lock(seatsMutex);
-
-  CommissionSeat *seats = SharedMemoryManager::data()->commissionA.seats;
-  for (int i = 0; i < 3; i++) {
-    if (seats[i].pid == -1) {
-      SharedMemoryManager::data()->commissionA.seats[i] = {
-          .pid = getpid(),
-          .questionsCount = 0,
-          .answered = false,
-      };
-      pthread_mutex_unlock(seatsMutex);
-      return i;
-    }
+int CandidateProcess::findCommissionSeat(char commission) {
+  pthread_mutex_t *comissionMutex = nullptr;
+  if (commission == 'A') {
+    comissionMutex = &SharedMemoryManager::data()->commissionAMutex;
+  } else {
+    comissionMutex = &SharedMemoryManager::data()->commissionBMutex;
   }
 
-  pthread_mutex_unlock(seatsMutex);
+  try {
+    MutexWrapper::lock(comissionMutex);
+    CommissionInfo *commissionInfo =
+        commission == 'A' ? &SharedMemoryManager::data()->commissionA
+                          : &SharedMemoryManager::data()->commissionB;
+
+    for (int i = 0; i < 3; i++) {
+      if (commissionInfo->seats[i].pid == -1) {
+        commissionInfo->seats[i] = {
+            .pid = getpid(), .questionsCount = 0, .answered = false};
+        MutexWrapper::unlock(comissionMutex);
+        return i;
+      }
+    }
+
+    MutexWrapper::unlock(comissionMutex);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to find commission seat: " + std::string(e.what());
+    handleError(errorMessage.c_str());
+  }
+
   return -1;
 }
 
 /**
- * Finds a commission B seat by checking the shared memory.
- */
-int CandidateProcess::findCommissionBSeat() {
-  // TODO: Use mutex in other places?
-  pthread_mutex_t *seatsMutex = &SharedMemoryManager::data()->seatsMutex;
-  pthread_mutex_lock(seatsMutex);
-
-  CommissionSeat *seats = SharedMemoryManager::data()->commissionB.seats;
-  for (int i = 0; i < 3; i++) {
-    if (seats[i].pid == -1) {
-      SharedMemoryManager::data()->commissionB.seats[i] = {
-          .pid = getpid(),
-          .questionsCount = 0,
-          .answered = false,
-      };
-      pthread_mutex_unlock(seatsMutex);
-      return i;
-    }
-  }
-
-  pthread_mutex_unlock(seatsMutex);
-  return -1;
-}
-
-/**
- * Waits for the questions to be available by checking the questionsCount in the
- * shared memory.
+ * Waits for the questions to be available by checking the questionsCount in
+ * the shared memory.
  */
 void CandidateProcess::waitForQuestions(char commission) {
-  Logger::info("CandidateProcess::waitForQuestions()");
-  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
-               " waiting for questions from commission " + commission);
-
+  pthread_mutex_t *comissionMutex = nullptr;
   if (commission == 'A') {
-    while (
-        SharedMemoryManager::data()->commissionA.seats[seat].questionsCount !=
-        (1 << 5) - 1) {
-      int result = sleep(1);
-      if (result < 0) {
-        handleError("Failed to sleep in waitForQuestions()");
-      }
-    }
+    comissionMutex = &SharedMemoryManager::data()->commissionAMutex;
   } else {
-    while (
-        SharedMemoryManager::data()->commissionB.seats[seat].questionsCount !=
-        (1 << 3) - 1) {
-      int result = sleep(1);
-      if (result < 0) {
-        handleError("Failed to sleep in waitForQuestions()");
+    comissionMutex = &SharedMemoryManager::data()->commissionBMutex;
+  }
+
+  try {
+    Logger::info("CandidateProcess::waitForQuestions()");
+    Logger::info("Candidate process with pid " + std::to_string(getpid()) +
+                 " waiting for questions from commission " + commission);
+
+    while (true) {
+      MutexWrapper::lock(comissionMutex);
+      if ((commission == 'A' && SharedMemoryManager::data()
+                                        ->commissionA.seats[seat]
+                                        .questionsCount == (1 << 5) - 1) ||
+          (commission == 'B' && SharedMemoryManager::data()
+                                        ->commissionB.seats[seat]
+                                        .questionsCount == (1 << 3) - 1)) {
+        MutexWrapper::unlock(comissionMutex);
+        break;
       }
+      MutexWrapper::unlock(comissionMutex);
+
+      Misc::safeSleep(1);
     }
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to wait for questions: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 }
 
@@ -277,15 +275,27 @@ void CandidateProcess::prepareAnswers(char commission) {
     }
   }
 
-  int result = usleep(sleepTime * 1000000);
-  if (result < 0) {
-    handleError("Failed to sleep in prepareAnswers()");
-  }
+  try {
+    Misc::safeUSleep(sleepTime * 1000000);
 
-  if (commission == 'A') {
-    SharedMemoryManager::data()->commissionA.seats[seat].answered = true;
-  } else {
-    SharedMemoryManager::data()->commissionB.seats[seat].answered = true;
+    pthread_mutex_t *comissionMutex = nullptr;
+    if (commission == 'A') {
+      comissionMutex = &SharedMemoryManager::data()->commissionAMutex;
+    } else {
+      comissionMutex = &SharedMemoryManager::data()->commissionBMutex;
+    }
+
+    MutexWrapper::lock(comissionMutex);
+    if (commission == 'A') {
+      SharedMemoryManager::data()->commissionA.seats[seat].answered = true;
+    } else {
+      SharedMemoryManager::data()->commissionB.seats[seat].answered = true;
+    }
+    MutexWrapper::unlock(comissionMutex);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to sleep in prepareAnswers: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
@@ -297,60 +307,51 @@ void CandidateProcess::prepareAnswers(char commission) {
  * practicalScore in the shared memory.
  */
 void CandidateProcess::waitForGrading(char commission) {
-  Logger::info("CandidateProcess::waitForGrading()");
-  if (commission == 'A') {
-    while (SharedMemoryManager::data()->candidates[index].theoreticalScore <
-           0) {
-      int result = sleep(1);
-      if (result < 0) {
-        handleError("Failed to sleep in waitForGrading()");
+  pthread_mutex_t *candidatesMutex =
+      &SharedMemoryManager::data()->candidateMutex;
+
+  try {
+    while (true) {
+      MutexWrapper::lock(candidatesMutex);
+      if (commission == 'A') {
+        if (SharedMemoryManager::data()->candidates[index].theoreticalScore >=
+            0) {
+          MutexWrapper::unlock(candidatesMutex);
+          break;
+        }
+      } else {
+        if (SharedMemoryManager::data()->candidates[index].practicalScore >=
+            0) {
+          MutexWrapper::unlock(candidatesMutex);
+          break;
+        }
       }
+      MutexWrapper::unlock(candidatesMutex);
+
+      Misc::safeSleep(1);
     }
-  } else {
-    while (SharedMemoryManager::data()->candidates[index].practicalScore < 0) {
-      int result = sleep(1);
-      if (result < 0) {
-        handleError("Failed to sleep in waitForGrading()");
-      }
-    }
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to wait for grading: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 }
 
 /**
- * Gets a commission B seat by checking the semaphore and the shared memory.
- */
-void CandidateProcess::getCommissionBSeat() {
-  Logger::info("CandidateProcess::getCommissionBSeat()");
-
-  seat = -1;
-  semaphoreB = SemaphoreManager::open("commissionB");
-
-  Logger::info("Candidate process with pid " + std::to_string(getpid()) +
-               " waiting for commission B seat");
-
-  while (seat == -1) {
-    SemaphoreManager::wait(semaphoreB);
-    seat = findCommissionBSeat();
-    if (seat == -1) {
-      SemaphoreManager::post(semaphoreB);
-      int result = usleep(10000);
-      if (result < 0) {
-        handleError("Failed to sleep in getCommissionBSeat()");
-      }
-    }
-  }
-}
-
-/**
- * Exits the exam if the candidate failed the exam.
+ * Exits the exam if the candidate failed the commission A.
  */
 void CandidateProcess::maybeExitExam() {
-  Logger::info("CandidateProcess::maybeExitExam()");
+  pthread_mutex_t *candidatesMutex =
+      &SharedMemoryManager::data()->candidateMutex;
+
+  MutexWrapper::lock(candidatesMutex);
   if (SharedMemoryManager::data()->candidates[index].theoreticalScore < 30) {
+    MutexWrapper::unlock(candidatesMutex);
     Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                  " failed to pass the exam");
     exit(0);
   }
+  MutexWrapper::unlock(candidatesMutex);
 }
 
 /**

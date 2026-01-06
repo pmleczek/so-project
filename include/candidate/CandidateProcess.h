@@ -19,14 +19,12 @@ public:
   void prepareAnswers(char commission);
   void waitForGrading(char commission);
   void maybeExitExam();
-  void getCommissionASeat();
-  void getCommissionBSeat();
+  void getCommissionSeat(char commission);
 
 private:
   static void rejectionHandler(int signal);
   static void terminationHandler(int signal);
-  int findCommissionASeat();
-  int findCommissionBSeat();
+  int findCommissionSeat(char commission);
 
   int index;
   int seat = -1;

@@ -12,5 +12,4 @@ public:
   static void unlink(const std::string &name);
   static void wait(sem_t *sem);
   static void post(sem_t *sem);
-  static bool trywait(sem_t *sem);
 };

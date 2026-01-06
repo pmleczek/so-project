@@ -50,5 +50,3 @@ void SemaphoreManager::post(sem_t *sem) {
                              std::string(strerror(errno)));
   }
 }
-
-bool SemaphoreManager::trywait(sem_t *sem) { return sem_trywait(sem) == 0; }

@@ -34,17 +34,17 @@ Logger::~Logger() {
   }
 }
 
-void Logger::info(const std::string &message) {
-  shared().log(message, "INFO");
+void Logger::setProcessPrefix(const std::string &prefix) {
+  shared().processPrefix_ = prefix;
 }
+
+void Logger::info(const std::string &message) { shared().log(message, "INFO"); }
 
 void Logger::error(const std::string &message) {
   shared().log(message, "ERROR");
 }
 
-void Logger::warn(const std::string &message) {
-  shared().log(message, "WARN");
-}
+void Logger::warn(const std::string &message) { shared().log(message, "WARN"); }
 
 void Logger::log(const std::string &message, const std::string &logLevel) {
   if (fileHandle_ == -1) {
@@ -100,6 +100,10 @@ std::string Logger::getPrefix(const std::string &logLevel) {
             1000;
 
   ss << "[" << buffer << "." << ms.count() << "]";
+
+  if (!processPrefix_.empty()) {
+    ss << " [" << processPrefix_ << "]";
+  }
 
   return ss.str();
 }

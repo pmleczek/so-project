@@ -31,6 +31,10 @@ private:
   void spawnThreads();
   void waitThreads();
   static void *threadFunction(void *arg);
+  CommissionInfo *commission();
+  int totalCandidates();
+  bool maybeGradeCandidate(int seat);
+  void maybeFinish();
 
   int memberCount_;
   char commissionType_;

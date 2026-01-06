@@ -1,11 +1,13 @@
 #include "dean/DeanProcess.h"
 
+#include "common/ipc/MutexWrapper.h"
 #include "common/ipc/SemaphoreManager.h"
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include "common/output/ResultsWriter.h"
 #include "common/process/ProcessRegistry.h"
 #include "common/utils/Memory.h"
+#include "common/utils/Misc.h"
 #include "common/utils/Random.h"
 #include "common/utils/Time.h"
 #include <regex>
@@ -107,27 +109,29 @@ void DeanProcess::validateArguments(int argc, char *argv[]) {
  * Initializes the dean process and IPC mechanisms.
  */
 void DeanProcess::initialize() {
-  /* Create shared memory and initialize its state */
-  SharedMemoryManager::initialize(config.candidateCount);
-  SharedMemoryManager::data()->candidateCount = config.candidateCount;
-  for (int i = 0; i < 3; i++) {
-    Memory::resetSeat('A', i);
-    Memory::resetSeat('B', i);
-  }
-
-  /* Initialize mutex for shared memory */
   try {
+    /* Create shared memory and initialize its state */
+    /* No mutex because dean is only process that writes to shared memory as of
+     * now */
+    SharedMemoryManager::initialize(config.candidateCount);
+    SharedMemoryManager::data()->candidateCount = config.candidateCount;
+    for (int i = 0; i < 3; i++) {
+      Memory::resetSeat('A', i);
+      Memory::resetSeat('B', i);
+    }
+
+    /* Initialize mutexes*/
     Memory::initializeMutex();
+
+    /* Create semaphores for commissions */
+    SemaphoreManager::create("commissionA", 0);
+    SemaphoreManager::create("commissionB", 0);
   } catch (const std::exception &e) {
     std::string errorMessage =
         "Failed to initialize mutex for shared memory: " +
         std::string(e.what());
     handleError(errorMessage.c_str());
   }
-
-  /* Create semaphores for commissions */
-  SemaphoreManager::create("commissionA", 0);
-  SemaphoreManager::create("commissionB", 0);
 }
 
 /**
@@ -135,27 +139,13 @@ void DeanProcess::initialize() {
  */
 void DeanProcess::setupSignalHandlers() {
   /* SECTION: Termination signals */
-  auto result = signal(SIGINT, DeanProcess::terminationHandler);
-  if (result == SIG_ERR) {
-    handleError("Failed to set up SIGINT handler");
-  }
-
-  result = signal(SIGTERM, DeanProcess::terminationHandler);
-  if (result == SIG_ERR) {
-    handleError("Failed to set up SIGTERM handler");
-  }
-
-  result = signal(SIGQUIT, DeanProcess::terminationHandler);
-  if (result == SIG_ERR) {
-    handleError("Failed to set up SIGQUIT handler");
-  }
+  registerSignal(SIGINT, DeanProcess::terminationHandler);
+  registerSignal(SIGTERM, DeanProcess::terminationHandler);
+  registerSignal(SIGQUIT, DeanProcess::terminationHandler);
   /* END SECTION: Termination signals */
 
   /* SECTION: Evacuation signal */
-  result = signal(SIGUSR1, DeanProcess::evacuationHandler);
-  if (result == SIG_ERR) {
-    handleError("Failed to set up SIGUSR1 handler");
-  }
+  registerSignal(SIGUSR1, DeanProcess::evacuationHandler);
   /* END SECTION: Evacuation signal */
 }
 
@@ -191,9 +181,12 @@ void DeanProcess::waitForExamStart() {
 
   Logger::info("Waiting for exam start for " + std::to_string(sleepTime) +
                " seconds");
-  int result = sleep(sleepTime);
-  if (result < 0) {
-    handleError("Failed in sleep() call to wait for exam start");
+  try {
+    Misc::safeSleep(sleepTime);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to sleep in waitForExamStart: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 
   Logger::info("Exam has started");
@@ -203,14 +196,31 @@ void DeanProcess::waitForExamStart() {
  * Starts the exam and waits for it to end.
  */
 void DeanProcess::start() {
-  Logger::info("DeanProcess::start()");
-  SharedMemoryManager::data()->examStarted = true;
+  pthread_mutex_t *examStateMutex =
+      &SharedMemoryManager::data()->examStateMutex;
 
-  while (SharedMemoryManager::data()->examStarted) {
-    usleep(1000000);
+  try {
+    MutexWrapper::lock(examStateMutex);
+    SharedMemoryManager::data()->examStarted = true;
+    MutexWrapper::unlock(examStateMutex);
+
+    while (true) {
+      MutexWrapper::lock(examStateMutex);
+      if (!SharedMemoryManager::data()->examStarted) {
+        MutexWrapper::unlock(examStateMutex);
+        break;
+      }
+      MutexWrapper::unlock(examStateMutex);
+
+      Misc::safeUSleep(1000000);
+    }
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to sleep in start: " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
 
-  Logger::info("Exam ended");
+  Logger::info("Exam ended. Publishing results...");
   ResultsWriter::publishResults(false);
 }
 
@@ -289,6 +299,9 @@ void DeanProcess::spawnCandidates() {
   std::unordered_set<int> retakeExamIndices =
       getRetakeExamIndices(failedExamIndices);
 
+  pthread_mutex_t *candidatesMutex =
+      &SharedMemoryManager::data()->candidateMutex;
+
   pid_t candidatePid;
   bool failed, retake;
 
@@ -314,37 +327,40 @@ void DeanProcess::spawnCandidates() {
           "Failed in execlp() call for candidate " + std::to_string(i);
       handleError(errorMessage.c_str());
     } else {
-      SharedMemoryManager::data()->candidates[i].pid = candidatePid;
-      SharedMemoryManager::data()->candidates[i].practicalScore = -1.0;
-      SharedMemoryManager::data()->candidates[i].finalScore = -1.0;
+      try {
+        MutexWrapper::lock(candidatesMutex);
 
-      failed = failedExamIndices.find(i) != failedExamIndices.end();
-      retake = retakeExamIndices.find(i) != retakeExamIndices.end();
+        SharedMemoryManager::data()->candidates[i].pid = candidatePid;
+        SharedMemoryManager::data()->candidates[i].practicalScore = -1.0;
+        SharedMemoryManager::data()->candidates[i].finalScore = -1.0;
 
-      if (failed) {
-        SharedMemoryManager::data()->candidates[i].status = NotEligible;
-      } else {
-        SharedMemoryManager::data()->candidates[i].status = PendingCommissionA;
-      }
+        failed = failedExamIndices.find(i) != failedExamIndices.end();
+        retake = retakeExamIndices.find(i) != retakeExamIndices.end();
 
-      if (retake) {
-        double theoreticalScore = Random::randomDouble(30.0, 100.0);
-        SharedMemoryManager::data()->candidates[i].theoreticalScore =
-            theoreticalScore;
-        retaking++;
-      } else {
-        SharedMemoryManager::data()->candidates[i].theoreticalScore = -1.0;
+        if (failed) {
+          SharedMemoryManager::data()->candidates[i].status = NotEligible;
+        } else {
+          SharedMemoryManager::data()->candidates[i].status =
+              PendingCommissionA;
+        }
+
+        if (retake) {
+          double theoreticalScore = Random::randomDouble(30.0, 100.0);
+          SharedMemoryManager::data()->candidates[i].theoreticalScore =
+              theoreticalScore;
+          retaking++;
+        } else {
+          SharedMemoryManager::data()->candidates[i].theoreticalScore = -1.0;
+        }
+
+        MutexWrapper::unlock(candidatesMutex);
+      } catch (const std::exception &e) {
+        std::string errorMessage = "Failed to spawn candidate " +
+                                   std::to_string(i) + ": " +
+                                   std::string(e.what());
+        handleError(errorMessage.c_str());
       }
     }
-
-    // TODO: Investigate
-    // For stability reasons
-    // int result = usleep(10000);
-    // if (result < 0) {
-    //   std::string errorMessage = "Failed in usleep() call for candidate " +
-    //                              std::to_string(i);
-    //   handleError(errorMessage.c_str());
-    // }
   }
 }
 
@@ -352,26 +368,45 @@ void DeanProcess::spawnCandidates() {
  * Verifies candidates eligibility for the exam.
  */
 void DeanProcess::verifyCandidates() {
-  Logger::info("DeanProcess::verifyCandidates()");
+  pthread_mutex_t *candidatesMutex =
+      &SharedMemoryManager::data()->candidateMutex;
 
   int rejected = 0;
-  for (int i = 0; i < config.candidateCount; i++) {
-    if (SharedMemoryManager::data()->candidates[i].status == NotEligible) {
-      int result =
-          kill(SharedMemoryManager::data()->candidates[i].pid, SIGUSR2);
-      if (result < 0) {
-        std::string errorMessage = "Failed to send SIGUSR2 to candidate " +
-                                   std::to_string(i) + ": " +
-                                   std::strerror(errno);
-        handleError(errorMessage.c_str());
+
+  try {
+    MutexWrapper::lock(candidatesMutex);
+
+    for (int i = 0; i < config.candidateCount; i++) {
+      if (SharedMemoryManager::data()->candidates[i].status == NotEligible) {
+        int result =
+            kill(SharedMemoryManager::data()->candidates[i].pid, SIGUSR2);
+        if (result < 0) {
+          std::string errorMessage = "Failed to send SIGUSR2 to candidate " +
+                                     std::to_string(i) + ": " +
+                                     std::strerror(errno);
+          handleError(errorMessage.c_str());
+        }
+        rejected++;
       }
-      rejected++;
     }
+
+    MutexWrapper::unlock(candidatesMutex);
+
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to verify candidates " + std::string(e.what());
+    handleError(errorMessage.c_str());
   }
+
+  pthread_mutex_t *examStateMutex =
+      &SharedMemoryManager::data()->examStateMutex;
+  MutexWrapper::lock(examStateMutex);
 
   int commissonACount = config.candidateCount - rejected - retaking;
   SharedMemoryManager::data()->commissionACandidateCount = commissonACount;
   SharedMemoryManager::data()->commissionBCandidateCount = commissonACount;
+
+  MutexWrapper::unlock(examStateMutex);
 }
 
 /**

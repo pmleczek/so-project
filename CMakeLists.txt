@@ -11,11 +11,13 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(COMMON_SOURCES
     src/common/ipc/SemaphoreManager.cpp
     src/common/ipc/SharedMemoryManager.cpp
+    src/common/ipc/MutexWrapper.cpp
     src/common/output/Logger.cpp
     src/common/output/ResultsWriter.cpp
     src/common/process/BaseProcess.cpp
     src/common/process/ProcessRegistry.cpp
     src/common/utils/Memory.cpp
+    src/common/utils/Misc.cpp
     src/common/utils/Random.cpp
     src/common/utils/Time.cpp
 )
