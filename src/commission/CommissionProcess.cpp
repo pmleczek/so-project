@@ -156,7 +156,13 @@ void CommissionProcess::start() {
   Logger::info("Commission " + std::string(1, commissionType_) +
                " releasing 3 seats after exam start");
   for (int i = 0; i < 3; i++) {
-    SemaphoreManager::post(semaphore);
+    try {
+      SemaphoreManager::post(semaphore);
+    } catch (const std::exception &e) {
+      std::string errorMessage =
+          "Failed to post to semaphore: " + std::string(e.what());
+      handleError(errorMessage.c_str());
+    }
   }
 
   mainLoop();
@@ -205,9 +211,7 @@ void CommissionProcess::mainLoop() {
           MutexWrapper::lock(commissionMutex);
           Memory::resetSeat(commissionType_, i);
           MutexWrapper::unlock(commissionMutex);
-
           SemaphoreManager::post(semaphore);
-
           break;
         }
       }
@@ -217,7 +221,7 @@ void CommissionProcess::mainLoop() {
     }
   } catch (const std::exception &e) {
     std::string errorMessage =
-        "Failed to sleep in mainLoop: " + std::string(e.what());
+        "Failed in commission mainLoop: " + std::string(e.what());
     handleError(errorMessage.c_str());
   }
 }
@@ -316,7 +320,16 @@ void *CommissionProcess::threadFunction(void *arg) {
 void CommissionProcess::cleanup() {
   Logger::info("CommissionProcess::cleanup()");
   waitThreads();
-  SharedMemoryManager::detach();
+
+  try {
+    SharedMemoryManager::detach();
+    SemaphoreManager::close(semaphore);
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to cleanup the commission process: " + std::string(e.what());
+    perror(errorMessage.c_str());
+  }
+
   Logger::info("CommissionProcess exiting");
 }
 

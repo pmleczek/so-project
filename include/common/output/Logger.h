@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <semaphore.h>
 
 class Logger {
 public:
@@ -21,4 +22,5 @@ private:
 
   int fileHandle_;
   std::string processPrefix_;
+  sem_t *logSemaphore_ = nullptr;
 };

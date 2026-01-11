@@ -126,6 +126,7 @@ void DeanProcess::initialize() {
     /* Create semaphores for commissions */
     SemaphoreManager::create("commissionA", 0);
     SemaphoreManager::create("commissionB", 0);
+    SemaphoreManager::create("logger", 1);
   } catch (const std::exception &e) {
     std::string errorMessage =
         "Failed to initialize mutex for shared memory: " +
@@ -415,9 +416,16 @@ void DeanProcess::verifyCandidates() {
 void DeanProcess::cleanup() {
   Logger::info("DeanProcess::cleanup()");
 
-  SharedMemoryManager::destroy();
-  SemaphoreManager::unlink("/commissionA");
-  SemaphoreManager::unlink("/commissionB");
+  try {
+    SharedMemoryManager::destroy();
+    SemaphoreManager::unlink("/commissionA");
+    SemaphoreManager::unlink("/commissionB");
+    SemaphoreManager::unlink("/logger");
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to cleanup the dean process: " + std::string(e.what());
+    perror(errorMessage.c_str());
+  }
 
   Logger::info("Dean process exiting with status 0");
 }

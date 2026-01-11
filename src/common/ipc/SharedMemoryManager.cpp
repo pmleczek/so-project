@@ -2,13 +2,27 @@
 #include "common/output/Logger.h"
 #include <cstring>
 
+/**
+ *  Get the shared memory instance.
+ *
+ * @return The shared memory instance.
+ */
 SharedMemoryManager &SharedMemoryManager::shared() {
   static SharedMemoryManager instance;
   return instance;
 }
 
+/**
+ * Destructor for the shared memory manager.
+ */
 SharedMemoryManager::~SharedMemoryManager() { shared().detach(); }
 
+/**
+ * Initialize the shared memory manager.
+ *
+ * @param count The number of candidates.
+ * @throw std::runtime_error If the shared memory cannot be initialized.
+ */
 void SharedMemoryManager::initialize(int count) {
   Logger::info("SharedMemoryManager::initialize(" + std::to_string(count) +
                ")");
@@ -19,9 +33,8 @@ void SharedMemoryManager::initialize(int count) {
   if (tempId != -1) {
     Logger::warn("Shared memory already exists. Cleaning up...");
     if (shmctl(tempId, IPC_RMID, NULL) == -1) {
-      Logger::error("Failed to clean up shared memory");
-      // TODO: Handle error
-      exit(1);
+      throw std::runtime_error(
+          "Failed to clean up already existing shared memory");
     }
   }
 
@@ -30,22 +43,22 @@ void SharedMemoryManager::initialize(int count) {
                " bytes");
   shared().shmId_ = shmget(key, size, IPC_CREAT | IPC_EXCL | 0600);
   if (shared().shmId_ == -1) {
-    Logger::error("Failed to create shared memory");
-    Logger::error("Error: " + std::string(strerror(errno)));
-    // TODO: Handle error
-    exit(1);
+    throw std::runtime_error("Failed to create new shared memory");
   }
 
   shared().data_ = (SharedState *)shmat(shared().shmId_, nullptr, 0);
   if (shared().data_ == (SharedState *)-1) {
-    // TODO: Handle error
-    Logger::error("Failed to attach to shared memory");
-    exit(1);
+    throw std::runtime_error("Failed to attach to shared memory");
   }
 
   memset(shared().data_, 0, size);
 }
 
+/**
+ * Attach to the shared memory.
+ *
+ * @throw std::runtime_error If the shared memory cannot be attached.
+ */
 void SharedMemoryManager::attach() {
   key_t key = getKey();
   Logger::info("Attaching to shared memory with key: " + std::to_string(key));
@@ -53,31 +66,38 @@ void SharedMemoryManager::attach() {
   Logger::info("Getting shared memory for key: " + std::to_string(key));
   int shmId = shmget(key, 0, 0600);
   if (shmId == -1) {
-    Logger::error("Failed to get shared memory for key: " +
-                  std::to_string(key));
-    Logger::error("Error: " + std::string(strerror(errno)));
-    // TODO: Handle error
-    exit(1);
+    throw std::runtime_error("Failed to get shared memory for key: " +
+                             std::to_string(key));
   }
 
   shared().data_ = (SharedState *)shmat(shmId, NULL, 0);
   if (shared().data_ == (SharedState *)-1) {
-    Logger::error("Failed to attach to shared memory");
-    // TODO: Handle error
-    exit(1);
+    throw std::runtime_error("Failed to attach to shared memory");
   }
 }
 
+/**
+ * Detach from the shared memory.
+ *
+ * @throw std::runtime_error If the shared memory cannot be detached.
+ */
 void SharedMemoryManager::detach() {
   Logger::info("SharedMemoryManager::detach()");
   Logger::info("Detaching from shared memory");
 
   if (shared().data_ != (SharedState *)-1) {
-    shmdt(shared().data_);
+    if (shmdt(shared().data_) == -1) {
+      throw std::runtime_error("Failed to detach from shared memory");
+    }
     shared().data_ = nullptr;
   }
 }
 
+/**
+ * Destroy the shared memory.
+ *
+ * @throw std::runtime_error If the shared memory cannot be destroyed.
+ */
 void SharedMemoryManager::destroy() {
   Logger::info("SharedMemoryManager::destroy()");
   Logger::info("Destroying shared memory with id: " +
@@ -85,19 +105,38 @@ void SharedMemoryManager::destroy() {
 
   if (shared().shmId_ != -1) {
     if (shmctl(shared().shmId_, IPC_RMID, NULL) == -1) {
-      Logger::error("Failed to destroy shared memory");
-      Logger::error("Error: " + std::string(strerror(errno)));
-      // TODO: Handle error
-      exit(1);
+      throw std::runtime_error("Failed to destroy shared memory");
     }
     shared().shmId_ = -1;
   }
 }
 
+/**
+ * Get the data from the shared memory.
+ *
+ * @return The data from the shared memory.
+ */
 SharedState *SharedMemoryManager::data() { return shared().data_; }
 
-key_t SharedMemoryManager::getKey() { return ftok("/tmp", 155); }
+/**
+ * Get the key for the shared memory.
+ *
+ * @return The key for the shared memory.
+ */
+key_t SharedMemoryManager::getKey() {
+  key_t key = ftok("/tmp", 155);
+  if (key == -1) {
+    throw std::runtime_error("Failed to get key for shared memory");
+  }
+  return key;
+}
 
+/**
+ * Get the size of the shared memory.
+ *
+ * @param count The number of candidates.
+ * @return The size of the shared memory.
+ */
 size_t SharedMemoryManager::getSize(int count) {
   return sizeof(SharedState) + sizeof(CandidateInfo) * count;
 }

@@ -13,6 +13,8 @@
     - [Dziekan](#dean-type)
     - [Kandydat](#cand-type)
     - [Komisja](#comm-type)
+  - [Zarys architektury](#arch-overview)
+  - [Użyte API oraz funkcje systemowe](#arch-apis)
 - [Testy](#tests)
 
 <a name="#basic-info"></a>
@@ -36,7 +38,7 @@
 
 ### Środowisko testowe
 
-**System operacyjny**: (Torus)
+**System operacyjny**: Debian GNU/Linux 11 (bullseye) (Torus)
 
 <a name="#running"></a>
 ## Uruchamianie symulacji
@@ -97,7 +99,7 @@ Główny proces symulacji - jeden na całą symulację. Uruchamiany jako pierws
 <a name="#cand-type"></a>
 ### Kandydat (`candidate`)
 
-Reprezentuje pojedynczego kandydata
+Reprezentuje pojedynczego kandydata. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. 
 
 <a name="#comm-type"></a>
 ### Komisja (`commission`)

@@ -359,7 +359,15 @@ void CandidateProcess::maybeExitExam() {
  */
 void CandidateProcess::cleanup() {
   Logger::info("CandidateProcess::cleanup()");
-  SharedMemoryManager::detach();
+
+  try {
+    SharedMemoryManager::detach();
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to detach from shared memory: " + std::string(e.what());
+    perror(errorMessage.c_str());
+  }
+
   Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                " exiting with status 0");
   ProcessRegistry::unregister(getpid());
