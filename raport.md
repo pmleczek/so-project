@@ -115,30 +115,94 @@ Reprezentuje pojedynczą komisję (`A` lub `B`) - dwa procesy na całą symulac
 
 ### 0. Podstawowe testy 
 
-Zbiór podstawowych testów weryfikujących poprawność symulacji oraz podstawowe scenariusze (nie liczą się do puli testów wymaganych wg. instrukcji wykonania projektu).
-
-**Oczekiwane zachowanie**: Symulacja zachowuje się zgodnie z opisem, przekazywane parametry są weryfikowane, a losowe poprawnie generowane. Symulacja nie pozostawia żadnych procesów "zombie" ani mechanizmów IPC.
-
 **Kroki**
 
 1. Uruchom symulację z odpowiednim zestawem parametrów
 2. Zweryfikuj zachowanie symulacji dla danego zestawu parametrów
 3. Zweryfikuj poprawne zakończenie symulacji oraz zwolnienie wykorzystanych zasobów
 
-**Scenariusze testowe**
+**Parametry**
 
-| Scenariusz | Parametry | Opis | Oczekiwane zachowanie |
-| --- | --- | --- | --- |
-| Podstawowy scenariusz | 10, dowolna poprawna godzina startu | Mała liczba procesów pozwala na szybkie zweryfikowanie poprawności działania całej symulacji | Symulacja działa, poprawnie kończy wykonywanie generując plik z logami oraz listę rankingową oraz zwalnia zasoby |
+10, dowolna poprawna godzina startu
+
+**Oczekiwane zachowanie**
+
+Symulacja zachowuje się zgodnie z opisem, przekazywane parametry są weryfikowane, a losowe poprawnie generowane. Symulacja nie pozostawia żadnych procesów "zombie" ani mechanizmów IPC.
 
 ### 1. Weryfikacja dopuszczenia do egzaminu
 
-**Oczekiwane zachowanie**: Dziekan powinien poprawnie weryfikować możliwość podejścia do egzaminu przez kandydatów, tj. powinien sprawdzać czy każdy z kandydatów posiada zdaną maturę.
+**Kroki**
+
+1. Uruchom symulację z odpowiednim zestawem parametrów
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
+
+**Parametry**
+
+10, dowolna poprawna godzina startu
+
+**Oczekiwane zachowanie**
+
+Dziekan powinien poprawnie weryfikować możliwość podejścia do egzaminu przez kandydatów, tj. powinien sprawdzać czy każdy z kandydatów posiada zdaną maturę.
+
+W logach znajduje się informacja o odrzuceniu kandydata po rozpoczęciu egzaminu, kandydat kończy działanie, np.:
+
+```sh
+[INFO] [2026-01-11 23:14:09.913] Exam has started
+[INFO] [2026-01-11 23:14:09.916] [Candidate (id=27)] CandidateProcess::rejectionHandler()
+[INFO] [2026-01-11 23:14:09.917] [Candidate (id=27)] Candidate process with pid 2236529 exiting with status 0
+```
+
+Dodatkowo w liście rankingowej znajduje się informacja o braku matury i niedopuszczeniu kandydata do egzaminu (`-1` jako wynik z cz. teoretycznej):
+
+```
+| ==== Lista Rankingowa ==== |
+| PID | Numer | Matura | Cz. teoretyczna | Cz. praktyczna | Ostateczny wynik |
+|-----|-------|--------|----------------|----------------|----------------|
+
+...
+
+| 2236529 | 27 | NIE | -1.000000 | 0.000000 | 0.000000 |
+```
+
+### 2. Dopuszczenie do części praktycznej
 
 **Kroki**
 
+1. Uruchom symulację z odpowiednim zestawem parametrów
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
 
-### 2. Dopuszczenie do części praktycznej
+**Parametry**
+
+10, dowolna poprawna godzina startu
+
+**Oczekiwane zachowanie**
+
+W logach powinny znajdować się informacje o tym że kandydaci nie zdali cz. teoretycznej i opuszczają egzamin:
+
+```sh
+[INFO] [2026-01-11 23:14:20.868] [Candidate (id=83)] Candidate process with pid 2236587 failed to pass the exam
+```
+
+Dodatkowo na liście rankingowej kandydaci którzy nie otrzymali przynajmniej `30%` z cz. teoretycznej powinni mieć wynik `0` z cz. praktycznej oraz z całego egzaminu:
+
+```
+| ==== Lista Rankingowa ==== |
+| PID | Numer | Matura | Cz. teoretyczna | Cz. praktyczna | Ostateczny wynik |
+|-----|-------|--------|----------------|----------------|----------------|
+
+...
+
+| 2236594 | 89 | TAK | 28.315670 | 0.000000 | 0.000000 |
+| 2236596 | 91 | TAK | 19.934314 | 0.000000 | 0.000000 |
+| 2236569 | 66 | TAK | 27.934578 | 0.000000 | 0.000000 |
+| 2236590 | 86 | TAK | 27.908569 | 0.000000 | 0.000000 |
+| 2236506 | 5 | TAK | 18.617539 | 0.000000 | 0.000000 |
+| 2236555 | 52 | TAK | 19.745578 | 0.000000 | 0.000000 |
+| 2236602 | 97 | TAK | 28.092428 | 0.000000 | 0.000000 |
+| 2236587 | 83 | TAK | 21.945655 | 0.000000 | 0.000000 |
+| 2236529 | 27 | NIE | -1.000000 | 0.000000 | 0.000000 |
+| 2236551 | 48 | TAK | 28.575112 | 0.000000 | 0.000000 |
+```
 
 ### 3. Pominięcie części teoretycznej
 

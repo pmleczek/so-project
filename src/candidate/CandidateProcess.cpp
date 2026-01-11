@@ -349,8 +349,10 @@ void CandidateProcess::maybeExitExam() {
     MutexWrapper::unlock(candidatesMutex);
     Logger::info("Candidate process with pid " + std::to_string(getpid()) +
                  " failed to pass the exam");
+    cleanup();
     exit(0);
   }
+
   MutexWrapper::unlock(candidatesMutex);
 }
 
