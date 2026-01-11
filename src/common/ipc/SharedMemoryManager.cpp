@@ -1,6 +1,8 @@
 #include "common/ipc/SharedMemoryManager.h"
+
 #include "common/output/Logger.h"
 #include <cstring>
+#include <stdexcept>
 
 /**
  *  Get the shared memory instance.

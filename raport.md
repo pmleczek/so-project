@@ -40,6 +40,10 @@
 
 **System operacyjny**: Debian GNU/Linux 11 (bullseye) (Torus)
 
+**Zarządzanie kompilacją**: CMake
+
+**Kompilator**: gcc version 8.5.0 (GCC) (Torus)
+
 <a name="#running"></a>
 ## Uruchamianie symulacji
 
