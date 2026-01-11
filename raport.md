@@ -180,7 +180,11 @@ Dodatkowo w liście rankingowej znajduje się informacja o braku matury i niedo
 W logach powinny znajdować się informacje o tym że kandydaci nie zdali cz. teoretycznej i opuszczają egzamin:
 
 ```sh
-[INFO] [2026-01-11 23:14:20.868] [Candidate (id=83)] Candidate process with pid 2236587 failed to pass the exam
+[INFO] [2026-01-11 23:42:29.937] [Candidate (id=48)] Candidate process with pid 2250660 failed to pass the exam
+[INFO] [2026-01-11 23:42:29.938] [Candidate (id=48)] CandidateProcess::cleanup()
+[INFO] [2026-01-11 23:42:29.939] [Candidate (id=48)] SharedMemoryManager::detach()
+[INFO] [2026-01-11 23:42:29.941] [Candidate (id=48)] Detaching from shared memory
+[INFO] [2026-01-11 23:42:29.942] [Candidate (id=48)] Candidate process with pid 2250660 exiting with status 0
 ```
 
 Dodatkowo na liście rankingowej kandydaci którzy nie otrzymali przynajmniej `30%` z cz. teoretycznej powinni mieć wynik `0` z cz. praktycznej oraz z całego egzaminu:
@@ -205,6 +209,15 @@ Dodatkowo na liście rankingowej kandydaci którzy nie otrzymali przynajmniej `3
 ```
 
 ### 3. Pominięcie części teoretycznej
+
+**Kroki**
+
+1. Uruchom symulację z odpowiednim zestawem parametrów
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
+
+**Parametry**
+
+10, dowolna poprawna godzina startu
 
 ### 4. Ocena odpowiedzi przez komisję
 
