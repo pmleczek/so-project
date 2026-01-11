@@ -17,7 +17,17 @@ SharedMemoryManager &SharedMemoryManager::shared() {
 /**
  * Destructor for the shared memory manager.
  */
-SharedMemoryManager::~SharedMemoryManager() { shared().detach(); }
+SharedMemoryManager::~SharedMemoryManager() {
+  if (data_ != nullptr && data_ != (SharedState *)-1) {
+    int result = shmdt(data_);
+    if (result == -1) {
+      std::string errorMessage = "Failed to detach from shared memory: " +
+                                 std::string(std::strerror(errno));
+      perror(errorMessage.c_str());
+    }
+    data_ = nullptr;
+  }
+}
 
 /**
  * Initialize the shared memory manager.

@@ -405,7 +405,7 @@ void DeanProcess::verifyCandidates() {
 
   int commissonACount = config.candidateCount - rejected - retaking;
   SharedMemoryManager::data()->commissionACandidateCount = commissonACount;
-  SharedMemoryManager::data()->commissionBCandidateCount = commissonACount;
+  SharedMemoryManager::data()->commissionBCandidateCount = rejected;
 
   MutexWrapper::unlock(examStateMutex);
 }

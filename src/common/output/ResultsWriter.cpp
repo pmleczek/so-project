@@ -3,6 +3,9 @@
 #include "common/ipc/SharedMemoryManager.h"
 #include "common/output/Logger.h"
 #include <fcntl.h>
+#include <algorithm>
+#include <cstring>
+#include <stdexcept>
 #include <vector>
 
 const char *ResultsWriter::fileName = "../output/lista_rankingowa.txt";
