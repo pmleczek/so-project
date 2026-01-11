@@ -462,6 +462,7 @@ void CommissionProcess::maybeFinish() {
 
       for (int i = 0; i < 3; i++) {
         if (commissionInfo->seats[i].pid != -1) {
+          Logger::info(std::string("Seat ") + std::to_string(i) + " is not empty");
           allSeatsEmpty = false;
           break;
         }

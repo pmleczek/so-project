@@ -9,13 +9,14 @@ int main(int argc, char *argv[]) {
   CandidateProcess candidateProcess(argc, argv);
 
   candidateProcess.waitForExamStart();
-  candidateProcess.getCommissionSeat('A');
-
-  candidateProcess.waitForQuestions('A');
-  candidateProcess.prepareAnswers('A');
-  candidateProcess.waitForGrading('A');
-
-  candidateProcess.maybeExitExam();
+  
+  if (!candidateProcess.isRetaking()) {
+    candidateProcess.getCommissionSeat('A');
+    candidateProcess.waitForQuestions('A');
+    candidateProcess.prepareAnswers('A');
+    candidateProcess.waitForGrading('A');
+    candidateProcess.maybeExitExam();
+  }
 
   candidateProcess.getCommissionSeat('B');
   candidateProcess.waitForQuestions('B');

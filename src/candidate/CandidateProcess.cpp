@@ -408,3 +408,28 @@ void CandidateProcess::terminationHandler(int signal) {
 
   exit(0);
 }
+
+/**
+ * Verifies if the candidate is retaking the exam
+ *
+ * @return true if candidate is retaking the exam, false otherwise
+ */
+bool CandidateProcess::isRetaking() {
+  pthread_mutex_t *candidatesMutex =
+      &SharedMemoryManager::data()->candidateMutex;
+
+  try {
+    MutexWrapper::lock(candidatesMutex);
+    if (SharedMemoryManager::data()->candidates[index].theoreticalScore >= 0) {
+      MutexWrapper::unlock(candidatesMutex);
+      return true;
+    }
+
+    MutexWrapper::unlock(candidatesMutex);
+    return false;
+  } catch (const std::exception &e) {
+    std::string errorMessage =
+        "Failed to validate retaking status: " + std::string(e.what());
+    handleError(errorMessage.c_str());
+  }
+}

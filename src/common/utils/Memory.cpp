@@ -4,6 +4,7 @@
 #include "common/output/Logger.h"
 #include <cstring>
 #include <string>
+#include <stdexcept>
 
 void Memory::resetSeat(char commission, size_t seat) {
   if (seat >= 3) {

@@ -20,6 +20,7 @@ public:
   void waitForGrading(char commission);
   void maybeExitExam();
   void getCommissionSeat(char commission);
+  bool isRetaking();
 
 private:
   static void rejectionHandler(int signal);

@@ -1,6 +1,7 @@
 #include "common/process/BaseProcess.h"
 
 #include "common/output/Logger.h"
+#include <signal.h>
 
 BaseProcess *BaseProcess::instance_ = nullptr;
 

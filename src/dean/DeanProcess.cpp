@@ -13,7 +13,9 @@
 #include <regex>
 #include <signal.h>
 #include <sys/resource.h>
+#include <sys/wait.h> 
 #include <unistd.h>
+#include <cerrno>  
 
 /**
  * Constructor for the dean process.
@@ -205,15 +207,24 @@ void DeanProcess::start() {
     SharedMemoryManager::data()->examStarted = true;
     MutexWrapper::unlock(examStateMutex);
 
-    while (true) {
-      MutexWrapper::lock(examStateMutex);
-      if (!SharedMemoryManager::data()->examStarted) {
-        MutexWrapper::unlock(examStateMutex);
-        break;
+    int commissionAPID = SharedMemoryManager::data()->commissionAPID;
+    if (commissionAPID != -1) {
+      int status;
+      if (waitpid(commissionAPID, &status, 0) == -1 && errno != ECHILD) {
+        Logger::warn("Failed to wait for commission A: " + std::string(strerror(errno)));
+      } else {
+        Logger::info("Commission A process finished");
       }
-      MutexWrapper::unlock(examStateMutex);
-
-      Misc::safeUSleep(1000000);
+    }
+    
+    int commissionBPID = SharedMemoryManager::data()->commissionBID;
+    if (commissionBPID != -1) {
+      int status;
+      if (waitpid(commissionBPID, &status, 0) == -1 && errno != ECHILD) {
+        Logger::warn("Failed to wait for commission B: " + std::string(strerror(errno)));
+      } else {
+        Logger::info("Commission B process finished");
+      }
     }
   } catch (const std::exception &e) {
     std::string errorMessage =
@@ -403,9 +414,9 @@ void DeanProcess::verifyCandidates() {
       &SharedMemoryManager::data()->examStateMutex;
   MutexWrapper::lock(examStateMutex);
 
-  int commissonACount = config.candidateCount - rejected - retaking;
-  SharedMemoryManager::data()->commissionACandidateCount = commissonACount;
-  SharedMemoryManager::data()->commissionBCandidateCount = rejected;
+  int commissionBCount = config.candidateCount - rejected;
+  SharedMemoryManager::data()->commissionACandidateCount = commissionBCount - retaking;
+  SharedMemoryManager::data()->commissionBCandidateCount = commissionBCount;
 
   MutexWrapper::unlock(examStateMutex);
 }

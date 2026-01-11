@@ -7,6 +7,7 @@ project(so_project
 
 SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(COMMON_SOURCES
     src/common/ipc/SemaphoreManager.cpp
