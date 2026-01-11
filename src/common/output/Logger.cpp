@@ -2,6 +2,8 @@
 
 #include "common/ipc/SemaphoreManager.h"
 #include <cerrno>
+#include <chrono>
+#include <stdexcept>
 #include <cstring>
 #include <ctime>
 #include <fcntl.h>
