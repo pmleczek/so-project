@@ -344,6 +344,11 @@ void CommissionProcess::terminationHandler(int signal) {
   if (instance_) {
     auto commissionProcess = static_cast<CommissionProcess *>(instance_);
     commissionProcess->running = false;
+
+    try {
+      Misc::safeUSleep(1000000);
+    } catch (const std::exception &e) {}
+
     commissionProcess->cleanup();
     instance_ = nullptr;
   }
