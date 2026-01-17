@@ -345,9 +345,14 @@ void CommissionProcess::terminationHandler(int signal) {
     auto commissionProcess = static_cast<CommissionProcess *>(instance_);
     commissionProcess->running = false;
 
-    try {
-      Misc::safeUSleep(1000000);
-    } catch (const std::exception &e) {}
+    for (int i = 0; i < memberCount_; i++) {
+      int result = pthread_cancel(commissionProcess->threadIds[i]);
+      if (result != 0) {
+        std::string errorMessage =
+            "Failed to cancel thread: " + std::to_string(result);
+        perror(errorMessage.c_str());
+      }
+    }
 
     commissionProcess->cleanup();
     instance_ = nullptr;
@@ -469,7 +474,8 @@ void CommissionProcess::maybeFinish() {
 
       for (int i = 0; i < 3; i++) {
         if (commissionInfo->seats[i].pid != -1) {
-          Logger::info(std::string("Seat ") + std::to_string(i) + " is not empty");
+          Logger::info(std::string("Seat ") + std::to_string(i) +
+                       " is not empty");
           allSeatsEmpty = false;
           break;
         }
