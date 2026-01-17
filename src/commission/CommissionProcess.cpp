@@ -347,10 +347,9 @@ void CommissionProcess::terminationHandler(int signal) {
 
     for (int i = 0; i < commissionProcess->memberCount_; i++) {
       int result = pthread_cancel(commissionProcess->threadIds[i]);
-      if (result != 0) {
-        std::string errorMessage =
-            "Failed to cancel thread: " + std::to_string(result);
-        perror(errorMessage.c_str());
+      if (result != 0 && result != ESRCH) {
+        Logger::warn("Failed to cancel thread " + std::to_string(i) + 
+                     ": " + std::string(strerror(result)));
       }
     }
 
