@@ -6,6 +6,8 @@
 #include "common/utils/Memory.h"
 #include "common/utils/Misc.h"
 #include "common/utils/Random.h"
+#include <cstring>
+#include <errno.h>
 #include <signal.h>
 #include <unistd.h>
 
@@ -348,8 +350,8 @@ void CommissionProcess::terminationHandler(int signal) {
     for (int i = 0; i < commissionProcess->memberCount_; i++) {
       int result = pthread_cancel(commissionProcess->threadIds[i]);
       if (result != 0 && result != ESRCH) {
-        Logger::warn("Failed to cancel thread " + std::to_string(i) + 
-                     ": " + std::string(strerror(result)));
+        Logger::warn("Failed to cancel thread " + std::to_string(i) + ": " +
+                     std::string(strerror(result)));
       }
     }
 
