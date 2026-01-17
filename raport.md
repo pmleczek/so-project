@@ -103,7 +103,7 @@ Główny proces symulacji - jeden na całą symulację. Uruchamiany jako pierws
 <a name="#cand-type"></a>
 ### Kandydat (`candidate`)
 
-Reprezentuje pojedynczego kandydata. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. 
+Reprezentuje pojedynczego kandydata. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Kandydaci zajmują miejsca w komisjach oraz odpowiadają na pytania, a następnie otrzymują oceny od komisji.
 
 <a name="#comm-type"></a>
 ### Komisja (`commission`)
@@ -134,7 +134,7 @@ Symulacja zachowuje się zgodnie z opisem, przekazywane parametry są weryfiko
 **Kroki**
 
 1. Uruchom symulację z odpowiednim zestawem parametrów
-2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego opisu
 
 **Parametry**
 
@@ -169,7 +169,7 @@ Dodatkowo w liście rankingowej znajduje się informacja o braku matury i niedo
 **Kroki**
 
 1. Uruchom symulację z odpowiednim zestawem parametrów
-2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego opisu
 
 **Parametry**
 
@@ -213,12 +213,94 @@ Dodatkowo na liście rankingowej kandydaci którzy nie otrzymali przynajmniej `3
 **Kroki**
 
 1. Uruchom symulację z odpowiednim zestawem parametrów
-2. Zweryfikuj listę rankingową oraz logi wg. poniższego scenariusza
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego opisu
 
 **Parametry**
 
 10, dowolna poprawna godzina startu
 
+**Oczekiwane zachowanie**
+
+Kandydaci którzy zdali poprzednio cz. teoretyczną nie podchodzą do komisji A, co jest uwzględnione w logach:
+
+```sh
+[INFO] [2026-01-11 23:50:00.294] [Candidate (id=79)] Candidate is retaking the exam, skipping commission A
+[INFO] [2026-01-11 23:50:00.296] [Candidate (id=79)] CandidateProcess::waitForQuestions()
+[INFO] [2026-01-11 23:50:00.297] [Candidate (id=79)] Candidate process with pid 2253982 waiting for questions from commission B
+```
+
+Dodatkowo w liście rankingowej kandydaci podchodzący ponownie powinni posiadać poprawny większy lub równy `30%` wynik z cz. teoretycznej:
+
+```
+| ==== Lista Rankingowa ==== |
+| PID | Numer | Matura | Cz. teoretyczna | Cz. praktyczna | Ostateczny wynik |
+|-----|-------|--------|----------------|----------------|----------------|
+
+...
+
+| 2253982 | 79 | TAK | 40.991052 | 43.439231 | 42.215142 |
+```
+
 ### 4. Ocena odpowiedzi przez komisję
 
+**Kroki**
+
+1. Uruchom symulację z odpowiednim zestawem parametrów
+2. Zweryfikuj listę rankingową oraz logi wg. poniższego opisu
+
+**Parametry**
+
+10, dowolna poprawna godzina startu
+
+**Oczekiwane zachowanie**
+
+W logach znajdują się informacje o zwiększającej się liczbie ocenionych kandydatów (zarówno dla komisji A jak i B):
+
+```
+[INFO] [2026-01-11 23:51:49.795] [Commission (type=A)] % of candidates graded: 37.623762%
+[INFO] [2026-01-11 23:51:51.798] [Commission (type=A)] % of candidates graded: 38.613861%
+
+...
+
+[INFO] [2026-01-11 23:51:54.794] [Commission (type=B)] % of candidates graded: 36.633663%
+[INFO] [2026-01-11 23:51:55.796] [Commission (type=B)] % of candidates graded: 37.623762%
+```
+
+Dodatkowo w liście rankingowej powinny znajdować się oceny kandydatów:
+
+```
+| ==== Lista Rankingowa ==== |
+| PID | Numer | Matura | Cz. teoretyczna | Cz. praktyczna | Ostateczny wynik |
+|-----|-------|--------|----------------|----------------|----------------|
+| 2253997 | 94 | TAK | 68.879181 | 88.706723 | 78.792952 |
+| 2253991 | 88 | TAK | 55.758786 | 94.541620 | 75.150203 |
+| 2253932 | 29 | TAK | 76.930281 | 67.848525 | 72.389403 |
+| 2253999 | 96 | TAK | 73.369928 | 69.452912 | 71.411420 |
+| 2253910 | 7 | TAK | 62.004553 | 80.616040 | 71.310297 |
+| 2254002 | 99 | TAK | 52.549674 | 83.475889 | 68.012781 |
+| 2253960 | 57 | TAK | 64.074583 | 71.724840 | 67.899712 |
+```
+
 ### 5. Ewakuacja budynku
+
+**Kroki**
+
+1. Uruchom symulację z odpowiednim zestawem parametrów
+2. W trakcie działania symulacji wyślij do procesu dziekana sygnał ewakuacji
+3. Zweryfikuj listę rankingową oraz logi wg. poniższego opisu
+
+**Parametry**
+
+10, dowolna poprawna godzina startu
+
+**Oczekiwane zachowanie**
+
+W logach pojawia się informacja o ewakuacji oraz o tym że wszystkie procesy są kończone:
+
+```
+[INFO] [2026-01-17 19:17:30.449] DeanProcess::evacuationHandler()
+
+...
+
+
+```

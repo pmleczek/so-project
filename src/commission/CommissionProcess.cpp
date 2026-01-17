@@ -341,6 +341,8 @@ void CommissionProcess::terminationHandler(int signal) {
   Logger::info("Termination signal: SIG " + std::to_string(signal) +
                " received");
 
+  running = false;
+
   if (instance_) {
     static_cast<CommissionProcess *>(instance_)->cleanup();
     instance_ = nullptr;
