@@ -26,6 +26,8 @@ public:
   void start();
   static void terminationHandler(int signal);
 
+  int memberCount_;
+
 private:
   void mainLoop();
   void spawnThreads();
@@ -36,7 +38,6 @@ private:
   bool maybeGradeCandidate(int seat);
   void maybeFinish();
 
-  int memberCount_;
   char commissionType_;
   std::atomic<bool> running = true;
   sem_t *semaphore;

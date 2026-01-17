@@ -345,7 +345,7 @@ void CommissionProcess::terminationHandler(int signal) {
     auto commissionProcess = static_cast<CommissionProcess *>(instance_);
     commissionProcess->running = false;
 
-    for (int i = 0; i < memberCount_; i++) {
+    for (int i = 0; i < commissionProcess->memberCount_; i++) {
       int result = pthread_cancel(commissionProcess->threadIds[i]);
       if (result != 0) {
         std::string errorMessage =
