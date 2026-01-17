@@ -17,17 +17,17 @@
   - [Użyte API oraz funkcje systemowe](#arch-apis)
 - [Testy](#tests)
 
-<a name="#basic-info"></a>
+<a name="basic-info"></a>
 ## Podstawowe informacje
 
 **Autor**: Patryk Mleczek
 
 **Temat**: 17 - Egzamin wstępny
 
-<a name="#environment"></a>
+<a name="environment"></a>
 ## Środowisko
 
-<a name="#dev-env"></a>
+<a name="dev-env"></a>
 ### Środowisko developmentu
 
 **System operacyjny**: macOS 26
@@ -44,10 +44,22 @@
 
 **Kompilator**: gcc version 8.5.0 (GCC) (Torus)
 
-<a name="#running"></a>
+<a name="running"></a>
 ## Uruchamianie symulacji
 
-<a name="#arg-params"></a>
+Uruchamianie bez kompilacji:
+
+```
+./dean <liczba miejsc> <godzina rozpoczęcia>
+```
+
+Kompilacja + uruchomienie:
+
+```
+./scripts/build_and_run.sh <liczba miejsc> <godzina rozpoczęcia>
+```
+
+<a name="arg-params"></a>
 ### Parametry przekazywane poprzez arguementy
 
 | Parametr | Opis | Format | Akceptowany zakres wartości |
@@ -59,7 +71,7 @@
 
 <sup>1</sup> `MAX_PROC_COUNT` = `dozwolona liczba procesów w systemie` * `0.9` / `10.5`
 
-<a name="#random-params"></a>
+<a name="random-params"></a>
 ### Parmaetry wyznaczane losowo
 
 Część parametrów jest wyznaczana losowo, ponieważ niekoniecznie miałoby sens, aby były przekazywane w trakcie uruchamiania symulacji:
@@ -75,10 +87,10 @@ Część parametrów jest wyznaczana losowo, ponieważ niekoniecznie miałoby s
 | Czas odpowiedzi T<sub>1..5</sub> w komisji A | Wyznaczane losowo aby uniknąć przekazywania dużej liczby argumentów do programu  | 0.25 ≤ T<sub>i</sub> ≤ 1 |
 | Czas odpowiedzi T<sub>1..3</sub> w komisji B | Wyznaczane losowo aby uniknąć przekazywania dużej liczby argumentów do programu  | 0.25 ≤ T<sub>i</sub> ≤ 1 |
 
-<a name="#arch"></a>
+<a name="arch"></a>
 ## Architektura
 
-<a name="#proc-types"></a>
+<a name="proc-types"></a>
 ### Typy procesów
 
 Symulacja reprezentowana jest poprzez trzy typy procesów:
@@ -87,7 +99,7 @@ Symulacja reprezentowana jest poprzez trzy typy procesów:
 - Kandydat (`candidate`) - proces reprezentujący pojedynczego kandydata
 - Komisja (`commission`) - proces reprezentujący komisję
 
-<a name="#dean-type"></a>
+<a name="dean-type"></a>
 ### Dziekan (`dean`)
 
 Główny proces symulacji - jeden na całą symulację. Uruchamiany jako pierwszy proces (uzywany do uruchamiania całej symulacji) oraz kończy wykonywanie jako ostatni spośród wszystkich procesów. Odpowiedzialny za:
@@ -100,17 +112,116 @@ Główny proces symulacji - jeden na całą symulację. Uruchamiany jako pierws
 - Obsługę sygnału ewakuacji i przekazywanie sygnału do kandydatów oraz komisji
 - Publikację wyników (listy rankingowej) po zakończeniu/przerwaniu egzaminu
 
-<a name="#cand-type"></a>
+<a name="cand-type"></a>
 ### Kandydat (`candidate`)
 
 Reprezentuje pojedynczego kandydata. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Kandydaci zajmują miejsca w komisjach oraz odpowiadają na pytania, a następnie otrzymują oceny od komisji.
 
-<a name="#comm-type"></a>
+<a name="comm-type"></a>
 ### Komisja (`commission`)
 
 Reprezentuje pojedynczą komisję (`A` lub `B`) - dwa procesy na całą symulacje. Tworzone przed rozpoczęciem egzaminu przez proces dziekana. Komisja składa się odpowiednio z 3 lub 5 wątków w zależności od typu (`A` lub `B`) odpowiedzialnych za tworzenie pytań dla kandydatów w ciągu kilku sekund (losowa liczba czasu z zakresu `2` do `5` sekund). Komisja odpowiada również za ocenianie odpowiedzi kandydatów, oceny przekazywane są do dziekana przez przewodniczącego komisji.
 
-<a name="#tests"></a>
+<a name="arch-overview"></a>
+### Zarys architektury
+
+### Przebieg symulacji*
+
+1. Symulacja startowana jest poprzez uruchomienie procesu dziekana z dwoma parametrami startowymi: liczbą miejsc oraz godziną rozpoczęcia
+2. Proces dziekana weryfikuje przekazane parametry, generuje parametry wyznaczane losowo oraz rejestru odpowiednie handlery sygnałów (w tym sygnały o ewakuacji)
+3. Proces dziekana spawnuje pozostałe procesy: kandydatów oraz komisje
+4. Następuje rozpoczęcie egzaminu oraz weryfikacja zdania matury
+5. Procesy kandydatów, któzy nie zdali matury otrzymują odpowiedni syngał i są kończone
+6. Komisje tworzą odpowiednio 5 lub 3 wątki i rozpoczynają główną pętle generującą pytania oraz oceniającą odpowiedzi
+7. Kandydaci poprzez semafory zajmują miejsca w komisji A, otrzymują pytania, odpowiadają na nie i są oceniani
+    1. Kandydaci którzy podchodzą do egzaminu ponownie nie podchodzą do komisji A
+8. Jeżeli kandydat nie otrzymał min. 30% (średnia z 5 ocen członków komisji) opuszcza egzamin (proces jest kończony)
+9. Kandydaci przechodzą do komisji B gdzie analogicznie są oceniani przez jej członków
+10. Kandydaci kończą swoje procesy
+11. Wraz z obsłużeniem wszystkich kandydatów komisje kończą działanie
+12. Po zakończenu działania procesów komisji dziekan publikuje liste rankingową oraz kończy swoje działanie
+
+**\*** - w momencie otrzymania sygnału o ewakuacji wszystkie procesy przerywają swoje wykonywanie
+
+### Dodatkowe informacje
+
+- Logi z działania programu zapisywane są do pliku `simulation.log` (synchronizacja dostępu poprzez semafor)
+- Błędy w procesach "dzieciach" dziekana są propagowwane do dziekana, a następnie do wszystkich dzieci, aby w razie krytycznych błędów przerywana była cała symulacja
+- Mechanizmy IPC, logowania, itp. są wyabstrahowane do osobnych klas wrapperów - w celu ujednolicenia implementacji
+
+<a name="arch-apis"></a>
+### Użyte API oraz funkcje systemowe
+
+### Tworzenie i obsługa plików
+
+- `open()` ([ResultsWriter.cpp:24](https://github.com/pmleczek/so-project/blob/main/src/common/output/ResultsWriter.cpp?plain=1#L24), [Logger.cpp:36](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L36))
+- `close()` ([ResultsWriter.cpp:54](https://github.com/pmleczek/so-project/blob/main/src/common/output/ResultsWriter.cpp?plain=1#L54), [Logger.cpp:54](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L54))
+- `write` ([ResultsWriter.cpp:41](https://github.com/pmleczek/so-project/blob/main/src/common/output/ResultsWriter.cpp?plain=1#L41), [Logger.cpp:99](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L99))
+- `unlink` ([ResultsWriter.cpp:16](https://github.com/pmleczek/so-project/blob/main/src/common/output/ResultsWriter.cpp?plain=1#L16), [Logger.cpp:126](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L126))
+
+### Tworzenie procesów
+
+- `fork()` ([DeanProcess.cpp:244](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L244), [DeanProcess.cpp:257](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L257), [DeanProcess.cpp:321](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L321))
+- `execlp()` ([DeanProcess.cpp:250](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L250), [DeanProcess.cpp:263](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L263), [DeanProcess.cpp:329](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L329))
+- `waitpid()` ([DeanProcess.cpp:213](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L213), [DeanProcess.cpp:223](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L223))
+- `exit()` ([DeanProcess.cpp:34](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L34), [DeanProcess.cpp:45](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L45), [DeanProcess.cpp:459](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L459), [DeanProcess.cpp:462](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L462), [DeanProcess.cpp:480](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L480), [DeanProcess.cpp:483](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L483), [CommissionProcess.cpp:28](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L28), [CommissionProcess.cpp:39](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L39), [CommissionProcess.cpp:84](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L84), [CommissionProcess.cpp:120](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L120), [CommissionProcess.cpp:253](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L253), [CommissionProcess.cpp:363](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L363), [CandidateProcess.cpp:24](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L24), [CandidateProcess.cpp:35](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L35), [CandidateProcess.cpp:122](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L122), [CandidateProcess.cpp:353](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L353), [CandidateProcess.cpp:393](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L393), [CandidateProcess.cpp:411](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L411), [BaseProcess.cpp:25](https://github.com/pmleczek/so-project/blob/main/src/common/process/BaseProcess.cpp?plain=1#L25), [BaseProcess.cpp:35](https://github.com/pmleczek/so-project/blob/main/src/common/process/BaseProcess.cpp?plain=1#L35), [BaseProcess.cpp:49](https://github.com/pmleczek/so-project/blob/main/src/common/process/BaseProcess.cpp?plain=1#L49))
+
+### Tworzenie i obsługa wątków
+
+- `pthread_create()` ([CommissionProcess.cpp:250](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L250))
+- `pthread_join()` ([CommissionProcess.cpp:264](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L264))
+- `pthread_exit()` ([CommissionProcess.cpp:315](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L315))
+- `pthread_mutex_lock()` ([MutexWrapper.cpp:14](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/MutexWrapper.cpp?plain=1#L14))
+- `pthread_mutex_unlock()` ([MutexWrapper.cpp:28](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/MutexWrapper.cpp?plain=1#L28))
+- `pthread_mutexattr_init()` ([Memory.cpp:29](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L29))
+- `pthread_mutexattr_setpshared()` ([Memory.cpp:35](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L35))
+- `pthread_mutexattr_destroy()` ([Memory.cpp:37](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L37), [Memory.cpp:47](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L47), [Memory.cpp:58](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L58))
+- `pthread_mutex_init()` ([Memory.cpp:45](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp?plain=1#L45))
+
+### Obsługa sygnałów
+
+- `signal()` ([BaseProcess.cpp:40](https://github.com/pmleczek/so-project/blob/main/src/common/process/BaseProcess.cpp?plain=1#L40))
+- `kill()` ([CommissionProcess.cpp:113](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L113), [CandidateProcess.cpp:115](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L115), [DeanProcess.cpp:394](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L394), [ProcessRegistry.cpp:53](https://github.com/pmleczek/so-project/blob/main/src/common/process/ProcessRegistry.cpp?plain=1#L53), [ProcessRegistry.cpp:57](https://github.com/pmleczek/so-project/blob/main/src/common/process/ProcessRegistry.cpp?plain=1#L57), [ProcessRegistry.cpp:62](https://github.com/pmleczek/so-project/blob/main/src/common/process/ProcessRegistry.cpp?plain=1#L62))
+
+### Synchronizacja procesów (wątków)
+
+Obsługa semaforów realizowana jest poprzez klasę `SemaphoreManager`. Bezpośrednie użycia funkcji związanych z semaforami:
+
+- `sem_open()` ([SemaphoreManager.cpp:15](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L15), [SemaphoreManager.cpp:24](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L24), [SemaphoreManager.cpp:44](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L44))
+- `sem_close()` ([SemaphoreManager.cpp:62](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L62))
+- `sem_unlink()` ([SemaphoreManager.cpp:19](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L19), [SemaphoreManager.cpp:76](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L76))
+- `sem_wait()` ([SemaphoreManager.cpp:89](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L89))
+- `sem_post()` ([SemaphoreManager.cpp:102](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SemaphoreManager.cpp?plain=1#L102))
+- `ftok()` - ([SharedMemoryManager.cpp:139](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L139))
+
+Użycia klasy `SemaphoreManager`:
+
+- `SemaphoreManager::create()` ([DeanProcess.cpp:129](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L129), [DeanProcess.cpp:130](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L130), [DeanProcess.cpp:131](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L131))
+- `SemaphoreManager::open()` ([CommissionProcess.cpp:79](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L79), [CandidateProcess.cpp:164](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L164), [Logger.cpp:82](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L82))
+- `SemaphoreManager::close()` ([CommissionProcess.cpp:328](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L328), [CandidateProcess.cpp:177](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L177), [Logger.cpp:46](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L46))
+- `SemaphoreManager::unlink()` ([DeanProcess.cpp:432](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L432), [DeanProcess.cpp:433](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L433), [DeanProcess.cpp:434](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L434))
+- `SemaphoreManager::wait()` ([CandidateProcess.cpp:168](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L168), [Logger.cpp:89](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L89))
+- `SemaphoreManager::post()` ([CommissionProcess.cpp:162](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L162), [CommissionProcess.cpp:216](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L216), [CommissionProcess.cpp:407](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L407), [CandidateProcess.cpp:172](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L172), [Logger.cpp:104](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L104), [Logger.cpp:118](https://github.com/pmleczek/so-project/blob/main/src/common/output/Logger.cpp?plain=1#L118))
+
+### Segmenty pamięci dzielonej
+
+Obsługa pamięci dzielonej realizowana jest poprzez klasę `SharedMemoryManager`. Bezpośrednie użycia funkcji związanych z semaforami:
+
+- `ftok()` - ([SharedMemoryManager.cpp:139](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L139))
+- `shmget()` ([SharedMemoryManager.cpp:44](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L44), [SharedMemoryManager.cpp:56](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L56), [SharedMemoryManager.cpp:79](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L79))
+- `shmat()` ([SharedMemoryManager.cpp:61](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L61), [SharedMemoryManager.cpp:85](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L85))
+- `shmdt()` ([SharedMemoryManager.cpp:22](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L22), [SharedMemoryManager.cpp:101](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L101))
+- `shmctl()` ([SharedMemoryManager.cpp:47](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L47), [SharedMemoryManager.cpp:119](https://github.com/pmleczek/so-project/blob/main/src/common/ipc/SharedMemoryManager.cpp?plain=1#L119))
+
+Użycia klasy `SharedMemoryManager`:
+
+- `SharedMemoryManager::initialize()` ([DeanProcess.cpp:118](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L118))
+- `SharedMemoryManager::attach()` ([CommissionProcess.cpp:75](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L75), [CandidateProcess.cpp:90](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L90))
+- `SharedMemoryManager::detach()` ([CommissionProcess.cpp:327](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp?plain=1#L327), [CandidateProcess.cpp:366](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp?plain=1#L366))
+- `SharedMemoryManager::destroy()` ([DeanProcess.cpp:431](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp?plain=1#L431))
+- `SharedMemoryManager::data()` - używane w wielu miejscach do dostępu do danych w pamięci współdzielonej ([CommissionProcess.cpp](https://github.com/pmleczek/so-project/blob/main/src/commission/CommissionProcess.cpp), [CandidateProcess.cpp](https://github.com/pmleczek/so-project/blob/main/src/candidate/CandidateProcess.cpp), [DeanProcess.cpp](https://github.com/pmleczek/so-project/blob/main/src/dean/DeanProcess.cpp), [ProcessRegistry.cpp](https://github.com/pmleczek/so-project/blob/main/src/common/process/ProcessRegistry.cpp), [Memory.cpp](https://github.com/pmleczek/so-project/blob/main/src/common/utils/Memory.cpp), [ResultsWriter.cpp](https://github.com/pmleczek/so-project/blob/main/src/common/output/ResultsWriter.cpp))
+
+<a name="tests"></a>
 ## Testy
 
 ### 0. Podstawowe testy 
@@ -298,9 +409,39 @@ Dodatkowo w liście rankingowej powinny znajdować się oceny kandydatów:
 W logach pojawia się informacja o ewakuacji oraz o tym że wszystkie procesy są kończone:
 
 ```
-[INFO] [2026-01-17 19:17:30.449] DeanProcess::evacuationHandler()
+[INFO] [2026-01-17 20:06:34.290] DeanProcess::evacuationHandler()
+[INFO] [2026-01-17 20:06:34.292] Evacuation signal received
+[INFO] [2026-01-17 20:06:34.293] Propagating signal: 15 to all processes
 
 ...
 
+[INFO] [2026-01-17 20:06:34.294] [Commission (type=A)] CommissionProcess::terminationHandler()
+```
 
+Lista rankingowa zawiera informacje o ewakuacji i dzieli kandydatów na tych którym udało się przejść przez obie komisje i tych którym nie:
+
+```
+| ==== Lista Rankingowa (Ewakuacja) ==== |
+| PID | Numer | Matura | Cz. teoretyczna | Cz. praktyczna | Ostateczny wynik |
+|-----|-------|--------|----------------|----------------|----------------|
+ === Ukonczyli egzamin ===
+| 7211 | 2 | TAK | 65.283215 | 67.841817 | 66.562516 |
+| 7212 | 3 | TAK | 48.068178 | 81.922641 | 64.995409 |
+| 7222 | 13 | TAK | 60.383721 | 57.336182 | 58.859952 |
+| 7226 | 17 | TAK | 60.365415 | 56.085368 | 58.225392 |
+
+...
+
+ === Nie ukończyli egzaminu ===
+| 7210 | 1 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7215 | 6 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7216 | 7 | TAK | 29.810387 | 0.000000 | NIE UKONCZONO |
+| 7217 | 8 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7218 | 9 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7220 | 11 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7223 | 14 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7224 | 15 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+| 7225 | 16 | TAK | 0.000000 | 0.000000 | NIE UKONCZONO |
+
+...
 ```
