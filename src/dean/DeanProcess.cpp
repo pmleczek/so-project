@@ -202,6 +202,11 @@ void DeanProcess::waitForExamStart() {
  * Starts the exam and waits for it to end.
  */
 void DeanProcess::start() {
+  if (pthread_create(&cleanupThread, nullptr, cleanupThreadFunction, this) !=
+      0) {
+    handleError("Failed to create cleanup thread");
+  }
+
   pthread_mutex_t *examStateMutex =
       &SharedMemoryManager::data()->examStateMutex;
 
@@ -437,6 +442,12 @@ void DeanProcess::verifyCandidates() {
 void DeanProcess::cleanup() {
   Logger::info("DeanProcess::cleanup()");
 
+  int result = pthread_cancel(cleanupThread);
+  if (result != 0 && result != ESRCH) {
+    Logger::warn("Failed to cancel thread cleanup thread: " +
+                 std::string(strerror(result)));
+  }
+
   try {
     SharedMemoryManager::destroy();
     SemaphoreManager::unlink("/commissionA");
@@ -497,17 +508,17 @@ void DeanProcess::terminationHandler(int signal) {
  * Cleans up the child processes
  */
 void *DeanProcess::cleanupThreadFunction(void *arg) {
-  DeanProcess* self = static_cast<DeanProcess*>(arg);
+  DeanProcess *self = static_cast<DeanProcess *>(arg);
   while (self->reaperRunning) {
     int status;
     try {
       pid_t waitedPid = waitpid(-1, &status, WNOHANG);
       if (waitedPid > 0) {
-        pthread_mutex_lock(&self->childPidsMutex);
+        MutexWrapper::lock(&self->childPidsMutex);
         self->childPids.erase(std::remove(self->childPids.begin(),
                                           self->childPids.end(), waitedPid),
                               self->childPids.end());
-        pthread_mutex_unlock(&self->childPidsMutex);
+        MutexWrapper::unlock(&self->childPidsMutex);
         Logger::info("Cleanup thread: cleaned up process " +
                      std::to_string(waitedPid));
       } else if (waitedPid == 0) {
