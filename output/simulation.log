@@ -1,33 +1,521 @@
-[INFO] [2026-01-22 21:26:27.588] [Dean (pid=1408154)] Spawning 103 candidates
-[INFO] [2026-01-22 21:26:27.590] [Dean (pid=1408154)] Failed exam indices (2): 
-[INFO] [2026-01-22 21:26:27.591] [Dean (pid=1408154)] - 55
-[INFO] [2026-01-22 21:26:27.592] [Dean (pid=1408154)] - 93
-[INFO] [2026-01-22 21:26:27.593] Process: commission started (pid=1408156)
-[INFO] [2026-01-22 21:26:27.594] [Commission (type=B, pid=1408156)] Attaching to shared memory with key: -1694171135
-[INFO] [2026-01-22 21:26:27.595] [Commission (type=B, pid=1408156)] Getting shared memory for key: -1694171135
-[INFO] [2026-01-22 21:26:27.596] [Commission (type=B, pid=1408156)] Initializing comission: B with 3 members
-[INFO] [2026-01-22 21:26:27.596] [Commission (type=B, pid=1408156)] Commission B waiting for exam start
-[INFO] [2026-01-22 21:26:27.597] Process: commission started (pid=1408155)
-[INFO] [2026-01-22 21:26:27.599] [Commission (type=A, pid=1408155)] Attaching to shared memory with key: -1694171135
-[INFO] [2026-01-22 21:26:27.600] [Commission (type=A, pid=1408155)] Getting shared memory for key: -1694171135
-[INFO] [2026-01-22 21:26:27.601] [Commission (type=A, pid=1408155)] Initializing comission: A with 5 members
-[INFO] [2026-01-22 21:26:27.601] [Commission (type=A, pid=1408155)] Commission A waiting for exam start
-[INFO] [2026-01-22 21:26:27.602] [Dean (pid=1408154)] Retake exam indices (2): 
-[INFO] [2026-01-22 21:26:27.603] [Dean (pid=1408154)] - 86
-[INFO] [2026-01-22 21:26:27.604] [Dean (pid=1408154)] - 100
-[INFO] [2026-01-22 21:26:27.608] [Dean (pid=1408154)] Propagating signal: 15 to all processes
-[INFO] [2026-01-22 21:26:27.609] [Dean (pid=1408154)] DeanProcess::terminationHandler()
-[INFO] [2026-01-22 21:26:27.610] [Dean (pid=1408154)] Termination signal: SIG 15 received
-[INFO] [2026-01-22 21:26:27.611] [Dean (pid=1408154)] Propagating signal: 15 to all processes
-[INFO] [2026-01-22 21:26:27.614] [Commission (type=A, pid=1408155)] CommissionProcess::terminationHandler()
-[INFO] [2026-01-22 21:26:27.616] [Commission (type=A, pid=1408155)] Termination signal: SIG 15 received
-[INFO] [2026-01-22 21:26:27.617] [Commission (type=A, pid=1408155)] CommissionProcess::cleanup()
-[INFO] [2026-01-22 21:26:27.617] [Commission (type=A, pid=1408155)] CommissionProcess::waitThreads()
-[INFO] [2026-01-22 21:26:27.618] [Dean (pid=1408154)] DeanProcess::cleanup()
-[INFO] [2026-01-22 21:26:27.619] [Dean (pid=1408154)] SharedMemoryManager::destroy()
-[INFO] [2026-01-22 21:26:27.620] [Dean (pid=1408154)] Destroying shared memory with id: 4063249
-[INFO] [2026-01-22 21:26:27.622] [Dean (pid=1408154)] Dean process exiting with status 0
-[INFO] [2026-01-22 21:26:27.623] [Commission (type=B, pid=1408156)] CommissionProcess::terminationHandler()
-[INFO] [2026-01-22 21:26:27.623] [Commission (type=B, pid=1408156)] Termination signal: SIG 15 received
-[INFO] [2026-01-22 21:26:27.624] [Commission (type=B, pid=1408156)] CommissionProcess::cleanup()
-[INFO] [2026-01-22 21:26:27.624] [Commission (type=B, pid=1408156)] CommissionProcess::waitThreads()
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] Cleanup thread started
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] Cleanup thread started
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] Spawning 98 candidates
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] Failed exam indices (1): 
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] - 41
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] Retake exam indices (2): 
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] - 61
+[INFO] [2026-01-22 22:00:18.771] [Dean (pid=28333)] - 88
+[INFO] [2026-01-22 22:00:18.799] [Dean (pid=28333)] Waiting for exam start for 41 seconds
+[INFO] [2026-01-22 22:00:19.9] Process: commission started (pid=28356)
+[INFO] [2026-01-22 22:00:19.10] Process: commission started (pid=28355)
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=B, pid=28356)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=A, pid=28355)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=B, pid=28356)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=A, pid=28355)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=B, pid=28356)] Initializing comission: B with 3 members
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=A, pid=28355)] Initializing comission: A with 5 members
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=B, pid=28356)] Commission B waiting for exam start
+[INFO] [2026-01-22 22:00:19.13] [Commission (type=A, pid=28355)] Commission A waiting for exam start
+[INFO] [2026-01-22 22:00:19.239] Process: candidate started (pid=28383)
+[INFO] [2026-01-22 22:00:19.249] Process: candidate started (pid=28389)
+[INFO] [2026-01-22 22:00:19.255] Process: candidate started (pid=28390)
+[INFO] [2026-01-22 22:00:19.256] Process: candidate started (pid=28399)
+[INFO] [2026-01-22 22:00:19.256] Process: candidate started (pid=28441)
+[INFO] [2026-01-22 22:00:19.257] Process: candidate started (pid=28372)
+[INFO] [2026-01-22 22:00:19.257] Process: candidate started (pid=28444)
+[INFO] [2026-01-22 22:00:19.257] Process: candidate started (pid=28357)
+[INFO] [2026-01-22 22:00:19.258] Process: candidate started (pid=28380)
+[INFO] [2026-01-22 22:00:19.258] Process: candidate started (pid=28366)
+[INFO] [2026-01-22 22:00:19.259] Process: candidate started (pid=28361)
+[INFO] [2026-01-22 22:00:19.259] Process: candidate started (pid=28388)
+[INFO] [2026-01-22 22:00:19.259] Process: candidate started (pid=28375)
+[INFO] [2026-01-22 22:00:19.260] Process: candidate started (pid=28367)
+[INFO] [2026-01-22 22:00:19.260] Process: candidate started (pid=28381)
+[INFO] [2026-01-22 22:00:19.260] Process: candidate started (pid=28418)
+[INFO] [2026-01-22 22:00:19.261] Process: candidate started (pid=28432)
+[INFO] [2026-01-22 22:00:19.261] Process: candidate started (pid=28435)
+[INFO] [2026-01-22 22:00:19.261] Process: candidate started (pid=28382)
+[INFO] [2026-01-22 22:00:19.262] Process: candidate started (pid=28385)
+[INFO] [2026-01-22 22:00:19.262] Process: candidate started (pid=28409)
+[INFO] [2026-01-22 22:00:19.262] Process: candidate started (pid=28384)
+[INFO] [2026-01-22 22:00:19.262] Process: candidate started (pid=28428)
+[INFO] [2026-01-22 22:00:19.263] Process: candidate started (pid=28396)
+[INFO] [2026-01-22 22:00:19.263] Process: candidate started (pid=28395)
+[INFO] [2026-01-22 22:00:19.263] Process: candidate started (pid=28408)
+[INFO] [2026-01-22 22:00:19.263] Process: candidate started (pid=28427)
+[INFO] [2026-01-22 22:00:19.264] Process: candidate started (pid=28406)
+[INFO] [2026-01-22 22:00:19.264] Process: candidate started (pid=28425)
+[INFO] [2026-01-22 22:00:19.264] Process: candidate started (pid=28403)
+[INFO] [2026-01-22 22:00:19.264] Process: candidate started (pid=28417)
+[INFO] [2026-01-22 22:00:19.264] Process: candidate started (pid=28374)
+[INFO] [2026-01-22 22:00:19.265] Process: candidate started (pid=28402)
+[INFO] [2026-01-22 22:00:19.265] Process: candidate started (pid=28377)
+[INFO] [2026-01-22 22:00:19.265] Process: candidate started (pid=28446)
+[INFO] [2026-01-22 22:00:19.265] Process: candidate started (pid=28438)
+[INFO] [2026-01-22 22:00:19.266] Process: candidate started (pid=28400)
+[INFO] [2026-01-22 22:00:19.266] Process: candidate started (pid=28371)
+[INFO] [2026-01-22 22:00:19.266] Process: candidate started (pid=28364)
+[INFO] [2026-01-22 22:00:19.266] Process: candidate started (pid=28359)
+[INFO] [2026-01-22 22:00:19.267] Process: candidate started (pid=28373)
+[INFO] [2026-01-22 22:00:19.267] Process: candidate started (pid=28386)
+[INFO] [2026-01-22 22:00:19.267] [Candidate (id=26, pid=28383)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.267] Process: candidate started (pid=28413)
+[INFO] [2026-01-22 22:00:19.267] Process: candidate started (pid=28447)
+[INFO] [2026-01-22 22:00:19.268] Process: candidate started (pid=28378)
+[INFO] [2026-01-22 22:00:19.268] Process: candidate started (pid=28445)
+[INFO] [2026-01-22 22:00:19.268] Process: candidate started (pid=28379)
+[INFO] [2026-01-22 22:00:19.268] Process: candidate started (pid=28410)
+[INFO] [2026-01-22 22:00:19.269] Process: candidate started (pid=28451)
+[INFO] [2026-01-22 22:00:19.269] Process: candidate started (pid=28404)
+[INFO] [2026-01-22 22:00:19.269] Process: candidate started (pid=28369)
+[INFO] [2026-01-22 22:00:19.269] Process: candidate started (pid=28394)
+[INFO] [2026-01-22 22:00:19.269] Process: candidate started (pid=28431)
+[INFO] [2026-01-22 22:00:19.270] Process: candidate started (pid=28407)
+[INFO] [2026-01-22 22:00:19.270] Process: candidate started (pid=28420)
+[INFO] [2026-01-22 22:00:19.270] Process: candidate started (pid=28434)
+[INFO] [2026-01-22 22:00:19.270] Process: candidate started (pid=28360)
+[INFO] [2026-01-22 22:00:19.271] Process: candidate started (pid=28397)
+[INFO] [2026-01-22 22:00:19.271] Process: candidate started (pid=28393)
+[INFO] [2026-01-22 22:00:19.271] Process: candidate started (pid=28398)
+[INFO] [2026-01-22 22:00:19.271] Process: candidate started (pid=28453)
+[INFO] [2026-01-22 22:00:19.272] Process: candidate started (pid=28416)
+[INFO] [2026-01-22 22:00:19.272] [Candidate (id=32, pid=28389)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.272] Process: candidate started (pid=28411)
+[INFO] [2026-01-22 22:00:19.272] Process: candidate started (pid=28405)
+[INFO] [2026-01-22 22:00:19.272] Process: candidate started (pid=28415)
+[INFO] [2026-01-22 22:00:19.273] Process: candidate started (pid=28422)
+[INFO] [2026-01-22 22:00:19.273] Process: candidate started (pid=28365)
+[INFO] [2026-01-22 22:00:19.274] Process: candidate started (pid=28358)
+[INFO] [2026-01-22 22:00:19.274] Process: candidate started (pid=28370)
+[INFO] [2026-01-22 22:00:19.274] Process: candidate started (pid=28421)
+[INFO] [2026-01-22 22:00:19.274] Process: candidate started (pid=28391)
+[INFO] [2026-01-22 22:00:19.275] Process: candidate started (pid=28440)
+[INFO] [2026-01-22 22:00:19.275] Process: candidate started (pid=28392)
+[INFO] [2026-01-22 22:00:19.275] Process: candidate started (pid=28426)
+[INFO] [2026-01-22 22:00:19.275] Process: candidate started (pid=28442)
+[INFO] [2026-01-22 22:00:19.275] Process: candidate started (pid=28414)
+[INFO] [2026-01-22 22:00:19.276] Process: candidate started (pid=28429)
+[INFO] [2026-01-22 22:00:19.276] Process: candidate started (pid=28454)
+[INFO] [2026-01-22 22:00:19.276] Process: candidate started (pid=28419)
+[INFO] [2026-01-22 22:00:19.276] Process: candidate started (pid=28368)
+[INFO] [2026-01-22 22:00:19.276] Process: candidate started (pid=28430)
+[INFO] [2026-01-22 22:00:19.277] Process: candidate started (pid=28436)
+[INFO] [2026-01-22 22:00:19.277] Process: candidate started (pid=28412)
+[INFO] [2026-01-22 22:00:19.277] Process: candidate started (pid=28424)
+[INFO] [2026-01-22 22:00:19.277] Process: candidate started (pid=28443)
+[INFO] [2026-01-22 22:00:19.277] Process: candidate started (pid=28363)
+[INFO] [2026-01-22 22:00:19.278] Process: candidate started (pid=28433)
+[INFO] [2026-01-22 22:00:19.278] Process: candidate started (pid=28401)
+[INFO] [2026-01-22 22:00:19.279] Process: candidate started (pid=28437)
+[INFO] [2026-01-22 22:00:19.279] Process: candidate started (pid=28376)
+[INFO] [2026-01-22 22:00:19.279] [Candidate (id=33, pid=28390)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.279] Process: candidate started (pid=28387)
+[INFO] [2026-01-22 22:00:19.279] Process: candidate started (pid=28449)
+[INFO] [2026-01-22 22:00:19.279] Process: candidate started (pid=28362)
+[INFO] [2026-01-22 22:00:19.280] Process: candidate started (pid=28423)
+[INFO] [2026-01-22 22:00:19.280] Process: candidate started (pid=28450)
+[INFO] [2026-01-22 22:00:19.280] Process: candidate started (pid=28439)
+[INFO] [2026-01-22 22:00:19.280] [Candidate (id=42, pid=28399)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.280] Process: candidate started (pid=28452)
+[INFO] [2026-01-22 22:00:19.281] Process: candidate started (pid=28448)
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=84, pid=28441)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=15, pid=28372)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=87, pid=28444)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=0, pid=28357)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=23, pid=28380)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=9, pid=28366)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=4, pid=28361)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=31, pid=28388)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=18, pid=28375)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=10, pid=28367)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=24, pid=28381)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=61, pid=28418)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=75, pid=28432)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=78, pid=28435)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.281] [Candidate (id=25, pid=28382)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=28, pid=28385)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=52, pid=28409)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=27, pid=28384)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=71, pid=28428)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=39, pid=28396)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=38, pid=28395)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=51, pid=28408)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=70, pid=28427)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=49, pid=28406)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=68, pid=28425)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=46, pid=28403)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=60, pid=28417)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=17, pid=28374)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=45, pid=28402)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=20, pid=28377)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=89, pid=28446)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=81, pid=28438)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=43, pid=28400)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=14, pid=28371)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=7, pid=28364)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=2, pid=28359)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=16, pid=28373)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=29, pid=28386)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=26, pid=28383)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=56, pid=28413)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.282] [Candidate (id=90, pid=28447)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=21, pid=28378)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=88, pid=28445)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=22, pid=28379)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=53, pid=28410)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=94, pid=28451)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=47, pid=28404)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=12, pid=28369)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=37, pid=28394)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=74, pid=28431)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=50, pid=28407)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=63, pid=28420)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=77, pid=28434)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=3, pid=28360)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=40, pid=28397)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=36, pid=28393)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=41, pid=28398)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=96, pid=28453)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=59, pid=28416)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=32, pid=28389)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=54, pid=28411)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=48, pid=28405)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=58, pid=28415)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=65, pid=28422)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=8, pid=28365)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=1, pid=28358)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=13, pid=28370)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=64, pid=28421)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=34, pid=28391)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.283] [Candidate (id=83, pid=28440)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=35, pid=28392)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=69, pid=28426)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=85, pid=28442)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=57, pid=28414)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=72, pid=28429)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=97, pid=28454)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=62, pid=28419)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=11, pid=28368)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=73, pid=28430)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=79, pid=28436)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=55, pid=28412)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=67, pid=28424)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=86, pid=28443)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=6, pid=28363)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=76, pid=28433)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=44, pid=28401)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=80, pid=28437)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=19, pid=28376)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=33, pid=28390)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=30, pid=28387)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=92, pid=28449)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=5, pid=28362)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=66, pid=28423)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=93, pid=28450)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=82, pid=28439)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=42, pid=28399)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=95, pid=28452)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=91, pid=28448)] Attaching to shared memory with key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=84, pid=28441)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=15, pid=28372)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=87, pid=28444)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=0, pid=28357)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.284] [Candidate (id=23, pid=28380)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=9, pid=28366)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=4, pid=28361)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=31, pid=28388)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=18, pid=28375)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=10, pid=28367)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=24, pid=28381)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=61, pid=28418)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=75, pid=28432)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=78, pid=28435)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=25, pid=28382)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=28, pid=28385)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=52, pid=28409)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=27, pid=28384)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=71, pid=28428)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=39, pid=28396)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=38, pid=28395)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=51, pid=28408)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=70, pid=28427)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=49, pid=28406)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=68, pid=28425)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=46, pid=28403)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=60, pid=28417)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=17, pid=28374)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=45, pid=28402)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=20, pid=28377)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=89, pid=28446)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=81, pid=28438)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=43, pid=28400)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=14, pid=28371)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=7, pid=28364)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=2, pid=28359)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=16, pid=28373)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=29, pid=28386)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=26, pid=28383)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=56, pid=28413)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.285] [Candidate (id=90, pid=28447)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=21, pid=28378)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=88, pid=28445)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=22, pid=28379)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=53, pid=28410)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=94, pid=28451)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=47, pid=28404)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=12, pid=28369)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=37, pid=28394)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=74, pid=28431)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=50, pid=28407)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=63, pid=28420)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=77, pid=28434)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=3, pid=28360)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=40, pid=28397)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=36, pid=28393)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=41, pid=28398)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=96, pid=28453)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=59, pid=28416)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=32, pid=28389)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=54, pid=28411)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=48, pid=28405)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=58, pid=28415)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=65, pid=28422)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=8, pid=28365)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=1, pid=28358)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=13, pid=28370)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=64, pid=28421)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=34, pid=28391)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=83, pid=28440)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=35, pid=28392)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=69, pid=28426)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=85, pid=28442)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.286] [Candidate (id=57, pid=28414)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=72, pid=28429)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=97, pid=28454)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=62, pid=28419)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=11, pid=28368)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=73, pid=28430)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=79, pid=28436)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=55, pid=28412)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=67, pid=28424)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=86, pid=28443)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=6, pid=28363)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=76, pid=28433)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=44, pid=28401)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=80, pid=28437)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=19, pid=28376)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=33, pid=28390)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=30, pid=28387)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=92, pid=28449)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=5, pid=28362)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=66, pid=28423)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=93, pid=28450)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=82, pid=28439)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=42, pid=28399)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.287] [Candidate (id=95, pid=28452)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=91, pid=28448)] Getting shared memory for key: -1693367548
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=84, pid=28441)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=15, pid=28372)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=87, pid=28444)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=0, pid=28357)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=23, pid=28380)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=9, pid=28366)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=4, pid=28361)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=31, pid=28388)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=18, pid=28375)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=10, pid=28367)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=24, pid=28381)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=61, pid=28418)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=75, pid=28432)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=78, pid=28435)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=25, pid=28382)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=28, pid=28385)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=52, pid=28409)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=27, pid=28384)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=71, pid=28428)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=39, pid=28396)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=38, pid=28395)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.288] [Candidate (id=51, pid=28408)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=70, pid=28427)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=49, pid=28406)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=68, pid=28425)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=46, pid=28403)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=60, pid=28417)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=17, pid=28374)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=45, pid=28402)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=20, pid=28377)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=89, pid=28446)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=81, pid=28438)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=43, pid=28400)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=14, pid=28371)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=7, pid=28364)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=2, pid=28359)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=16, pid=28373)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=29, pid=28386)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=56, pid=28413)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=90, pid=28447)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=21, pid=28378)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=88, pid=28445)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=22, pid=28379)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=53, pid=28410)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=94, pid=28451)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=47, pid=28404)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=12, pid=28369)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.289] [Candidate (id=37, pid=28394)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=74, pid=28431)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=50, pid=28407)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=63, pid=28420)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=77, pid=28434)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=3, pid=28360)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=40, pid=28397)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=36, pid=28393)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=41, pid=28398)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=96, pid=28453)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=59, pid=28416)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=54, pid=28411)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=48, pid=28405)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=58, pid=28415)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=65, pid=28422)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=8, pid=28365)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=1, pid=28358)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=13, pid=28370)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=64, pid=28421)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.290] [Candidate (id=34, pid=28391)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=83, pid=28440)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=35, pid=28392)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=69, pid=28426)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=85, pid=28442)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=57, pid=28414)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=72, pid=28429)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=97, pid=28454)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=62, pid=28419)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=11, pid=28368)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=73, pid=28430)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=79, pid=28436)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=55, pid=28412)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=67, pid=28424)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=86, pid=28443)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=6, pid=28363)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=76, pid=28433)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=44, pid=28401)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=80, pid=28437)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=19, pid=28376)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=30, pid=28387)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=92, pid=28449)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=5, pid=28362)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=66, pid=28423)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=93, pid=28450)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=82, pid=28439)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=95, pid=28452)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:19.291] [Candidate (id=91, pid=28448)] CandidateProcess::waitForExamStart()
+[INFO] [2026-01-22 22:00:28.356] [Dean (pid=28333)] DeanProcess::terminationHandler()
+[INFO] [2026-01-22 22:00:28.356] [Dean (pid=28333)] Termination signal: SIG 2 received
+[INFO] [2026-01-22 22:00:28.356] [Dean (pid=28333)] Propagating signal: 15 to all processes
+[INFO] [2026-01-22 22:00:28.356] [Dean (pid=28333)] DeanProcess::cleanup()
+[INFO] [2026-01-22 22:00:28.422] [Dean (pid=28333)] Cleanup thread: doing final cleanup
+[INFO] [2026-01-22 22:00:28.422] [Dean (pid=28333)] Cleanup thread: final reap of process 28355
+[INFO] [2026-01-22 22:00:28.422] [Dean (pid=28333)] Cleanup thread: final reap of process 28356
+[INFO] [2026-01-22 22:00:28.422] [Dean (pid=28333)] Cleanup thread: final reap of process 28357
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28358
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28359
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28360
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28361
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28362
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28363
+[INFO] [2026-01-22 22:00:28.423] [Dean (pid=28333)] Cleanup thread: final reap of process 28364
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28365
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28366
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28367
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28368
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28369
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28370
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28371
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28372
+[INFO] [2026-01-22 22:00:28.424] [Dean (pid=28333)] Cleanup thread: final reap of process 28373
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28374
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28375
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28376
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28377
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28378
+[INFO] [2026-01-22 22:00:28.425] [Dean (pid=28333)] Cleanup thread: final reap of process 28379
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28380
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28381
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28382
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28383
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28384
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28385
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28386
+[INFO] [2026-01-22 22:00:28.426] [Dean (pid=28333)] Cleanup thread: final reap of process 28387
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28388
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28389
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28390
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28391
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28392
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28393
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28394
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28395
+[INFO] [2026-01-22 22:00:28.427] [Dean (pid=28333)] Cleanup thread: final reap of process 28396
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28397
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28398
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28399
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28400
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28401
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28402
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28403
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28404
+[INFO] [2026-01-22 22:00:28.428] [Dean (pid=28333)] Cleanup thread: final reap of process 28405
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28406
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28407
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28408
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28409
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28410
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28411
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28412
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28413
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28414
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28415
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28416
+[INFO] [2026-01-22 22:00:28.429] [Dean (pid=28333)] Cleanup thread: final reap of process 28417
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28418
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28419
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28420
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28421
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28422
+[INFO] [2026-01-22 22:00:28.430] [Dean (pid=28333)] Cleanup thread: final reap of process 28423
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28424
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28425
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28426
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28427
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28428
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28429
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28430
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28431
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28432
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28433
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28434
+[INFO] [2026-01-22 22:00:28.431] [Dean (pid=28333)] Cleanup thread: final reap of process 28435
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28436
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28437
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28438
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28439
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28440
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28441
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28442
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28443
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28444
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28445
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28446
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28447
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28448
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28449
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28450
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28451
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28452
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28453
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread: final reap of process 28454
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread exiting
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] Cleanup thread stopped
+[INFO] [2026-01-22 22:00:28.432] [Dean (pid=28333)] SharedMemoryManager::destroy()
+[INFO] [2026-01-22 22:00:28.433] [Dean (pid=28333)] Destroying shared memory with id: 65536
+[INFO] [2026-01-22 22:00:28.433] [Dean (pid=28333)] Dean process exiting with status 0

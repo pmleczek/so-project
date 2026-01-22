@@ -569,7 +569,7 @@ void *DeanProcess::cleanupThreadFunction(void *arg) {
   for (pid_t pid : remainingPids) {
     int status;
     if (waitpid(pid, &status, 0) > 0) {
-      Logger::info("Cleanup thread: final reap of process " +
+      Logger::info("Cleanup thread: final cleanup of process " +
                    std::to_string(pid));
     }
   }

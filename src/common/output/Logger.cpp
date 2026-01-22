@@ -95,6 +95,8 @@ void Logger::log(const std::string &message, const std::string &logLevel) {
 
   std::string logMessage = getPrefix(logLevel) + " " + message + "\n";
 
+  std::cout << logMessage;
+
   ssize_t bytesWritten =
       write(fileHandle_, logMessage.c_str(), logMessage.length());
   if (bytesWritten == -1) {
