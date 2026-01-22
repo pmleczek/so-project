@@ -2,11 +2,15 @@
 
 #include "common/process/BaseProcess.h"
 #include "dean/DeanConfig.h"
+#include <atomic>
+#include <pthread.h>
 #include <unordered_set>
+#include <vector>
 
 class DeanProcess : public BaseProcess {
 public:
   DeanProcess(int argc, char *argv[]);
+  ~DeanProcess();
 
   void validateArguments(int argc, char *argv[]) override;
   void initialize() override;
@@ -27,6 +31,7 @@ private:
   static void evacuationHandler(int signal);
   static void terminationHandler(int signal);
   static void *cleanupThreadFunction(void *arg);
+  void stopCleanupThread();
 
   int candidateCount;
   int retaking = 0;
@@ -34,5 +39,6 @@ private:
 
   std::vector<pid_t> childPids;
   pthread_mutex_t childPidsMutex;
+  std::atomic<bool> cleanupRunning;
   pthread_t cleanupThread;
 };

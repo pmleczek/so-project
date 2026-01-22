@@ -10,7 +10,10 @@
 #include "common/utils/Misc.h"
 #include "common/utils/Random.h"
 #include "common/utils/Time.h"
+#include <algorithm>
+#include <atomic>
 #include <cerrno>
+#include <pthread.h>
 #include <regex>
 #include <signal.h>
 #include <sys/resource.h>
@@ -24,7 +27,11 @@
  * @param argv The arguments passed to the program.
  */
 DeanProcess::DeanProcess(int argc, char *argv[])
-    : BaseProcess(argc, argv, true), config() {
+    : BaseProcess(argc, argv, true), config(), cleanupRunning(false) {
+  if (pthread_mutex_init(&childPidsMutex, nullptr) != 0) {
+    handleError("Failed to initialize childPidsMutex");
+  }
+
   try {
     validateArguments(argc, argv);
   } catch (const std::exception &e) {
@@ -44,6 +51,11 @@ DeanProcess::DeanProcess(int argc, char *argv[])
     perror(errorMessage.c_str());
     exit(1);
   }
+}
+
+DeanProcess::~DeanProcess() {
+  stopCleanupThread();
+  pthread_mutex_destroy(&childPidsMutex);
 }
 
 /**
@@ -202,11 +214,6 @@ void DeanProcess::waitForExamStart() {
  * Starts the exam and waits for it to end.
  */
 void DeanProcess::start() {
-  if (pthread_create(&cleanupThread, nullptr, cleanupThreadFunction, this) !=
-      0) {
-    handleError("Failed to create cleanup thread");
-  }
-
   pthread_mutex_t *examStateMutex =
       &SharedMemoryManager::data()->examStateMutex;
 
@@ -263,7 +270,10 @@ void DeanProcess::spawnComissions() {
 
   ProcessRegistry::registerCommission(pidA, 'A');
 
-  /* Comission B */
+  MutexWrapper::lock(&childPidsMutex);
+  childPids.push_back(pidA);
+  MutexWrapper::unlock(&childPidsMutex);
+
   pid_t pidB = fork();
   if (pidB < 0) {
     handleError("Failed in fork() call for commission B");
@@ -275,6 +285,17 @@ void DeanProcess::spawnComissions() {
   }
 
   ProcessRegistry::registerCommission(pidB, 'B');
+
+  MutexWrapper::lock(&childPidsMutex);
+  childPids.push_back(pidB);
+  MutexWrapper::unlock(&childPidsMutex);
+
+  cleanupRunning = true;
+  if (pthread_create(&cleanupThread, nullptr, cleanupThreadFunction, this) !=
+      0) {
+    handleError("Failed to create cleanup thread");
+  }
+  Logger::info("Cleanup thread started");
 }
 
 /**
@@ -350,9 +371,9 @@ void DeanProcess::spawnCandidates() {
       handleError(errorMessage.c_str());
     } else {
       try {
-        MutexWrapper::lock(childPidsMutex);
+        MutexWrapper::lock(&childPidsMutex);
         childPids.push_back(candidatePid);
-        MutexWrapper::unlock(childPidsMutex);
+        MutexWrapper::unlock(&childPidsMutex);
 
         MutexWrapper::lock(candidatesMutex);
 
@@ -439,14 +460,20 @@ void DeanProcess::verifyCandidates() {
 /**
  * Cleans up the dean process.
  */
+void DeanProcess::stopCleanupThread() {
+  if (cleanupRunning) {
+    cleanupRunning = false;
+    if (pthread_join(cleanupThread, nullptr) != 0) {
+      Logger::warn("Failed to join cleanup thread");
+    }
+    Logger::info("Cleanup thread stopped");
+  }
+}
+
 void DeanProcess::cleanup() {
   Logger::info("DeanProcess::cleanup()");
 
-  int result = pthread_cancel(cleanupThread);
-  if (result != 0 && result != ESRCH) {
-    Logger::warn("Failed to cancel thread cleanup thread: " +
-                 std::string(strerror(result)));
-  }
+  stopCleanupThread();
 
   try {
     SharedMemoryManager::destroy();
@@ -509,7 +536,9 @@ void DeanProcess::terminationHandler(int signal) {
  */
 void *DeanProcess::cleanupThreadFunction(void *arg) {
   DeanProcess *self = static_cast<DeanProcess *>(arg);
-  while (self->reaperRunning) {
+  Logger::info("Cleanup thread started");
+
+  while (self->cleanupRunning) {
     int status;
     try {
       pid_t waitedPid = waitpid(-1, &status, WNOHANG);
@@ -522,10 +551,29 @@ void *DeanProcess::cleanupThreadFunction(void *arg) {
         Logger::info("Cleanup thread: cleaned up process " +
                      std::to_string(waitedPid));
       } else if (waitedPid == 0) {
-        safeUSleep(100000);
+        Misc::safeUSleep(100000);
       } else if (errno == ECHILD) {
-        safeUSleep(100000);
+        Misc::safeUSleep(100000);
       }
+    } catch (const std::exception &e) {
+      Logger::warn("Exception in cleanup thread: " + std::string(e.what()));
+      Misc::safeUSleep(100000);
     }
   }
+
+  Logger::info("Cleanup thread: doing final cleanup");
+  MutexWrapper::lock(&self->childPidsMutex);
+  std::vector<pid_t> remainingPids = self->childPids;
+  MutexWrapper::unlock(&self->childPidsMutex);
+
+  for (pid_t pid : remainingPids) {
+    int status;
+    if (waitpid(pid, &status, 0) > 0) {
+      Logger::info("Cleanup thread: final reap of process " +
+                   std::to_string(pid));
+    }
+  }
+
+  Logger::info("Cleanup thread exiting");
+  return nullptr;
 }
