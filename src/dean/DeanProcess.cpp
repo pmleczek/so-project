@@ -10,12 +10,12 @@
 #include "common/utils/Misc.h"
 #include "common/utils/Random.h"
 #include "common/utils/Time.h"
+#include <cerrno>
 #include <regex>
 #include <signal.h>
 #include <sys/resource.h>
-#include <sys/wait.h> 
+#include <sys/wait.h>
 #include <unistd.h>
-#include <cerrno>  
 
 /**
  * Constructor for the dean process.
@@ -112,6 +112,9 @@ void DeanProcess::validateArguments(int argc, char *argv[]) {
  */
 void DeanProcess::initialize() {
   try {
+    /* Set up logger prefix  */
+    Logger::setProcessPrefix("Dean (pid=" + std::to_string(pid_) + ")");
+
     /* Create shared memory and initialize its state */
     /* No mutex because dean is only process that writes to shared memory as of
      * now */
@@ -211,17 +214,19 @@ void DeanProcess::start() {
     if (commissionAPID != -1) {
       int status;
       if (waitpid(commissionAPID, &status, 0) == -1 && errno != ECHILD) {
-        Logger::warn("Failed to wait for commission A: " + std::string(strerror(errno)));
+        Logger::warn("Failed to wait for commission A: " +
+                     std::string(strerror(errno)));
       } else {
         Logger::info("Commission A process finished");
       }
     }
-    
+
     int commissionBPID = SharedMemoryManager::data()->commissionBID;
     if (commissionBPID != -1) {
       int status;
       if (waitpid(commissionBPID, &status, 0) == -1 && errno != ECHILD) {
-        Logger::warn("Failed to wait for commission B: " + std::string(strerror(errno)));
+        Logger::warn("Failed to wait for commission B: " +
+                     std::string(strerror(errno)));
       } else {
         Logger::info("Commission B process finished");
       }
@@ -340,6 +345,10 @@ void DeanProcess::spawnCandidates() {
       handleError(errorMessage.c_str());
     } else {
       try {
+        MutexWrapper::lock(childPidsMutex);
+        childPids.push_back(candidatePid);
+        MutexWrapper::unlock(childPidsMutex);
+
         MutexWrapper::lock(candidatesMutex);
 
         SharedMemoryManager::data()->candidates[i].pid = candidatePid;
@@ -415,7 +424,8 @@ void DeanProcess::verifyCandidates() {
   MutexWrapper::lock(examStateMutex);
 
   int commissionBCount = config.candidateCount - rejected;
-  SharedMemoryManager::data()->commissionACandidateCount = commissionBCount - retaking;
+  SharedMemoryManager::data()->commissionACandidateCount =
+      commissionBCount - retaking;
   SharedMemoryManager::data()->commissionBCandidateCount = commissionBCount;
 
   MutexWrapper::unlock(examStateMutex);
@@ -481,4 +491,30 @@ void DeanProcess::terminationHandler(int signal) {
   }
 
   exit(0);
+}
+
+/**
+ * Cleans up the child processes
+ */
+void *DeanProcess::cleanupThreadFunction(void *arg) {
+  DeanProcess* self = static_cast<DeanProcess*>(arg);
+  while (self->reaperRunning) {
+    int status;
+    try {
+      pid_t waitedPid = waitpid(-1, &status, WNOHANG);
+      if (waitedPid > 0) {
+        pthread_mutex_lock(&self->childPidsMutex);
+        self->childPids.erase(std::remove(self->childPids.begin(),
+                                          self->childPids.end(), waitedPid),
+                              self->childPids.end());
+        pthread_mutex_unlock(&self->childPidsMutex);
+        Logger::info("Cleanup thread: cleaned up process " +
+                     std::to_string(waitedPid));
+      } else if (waitedPid == 0) {
+        safeUSleep(100000);
+      } else if (errno == ECHILD) {
+        safeUSleep(100000);
+      }
+    }
+  }
 }

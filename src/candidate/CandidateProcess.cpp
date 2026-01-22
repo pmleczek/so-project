@@ -61,7 +61,10 @@ void CandidateProcess::validateArguments(int argc, char *argv[]) {
     throw std::invalid_argument("Candidate index must be non-negative");
   }
   index = candidateIndex;
-  Logger::setProcessPrefix("Candidate (id=" + std::to_string(index) + ")");
+
+  /* Set up logger prefix */
+  Logger::setProcessPrefix("Candidate (id=" + std::to_string(index) +
+                           ", pid=" + std::to_string(pid_) + ")");
 
   /* Validate times for commission A */
   /* Expected format: double[] */

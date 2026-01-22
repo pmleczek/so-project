@@ -26,8 +26,13 @@ private:
   getRetakeExamIndices(std::unordered_set<int> excludedIndices);
   static void evacuationHandler(int signal);
   static void terminationHandler(int signal);
+  static void *cleanupThreadFunction(void *arg);
 
   int candidateCount;
   int retaking = 0;
   DeanConfig config;
+
+  std::vector<pid_t> childPids;
+  pthread_mutex_t childPidsMutex;
+  pthread_t cleanupThread;
 };

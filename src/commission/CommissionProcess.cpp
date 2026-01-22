@@ -58,8 +58,10 @@ void CommissionProcess::validateArguments(int argc, char *argv[]) {
     throw std::invalid_argument(
         "Invalid commission type. Usage: ./commission <type: A or B>");
   }
+  /* Set up logger prefix */
   Logger::setProcessPrefix(
-      "Commission (type=" + std::string(1, commissionType_) + ")");
+      "Commission (type=" + std::string(1, commissionType_) +
+      ", pid=" + std::to_string(pid_) + ")");
 
   if (commissionType_ == 'A') {
     memberCount_ = 5;
